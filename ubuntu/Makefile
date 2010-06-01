@@ -25,6 +25,7 @@ obj-$(CONFIG_OMNIBOOK)		+= omnibook/
 ##
 ##
 ##
+obj-$(CONFIG_AUFS_FS)		+= aufs/
 ##
 ##
 ##
