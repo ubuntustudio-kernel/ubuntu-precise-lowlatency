@@ -2299,7 +2299,7 @@ void dispc_mgr_enable_stallmode(enum omap_channel channel, bool enable)
 static bool _dispc_lcd_timings_ok(int hsw, int hfp, int hbp,
 		int vsw, int vfp, int vbp)
 {
-	if (cpu_is_omap24xx() || omap_rev() < OMAP3430_REV_ES3_0) {
+	if (cpu_is_omap24xx() || (cpu_is_omap34xx() && omap_rev_lt_3_0())) {
 		if (hsw < 1 || hsw > 64 ||
 				hfp < 1 || hfp > 256 ||
 				hbp < 1 || hbp > 256 ||
@@ -2332,7 +2332,7 @@ static void _dispc_mgr_set_lcd_timings(enum omap_channel channel, int hsw,
 {
 	u32 timing_h, timing_v;
 
-	if (cpu_is_omap24xx() || omap_rev() < OMAP3430_REV_ES3_0) {
+	if (cpu_is_omap24xx() || (cpu_is_omap34xx() && omap_rev_lt_3_0())) {
 		timing_h = FLD_VAL(hsw-1, 5, 0) | FLD_VAL(hfp-1, 15, 8) |
 			FLD_VAL(hbp-1, 27, 20);
 
