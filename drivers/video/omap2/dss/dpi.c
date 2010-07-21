@@ -203,7 +203,10 @@ int omapdss_dpi_display_enable(struct omap_dss_device *dssdev)
 
 	if (dpi_use_dsi_pll(dssdev)) {
 		dss_clk_enable(DSS_CLK_SYSCK);
-		r = dsi_pll_init(dpi.dsidev, 0, 1);
+		if (cpu_is_omap3630())
+			r = dsi_pll_init(dssdev, 1, 1);
+		else
+			r = dsi_pll_init(dssdev, 0, 1);
 		if (r)
 			goto err3;
 	}
