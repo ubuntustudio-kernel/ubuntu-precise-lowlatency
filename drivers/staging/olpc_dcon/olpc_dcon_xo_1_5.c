@@ -11,6 +11,7 @@
 #include <linux/pci.h>
 #include <linux/gpio.h>
 #include <asm/olpc.h>
+#include <linux/delay.h>
 
 /* TODO: this eventually belongs in linux/vx855.h */
 #define NR_VX855_GPI    14
