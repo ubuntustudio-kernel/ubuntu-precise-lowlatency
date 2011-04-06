@@ -14,6 +14,7 @@
 #include <linux/gpio.h>
 #include <linux/delay.h>
 #include <asm/olpc.h>
+#include <linux/delay.h>
 
 #include "olpc_dcon.h"
 
