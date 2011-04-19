@@ -4,6 +4,10 @@ linux (2.6.39-0.4) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Major Kernel Changes ]
+
+  * rebase from v2.6.39-rc3 to v2.6.39-rc4
+
  -- Leann Ogasawara <leann.ogasawara@canonical.com>  Tue, 19 Apr 2011 06:25:20 -0700
 
 linux (2.6.39-0.3) oneiric; urgency=low
