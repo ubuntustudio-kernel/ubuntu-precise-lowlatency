@@ -63,6 +63,7 @@
  *	C4	= GPIO173, GPIO172, GPIO171: 1 0 1
  *	XMA	= GPIO173, GPIO172, GPIO171: 0 0 0
  *	XMB	= GPIO173, GPIO172, GPIO171: 0 0 1
+ *	XMC	= GPIO173, GPIO172, GPIO171: 0 1 0
  */
 enum {
 	OMAP3BEAGLE_BOARD_UNKN = 0,
@@ -70,6 +71,7 @@ enum {
 	OMAP3BEAGLE_BOARD_C1_3,
 	OMAP3BEAGLE_BOARD_C4,
 	OMAP3BEAGLE_BOARD_XM,
+	OMAP3BEAGLE_BOARD_XMC,
 };
 
 static u8 omap3_beagle_version;
@@ -128,6 +130,10 @@ static void __init omap3_beagle_init_rev(void)
 	case 1:
 		printk(KERN_INFO "OMAP3 Beagle Rev: xM B\n");
 		omap3_beagle_version = OMAP3BEAGLE_BOARD_XM;
+		break;
+	case 2:
+		printk(KERN_INFO "OMAP3 Beagle Rev: xM C\n");
+		omap3_beagle_version = OMAP3BEAGLE_BOARD_XMC;
 		break;
 	default:
 		printk(KERN_INFO "OMAP3 Beagle Rev: unknown %hd\n", beagle_rev);
@@ -229,7 +235,8 @@ static void __init beagle_display_init(void)
 	int r;
 
 	/* DVI reset GPIO is different between beagle revisions */
-	if (omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM)
+	if ((omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM) ||
+			(omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XMC))
 		beagle_dvi_device.reset_gpio = 129;
 	else
 		beagle_dvi_device.reset_gpio = 170;
@@ -266,7 +273,8 @@ static int beagle_twl_gpio_setup(struct device *dev,
 {
 	int r, usb_pwr_level;
 
-	if (omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM) {
+	if ((omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM) ||
+			(omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XMC)) {
 		mmc[0].gpio_wp = -EINVAL;
 	} else if ((omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_C1_3) ||
 		(omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_C4)) {
@@ -288,7 +296,8 @@ static int beagle_twl_gpio_setup(struct device *dev,
 	 * high / others active low)
 	 * DVI reset GPIO is different between beagle revisions
 	 */
-	if (omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM) {
+	if (omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XM ||
+			(omap3_beagle_get_rev() == OMAP3BEAGLE_BOARD_XMC)) {
 		usb_pwr_level = GPIOF_OUT_INIT_HIGH;
 		beagle_dvi_device.reset_gpio = 129;
 		/*
