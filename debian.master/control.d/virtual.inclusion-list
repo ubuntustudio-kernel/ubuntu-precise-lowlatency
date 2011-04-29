@@ -88,6 +88,7 @@ fs/configfs/*
 fs/exportfs/*
 fs/fat/*
 fs/nls/nls_cp437.ko
+fs/nls/nls_iso8859-1.ko
 fs/isofs/*
 fs/cifs/*
 fs/xfs/*
