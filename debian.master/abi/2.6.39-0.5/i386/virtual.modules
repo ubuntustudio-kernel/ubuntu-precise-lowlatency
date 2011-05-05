@@ -41,9 +41,11 @@ async_tx
 async_xor
 atm
 authenc
+authencesn
 auth_rpcgss
 autofs4
 ax25
+bch
 binfmt_misc
 blowfish
 bonding
@@ -52,6 +54,7 @@ bridge
 bsd_comp
 btrfs
 BusLogic
+cachefiles
 camellia
 can
 can-bcm
@@ -135,7 +138,6 @@ erst-dbg
 esp4
 esp6
 evbug
-exportfs
 fat
 faulty
 fb_sys_fops
@@ -176,13 +178,23 @@ ipddp
 ip_gre
 ipip
 ip_queue
+ip_set
+ip_set_bitmap_ip
+ip_set_bitmap_ipmac
+ip_set_bitmap_port
+ip_set_hash_ip
+ip_set_hash_ipport
+ip_set_hash_ipportip
+ip_set_hash_ipportnet
+ip_set_hash_net
+ip_set_hash_netport
+ip_set_list_set
 iptable_filter
 iptable_mangle
 iptable_nat
 iptable_raw
 ip_tables
 iptable_security
-ipt_addrtype
 ipt_ah
 ipt_CLUSTERIP
 ipt_ecn
@@ -213,7 +225,6 @@ irda
 irlan
 irnet
 iscsi_tcp
-iscsi_trgt
 isofs
 joydev
 khazad
@@ -257,6 +268,7 @@ netconsole
 netrom
 nf_conntrack
 nf_conntrack_amanda
+nf_conntrack_broadcast
 nf_conntrack_ftp
 nf_conntrack_h323
 nf_conntrack_ipv4
@@ -271,6 +283,7 @@ nf_conntrack_proto_sctp
 nf_conntrack_proto_udplite
 nf_conntrack_sane
 nf_conntrack_sip
+nf_conntrack_snmp
 nf_conntrack_tftp
 nf_defrag_ipv4
 nf_defrag_ipv6
@@ -295,6 +308,7 @@ nfs_acl
 nfsd
 nf_tproxy_core
 nls_cp437
+nls_iso8859-1
 nvram
 oprofile
 output
@@ -339,16 +353,19 @@ salsa20_generic
 salsa20-i586
 sch_atm
 sch_cbq
+sch_choke
 sch_drr
 sch_dsmark
 sch_gred
 sch_hfsc
 sch_htb
 sch_ingress
+sch_mqprio
 sch_multiq
 sch_netem
 sch_prio
 sch_red
+sch_sfb
 sch_sfq
 sch_tbf
 sch_teql
@@ -407,6 +424,7 @@ tcp_westwood
 tcp_yeah
 tcrypt
 tea
+test-kstrtox
 tgr192
 tipc
 ts_bm
@@ -439,8 +457,8 @@ xcbc
 xen-evtchn
 xen-fbfront
 xenfs
+xen-gntalloc
 xen-gntdev
-xen-kbdfront
 xen-platform-pci
 xfrm4_mode_beet
 xfrm4_mode_transport
@@ -456,6 +474,8 @@ xfrm_user
 xfs
 xor
 x_tables
+xt_addrtype
+xt_AUDIT
 xt_CHECKSUM
 xt_CLASSIFY
 xt_cluster
@@ -468,6 +488,7 @@ xt_conntrack
 xt_cpu
 xt_CT
 xt_dccp
+xt_devgroup
 xt_dscp
 xt_DSCP
 xt_esp
@@ -500,6 +521,7 @@ xt_recent
 xts
 xt_sctp
 xt_SECMARK
+xt_set
 xt_socket
 xt_state
 xt_statistic
