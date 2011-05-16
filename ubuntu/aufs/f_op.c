@@ -67,7 +67,7 @@ static int aufs_open_nondir(struct inode *inode __maybe_unused,
 	int err;
 	struct super_block *sb;
 
-	AuDbg("%.*s, f_ flags 0x%x, f_mode 0x%x\n",
+	AuDbg("%.*s, f_flags 0x%x, f_mode 0x%x\n",
 	      AuDLNPair(file->f_dentry), vfsub_file_flags(file),
 	      file->f_mode);
 
@@ -225,7 +225,9 @@ static ssize_t au_do_aio(struct file *h_file, int rw, struct kiocb *kio,
 	if (func) {
 		file = kio->ki_filp;
 		kio->ki_filp = h_file;
+		lockdep_off();
 		err = func(kio, iov, nv, pos);
+		lockdep_on();
 		kio->ki_filp = file;
 	} else
 		/* currently there is no such fs */
@@ -568,6 +570,33 @@ out:
 /* very ugly approach */
 #include "mtx.h"
 
+static void au_fi_mmap_lock_and_sell(struct file *file)
+{
+	struct mutex *mtx;
+
+	FiMustWriteLock(file);
+
+	mtx = &au_fi(file)->fi_mmap;
+	mutex_lock(mtx);
+	mutex_release(&mtx->dep_map, /*nested*/0, _RET_IP_);
+}
+
+static void au_fi_mmap_buy(struct file *file)
+{
+	struct mutex *mtx;
+
+	mtx = &au_fi(file)->fi_mmap;
+	MtxMustLock(mtx);
+
+	mutex_set_owner(mtx);
+	mutex_acquire(&mtx->dep_map, /*subclass*/0, /*trylock*/0, _RET_IP_);
+}
+
+static void au_fi_mmap_unlock(struct file *file)
+{
+	mutex_unlock(&au_fi(file)->fi_mmap);
+}
+
 struct au_mmap_pre_args {
 	/* input */
 	struct file *file;
@@ -613,7 +642,8 @@ static int au_mmap_pre(struct file *file, struct vm_area_struct *vma,
 	*br = au_sbr(sb, bstart);
 	*h_file = au_hf_top(file);
 	get_file(*h_file);
-	au_fi_mmap_lock(file);
+	if (!*mmapped)
+		au_fi_mmap_lock_and_sell(file);
 
 out_unlock:
 	fi_write_unlock(file);
@@ -647,8 +677,8 @@ static int aufs_mmap(struct file *file, struct vm_area_struct *vma)
 		err = wkq_err;
 	if (unlikely(err))
 		goto out;
-	finfo = au_fi(file);
-	mutex_set_owner(&finfo->fi_mmap);
+	if (!args.mmapped)
+		au_fi_mmap_buy(file);
 
 	h_dentry = args.h_file->f_dentry;
 	if (!args.mmapped && au_test_fs_bad_mapping(h_dentry->d_sb)) {
@@ -667,6 +697,7 @@ static int aufs_mmap(struct file *file, struct vm_area_struct *vma)
 	err = PTR_ERR(h_vmop);
 	if (IS_ERR(h_vmop))
 		goto out_unlock;
+	finfo = au_fi(file);
 	AuDebugOn(args.mmapped && h_vmop != finfo->fi_hvmop);
 
 	vmop = (void *)au_dy_vmop(file, args.br, h_vmop);
@@ -695,7 +726,8 @@ static int aufs_mmap(struct file *file, struct vm_area_struct *vma)
 	fsstack_copy_attr_atime(file->f_dentry->d_inode, h_dentry->d_inode);
 
 out_unlock:
-	au_fi_mmap_unlock(file);
+	if (!args.mmapped)
+		au_fi_mmap_unlock(file);
 	fput(args.h_file);
 out:
 	return err;

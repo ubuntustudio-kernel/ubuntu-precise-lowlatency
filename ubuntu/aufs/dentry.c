@@ -62,7 +62,7 @@ struct dentry *au_lkup_one(struct qstr *name, struct dentry *h_parent,
 	h_nd.path.dentry = h_parent;
 	h_nd.path.mnt = br->br_mnt;
 
-	err = __lookup_one_len(name->name, &h_nd.last, NULL, name->len);
+	err = vfsub_name_hash(name->name, &h_nd.last, name->len);
 	h_dentry = ERR_PTR(err);
 	if (!err) {
 		path_get(&h_nd.path);

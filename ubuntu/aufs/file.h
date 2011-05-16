@@ -129,8 +129,6 @@ void au_set_h_fptr(struct file *file, aufs_bindex_t bindex,
 		   struct file *h_file);
 
 void au_update_figen(struct file *file);
-void au_fi_mmap_lock(struct file *file);
-void au_fi_mmap_unlock(struct file *file);
 struct au_fidir *au_fidir_alloc(struct super_block *sb);
 int au_fidir_realloc(struct au_finfo *finfo, int nbr);
 
