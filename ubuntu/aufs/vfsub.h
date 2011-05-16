@@ -30,8 +30,10 @@
 #include "debug.h"
 
 /* copied from linux/fs/internal.h */
+/* todo: BAD approach!! */
 DECLARE_BRLOCK(vfsmount_lock);
 extern void file_sb_list_del(struct file *f);
+extern spinlock_t inode_sb_list_lock;
 
 /* copied from linux/fs/file_table.c */
 DECLARE_LGLOCK(files_lglock);
@@ -107,6 +109,7 @@ int vfsub_kern_path(const char *name, unsigned int flags, struct path *path);
 struct dentry *vfsub_lookup_one_len(const char *name, struct dentry *parent,
 				    int len);
 struct dentry *vfsub_lookup_hash(struct nameidata *nd);
+int vfsub_name_hash(const char *name, struct qstr *this, int len);
 
 /* ---------------------------------------------------------------------- */
 
@@ -182,7 +185,9 @@ static inline loff_t vfsub_llseek(struct file *file, loff_t offset, int origin)
 {
 	loff_t err;
 
+	lockdep_off();
 	err = vfs_llseek(file, offset, origin);
+	lockdep_on();
 	return err;
 }
 
