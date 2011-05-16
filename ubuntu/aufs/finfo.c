@@ -26,7 +26,7 @@
 void au_hfput(struct au_hfile *hf, struct file *file)
 {
 	/* todo: direct access f_flags */
-	if (vfsub_file_flags(file) & vfsub_fmode_to_uint(FMODE_EXEC))
+	if (vfsub_file_flags(file) & __FMODE_EXEC)
 		allow_write_access(hf->hf_file);
 	fput(hf->hf_file);
 	hf->hf_file = NULL;
@@ -60,23 +60,6 @@ void au_update_figen(struct file *file)
 {
 	atomic_set(&au_fi(file)->fi_generation, au_digen(file->f_dentry));
 	/* smp_mb(); */ /* atomic_set */
-}
-
-/* ---------------------------------------------------------------------- */
-
-void au_fi_mmap_lock(struct file *file)
-{
-	FiMustWriteLock(file);
-	lockdep_off();
-	mutex_lock(&au_fi(file)->fi_mmap);
-	lockdep_on();
-}
-
-void au_fi_mmap_unlock(struct file *file)
-{
-	lockdep_off();
-	mutex_unlock(&au_fi(file)->fi_mmap);
-	lockdep_on();
 }
 
 /* ---------------------------------------------------------------------- */

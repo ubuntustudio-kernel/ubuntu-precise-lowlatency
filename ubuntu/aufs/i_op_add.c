@@ -453,6 +453,7 @@ static int au_cpup_or_link(struct dentry *src_dentry, struct au_link_args *a)
 		au_plink_append(inode, a->bdst, a->h_path.dentry);
 
 out:
+	AuTraceErr(err);
 	return err;
 }
 
@@ -492,7 +493,7 @@ int aufs_link(struct dentry *src_dentry, struct inode *dir,
 		goto out_unlock;
 
 	a->src_parent = dget_parent(src_dentry);
-	wr_dir_args.force_btgt = au_dbstart(src_dentry);
+	wr_dir_args.force_btgt = au_ibstart(inode);
 
 	di_write_lock_parent(a->parent);
 	wr_dir_args.force_btgt = au_wbr(dentry, wr_dir_args.force_btgt);
@@ -507,21 +508,29 @@ int aufs_link(struct dentry *src_dentry, struct inode *dir,
 	a->bdst = au_dbstart(dentry);
 	a->h_path.dentry = au_h_dptr(dentry, a->bdst);
 	a->h_path.mnt = au_sbr_mnt(sb, a->bdst);
-	a->bsrc = au_dbstart(src_dentry);
+	a->bsrc = au_ibstart(inode);
+	h_src_dentry = au_h_d_alias(src_dentry, a->bsrc);
+	if (!h_src_dentry) {
+		a->bsrc = au_dbstart(src_dentry);
+		h_src_dentry = au_h_d_alias(src_dentry, a->bsrc);
+		AuDebugOn(!h_src_dentry);
+	} else if (IS_ERR(h_src_dentry))
+		goto out_parent;
+
 	if (au_opt_test(au_mntflags(sb), PLINK)) {
 		if (a->bdst < a->bsrc
 		    /* && h_src_dentry->d_sb != a->h_path.dentry->d_sb */)
 			err = au_cpup_or_link(src_dentry, a);
-		else {
-			h_src_dentry = au_h_dptr(src_dentry, a->bdst);
+		else
 			err = vfsub_link(h_src_dentry, au_pinned_h_dir(&a->pin),
 					 &a->h_path);
-		}
+		dput(h_src_dentry);
 	} else {
 		/*
 		 * copyup src_dentry to the branch we process,
 		 * and then link(2) to it.
 		 */
+		dput(h_src_dentry);
 		if (a->bdst < a->bsrc
 		    /* && h_src_dentry->d_sb != a->h_path.dentry->d_sb */) {
 			au_unpin(&a->pin);

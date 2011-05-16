@@ -20,6 +20,7 @@
  * branch management
  */
 
+#include <linux/compat.h>
 #include <linux/file.h>
 #include <linux/statfs.h>
 #include "aufs.h"
@@ -530,6 +531,18 @@ out:
 		pr_info(fmt, ##__VA_ARGS__); \
 } while (0)
 
+static int au_test_ibusy(struct inode *inode, aufs_bindex_t bstart,
+			 aufs_bindex_t bend)
+{
+	return (inode && !S_ISDIR(inode->i_mode)) || bstart == bend;
+}
+
+static int au_test_dbusy(struct dentry *dentry, aufs_bindex_t bstart,
+			 aufs_bindex_t bend)
+{
+	return au_test_ibusy(dentry->d_inode, bstart, bend);
+}
+
 /*
  * test if the branch is deletable or not.
  */
@@ -541,7 +554,6 @@ static int test_dentry_busy(struct dentry *root, aufs_bindex_t bindex,
 	struct au_dcsub_pages dpages;
 	struct au_dpage *dpage;
 	struct dentry *d;
-	struct inode *inode;
 
 	err = au_dpages_init(&dpages, GFP_NOFS);
 	if (unlikely(err))
@@ -578,14 +590,12 @@ static int test_dentry_busy(struct dentry *root, aufs_bindex_t bindex,
 			}
 
 			/* AuDbgDentry(d); */
-			inode = d->d_inode;
 			bstart = au_dbstart(d);
 			bend = au_dbend(d);
 			if (bstart <= bindex
 			    && bindex <= bend
 			    && au_h_dptr(d, bindex)
-			    && ((inode && !S_ISDIR(inode->i_mode))
-				|| bstart == bend)) {
+			    && au_test_dbusy(d, bstart, bend)) {
 				err = -EBUSY;
 				AuVerbose(verbose, "busy %.*s\n", AuDLNPair(d));
 				AuDbgDentry(d);
@@ -640,7 +650,7 @@ static int test_inode_busy(struct super_block *sb, aufs_bindex_t bindex,
 		if (bstart <= bindex
 		    && bindex <= bend
 		    && au_h_iptr(i, bindex)
-		    && (!S_ISDIR(i->i_mode) || bstart == bend)) {
+		    && au_test_ibusy(i, bstart, bend)) {
 			err = -EBUSY;
 			AuVerbose(verbose, "busy i%lu\n", i->i_ino);
 			AuDbgInode(i);
@@ -842,6 +852,77 @@ out:
 
 /* ---------------------------------------------------------------------- */
 
+static int au_ibusy(struct super_block *sb, struct aufs_ibusy __user *arg)
+{
+	int err;
+	aufs_bindex_t bstart, bend;
+	struct aufs_ibusy ibusy;
+	struct inode *inode, *h_inode;
+
+	err = -EPERM;
+	if (unlikely(!capable(CAP_SYS_ADMIN)))
+		goto out;
+
+	err = copy_from_user(&ibusy, arg, sizeof(ibusy));
+	if (!err)
+		err = !access_ok(VERIFY_WRITE, &arg->h_ino, sizeof(arg->h_ino));
+	if (unlikely(err)) {
+		err = -EFAULT;
+		AuTraceErr(err);
+		goto out;
+	}
+
+	err = -EINVAL;
+	si_read_lock(sb, AuLock_FLUSH);
+	if (unlikely(ibusy.bindex < 0 || ibusy.bindex > au_sbend(sb)))
+		goto out_unlock;
+
+	err = 0;
+	ibusy.h_ino = 0; /* invalid */
+	inode = ilookup(sb, ibusy.ino);
+	if (!inode
+	    || inode->i_ino == AUFS_ROOT_INO
+	    || is_bad_inode(inode))
+		goto out_unlock;
+
+	ii_read_lock_child(inode);
+	bstart = au_ibstart(inode);
+	bend = au_ibend(inode);
+	if (bstart <= ibusy.bindex && ibusy.bindex <= bend) {
+		h_inode = au_h_iptr(inode, ibusy.bindex);
+		if (h_inode && au_test_ibusy(inode, bstart, bend))
+			ibusy.h_ino = h_inode->i_ino;
+	}
+	ii_read_unlock(inode);
+	iput(inode);
+
+out_unlock:
+	si_read_unlock(sb);
+	if (!err) {
+		err = __put_user(ibusy.h_ino, &arg->h_ino);
+		if (unlikely(err)) {
+			err = -EFAULT;
+			AuTraceErr(err);
+		}
+	}
+out:
+	return err;
+}
+
+long au_ibusy_ioctl(struct file *file, unsigned long arg)
+{
+	return au_ibusy(file->f_dentry->d_sb, (void __user *)arg);
+}
+
+#ifdef CONFIG_COMPAT
+long au_ibusy_compat_ioctl(struct file *file, unsigned long arg)
+{
+	return au_ibusy(file->f_dentry->d_sb, compat_ptr(arg));
+}
+#endif
+
+/* ---------------------------------------------------------------------- */
+
 /*
  * change a branch permission
  */
@@ -911,11 +992,16 @@ static void au_farray_free(struct file **a, unsigned long long max)
 static int au_br_mod_files_ro(struct super_block *sb, aufs_bindex_t bindex)
 {
 	int err, do_warn;
+	unsigned int mnt_flags;
 	unsigned long long ull, max;
 	aufs_bindex_t br_id;
+	unsigned char verbose;
 	struct file *file, *hf, **array;
 	struct inode *inode;
 	struct au_hfile *hfile;
+
+	mnt_flags = au_mntflags(sb);
+	verbose = !!au_opt_test(mnt_flags, VERBOSE);
 
 	array = au_farray_alloc(sb, &max);
 	err = PTR_ERR(array);
@@ -931,6 +1017,8 @@ static int au_br_mod_files_ro(struct super_block *sb, aufs_bindex_t bindex)
 		fi_read_lock(file);
 		if (unlikely(au_test_mmapped(file))) {
 			err = -EBUSY;
+			AuVerbose(verbose, "mmapped %.*s\n",
+				  AuDLNPair(file->f_dentry));
 			AuDbgFile(file);
 			FiMustNoWaiters(file);
 			fi_read_unlock(file);

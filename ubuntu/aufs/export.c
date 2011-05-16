@@ -242,13 +242,15 @@ static struct dentry *decode_by_ino(struct super_block *sb, ino_t ino,
 		spin_unlock(&inode->i_lock);
 	}
 	if (unlikely(dentry && au_digen_test(dentry, sigen))) {
+		/* need to refresh */
 		dput(dentry);
-		dentry = ERR_PTR(-ESTALE);
+		dentry = NULL;
 	}
 
 out_iput:
 	iput(inode);
 out:
+	AuTraceErrPtr(dentry);
 	return dentry;
 }
 
