@@ -24,7 +24,7 @@
 #include <linux/limits.h>
 #include <linux/types.h>
 
-#define AUFS_VERSION	"2.1-standalone.tree-38-rcN-20110207"
+#define AUFS_VERSION	"2.1-standalone.tree-39-rcN-20110418"
 
 /* todo? move this to linux-2.6.19/include/magic.h */
 #define AUFS_SUPER_MAGIC	('a' << 24 | 'u' << 16 | 'f' << 8 | 's')
@@ -118,7 +118,10 @@ enum {
 	AuCtl_RDU_INO,
 
 	/* pathconf wrapper */
-	AuCtl_WBR_FD
+	AuCtl_WBR_FD,
+
+	/* busy inode */
+	AuCtl_IBUSY
 };
 
 /* borrowed from linux/include/linux/kernel.h */
@@ -189,9 +192,15 @@ struct aufs_rdu {
 	struct au_rdu_cookie	cookie;
 } __aligned(8);
 
+struct aufs_ibusy {
+	__u64		ino, h_ino;
+	__s16		bindex;
+} __aligned(8);
+
 #define AuCtlType		'A'
 #define AUFS_CTL_RDU		_IOWR(AuCtlType, AuCtl_RDU, struct aufs_rdu)
 #define AUFS_CTL_RDU_INO	_IOWR(AuCtlType, AuCtl_RDU_INO, struct aufs_rdu)
 #define AUFS_CTL_WBR_FD		_IO(AuCtlType, AuCtl_WBR_FD)
+#define AUFS_CTL_IBUSY		_IOWR(AuCtlType, AuCtl_IBUSY, struct aufs_ibusy)
 
 #endif /* __AUFS_TYPE_H__ */
