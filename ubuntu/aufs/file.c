@@ -66,7 +66,7 @@ struct file *au_h_open(struct dentry *dentry, aufs_bindex_t bindex, int flags,
 	sb = dentry->d_sb;
 	br = au_sbr(sb, bindex);
 	h_file = ERR_PTR(-EACCES);
-	exec_flag = flags & vfsub_fmode_to_uint(FMODE_EXEC);
+	exec_flag = flags & __FMODE_EXEC;
 	if (exec_flag && (br->br_mnt->mnt_flags & MNT_NOEXEC))
 		goto out;
 
@@ -633,8 +633,6 @@ static int aufs_write_end(struct file *file, struct address_space *mapping,
 { AuUnsupport(); return 0; }
 static int aufs_writepage(struct page *page, struct writeback_control *wbc)
 { AuUnsupport(); return 0; }
-static void aufs_sync_page(struct page *page)
-{ AuUnsupport(); }
 
 static int aufs_set_page_dirty(struct page *page)
 { AuUnsupport(); return 0; }
@@ -662,7 +660,6 @@ const struct address_space_operations aufs_aop = {
 	.get_xip_mem		= aufs_get_xip_mem,
 #ifdef CONFIG_AUFS_DEBUG
 	.writepage		= aufs_writepage,
-	.sync_page		= aufs_sync_page,
 	/* no writepages, because of writepage */
 	.set_page_dirty		= aufs_set_page_dirty,
 	/* no readpages, because of readpage */

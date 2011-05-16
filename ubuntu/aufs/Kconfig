@@ -72,7 +72,7 @@ endchoice
 
 config AUFS_EXPORT
 	bool "NFS-exportable aufs"
-	depends on (AUFS_FS = y && EXPORTFS = y) || (AUFS_FS = m && EXPORTFS)
+	depends on EXPORTFS
 	help
 	If you want to export your mounted aufs via NFS, then enable this
 	option. There are several requirements for this configuration.
