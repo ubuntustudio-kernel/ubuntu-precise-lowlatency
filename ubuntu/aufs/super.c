@@ -450,17 +450,21 @@ static unsigned long long au_iarray_cb(void *a,
 	n = 0;
 	p = a;
 	head = arg;
-	spin_lock(&inode_lock);
+	spin_lock(&inode_sb_list_lock);
 	list_for_each_entry(inode, head, i_sb_list) {
 		if (!is_bad_inode(inode)
 		    && au_ii(inode)->ii_bstart >= 0) {
-			au_igrab(inode);
-			*p++ = inode;
-			n++;
-			AuDebugOn(n > max);
+			spin_lock(&inode->i_lock);
+			if (atomic_read(&inode->i_count)) {
+				au_igrab(inode);
+				*p++ = inode;
+				n++;
+				AuDebugOn(n > max);
+			}
+			spin_unlock(&inode->i_lock);
 		}
 	}
-	spin_unlock(&inode_lock);
+	spin_unlock(&inode_sb_list_lock);
 
 	return n;
 }

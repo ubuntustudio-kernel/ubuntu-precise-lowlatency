@@ -178,7 +178,6 @@ static void dy_aop(struct au_dykey *key, const void *h_op,
 
 	DySetAop(writepage);
 	DySetAopForce(readpage);	/* force */
-	DySetAop(sync_page);
 	DySetAop(writepages);
 	DySetAop(set_page_dirty);
 	DySetAop(readpages);

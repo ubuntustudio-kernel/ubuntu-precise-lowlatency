@@ -122,6 +122,7 @@ struct au_vdir;
 void au_dpri_vdir(struct au_vdir *vdir);
 struct inode;
 void au_dpri_inode(struct inode *inode);
+void au_dpri_dalias(struct inode *inode);
 void au_dpri_dentry(struct dentry *dentry);
 struct file;
 void au_dpri_file(struct file *filp);
@@ -154,6 +155,11 @@ void au_debug_sbinfo_init(struct au_sbinfo *sbinfo);
 #define AuDbgInode(i) do { \
 	AuDbg(#i "\n"); \
 	au_dpri_inode(i); \
+} while (0)
+
+#define AuDbgDAlias(i) do { \
+	AuDbg(#i "\n"); \
+	au_dpri_dalias(i); \
 } while (0)
 
 #define AuDbgDentry(d) do { \
@@ -210,6 +216,7 @@ AuStubVoid(au_debug_sbinfo_init, struct au_sbinfo *sbinfo)
 #define AuDbgWhlist(w)		do {} while (0)
 #define AuDbgVdir(v)		do {} while (0)
 #define AuDbgInode(i)		do {} while (0)
+#define AuDbgDAlias(i)		do {} while (0)
 #define AuDbgDentry(d)		do {} while (0)
 #define AuDbgFile(f)		do {} while (0)
 #define AuDbgSb(sb)		do {} while (0)
