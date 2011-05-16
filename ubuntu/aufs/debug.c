@@ -133,6 +133,16 @@ void au_dpri_inode(struct inode *inode)
 			     iinfo->ii_hinode[0 + bindex].hi_whdentry);
 }
 
+void au_dpri_dalias(struct inode *inode)
+{
+	struct dentry *d;
+
+	spin_lock(&inode->i_lock);
+	list_for_each_entry(d, &inode->i_dentry, d_alias)
+		au_dpri_dentry(d);
+	spin_unlock(&inode->i_lock);
+}
+
 static int do_pri_dentry(aufs_bindex_t bindex, struct dentry *dentry)
 {
 	struct dentry *wh = NULL;

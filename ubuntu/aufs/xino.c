@@ -169,7 +169,7 @@ struct file *au_xino_create2(struct file *base_file, struct file *copy_src)
 	path.mnt = base_file->f_vfsmnt;
 	file = vfsub_dentry_open(&path,
 				 O_RDWR | O_CREAT | O_EXCL | O_LARGEFILE
-				 /* | FMODE_NONOTIFY */);
+				 /* | __FMODE_NONOTIFY */);
 	if (IS_ERR(file)) {
 		pr_err("%.*s open err %ld\n", AuLNPair(name), PTR_ERR(file));
 		goto out_dput;
@@ -686,7 +686,7 @@ struct file *au_xino_create(struct super_block *sb, char *fname, int silent)
 	 * when a user specified the xino, we cannot get au_hdir to be ignored.
 	 */
 	file = vfsub_filp_open(fname, O_RDWR | O_CREAT | O_EXCL | O_LARGEFILE
-			       /* | FMODE_NONOTIFY */,
+			       /* | __FMODE_NONOTIFY */,
 			       S_IRUGO | S_IWUGO);
 	if (IS_ERR(file)) {
 		if (!silent)
