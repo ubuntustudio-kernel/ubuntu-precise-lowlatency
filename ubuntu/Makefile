@@ -28,7 +28,7 @@ obj-m				+= rfkill/
 ##
 ##
 ##
-obj-$(CONFIG_FSAM7400)		+= fsam7400/
+#obj-$(CONFIG_FSAM7400)		+= fsam7400/
 ##
 ##
 ##
