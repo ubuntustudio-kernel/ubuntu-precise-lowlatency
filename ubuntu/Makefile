@@ -24,7 +24,7 @@ obj-$(CONFIG_NDISWRAPPER)	+= ndiswrapper/
 ##
 ##
 ##
-obj-m				+= rfkill/
+#obj-m				+= rfkill/
 ##
 ##
 ##
