@@ -32,7 +32,7 @@ obj-m				+= rfkill/
 ##
 ##
 ##
-obj-$(CONFIG_OMNIBOOK)		+= omnibook/
+#obj-$(CONFIG_OMNIBOOK)		+= omnibook/
 ##
 ##
 ##
