@@ -284,11 +284,11 @@ aty128fb
 atyfb
 au0828
 au8522
+aufs
 authenc
 authencesn
 auth_rpcgss
 autofs4
-av5100
 avma1_cs
 avm_cs
 avmfritz
@@ -672,6 +672,7 @@ e1000
 e1000e
 e752x_edac
 earth-pt1
+easycap
 eata
 ebt_802_3
 ebtable_broute
@@ -782,7 +783,6 @@ fpu
 freevxfs
 friq
 frpw
-fsam7400
 fscache
 fschmd
 ft1000
@@ -1755,7 +1755,6 @@ ocfs2_stack_user
 old_belkin-sir
 olympic
 omfs
-omnibook
 omninet
 on20
 on26
@@ -1846,7 +1845,6 @@ pata_sil680
 pata_sl82c105
 pata_triflex
 pata_via
-pbe5
 pc87360
 pc87413_wdt
 pc87427

@@ -3641,6 +3641,7 @@ EXPORT_SYMBOL vmlinux 0x0862be5d	mmc_register_driver
 EXPORT_SYMBOL vmlinux 0x08767c10	genl_unregister_mc_group
 EXPORT_SYMBOL vmlinux 0x087c80f1	page_readlink
 EXPORT_SYMBOL vmlinux 0x0897287b	acpi_disable_all_gpes
+EXPORT_SYMBOL vmlinux 0x089b459f	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x08a7f5b2	ilookup
 EXPORT_SYMBOL vmlinux 0x08bae2e0	qdisc_tree_decrease_qlen
 EXPORT_SYMBOL vmlinux 0x08d66a3a	warn_slowpath_fmt

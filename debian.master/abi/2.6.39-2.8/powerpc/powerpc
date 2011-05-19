@@ -4009,6 +4009,7 @@ EXPORT_SYMBOL vmlinux 0x2f997826	udp_sendmsg
 EXPORT_SYMBOL vmlinux 0x2fd5fd4d	gnet_stats_start_copy_compat
 EXPORT_SYMBOL vmlinux 0x2fd8828b	netdev_fix_features
 EXPORT_SYMBOL vmlinux 0x2ff5deed	simple_fill_super
+EXPORT_SYMBOL vmlinux 0x3006e61a	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x300efae4	tcp_v4_md5_do_del
 EXPORT_SYMBOL vmlinux 0x30226ddf	agp_device_command
 EXPORT_SYMBOL vmlinux 0x3028e855	init_timer_key

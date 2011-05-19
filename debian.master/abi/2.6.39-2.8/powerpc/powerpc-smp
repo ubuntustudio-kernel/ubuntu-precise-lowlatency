@@ -6054,6 +6054,7 @@ EXPORT_SYMBOL vmlinux 0xc52f5714	fb_videomode_to_var
 EXPORT_SYMBOL vmlinux 0xc54c9382	netdev_err
 EXPORT_SYMBOL vmlinux 0xc5534d64	ioread16
 EXPORT_SYMBOL vmlinux 0xc554995b	ps2_end_command
+EXPORT_SYMBOL vmlinux 0xc55c2a9d	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0xc55c3e98	simple_lookup
 EXPORT_SYMBOL vmlinux 0xc56cd47d	i2c_master_recv
 EXPORT_SYMBOL vmlinux 0xc56d8cb9	netdev_set_bond_master

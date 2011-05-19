@@ -2609,6 +2609,7 @@ EXPORT_SYMBOL vmlinux 0x2fa596a4	unregister_nls
 EXPORT_SYMBOL vmlinux 0x2fa7e1fa	kobject_del
 EXPORT_SYMBOL vmlinux 0x2fb0d5b3	release_sock
 EXPORT_SYMBOL vmlinux 0x2fda47da	nla_reserve_nohdr
+EXPORT_SYMBOL vmlinux 0x3006e61a	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x3009cc01	md_register_thread
 EXPORT_SYMBOL vmlinux 0x3028e855	init_timer_key
 EXPORT_SYMBOL vmlinux 0x305f6f92	sk_alloc

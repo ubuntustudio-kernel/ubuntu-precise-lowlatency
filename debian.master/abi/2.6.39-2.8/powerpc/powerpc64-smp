@@ -6174,6 +6174,7 @@ EXPORT_SYMBOL vmlinux 0xc509b296	ide_set_handler
 EXPORT_SYMBOL vmlinux 0xc526a09c	mdiobus_register
 EXPORT_SYMBOL vmlinux 0xc52f5714	fb_videomode_to_var
 EXPORT_SYMBOL vmlinux 0xc5534d64	ioread16
+EXPORT_SYMBOL vmlinux 0xc55c2a9d	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0xc5612fc5	xfrm_init_replay
 EXPORT_SYMBOL vmlinux 0xc591cafd	vmap
 EXPORT_SYMBOL vmlinux 0xc5a6cd7e	jbd2_journal_lock_updates

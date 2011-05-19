@@ -182,6 +182,7 @@ aty128fb
 atyfb
 au0828
 au8522
+aufs
 authenc
 authencesn
 auth_rpcgss
@@ -530,6 +531,7 @@ e100
 e1000
 e1000e
 earth-pt1
+easycap
 eata
 ebt_802_3
 ebtable_broute

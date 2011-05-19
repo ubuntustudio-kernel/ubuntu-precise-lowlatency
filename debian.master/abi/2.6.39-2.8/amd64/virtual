@@ -3620,6 +3620,7 @@ EXPORT_SYMBOL vmlinux 0x0833a640	blk_queue_softirq_done
 EXPORT_SYMBOL vmlinux 0x08696d06	napi_gro_flush
 EXPORT_SYMBOL vmlinux 0x0872771a	d_validate
 EXPORT_SYMBOL vmlinux 0x0897287b	acpi_disable_all_gpes
+EXPORT_SYMBOL vmlinux 0x089b459f	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x08af15e5	netpoll_send_skb_on_dev
 EXPORT_SYMBOL vmlinux 0x08b662d5	security_inode_notifysecctx
 EXPORT_SYMBOL vmlinux 0x08bb5e5c	set_binfmt

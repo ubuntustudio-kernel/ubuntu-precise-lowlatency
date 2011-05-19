@@ -3747,6 +3747,7 @@ EXPORT_SYMBOL vmlinux 0x08666fe1	bio_integrity_endio
 EXPORT_SYMBOL vmlinux 0x086760ad	unregister_tcf_proto_ops
 EXPORT_SYMBOL vmlinux 0x086ac726	register_console
 EXPORT_SYMBOL vmlinux 0x0897287b	acpi_disable_all_gpes
+EXPORT_SYMBOL vmlinux 0x089b459f	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x08a9327f	xfrm_state_register_afinfo
 EXPORT_SYMBOL vmlinux 0x08bc3028	unlock_new_inode
 EXPORT_SYMBOL vmlinux 0x08c817f8	mmc_regulator_set_ocr

@@ -3089,6 +3089,7 @@ EXPORT_SYMBOL vmlinux 0x2fcb91b1	register_quota_format
 EXPORT_SYMBOL vmlinux 0x2fd4db0b	rfkill_blocked
 EXPORT_SYMBOL vmlinux 0x2fe4c815	cap_file_mmap
 EXPORT_SYMBOL vmlinux 0x2ff8fb1b	aio_complete
+EXPORT_SYMBOL vmlinux 0x3006e61a	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x3028e855	init_timer_key
 EXPORT_SYMBOL vmlinux 0x304707bb	no_llseek
 EXPORT_SYMBOL vmlinux 0x30536940	scsi_prep_return

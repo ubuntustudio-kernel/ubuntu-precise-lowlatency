@@ -3762,6 +3762,7 @@ EXPORT_SYMBOL vmlinux 0x0841e02b	tr_type_trans
 EXPORT_SYMBOL vmlinux 0x08763f84	security_path_rmdir
 EXPORT_SYMBOL vmlinux 0x08835f07	scsi_device_get
 EXPORT_SYMBOL vmlinux 0x0897287b	acpi_disable_all_gpes
+EXPORT_SYMBOL vmlinux 0x089b459f	inode_sb_list_lock
 EXPORT_SYMBOL vmlinux 0x08ae0def	scsi_target_quiesce
 EXPORT_SYMBOL vmlinux 0x08c2eff2	thermal_zone_bind_cooling_device
 EXPORT_SYMBOL vmlinux 0x08d66a3a	warn_slowpath_fmt
