@@ -828,6 +828,7 @@ lirc_ttusbir
 lirc_zilog
 lis3lv02d
 lis3lv02d_i2c
+llc2
 lm8323
 lnbp21
 lockd
