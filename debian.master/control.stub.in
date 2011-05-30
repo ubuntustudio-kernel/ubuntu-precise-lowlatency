@@ -12,7 +12,7 @@ Package: SRCPKGNAME-source-PKGVER
 Architecture: all
 Section: devel
 Priority: optional
-Provides: SRCPKGNAME-source, SRCPKGNAME-source-2.6
+Provides: SRCPKGNAME-source, SRCPKGNAME-source-3.0
 Depends: ${misc:Depends}, binutils, bzip2, coreutils | fileutils (>= 4.0)
 Recommends: libc-dev, gcc, make
 Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
@@ -36,8 +36,8 @@ Architecture: all
 Section: doc
 Priority: optional
 Depends: ${misc:Depends}
-Conflicts: SRCPKGNAME-doc-2.6
-Replaces: SRCPKGNAME-doc-2.6
+Conflicts: SRCPKGNAME-doc-3.0
+Replaces: SRCPKGNAME-doc-3.0
 Description: Linux kernel specific documentation for version PKGVER
  This package provides the various documents in the PKGVER kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
@@ -60,7 +60,7 @@ Architecture: all
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
-Provides: SRCPKGNAME-headers, SRCPKGNAME-headers-2.6
+Provides: SRCPKGNAME-headers, SRCPKGNAME-headers-3.0
 Description: Header files related to Linux kernel version PKGVER
  This package provides kernel header files for version PKGVER, for sites
  that want the latest kernel headers. Please read
