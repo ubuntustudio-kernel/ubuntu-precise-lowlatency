@@ -753,6 +753,8 @@ EXPORT_SYMBOL drivers/net/irda/sir-dev 0xa2ff2514	sirdev_get_instance
 EXPORT_SYMBOL drivers/net/irda/sir-dev 0xa5919e44	sirdev_raw_write
 EXPORT_SYMBOL drivers/net/irda/sir-dev 0xb4d630d8	sirdev_write_complete
 EXPORT_SYMBOL drivers/net/irda/sir-dev 0xbb5c006b	irda_unregister_dongle
+EXPORT_SYMBOL drivers/net/phy/mdio-bitbang 0x3dc89ef5	free_mdio_bitbang
+EXPORT_SYMBOL drivers/net/phy/mdio-bitbang 0xcc422eb9	alloc_mdio_bitbang
 EXPORT_SYMBOL drivers/net/pppox 0x18791d0f	pppox_ioctl
 EXPORT_SYMBOL drivers/net/pppox 0x66d826e3	pppox_unbind_sock
 EXPORT_SYMBOL drivers/net/pppox 0x89693164	register_pppox_proto
@@ -1239,6 +1241,8 @@ EXPORT_SYMBOL drivers/video/backlight/generic_bl 0xc86baa7c	corgibl_limit_intens
 EXPORT_SYMBOL drivers/video/backlight/lcd 0x6199d142	lcd_device_register
 EXPORT_SYMBOL drivers/video/backlight/lcd 0xc132712a	lcd_device_unregister
 EXPORT_SYMBOL drivers/video/mb862xx/mb862xxfb_accel 0x3c0db6b4	mb862xxfb_init_accel
+EXPORT_SYMBOL drivers/video/output 0x0aea2157	video_output_register
+EXPORT_SYMBOL drivers/video/output 0x67cf3b9b	video_output_unregister
 EXPORT_SYMBOL drivers/video/syscopyarea 0xd71d889a	sys_copyarea
 EXPORT_SYMBOL drivers/video/sysfillrect 0x0fc71f73	sys_fillrect
 EXPORT_SYMBOL drivers/video/sysimgblt 0xc31bf437	sys_imageblit
@@ -2813,7 +2817,6 @@ EXPORT_SYMBOL vmlinux 0x3d845707	netif_carrier_off
 EXPORT_SYMBOL vmlinux 0x3d9f370c	__tracepoint_kmalloc_node
 EXPORT_SYMBOL vmlinux 0x3da32865	md_check_no_bitmap
 EXPORT_SYMBOL vmlinux 0x3daa51cd	cfb_imageblit
-EXPORT_SYMBOL vmlinux 0x3dc89ef5	free_mdio_bitbang
 EXPORT_SYMBOL vmlinux 0x3dcb88a0	irq_set_handler_data
 EXPORT_SYMBOL vmlinux 0x3dd13fed	nonseekable_open
 EXPORT_SYMBOL vmlinux 0x3de24ee2	xfrm_lookup
@@ -4754,7 +4757,6 @@ EXPORT_SYMBOL vmlinux 0xcc230d2a	insert_inode_locked
 EXPORT_SYMBOL vmlinux 0xcc248d26	serial8250_suspend_port
 EXPORT_SYMBOL vmlinux 0xcc300a62	netdev_set_master
 EXPORT_SYMBOL vmlinux 0xcc36f32e	fb_unregister_client
-EXPORT_SYMBOL vmlinux 0xcc422eb9	alloc_mdio_bitbang
 EXPORT_SYMBOL vmlinux 0xcc5005fe	msleep_interruptible
 EXPORT_SYMBOL vmlinux 0xcc53ff21	param_get_string
 EXPORT_SYMBOL vmlinux 0xcc7fa952	local_bh_enable_ip

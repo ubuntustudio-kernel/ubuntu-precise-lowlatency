@@ -2160,6 +2160,8 @@ EXPORT_SYMBOL drivers/ssb/ssb 0xe7f803b5	ssb_bus_powerup
 EXPORT_SYMBOL drivers/ssb/ssb 0xf7256316	ssb_bus_resume
 EXPORT_SYMBOL drivers/ssb/ssb 0xf813b579	ssb_device_enable
 EXPORT_SYMBOL drivers/staging/altera-stapl/altera-stapl 0x71ce2d3d	altera_init
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x947c8cec	bcmsdh_probe
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x9b992292	bcmsdh_remove
 EXPORT_SYMBOL drivers/staging/cxd2099/cxd2099 0x13c52220	cxd2099_attach
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x0544bfd3	ieee80211_get_beacon_rsl
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x0a126f93	DOT11D_GetMaxTxPwrInDbm

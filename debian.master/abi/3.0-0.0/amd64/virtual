@@ -1446,6 +1446,8 @@ EXPORT_SYMBOL drivers/net/mdio 0xc6b1163f	mdio45_links_ok
 EXPORT_SYMBOL drivers/net/mlx4/mlx4_core 0x5a505697	mlx4_release_eq
 EXPORT_SYMBOL drivers/net/mlx4/mlx4_core 0x7279684f	mlx4_assign_eq
 EXPORT_SYMBOL drivers/net/mlx4/mlx4_core 0xeeadbbf5	mlx4_test_interrupts
+EXPORT_SYMBOL drivers/net/phy/mdio-bitbang 0x374569f5	alloc_mdio_bitbang
+EXPORT_SYMBOL drivers/net/phy/mdio-bitbang 0x43dd118f	free_mdio_bitbang
 EXPORT_SYMBOL drivers/net/pppox 0x5918c6ca	pppox_ioctl
 EXPORT_SYMBOL drivers/net/pppox 0x605468e5	pppox_unbind_sock
 EXPORT_SYMBOL drivers/net/pppox 0x80a2a089	register_pppox_proto
@@ -2079,6 +2081,8 @@ EXPORT_SYMBOL drivers/ssb/ssb 0xd8f585e1	ssb_clockspeed
 EXPORT_SYMBOL drivers/ssb/ssb 0xeafd1021	ssb_bus_resume
 EXPORT_SYMBOL drivers/ssb/ssb 0xf3dec666	ssb_pcihost_register
 EXPORT_SYMBOL drivers/staging/altera-stapl/altera-stapl 0x918d2319	altera_init
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0xb6ab23de	bcmsdh_remove
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0xd7877e72	bcmsdh_probe
 EXPORT_SYMBOL drivers/staging/comedi/comedi 0x04251cbb	comedi_error
 EXPORT_SYMBOL drivers/staging/comedi/comedi 0x0cd330f4	range_unknown
 EXPORT_SYMBOL drivers/staging/comedi/comedi 0x2bf9e17f	comedi_buf_read_alloc
@@ -3505,6 +3509,13 @@ EXPORT_SYMBOL sound/usb/snd-usbmidi-lib 0x158f5b7e	snd_usbmidi_create
 EXPORT_SYMBOL sound/usb/snd-usbmidi-lib 0x16756dc0	snd_usbmidi_input_start
 EXPORT_SYMBOL sound/usb/snd-usbmidi-lib 0x63343b1d	snd_usbmidi_input_stop
 EXPORT_SYMBOL sound/usb/snd-usbmidi-lib 0xd9d2bb03	snd_usbmidi_disconnect
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x15cd3d57	dm_mem_cache_shrink
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x2dd69557	dm_mem_cache_client_create
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x4da43adf	dm_mem_cache_free
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x59d390aa	dm_mem_cache_alloc
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x71501c45	dm_mem_cache_client_destroy
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0x920a7a41	dm_message_parse
+EXPORT_SYMBOL ubuntu/dm-raid4-5/dm-raid45 0xd377be28	dm_mem_cache_grow
 EXPORT_SYMBOL vmlinux 0x00000000	softirq_work_list
 EXPORT_SYMBOL vmlinux 0x001438a4	dev_mc_init
 EXPORT_SYMBOL vmlinux 0x001592ae	ihold
@@ -4320,7 +4331,6 @@ EXPORT_SYMBOL vmlinux 0x36d03c05	xfrm_lookup
 EXPORT_SYMBOL vmlinux 0x36e360e3	__hw_addr_add_multiple
 EXPORT_SYMBOL vmlinux 0x3701a196	csum_partial_copy_to_user
 EXPORT_SYMBOL vmlinux 0x3744cf36	vmalloc_to_pfn
-EXPORT_SYMBOL vmlinux 0x374569f5	alloc_mdio_bitbang
 EXPORT_SYMBOL vmlinux 0x3769c949	keyring_clear
 EXPORT_SYMBOL vmlinux 0x377bfc49	pci_find_parent_resource
 EXPORT_SYMBOL vmlinux 0x37846070	vmtruncate
@@ -4520,7 +4530,6 @@ EXPORT_SYMBOL vmlinux 0x43a0458b	blk_start_plug
 EXPORT_SYMBOL vmlinux 0x43a7e9f0	phy_driver_unregister
 EXPORT_SYMBOL vmlinux 0x43d479f6	fb_is_primary_device
 EXPORT_SYMBOL vmlinux 0x43d5450f	test_set_page_writeback
-EXPORT_SYMBOL vmlinux 0x43dd118f	free_mdio_bitbang
 EXPORT_SYMBOL vmlinux 0x43e6de1c	lookup_one_len
 EXPORT_SYMBOL vmlinux 0x43ec3aaa	abort_creds
 EXPORT_SYMBOL vmlinux 0x43ec913a	put_cmsg

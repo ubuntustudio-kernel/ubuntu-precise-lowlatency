@@ -379,6 +379,7 @@ bq20z75
 bq24022
 bq27x00_battery
 br2684
+brcmfmac
 brcmsmac
 bridge
 broadsheetfb
@@ -644,6 +645,7 @@ dmi-sysfs
 dmm32at
 dm-queue-length
 dm-raid
+dm-raid45
 dm-service-time
 dmx3191d
 dm-zero
@@ -1614,6 +1616,8 @@ md4
 mdacon
 mdc800
 mdio
+mdio-bitbang
+mdio-gpio
 me4000
 me_daq
 megaraid

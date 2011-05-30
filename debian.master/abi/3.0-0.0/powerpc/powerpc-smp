@@ -2151,6 +2151,8 @@ EXPORT_SYMBOL drivers/ssb/ssb 0xd9d515a7	ssb_pcicore_dev_irqvecs_enable
 EXPORT_SYMBOL drivers/ssb/ssb 0xe2780480	ssb_set_devtypedata
 EXPORT_SYMBOL drivers/ssb/ssb 0xf41e0897	ssb_bus_resume
 EXPORT_SYMBOL drivers/staging/altera-stapl/altera-stapl 0x4b1302b6	altera_init
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x40531e14	bcmsdh_remove
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x4ce61fd9	bcmsdh_probe
 EXPORT_SYMBOL drivers/staging/cxd2099/cxd2099 0xc0496dc4	cxd2099_attach
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x055151d3	ieee80211_disassociate_rsl
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x0deefd19	ieee80211_softmac_scan_syncro_rsl

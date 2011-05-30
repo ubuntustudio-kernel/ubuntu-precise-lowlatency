@@ -2151,6 +2151,8 @@ EXPORT_SYMBOL drivers/ssb/ssb 0xd481192b	ssb_admatch_size
 EXPORT_SYMBOL drivers/ssb/ssb 0xd7d04453	ssb_bus_suspend
 EXPORT_SYMBOL drivers/ssb/ssb 0xe7892568	ssb_pmu_set_ldo_voltage
 EXPORT_SYMBOL drivers/staging/altera-stapl/altera-stapl 0x4d71a0fa	altera_init
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x12b7062f	bcmsdh_probe
+EXPORT_SYMBOL drivers/staging/brcm80211/brcmfmac/brcmfmac 0x6fc0feef	bcmsdh_remove
 EXPORT_SYMBOL drivers/staging/cxd2099/cxd2099 0x10262929	cxd2099_attach
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x04dbb98a	ieee80211_wx_set_rawtx_rsl
 EXPORT_SYMBOL drivers/staging/rtl8192u/r8192u_usb 0x095d1236	notify_wx_assoc_event_rsl

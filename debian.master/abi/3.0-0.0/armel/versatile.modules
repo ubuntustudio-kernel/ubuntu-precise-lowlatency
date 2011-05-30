@@ -185,6 +185,7 @@ bpqether
 bq20z75
 bq24022
 bq27x00_battery
+brcmfmac
 brcmsmac
 bridge
 broadsheetfb
@@ -322,6 +323,7 @@ dm-crypt
 dmfe
 dm-queue-length
 dm-raid
+dm-raid45
 dm-service-time
 dmx3191d
 dm-zero
@@ -885,6 +887,8 @@ mct_u232
 md4
 mdc800
 mdio
+mdio-bitbang
+mdio-gpio
 megaraid
 megaraid_mbox
 megaraid_mm
