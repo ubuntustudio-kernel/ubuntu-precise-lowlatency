@@ -65,9 +65,6 @@ printenv:
 	@echo "skipmodule        = $(skipmodule)"
 	@echo "skipdbg           = $(skipdbg)"
 	@echo "ubuntu_log_opts   = $(ubuntu_log_opts)"
-ifneq ($(SUBLEVEL),)
-	@echo "SUBLEVEL          = $(SUBLEVEL)"
-endif
 	@echo "CONCURRENCY_LEVEL = $(CONCURRENCY_LEVEL)"
 	@echo "bin package name  = $(bin_pkg_name)"
 	@echo "hdr package name  = $(hdrs_pkg_name)"

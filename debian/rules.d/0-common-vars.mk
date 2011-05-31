@@ -91,11 +91,6 @@ libc_dev_version := -v$(release)-$(shell expr "$(abinum)" + 1000).$(raw_uploadnu
 endif
 endif
 
-# We force the sublevel to be exactly what we want. The actual source may
-# be an in development git tree. We want to force it here instead of
-# committing changes to the top level Makefile
-SUBLEVEL	:= $(shell echo $(release) | awk -F. '{print $$3}')
-
 DEB_HOST_MULTIARCH = $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 DEB_HOST_GNU_TYPE  = $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE = $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
@@ -216,8 +211,8 @@ conc_level		= -j$(CONCURRENCY_LEVEL)
 # target_flavour is filled in for each step
 kmake = make ARCH=$(build_arch) \
 	CROSS_COMPILE=$(CROSS_COMPILE) \
-	EXTRAVERSION=-$(abinum)-$(target_flavour) \
-	CONFIG_DEBUG_SECTION_MISMATCH=y SUBLEVEL=$(SUBLEVEL) \
+	KERNELVERSION=$(abi_release)-$(target_flavour) \
+	CONFIG_DEBUG_SECTION_MISMATCH=y \
 	KBUILD_BUILD_VERSION="$(uploadnum)" \
 	LOCALVERSION= localver-extra=
 ifneq ($(LOCAL_ENV_CC),)
