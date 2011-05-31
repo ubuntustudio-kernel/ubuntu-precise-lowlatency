@@ -51,7 +51,7 @@ ubuntu_log_opts += --print-shas
 endif
 
 # Get the kernels own extra version to be added to the release signature.
-extraversion=$(shell awk '/EXTRAVERSION =/ { print $$3 }' <Makefile)
+raw_kernelversion=$(shell make kernelversion)
 
 #
 # full_build -- are we doing a full buildd style build
