@@ -33,13 +33,13 @@ struct thread_info;
 #ifdef CONFIG_DEBUG_MUTEXES
 static inline void mutex_set_owner(struct mutex *lock)
 {
-	lock->owner = current_thread_info();
+	lock->owner = current;
 }
 #else
 static inline void mutex_set_owner(struct mutex *lock)
 {
 #ifdef CONFIG_SMP
-	lock->owner = current_thread_info();
+	lock->owner = current;
 #endif
 }
 #endif
