@@ -500,7 +500,7 @@ found:
 
 	return -EPERM;
 }
-EXPORT_SYMBOL(devcgroup_inode_permission);
+EXPORT_SYMBOL(__devcgroup_inode_permission);
 
 int devcgroup_inode_mknod(int mode, dev_t dev)
 {
