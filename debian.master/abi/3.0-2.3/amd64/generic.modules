@@ -1985,7 +1985,6 @@ r128
 r8169
 r8187se
 r8192e_pci
-r8192se_pci
 r8192u_usb
 r852
 r8712u
@@ -2204,7 +2203,7 @@ rtl8180
 rtl8187
 rtl8192c-common
 rtl8192ce
-rtl8192se
+
 rtlwifi
 rts_pstor
 rxkad
