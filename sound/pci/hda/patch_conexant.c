@@ -1123,10 +1123,8 @@ static int patch_cxt5045(struct hda_codec *codec)
 	board_config = snd_hda_check_board_config(codec, CXT5045_MODELS,
 						  cxt5045_models,
 						  cxt5045_cfg_tbl);
-#if 0 /* use the old method just for safety */
 	if (board_config < 0)
-		board_config = CXT5045_AUTO;
-#endif
+		board_config = CXT5045_AUTO; /* model=auto as default */
 	if (board_config == CXT5045_AUTO)
 		return patch_conexant_auto(codec);
 
@@ -1564,10 +1562,8 @@ static int patch_cxt5047(struct hda_codec *codec)
 	board_config = snd_hda_check_board_config(codec, CXT5047_MODELS,
 						  cxt5047_models,
 						  cxt5047_cfg_tbl);
-#if 0 /* not enabled as default, as BIOS often broken for this codec */
 	if (board_config < 0)
-		board_config = CXT5047_AUTO;
-#endif
+		board_config = CXT5047_AUTO; /* model=auto as default */
 	if (board_config == CXT5047_AUTO)
 		return patch_conexant_auto(codec);
 
@@ -1993,10 +1989,8 @@ static int patch_cxt5051(struct hda_codec *codec)
 	board_config = snd_hda_check_board_config(codec, CXT5051_MODELS,
 						  cxt5051_models,
 						  cxt5051_cfg_tbl);
-#if 0 /* use the old method just for safety */
 	if (board_config < 0)
-		board_config = CXT5051_AUTO;
-#endif
+		board_config = CXT5051_AUTO; /* model=auto as default */
 	if (board_config == CXT5051_AUTO)
 		return patch_conexant_auto(codec);
 
@@ -3114,10 +3108,8 @@ static int patch_cxt5066(struct hda_codec *codec)
 
 	board_config = snd_hda_check_board_config(codec, CXT5066_MODELS,
 						  cxt5066_models, cxt5066_cfg_tbl);
-#if 0 /* use the old method just for safety */
 	if (board_config < 0)
-		board_config = CXT5066_AUTO;
-#endif
+		board_config = CXT5066_AUTO; /* model=auto as default */
 	if (board_config == CXT5066_AUTO)
 		return patch_conexant_auto(codec);
 
