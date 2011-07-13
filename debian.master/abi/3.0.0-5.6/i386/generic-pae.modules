@@ -2364,6 +2364,7 @@ rtl8180
 rtl8187
 rtl8192c-common
 rtl8192ce
+rtl8192cu
 rtl8192se
 rtlwifi
 rts_pstor
