@@ -165,8 +165,8 @@ static int ovl_fill_upper(void *buf, const char *name, int namelen,
 	return ovl_cache_entry_add_rb(rdd, name, namelen, ino, d_type);
 }
 
-static int ovl_dir_read(struct path *realpath, struct ovl_readdir_data *rdd,
-			  filldir_t filler)
+static inline int ovl_dir_read(struct path *realpath,
+			       struct ovl_readdir_data *rdd, filldir_t filler)
 {
 	struct file *realfile;
 	int err;
@@ -246,7 +246,7 @@ static int ovl_dir_mark_whiteouts(struct ovl_readdir_data *rdd)
 	return 0;
 }
 
-static int ovl_dir_read_merged(struct path *upperpath, struct path *lowerpath,
+static inline int ovl_dir_read_merged(struct path *upperpath, struct path *lowerpath,
 			       struct ovl_readdir_data *rdd)
 {
 	int err;
