@@ -569,6 +569,12 @@ static int ovl_fill_super(struct super_block *sb, void *data, int silent)
 		goto out_put_upper_mnt;
 	}
 
+	/*
+	 * Make lower_mnt R/O.  That way fchmod/fchown on lower file
+	 * will fail instead of modifying lower fs.
+	 */
+	ufs->lower_mnt->mnt_flags |= MNT_READONLY;
+
 	/* If the upper fs is r/o, we mark overlayfs r/o too */
 	if (ufs->upper_mnt->mnt_sb->s_flags & MS_RDONLY)
 		sb->s_flags |= MS_RDONLY;
