@@ -248,7 +248,7 @@ static struct ovl_entry *ovl_alloc_entry(void)
 	return kzalloc(sizeof(struct ovl_entry), GFP_KERNEL);
 }
 
-static struct dentry *ovl_lookup_real(struct dentry *dir, struct qstr *name)
+static inline struct dentry *ovl_lookup_real(struct dentry *dir, struct qstr *name)
 {
 	struct dentry *dentry;
 
@@ -266,7 +266,7 @@ static struct dentry *ovl_lookup_real(struct dentry *dir, struct qstr *name)
 	return dentry;
 }
 
-int ovl_do_lookup(struct dentry *dentry)
+static int ovl_do_lookup(struct dentry *dentry)
 {
 	struct ovl_entry *oe;
 	struct dentry *upperdir;
@@ -361,6 +361,17 @@ out_put_dir:
 	kfree(oe);
 out:
 	return err;
+}
+
+struct dentry *ovl_lookup(struct inode *dir, struct dentry *dentry,
+			  struct nameidata *nd)
+{
+	int err = ovl_do_lookup(dentry);
+
+	if (err)
+		return ERR_PTR(err);
+
+	return NULL;
 }
 
 static void ovl_put_super(struct super_block *sb)
