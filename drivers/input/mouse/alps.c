@@ -127,6 +127,11 @@ static const struct dmi_system_id dell_quirk_table[] = {
 			DMI_MATCH(DMI_CHASSIS_TYPE, "9"),
 		},
 	},
+	{
+		.matches = {
+			DMI_MATCH(DMI_PRODUCT_NAME, "ZHAOYANG E47"),
+		},
+	},
 	{ }
 };
 
