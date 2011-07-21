@@ -2020,6 +2020,7 @@ pch_uart
 pci
 pci200syn
 pcips2
+pci_slot
 pci-stub
 pcl711
 pcl724
@@ -2425,6 +2426,8 @@ sbc_fitpc2_wdt
 sbc_gxx
 sbe-2t3e3
 sbni
+sbs
+sbshc
 sc
 sc1200wdt
 sc520cdp
@@ -3280,6 +3283,7 @@ wm8775
 wm8994-gpio
 wm8994-regulator
 wm97xx-ts
+wmi
 wp512
 wusb-cbaf
 wusbcore

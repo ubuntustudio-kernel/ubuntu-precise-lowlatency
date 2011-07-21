@@ -315,6 +315,7 @@ p8023
 parport
 parport_pc
 pcbc
+pci_slot
 pcnet32
 pcrypt
 phonet
@@ -347,6 +348,8 @@ rose
 rxkad
 salsa20_generic
 salsa20-x86_64
+sbs
+sbshc
 sch_atm
 sch_cbq
 sch_choke
