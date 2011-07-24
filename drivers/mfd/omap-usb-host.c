@@ -751,7 +751,6 @@ static int usbhs_enable(struct device *dev)
 			goto err_tll;
 		}
 	}
-
 	dev_dbg(dev, "TLL RESET DONE\n");
 
 	/* (1<<3) = no idle mode only for initial debugging */
@@ -768,8 +767,6 @@ static int usbhs_enable(struct device *dev)
 				| OMAP_UHH_SYSCONFIG_CACTIVITY
 				| OMAP_UHH_SYSCONFIG_MIDLEMODE);
 		reg &= ~OMAP_UHH_SYSCONFIG_AUTOIDLE;
-
-
 	} else if (is_omap_usbhs_rev2(omap)) {
 		reg &= ~OMAP4_UHH_SYSCONFIG_IDLEMODE_CLEAR;
 		reg |= OMAP4_UHH_SYSCONFIG_NOIDLE;
