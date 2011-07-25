@@ -115,6 +115,7 @@ alauda
 algif_hash
 algif_skcipher
 ali-ircc
+alim7101_wdt
 altera-ci
 altera_jtaguart
 altera_ps2
@@ -147,6 +148,7 @@ arpt_mangle
 as5011
 asc7621
 asix
+asus_oled
 async_memcpy
 async_pq
 async_raid6_recov
@@ -297,6 +299,7 @@ cb710-mmc
 c_can
 c_can_platform
 cciss
+ccm
 cdc-acm
 cdc_eem
 cdc_ether
@@ -364,6 +367,7 @@ crypto_null
 crystalhd
 cs5345
 cs53l32a
+ctr
 cts
 cuse
 cx18
@@ -471,6 +475,7 @@ doc2001
 doc2001plus
 docecc
 docprobe
+drbd
 drm
 drm_kms_helper
 drxd
@@ -649,6 +654,7 @@ garmin_gps
 garp
 g_audio
 g_cdc
+gcm
 g_dbgp
 gdth
 generic
@@ -810,6 +816,7 @@ hid-wacom
 hid-waltop
 hid-zpff
 hid-zydacron
+hifn_795x
 hisax
 hisax_fcpcipnp
 hisax_isac
@@ -1185,6 +1192,7 @@ lp3972
 lpc_sch
 lpddr_cmds
 lpfc
+lru_cache
 lrw
 ltc4151
 ltc4215
@@ -1192,6 +1200,7 @@ ltc4245
 ltc4261
 ltv350qv
 lxt
+lzo
 m25p80
 m52790
 ma600-sir
@@ -1514,6 +1523,7 @@ ov7670
 ov772x
 ov9640
 ov9740
+overlayfs
 oxu210hp-hcd
 p54common
 p54pci
@@ -2000,6 +2010,7 @@ sdricoh_cs
 sedlbauer_cs
 seed
 sep_driver
+seqiv
 ser_gigaset
 serial_cs
 serio_raw

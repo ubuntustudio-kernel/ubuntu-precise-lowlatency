@@ -116,6 +116,7 @@ alauda
 algif_hash
 algif_skcipher
 ali-ircc
+alim7101_wdt
 altera-ci
 altera_jtaguart
 altera_ps2
@@ -154,6 +155,7 @@ arpt_mangle
 as5011
 asc7621
 asix
+asus_oled
 async_memcpy
 async_pq
 async_raid6_recov
@@ -188,7 +190,6 @@ atmtcp
 atp870u
 atxp1
 aty128fb
-atyfb
 au0828
 au8522
 aufs
@@ -309,6 +310,7 @@ cb710-mmc
 c_can
 c_can_platform
 cciss
+ccm
 cdc-acm
 cdc_eem
 cdc_ether
@@ -363,7 +365,6 @@ cp210x
 cpia2
 cpqarray
 cpufreq_stats
-cpu-notifier-error-inject
 c-qcam
 cramfs
 crc7
@@ -376,6 +377,7 @@ crypto_null
 crystalhd
 cs5345
 cs53l32a
+ctr
 cts
 cuse
 cx18
@@ -485,6 +487,7 @@ docecc
 docprobe
 donauboe
 dpt_i2o
+drbd
 drm
 drm_kms_helper
 drxd
@@ -664,6 +667,7 @@ garmin_gps
 garp
 g_audio
 g_cdc
+gcm
 g_dbgp
 gdth
 generic
@@ -687,7 +691,6 @@ g_mass_storage
 g_midi
 g_ncm
 g_nokia
-goku_udc
 gpio-addr-flash
 gpio-charger
 gpio-fan
@@ -825,6 +828,7 @@ hid-wacom
 hid-waltop
 hid-zpff
 hid-zydacron
+hifn_795x
 hisax
 hisax_fcpcipnp
 hisax_isac
@@ -839,6 +843,7 @@ hostap_plx
 hp100
 hp4x
 hpfs
+hpilo
 hpsa
 hptiop
 hso
@@ -1031,6 +1036,7 @@ iscsi_tcp
 isdn
 isdn_bsdcomp
 isdnhdlc
+isdnloop
 isight_firmware
 isl29003
 isl29020
@@ -1101,6 +1107,7 @@ ksdazzle-sir
 ksz884x
 ktti
 kvaser_pci
+kvm
 kyrofb
 l1oip
 l2tp_core
@@ -1203,6 +1210,7 @@ lp3972
 lpc_sch
 lpddr_cmds
 lpfc
+lru_cache
 lrw
 ltc4151
 ltc4215
@@ -1387,6 +1395,7 @@ ncpfs
 ne2k-pci
 neofb
 net1080
+net2280
 netconsole
 netjet
 netrom
@@ -1536,6 +1545,7 @@ ov7670
 ov772x
 ov9640
 ov9740
+overlayfs
 oxu210hp-hcd
 p54common
 p54pci
@@ -1623,7 +1633,6 @@ pcmciamtd
 pcmcia_rsrc
 pcnet32
 pcnet_cs
-pcrypt
 pcspkr
 pcwd_pci
 pcwd_usb
@@ -1838,6 +1847,7 @@ rfd_ftl
 rfkill-regulator
 rio500
 rionet
+riscom8
 rivafb
 rj54n1cb0c
 rmd128
@@ -2012,6 +2022,7 @@ sdricoh_cs
 sedlbauer_cs
 seed
 sep_driver
+seqiv
 ser_gigaset
 serial_cs
 serio_raw
@@ -2482,6 +2493,7 @@ tpm_atmel
 tpm_nsc
 tps6105x
 tps6105x-regulator
+tps65010
 tps65023-regulator
 tps6507x
 tps6507x-regulator
