@@ -338,6 +338,7 @@ cm4000_cs
 cm4040_cs
 cma3000_d0x
 cma3000_d0x_i2c
+cmd64x
 cmtp
 cnic
 cobra

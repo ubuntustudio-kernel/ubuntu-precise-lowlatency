@@ -10878,6 +10878,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x66b2a859	nr_free_buffer_pages
 EXPORT_SYMBOL_GPL vmlinux 0x66d87d38	symbol_put_addr
 EXPORT_SYMBOL_GPL vmlinux 0x66e77fb4	dev_attr_em_message_type
 EXPORT_SYMBOL_GPL vmlinux 0x670b9490	sched_setscheduler
+EXPORT_SYMBOL_GPL vmlinux 0x6772a64e	acpi_debugfs_dir
 EXPORT_SYMBOL_GPL vmlinux 0x67955ce6	profile_hits
 EXPORT_SYMBOL_GPL vmlinux 0x67ae54c4	ata_acpi_stm
 EXPORT_SYMBOL_GPL vmlinux 0x6834db80	hrtimer_init_sleeper

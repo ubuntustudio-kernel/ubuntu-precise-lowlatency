@@ -10498,6 +10498,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x4cbaf240	mmu_notifier_unregister
 EXPORT_SYMBOL_GPL vmlinux 0x4cd7b60d	fuse_conn_kill
 EXPORT_SYMBOL_GPL vmlinux 0x4cda5229	class_find_device
 EXPORT_SYMBOL_GPL vmlinux 0x4cef0b32	crypto_mod_get
+EXPORT_SYMBOL_GPL vmlinux 0x4d0dd3d9	acpi_debugfs_dir
 EXPORT_SYMBOL_GPL vmlinux 0x4d2ba097	dm_rh_recovery_prepare
 EXPORT_SYMBOL_GPL vmlinux 0x4d4fd5f1	xfrm_calg_get_byname
 EXPORT_SYMBOL_GPL vmlinux 0x4d52c73a	ata_bmdma_port_start

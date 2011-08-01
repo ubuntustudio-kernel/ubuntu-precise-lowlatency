@@ -11969,6 +11969,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xe30ed0f6	debugfs_create_file
 EXPORT_SYMBOL_GPL vmlinux 0xe35e94dc	pm_qos_update_request
 EXPORT_SYMBOL_GPL vmlinux 0xe3659d51	ata_cable_40wire
 EXPORT_SYMBOL_GPL vmlinux 0xe368075f	ring_buffer_read_prepare
+EXPORT_SYMBOL_GPL vmlinux 0xe3aad453	acpi_debugfs_dir
 EXPORT_SYMBOL_GPL vmlinux 0xe3bc7fd4	hpet_unregister_irq_handler
 EXPORT_SYMBOL_GPL vmlinux 0xe3d12c0a	dm_rh_recovery_start
 EXPORT_SYMBOL_GPL vmlinux 0xe41534ce	bind_evtchn_to_irqhandler
