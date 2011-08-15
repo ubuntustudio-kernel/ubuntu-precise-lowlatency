@@ -36,7 +36,7 @@ obj-$(CONFIG_NDISWRAPPER)	+= ndiswrapper/
 ##
 ##
 ##
-obj-$(CONFIG_AUFS_FS)		+= aufs/
+#obj-$(CONFIG_AUFS_FS)		+= aufs/
 ##
 ##
 ##
