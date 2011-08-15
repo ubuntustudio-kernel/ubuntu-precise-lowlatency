@@ -33,8 +33,7 @@ bool ovl_dentry_is_opaque(struct dentry *dentry);
 void ovl_dentry_set_opaque(struct dentry *dentry, bool opaque);
 bool ovl_is_whiteout(struct dentry *dentry);
 void ovl_dentry_update(struct dentry *dentry, struct dentry *upperdentry);
-struct dentry *ovl_lookup(struct inode *dir, struct dentry *dentry,
-			  struct nameidata *nd);
+int ovl_do_lookup(struct dentry *dentry);
 
 struct dentry *ovl_upper_create(struct dentry *upperdir, struct dentry *dentry,
 				struct kstat *stat, const char *link);
