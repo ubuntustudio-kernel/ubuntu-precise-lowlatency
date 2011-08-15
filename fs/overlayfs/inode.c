@@ -90,18 +90,9 @@ int ovl_permission(struct inode *inode, int mask, unsigned int flags)
 		/*
 		 * Writes will always be redirected to upper layer, so
 		 * ignore lower layer being read-only.
-		 *
-		 * If the overlay itself is read-only then proceed
-		 * with the permission check, don't return EROFS.
-		 * This will only happen if this is the lower layer of
-		 * another overlayfs.
-		 *
-		 * If upper fs becomes read-only after the overlay was
-		 * constructed return EROFS to prevent modification of
-		 * upper layer.
 		 */
 		err = -EROFS;
-		if (is_upper && !IS_RDONLY(inode) && IS_RDONLY(realinode) &&
+		if (is_upper && IS_RDONLY(realinode) &&
 		    (S_ISREG(mode) || S_ISDIR(mode) || S_ISLNK(mode)))
 			goto out_dput;
 
