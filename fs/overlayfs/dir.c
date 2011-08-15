@@ -15,6 +15,17 @@
 
 static const char *ovl_whiteout_symlink = "(overlay-whiteout)";
 
+static struct dentry *ovl_lookup(struct inode *dir, struct dentry *dentry,
+				 struct nameidata *nd)
+{
+	int err = ovl_do_lookup(dentry);
+
+	if (err)
+		return ERR_PTR(err);
+
+	return NULL;
+}
+
 static int ovl_whiteout(struct dentry *upperdir, struct dentry *dentry)
 {
 	int err;
