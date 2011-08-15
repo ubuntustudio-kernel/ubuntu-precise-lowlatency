@@ -190,7 +190,6 @@ atmtcp
 atp870u
 atxp1
 aty128fb
-atyfb
 au0828
 au8522
 aufs
@@ -367,7 +366,6 @@ cp210x
 cpia2
 cpqarray
 cpufreq_stats
-cpu-notifier-error-inject
 c-qcam
 cramfs
 crc7
@@ -580,6 +578,7 @@ ebt_stp
 ebt_ulog
 ebt_vlan
 econet
+ecryptfs
 edac_core
 eeprom
 eeprom_93cx6
@@ -694,7 +693,6 @@ g_mass_storage
 g_midi
 g_ncm
 g_nokia
-goku_udc
 gpio-addr-flash
 gpio-charger
 gpio-fan
@@ -847,6 +845,7 @@ hostap_plx
 hp100
 hp4x
 hpfs
+hpilo
 hpsa
 hptiop
 hso
@@ -1039,6 +1038,7 @@ iscsi_tcp
 isdn
 isdn_bsdcomp
 isdnhdlc
+isdnloop
 isight_firmware
 isl29003
 isl29020
@@ -1109,6 +1109,7 @@ ksdazzle-sir
 ksz884x
 ktti
 kvaser_pci
+kvm
 kyrofb
 l1oip
 l2tp_core
@@ -1228,6 +1229,7 @@ mac80211
 mac80211_hwsim
 mace
 macvlan
+macvtap
 magellan
 mantis
 mantis_core
@@ -1397,6 +1399,7 @@ ncpfs
 ne2k-pci
 neofb
 net1080
+net2280
 netconsole
 netjet
 netrom
@@ -1634,7 +1637,6 @@ pcmciamtd
 pcmcia_rsrc
 pcnet32
 pcnet_cs
-pcrypt
 pcspkr
 pcwd_pci
 pcwd_usb
@@ -1849,6 +1851,7 @@ rfd_ftl
 rfkill-regulator
 rio500
 rionet
+riscom8
 rivafb
 rj54n1cb0c
 rmd128
@@ -2494,6 +2497,7 @@ tpm_atmel
 tpm_nsc
 tps6105x
 tps6105x-regulator
+tps65010
 tps65023-regulator
 tps6507x
 tps6507x-regulator

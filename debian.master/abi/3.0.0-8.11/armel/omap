@@ -1222,6 +1222,7 @@
 (unknown) drivers/net/macvlan 0x53405093	macvlan_dellink
 (unknown) drivers/net/macvlan 0x710f4da6	macvlan_common_newlink
 (unknown) drivers/net/macvlan 0x9558401a	macvlan_link_register
+(unknown) drivers/net/macvtap 0x22201bc1	macvtap_get_socket
 (unknown) drivers/net/phy/mdio-bitbang 0x1a867a66	free_mdio_bitbang
 (unknown) drivers/net/phy/mdio-bitbang 0xb9369b4f	alloc_mdio_bitbang
 (unknown) drivers/net/pppox 0x043db00d	pppox_ioctl

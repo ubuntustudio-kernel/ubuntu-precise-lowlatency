@@ -2243,6 +2243,7 @@
 (unknown) drivers/net/macvlan 0x9d8eefd1	macvlan_dellink
 (unknown) drivers/net/macvlan 0xb2a75c63	macvlan_common_newlink
 (unknown) drivers/net/macvlan 0xcb2a2060	macvlan_link_register
+(unknown) drivers/net/macvtap 0x302e21e1	macvtap_get_socket
 (unknown) drivers/net/mdio 0x0f934475	mdio45_ethtool_gset_npage
 (unknown) drivers/net/mdio 0x22bce513	mdio_mii_ioctl
 (unknown) drivers/net/mdio 0x43e4defc	mdio45_nway_restart

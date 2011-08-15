@@ -954,6 +954,7 @@ ma600-sir
 mac80211
 mac80211_hwsim
 macvlan
+macvtap
 magellan
 mailbox
 mailbox_mach
