@@ -2961,6 +2961,7 @@ vme_vmivme7805
 vmk80xx
 vmlfb
 vmw_balloon
+vmwgfx
 vmw_pvscsi
 vmxnet3
 vp27smpx
