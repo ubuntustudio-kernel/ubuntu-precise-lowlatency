@@ -213,8 +213,7 @@ static int setup_backing_swap(void)
 
 	if (S_ISBLK(inode->i_mode)) {
 		bdev = I_BDEV(inode);
-		error = blkdev_get(bdev, O_RDWR | FMODE_EXCL, ramzswap_init);
-
+		error = bd_claim(bdev, ramzswap_init);
 		if (error < 0) {
 			bdev = NULL;
 			goto bad_param;
@@ -240,7 +239,7 @@ static int setup_backing_swap(void)
 bad_param:
 	if (bdev) {
 		set_blocksize(bdev, rzs.old_block_size);
-		blkdev_put(bdev, O_RDWR | FMODE_EXCL);
+		bd_release(bdev);
 	}
 	filp_close(swap_file, NULL);
 
@@ -964,7 +963,7 @@ static void __exit ramzswap_exit(void)
 	/* Close backing swap device (if present) */
 	if (rzs.backing_swap) {
 		set_blocksize(rzs.backing_swap, rzs.old_block_size);
-		blkdev_put(rzs.backing_swap, O_RDWR | FMODE_EXCL);
+		bd_release(rzs.backing_swap);
 		filp_close(rzs.swap_file, NULL);
 	}
 
