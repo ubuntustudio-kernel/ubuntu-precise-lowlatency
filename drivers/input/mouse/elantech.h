@@ -16,12 +16,14 @@
 /*
  * Command values for Synaptics style queries
  */
+#define ETP_FW_ID_QUERY			0x00
 #define ETP_FW_VERSION_QUERY		0x01
 #define ETP_CAPABILITIES_QUERY		0x02
 
 /*
  * Command values for register reading or writing
  */
+#define ETP_REGISTER_RW			0x00
 #define ETP_REGISTER_READ		0x10
 #define ETP_REGISTER_WRITE		0x11
 
@@ -110,6 +112,9 @@ struct elantech_data {
 	bool reports_pressure;
 	unsigned char hw_version;
 	unsigned int fw_version;
+	unsigned int x_max;
+	unsigned int y_max;
+	unsigned int y_max_2ft;
 	unsigned int single_finger_reports;
 	unsigned char parity[256];
 };
