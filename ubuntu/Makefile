@@ -12,7 +12,6 @@
 ##
 ##
 ##
-obj-$(CONFIG_BLK_DEV_COMPCACHE)	+= compcache/
 ##
 ##
 ##
