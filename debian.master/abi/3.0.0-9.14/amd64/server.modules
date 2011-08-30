@@ -717,7 +717,6 @@ ebt_ulog
 ebt_vlan
 echo
 econet
-ecryptfs
 ec_sys
 edac_core
 edac_mce_amd

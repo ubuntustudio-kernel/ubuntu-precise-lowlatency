@@ -568,7 +568,6 @@ ebt_stp
 ebt_ulog
 ebt_vlan
 econet
-ecryptfs
 edac_core
 eeprom
 eeprom_93cx6
