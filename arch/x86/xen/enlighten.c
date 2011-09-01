@@ -1360,8 +1360,10 @@ static int __cpuinit xen_hvm_cpu_notify(struct notifier_block *self,
 	switch (action) {
 	case CPU_UP_PREPARE:
 		per_cpu(xen_vcpu, cpu) = &HYPERVISOR_shared_info->vcpu_info[cpu];
+		/* FIXME: Disable until a final solution is found (lp#838026)
 		if (xen_have_vector_callback)
 			xen_init_lock_cpu(cpu);
+		*/
 		break;
 	default:
 		break;
