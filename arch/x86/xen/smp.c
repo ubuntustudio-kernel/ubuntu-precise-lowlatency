@@ -531,7 +531,9 @@ static void __init xen_hvm_smp_prepare_cpus(unsigned int max_cpus)
 	native_smp_prepare_cpus(max_cpus);
 	WARN_ON(xen_smp_intr_init(0));
 
+	/* FIXME: Disable until final solution is found (lp#838026)
 	xen_init_lock_cpu(0);
+	*/
 }
 
 static int __cpuinit xen_hvm_cpu_up(unsigned int cpu)
