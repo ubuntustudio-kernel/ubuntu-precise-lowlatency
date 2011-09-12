@@ -2757,7 +2757,6 @@
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0x9404d6fc	rt2800_init_eeprom
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0x9900e713	rt2800_check_firmware
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0xb57e513b	rt2800_wait_csr_ready
-(unknown) drivers/net/wireless/rt2x00/rt2800lib 0xb68cfd9c	rt2800_txdone
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0xc40dcd8a	rt2800_config_shared_key
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0xcd59ce5f	rt2800_write_tx_data
 (unknown) drivers/net/wireless/rt2x00/rt2800lib 0xcf0f13b0	rt2800_efuse_detect

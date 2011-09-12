@@ -360,6 +360,7 @@ cdc_ncm
 cdc-phonet
 cdc_subset
 cdc-wdm
+cdrom
 ceph
 cfg80211
 cfi_cmdset_0001
@@ -391,7 +392,6 @@ cm4000_cs
 cm4040_cs
 cma3000_d0x
 cma3000_d0x_i2c
-cmd64x
 cmtp
 cnic
 cobra
