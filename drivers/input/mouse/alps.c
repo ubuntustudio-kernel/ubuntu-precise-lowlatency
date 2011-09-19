@@ -745,7 +745,8 @@ static void alps_disconnect(struct psmouse *psmouse)
 
 	psmouse_reset(psmouse);
 	del_timer_sync(&priv->timer);
-	input_unregister_device(priv->dev2);
+	if (!alps_model_quirk_enabled)
+		input_unregister_device(priv->dev2);
 	kfree(priv);
 }
 
