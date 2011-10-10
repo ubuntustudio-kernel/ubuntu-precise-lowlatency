@@ -341,12 +341,11 @@ static struct ata_port_operations piix_sata_ops = {
 };
 
 static struct ata_port_operations piix_pata_ops = {
-	.inherits		= &ata_bmdma32_port_ops,
+	.inherits		= &piix_sata_ops,
 	.cable_detect		= ata_cable_40wire,
 	.set_piomode		= piix_set_piomode,
 	.set_dmamode		= piix_set_dmamode,
 	.prereset		= piix_pata_prereset,
-	.sff_irq_check		= piix_irq_check,
 };
 
 static struct ata_port_operations piix_vmw_ops = {
@@ -1585,15 +1584,6 @@ static int __devinit piix_init_one(struct pci_dev *pdev,
 		dev_info(&pdev->dev, "quirky BIOS, skipping spindown "
 				"on poweroff and hibernation\n");
 	}
-
-	/*
-	 * Sandybridge chipset H61/P67/H67 have broken 32 mode up to now
-	 * see https://bugzilla.kernel.org/show_bug.cgi?id=40592
-	 */
-	if (pdev->vendor == PCI_VENDOR_ID_INTEL && pdev->device == 0x1c00)
-		piix_sata_ops.inherits = &ata_bmdma_port_ops;
-	else
-		piix_sata_ops.inherits = &ata_bmdma32_port_ops;
 
 	port_info[0] = piix_port_info[ent->driver_data];
 	port_info[1] = piix_port_info[ent->driver_data];
