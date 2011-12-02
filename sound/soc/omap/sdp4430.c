@@ -534,6 +534,7 @@ static struct snd_soc_dai_link sdp4430_dai[] = {
 		.dynamic = 1, /* BE is dynamic */
 		.dsp_link = &fe_tones,
 	},
+#ifdef CONFIG_INPUT_TWL4030_VIBRA
 	{
 		.name = "SDP4430 Vibra Playback",
 		.stream_name = "VIB-DL",
@@ -545,6 +546,7 @@ static struct snd_soc_dai_link sdp4430_dai[] = {
 		.dynamic = 1, /* BE is dynamic */
 		.dsp_link = &fe_vib,
 	},
+#endif
 	{
 		.name = "SDP4430 MODEM",
 		.stream_name = "MODEM",
