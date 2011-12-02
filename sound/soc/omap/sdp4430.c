@@ -594,17 +594,18 @@ static struct snd_soc_dai_link sdp4430_dai[] = {
         .init = sdp4430_twl6040_init,                                           
         .ops = &sdp4430_ops, 
 */
-		.name = "Legacy McPDM",
-		.stream_name = "Headset Playback",
+		.name = "TWL6040", // "Legacy McPDM",
+		.stream_name = "TWL6040", // "Headset Playback",
 
 		/* ABE components - DL1 */
-		.cpu_dai_name = "mcpdm-dl",
+		.cpu_dai_name = /* "omap-mcpdm", // */ "mcpdm-dl",
 		.platform_name = "omap-pcm-audio",
 
 		/* Phoenix - DL1 DAC */
-		.codec_dai_name =  "twl6040-dl1",
+		.codec_dai_name =  /*"twl6040-legacy", */ "twl6040-dl1",
 		.codec_name = "twl6040-codec",
 
+		.init = sdp4430_twl6040_init,
 		.ops = &sdp4430_mcpdm_ops,
 	},
 	{
