@@ -81,6 +81,30 @@
 #define MCPDM_PDM_UP_MASK		0x7
 #define MCPDM_PDM_DN_MASK		(0x1f << 3)
 
+#if 0
+/*                                                                              
+ *                                                                               * MCPDM_CTRL bit fields                                                        
+ *                                                                                */                                                                             
+                                                                                
+#define PDM_UP1_EN             0x0001                                           
+#define PDM_UP2_EN             0x0002                                           
+#define PDM_UP3_EN             0x0004                                           
+#define PDM_DN1_EN             0x0008                                           
+#define PDM_DN2_EN             0x0010                                           
+#define PDM_DN3_EN             0x0020                                           
+#define PDM_DN4_EN             0x0040                                           
+#define PDM_DN5_EN             0x0080                                           
+#define PDMOUTFORMAT           0x0100                                           
+#define CMD_INT                        0x0200                                   
+#define STATUS_INT             0x0400                                           
+#define SW_UP_RST              0x0800                                           
+#define SW_DN_RST              0x1000                                           
+#define PDM_UP_MASK            0x007                                            
+#define PDM_DN_MASK            0x0F8                                            
+#define PDM_eMD_MASK           0x200                                            
+>>>>>>> patched
+#define PDM_STATUS_MASK                0x400 
+#endif
 
 #define MCPDM_PDMOUTFORMAT_LJUST	(0 << 8)
 #define MCPDM_PDMOUTFORMAT_RJUST	(1 << 8)
