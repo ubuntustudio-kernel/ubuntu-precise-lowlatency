@@ -506,6 +506,12 @@ static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 	if (!dai->active) {
 		pm_runtime_get_sync(mcpdm->dev);
 		omap_mcpdm_set_offset(mcpdm);
+
+		/* Enable McPDM watch dog for ES above ES 1.0 to avoid saturation */
+		if (omap_rev() != OMAP4430_REV_ES1_0) {
+			ctrl = omap_mcpdm_read(mcpdm, MCPDM_CTRL);
+			omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl | WD_EN);
+		}
 	}
 
 	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK) {
@@ -749,6 +755,7 @@ static int omap_mcpdm_probe(struct snd_soc_dai *dai)
 	/* Configure McPDM threshold values */
 	mcpdm->dn_threshold = 2;
 	mcpdm->up_threshold = MCPDM_UP_THRES_MAX - 3;
+
 	return ret;
 }
 
