@@ -80,7 +80,6 @@ struct omap_mcpdm {
 	u32 up_channels;
 	int dl_active;
 	int ul_active;
-	int abe_mode[2];
 
 	/* McPDM FIFO thresholds */
 	u32 dn_threshold;
@@ -92,6 +91,9 @@ struct omap_mcpdm {
 	/* DC offset */
 	unsigned long dl1_offset;
 	unsigned long dl2_offset;
+	int active;
+	int abe_mode;
+
 };
 
 /*
@@ -153,7 +155,11 @@ static void omap_mcpdm_reg_dump(struct omap_mcpdm *mcpdm)
 	dev_dbg(mcpdm->dev, "FIFO_CTRL_DN: 0x%04x\n",
 			omap_mcpdm_read(mcpdm, MCPDM_REG_FIFO_CTRL_DN));
 	dev_dbg(mcpdm->dev, "FIFO_CTRL_UP:  0x%04x\n",
+<<<<<<< current
 			omap_mcpdm_read(mcpdm, MCPDM_REG_FIFO_CTRL_UP));
+=======
+			omap_mcpdm_read(mcpdm, MCPDM_FIFO_CTRL_UP));
+>>>>>>> patched
 	dev_dbg(mcpdm->dev, "***********************\n");
 }
 #else
@@ -171,17 +177,30 @@ static void omap_mcpdm_start(struct omap_mcpdm *mcpdm)
 	ctrl |= (MCPDM_SW_DN_RST | MCPDM_SW_UP_RST);
 	omap_mcpdm_write(mcpdm, MCPDM_REG_CTRL, ctrl);
 
+<<<<<<< current
 	ctrl |= mcpdm->dn_channels | mcpdm->up_channels;
 	omap_mcpdm_write(mcpdm, MCPDM_REG_CTRL, ctrl);
 
 	ctrl &= ~(MCPDM_SW_DN_RST | MCPDM_SW_UP_RST);
 	omap_mcpdm_write(mcpdm, MCPDM_REG_CTRL, ctrl);
+=======
+	ctrl |= SW_UP_RST;
+	ctrl |= SW_DN_RST;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+	ctrl |= mcpdm->up_channels;
+	ctrl |= mcpdm->dn_channels;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+	ctrl &= ~SW_UP_RST;
+	ctrl &= ~SW_DN_RST;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+>>>>>>> patched
 }
 
 /*
  * Disables the transfer through the PDM interface to/from the Phoenix
  * codec by disabling the corresponding UP or DN channels.
  */
+<<<<<<< current
 static void omap_mcpdm_stop(struct omap_mcpdm *mcpdm)
 {
 	u32 ctrl = omap_mcpdm_read(mcpdm, MCPDM_REG_CTRL);
@@ -211,11 +230,15 @@ static inline int omap_mcpdm_active(struct omap_mcpdm *mcpdm)
  * This function should be called before omap_mcpdm_start.
  */
 static void omap_mcpdm_open_streams(struct omap_mcpdm *mcpdm)
+=======
+static void omap_mcpdm_stop(struct omap_mcpdm *mcpdm)
+>>>>>>> patched
 {
 	omap_mcpdm_write(mcpdm, MCPDM_REG_IRQENABLE_SET,
 			MCPDM_DN_IRQ_EMPTY | MCPDM_DN_IRQ_FULL |
 			MCPDM_UP_IRQ_EMPTY | MCPDM_UP_IRQ_FULL);
 
+<<<<<<< current
 	/* Enable DN RX1/2 offset cancellation feature, if configured */
 	if (mcpdm->dn_rx_offset) {
 		u32 dn_offset = mcpdm->dn_rx_offset;
@@ -224,6 +247,17 @@ static void omap_mcpdm_open_streams(struct omap_mcpdm *mcpdm)
 		dn_offset |= (MCPDM_DN_OFST_RX1_EN | MCPDM_DN_OFST_RX2_EN);
 		omap_mcpdm_write(mcpdm, MCPDM_REG_DN_OFFSET, dn_offset);
 	}
+=======
+	ctrl |= SW_UP_RST;
+	ctrl |= SW_DN_RST;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+	ctrl &= ~mcpdm->up_channels;
+	ctrl &= ~mcpdm->dn_channels;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+	ctrl &= ~SW_UP_RST;
+	ctrl &= ~SW_DN_RST;
+	omap_mcpdm_write(mcpdm, MCPDM_CTRL, ctrl);
+>>>>>>> patched
 
 	omap_mcpdm_write(mcpdm, MCPDM_REG_FIFO_CTRL_DN, mcpdm->dn_threshold);
 	omap_mcpdm_write(mcpdm, MCPDM_REG_FIFO_CTRL_UP, mcpdm->up_threshold);
@@ -389,98 +423,6 @@ static irqreturn_t omap_mcpdm_irq_handler(int irq, void *dev_id)
 	return IRQ_HANDLED;
 }
 
-/* Enable/disable DC offset cancelation for the analog
- * headset path (PDM channels 1 and 2).
- */
-static void omap_mcpdm_set_offset(struct omap_mcpdm *mcpdm)
-{
-	int offset;
-
-	if (mcpdm->dl1_offset > DN_OFST_MAX) {
-		dev_err(mcpdm->dev, "DC DL1 offset out of range\n");
-		return;
-	}
-
-	if (mcpdm->dl2_offset > DN_OFST_MAX) {
-		dev_err(mcpdm->dev, "DC DL2 offset out of range\n");
-		return;
-	}
-
-	offset = (mcpdm->dl1_offset << DN_OFST_RX1) |
-			(mcpdm->dl2_offset << DN_OFST_RX2);
-
-	/* offset cancellation for channel 1 */
-	if (mcpdm->dl1_offset)
-		offset |= DN_OFST_RX1_EN;
-	else
-		offset &= ~DN_OFST_RX1_EN;
-
-	/* offset cancellation for channel 2 */
-	if (mcpdm->dl2_offset)
-		offset |= DN_OFST_RX2_EN;
-	else
-		offset &= ~DN_OFST_RX2_EN;
-
-	omap_mcpdm_write(mcpdm, MCPDM_DN_OFFSET, offset);
-}
-
-static ssize_t mcpdm_dl1_show(struct device *dev,
-				struct device_attribute *attr, char *buf)
-{
-	struct omap_mcpdm *mcpdm = dev_get_drvdata(dev);
-
-	return sprintf(buf, "%ld\n", mcpdm->dl1_offset);
-}
-
-static ssize_t mcpdm_dl1_set(struct device *dev,
-			       struct device_attribute *attr,
-			       const char *buf, size_t count)
-{
-	struct omap_mcpdm *mcpdm = dev_get_drvdata(dev);
-	int ret;
-	unsigned long value;
-
-	ret = strict_strtol(buf, 10, &value);
-	if (ret)
-		return ret;
-
-	if (value > DN_OFST_MAX)
-		return -EINVAL;
-
-	mcpdm->dl1_offset = value;
-	return count;
-}
-
-static ssize_t mcpdm_dl2_show(struct device *dev,
-				struct device_attribute *attr, char *buf)
-{
-	struct omap_mcpdm *mcpdm = dev_get_drvdata(dev);
-
-	return sprintf(buf, "%ld\n", mcpdm->dl2_offset);
-}
-
-static ssize_t mcpdm_dl2_set(struct device *dev,
-			       struct device_attribute *attr,
-			       const char *buf, size_t count)
-{
-	struct omap_mcpdm *mcpdm = dev_get_drvdata(dev);
-	int ret;
-	unsigned long value;
-
-	ret = strict_strtol(buf, 10, &value);
-	if (ret)
-		return ret;
-
-	if (value > DN_OFST_MAX)
-		return -EINVAL;
-
-	mcpdm->dl2_offset = value;
-	return count;
-}
-
-static DEVICE_ATTR(dl1, 0644, mcpdm_dl1_show, mcpdm_dl1_set);
-static DEVICE_ATTR(dl2, 0644, mcpdm_dl2_show, mcpdm_dl2_set);
-
 static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 				  struct snd_soc_dai *dai)
 {
@@ -498,14 +440,12 @@ static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 	dev_dbg(dai->dev, "%s: active %d\n", __func__, dai->active);
 
 	/* make sure we stop any pre-existing shutdown */
-	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK)
-		cancel_delayed_work(&mcpdm->delayed_work);
+	cancel_delayed_work_sync(&mcpdm->delayed_work);
 
 	mutex_lock(&mcpdm->mutex);
 
-	if (!dai->active) {
+	if (!mcpdm->active++) {
 		pm_runtime_get_sync(mcpdm->dev);
-		omap_mcpdm_set_offset(mcpdm);
 
 		/* Enable McPDM watch dog for ES above ES 1.0 to avoid saturation */
 		if (omap_rev() != OMAP4430_REV_ES1_0) {
@@ -515,17 +455,15 @@ static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 	}
 
 	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK) {
-		mcpdm->dl_active++;
 		omap_mcpdm_playback_open(mcpdm);
 	} else {
-		mcpdm->ul_active++;
 		omap_mcpdm_capture_open(mcpdm);
 	}
 
 	if (dai->id > 1)
-		mcpdm->abe_mode[substream->stream] = 1;
+		mcpdm->abe_mode = 1;
 	else
-		mcpdm->abe_mode[substream->stream] = 0;
+		mcpdm->abe_mode = 0;
 
 	mutex_unlock(&mcpdm->mutex);
 
@@ -546,26 +484,27 @@ static void playback_work(struct work_struct *work)
 	struct omap_mcpdm *mcpdm =
 			container_of(work, struct omap_mcpdm, delayed_work.work);
 
-	mutex_lock(&mcpdm->mutex);
-
-	if (!mcpdm->dl_active) {
+	if (!mcpdm->active && omap_mcpdm_active(mcpdm)) {
 
 		/* ABE playback stop handled by delayed work */
-		if (mcpdm->abe_mode[SNDRV_PCM_STREAM_PLAYBACK]) {
+		if (mcpdm->abe_mode) {
 			omap_abe_port_disable(mcpdm->abe, mcpdm->dl_port);
+			omap_abe_port_disable(mcpdm->abe, mcpdm->ul_port);
 			udelay(250);
-			omap_mcpdm_stop(mcpdm, SNDRV_PCM_STREAM_PLAYBACK);
+			omap_mcpdm_stop(mcpdm);
 			omap_mcpdm_playback_close(mcpdm);
+			omap_mcpdm_capture_close(mcpdm);
 			abe_dsp_shutdown();
 			abe_dsp_pm_put();
-		} else
+		} else {
+			omap_mcpdm_stop(mcpdm);
 			omap_mcpdm_playback_close(mcpdm);
+			omap_mcpdm_capture_close(mcpdm);
+		}
 	}
 
-	if (!mcpdm->dl_active && !mcpdm->ul_active)
+	if (!omap_mcpdm_active(mcpdm))
 		pm_runtime_put_sync(mcpdm->dev);
-
-	mutex_unlock(&mcpdm->mutex);
 }
 
 static void omap_mcpdm_dai_shutdown(struct snd_pcm_substream *substream,
@@ -577,6 +516,7 @@ static void omap_mcpdm_dai_shutdown(struct snd_pcm_substream *substream,
 
 	mutex_lock(&mcpdm->mutex);
 
+<<<<<<< current
 	if (!dai->active) {
 		if (omap_mcpdm_active(mcpdm)) {
 			omap_mcpdm_stop(mcpdm);
@@ -585,6 +525,12 @@ static void omap_mcpdm_dai_shutdown(struct snd_pcm_substream *substream,
 
 		if (!omap_mcpdm_active(mcpdm))
 			pm_runtime_put_sync(mcpdm->dev);
+=======
+	if (!--mcpdm->active) {
+		cancel_delayed_work_sync(&mcpdm->delayed_work);
+		schedule_delayed_work(&mcpdm->delayed_work,
+					msecs_to_jiffies(1000)); /* TODO: pdata ? */
+>>>>>>> patched
 	}
 
 	mutex_unlock(&mcpdm->mutex);
@@ -605,10 +551,8 @@ static int omap_mcpdm_dai_hw_params(struct snd_pcm_substream *substream,
 
 	/* ABE DAIs have fixed channels and IDs > MCPDM_LEGACY_DAI_DL1 */
 	if (dai->id > MCPDM_LEGACY_DAI_DL1) {
-		if (stream == SNDRV_PCM_STREAM_PLAYBACK)
-			mcpdm->dn_channels = PDM_DN_MASK | PDM_CMD_MASK;
-		else
-			mcpdm->up_channels = PDM_UP1_EN | PDM_UP2_EN;
+		mcpdm->dn_channels = PDM_DN_MASK | PDM_CMD_MASK;
+		mcpdm->up_channels = PDM_UP1_EN | PDM_UP2_EN;
 		return 0;
 	}
 
@@ -662,21 +606,27 @@ static int omap_mcpdm_prepare(struct snd_pcm_substream *substream,
 	if (dai->id < MCPDM_ABE_DAI_DL1)
 		return 0;
 
+<<<<<<< current
         if (!omap_mcpdm_active(mcpdm)) {                                        
                 omap_mcpdm_start(mcpdm);                                        
                 omap_mcpdm_reg_dump(mcpdm);                                     
         }
 
 	if (substream->stream == SNDRV_PCM_STREAM_PLAYBACK) {
+=======
+	if (!omap_mcpdm_active(mcpdm)) {
+>>>>>>> patched
 
 		/* Check if ABE McPDM DL is already started */
-		if (omap_abe_port_is_enabled(mcpdm->abe, mcpdm->dl_port))
+		if ((omap_abe_port_is_enabled(mcpdm->abe, mcpdm->dl_port)) ||
+		    (omap_abe_port_is_enabled(mcpdm->abe, mcpdm->ul_port)))
 			return 0;
 
 		abe_dsp_pm_get();
 
 		/* start ATC before McPDM IP */
 		omap_abe_port_enable(mcpdm->abe, mcpdm->dl_port);
+		omap_abe_port_enable(mcpdm->abe, mcpdm->ul_port);
 
 		/* wait 250us for ABE tick */
 		udelay(250);
@@ -687,48 +637,11 @@ static int omap_mcpdm_prepare(struct snd_pcm_substream *substream,
 	return 0;
 }
 
-static int omap_mcpdm_dai_trigger(struct snd_pcm_substream *substream,
-				  int cmd, struct snd_soc_dai *dai)
-{
-	struct omap_mcpdm *mcpdm = snd_soc_dai_get_drvdata(dai);
-	int stream = substream->stream;
-
-	dev_dbg(dai->dev, "cmd %d\n", cmd);
-
-	switch (cmd) {
-	case SNDRV_PCM_TRIGGER_START:
-		/* ABE playback start handled by hw_params to prevent pop-noise */
-		if (dai->id == MCPDM_ABE_DAI_DL1 ||
-		    dai->id == MCPDM_ABE_DAI_DL2 ||
-		    dai->id == MCPDM_ABE_DAI_VIB)
-			return 0;
-		omap_mcpdm_start(mcpdm, stream);
-		break;
-	case SNDRV_PCM_TRIGGER_PAUSE_RELEASE:
-		break;
-	case SNDRV_PCM_TRIGGER_PAUSE_PUSH:
-		break;
-	case SNDRV_PCM_TRIGGER_STOP:
-		/* ABE playback stop handled by delayed work */
-		if (dai->id == MCPDM_ABE_DAI_DL1 ||
-		    dai->id == MCPDM_ABE_DAI_DL2 ||
-		    dai->id == MCPDM_ABE_DAI_VIB)
-			return 0;
-		omap_mcpdm_stop(mcpdm, stream);
-		break;
-	default:
-		break;
-	}
-	omap_mcpdm_reg_dump(mcpdm);
-	return 0;
-}
-
 static struct snd_soc_dai_ops omap_mcpdm_dai_ops = {
 	.startup	= omap_mcpdm_dai_startup,
 	.shutdown	= omap_mcpdm_dai_shutdown,
 	.hw_params	= omap_mcpdm_dai_hw_params,
 	.prepare	= omap_mcpdm_prepare,
-	.trigger	= omap_mcpdm_dai_trigger,
 };
 
 static int omap_mcpdm_probe(struct snd_soc_dai *dai)
@@ -906,16 +819,6 @@ static __devinit int asoc_mcpdm_probe(struct platform_device *pdev)
 
 	mcpdm->dev = &pdev->dev;
 
-	/* DL1 and DL2 DC offset values will be different for each device */
-	mcpdm->dl1_offset = DN_OFST_MAX >> 1;
-	mcpdm->dl2_offset = DN_OFST_MAX >> 1;
-	err = device_create_file(mcpdm->dev, &dev_attr_dl1);
-	if (err < 0)
-		dev_err(mcpdm->dev,"failed to DL1 DC offset sysfs: %d\n", err);
-	err = device_create_file(mcpdm->dev, &dev_attr_dl2);
-	if (err < 0)
-		dev_err(mcpdm->dev,"failed to DL2 DC offset sysfs: %d\n", err);
-
 	INIT_DELAYED_WORK(&mcpdm->delayed_work, playback_work);
 
 #if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\
@@ -925,6 +828,9 @@ static __devinit int asoc_mcpdm_probe(struct platform_device *pdev)
 
 	mcpdm->dl_port = omap_abe_port_open(mcpdm->abe, OMAP_ABE_BE_PORT_PDM_DL1);
 	if (mcpdm->dl_port == NULL)
+		goto err_irq;
+	mcpdm->ul_port = omap_abe_port_open(mcpdm->abe, OMAP_ABE_BE_PORT_PDM_UL1);
+	if (mcpdm->ul_port == NULL)
 		goto err_irq;
 #endif
 
@@ -936,6 +842,7 @@ static __devinit int asoc_mcpdm_probe(struct platform_device *pdev)
 #if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\
 	defined(CONFIG_SND_OMAP_SOC_ABE_DSP_MODULE)
 	omap_abe_port_close(mcpdm->abe, mcpdm->dl_port);
+	omap_abe_port_close(mcpdm->abe, mcpdm->ul_port);
 #endif
 err_irq:
 	iounmap(mcpdm->io_base);
@@ -958,11 +865,12 @@ static int __devexit asoc_mcpdm_remove(struct platform_device *pdev)
 	device_remove_file(&pdev->dev, &dev_attr_dl1);
 	device_remove_file(&pdev->dev, &dev_attr_dl2);
 
-#if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\                                    
-        defined(CONFIG_SND_OMAP_SOC_ABE_DSP_MODULE)                             
-        omap_abe_port_close(mcpdm->abe, mcpdm->dl_port);                        
-        omap_abe_port_mgr_put(mcpdm->abe);                                      
-#endif 
+#if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\
+	defined(CONFIG_SND_OMAP_SOC_ABE_DSP_MODULE)
+	omap_abe_port_close(mcpdm->abe, mcpdm->dl_port);
+	omap_abe_port_close(mcpdm->abe, mcpdm->ul_port);
+	omap_abe_port_mgr_put(mcpdm->abe);
+#endif
 
 	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 	iounmap(mcpdm->io_base);
