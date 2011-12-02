@@ -85,6 +85,9 @@
 #define MCPDM_PDMOUTFORMAT_LJUST	(0 << 8)
 #define MCPDM_PDMOUTFORMAT_RJUST	(1 << 8)
 
+#define PDMOUTFORMAT_LJUST	(0 << 8)
+#define PDMOUTFORMAT_RJUST	(1 << 8)
+
 /*
  * MCPDM_FIFO_CTRL bit fields
  */
