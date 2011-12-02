@@ -385,7 +385,7 @@ static int __init omap_init_devices(void)
 	 */
 	omap_init_rng();
 	omap_init_dmic();
-	omap_init_mcpdm();
+//	omap_init_mcpdm();
 	omap_init_aess();
 	omap_init_uwire();
 	return 0;

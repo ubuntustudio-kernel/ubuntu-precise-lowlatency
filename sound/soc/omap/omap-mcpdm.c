@@ -66,7 +66,6 @@ struct omap_mcpdm {
 	unsigned long phys_base;
 	void __iomem *io_base;
 	int irq;
-	struct delayed_work delayed_work;
 
 	struct mutex mutex;
 	struct omap_mcpdm_platform_data *pdata;
@@ -385,9 +384,6 @@ static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 
 	dev_dbg(dai->dev, "%s: active %d\n", __func__, dai->active);
 
-	/* make sure we stop any pre-existing shutdown */
-	cancel_delayed_work_sync(&mcpdm->delayed_work);
-
 	if (!mcpdm->active++) {
 		pm_runtime_get_sync(mcpdm->dev);
 
@@ -414,35 +410,9 @@ static int omap_mcpdm_dai_startup(struct snd_pcm_substream *substream,
 	else
 		mcpdm->abe_mode = 0;
 
+	mutex_unlock(&mcpdm->mutex);
+
 	return 0;
-}
-
-/* work to delay McPDM shutdown */
-static void playback_work(struct work_struct *work)
-{
-	struct omap_mcpdm *mcpdm =
-			container_of(work, struct omap_mcpdm, delayed_work.work);
-
-	if (!mcpdm->active && omap_mcpdm_active(mcpdm)) {
-		/* ABE playback stop handled by delayed work */
-		if (mcpdm->abe_mode) {
-			omap_abe_port_disable(mcpdm->abe, mcpdm->dl_port);
-			omap_abe_port_disable(mcpdm->abe, mcpdm->ul_port);
-			udelay(250);
-			omap_mcpdm_stop(mcpdm);
-			omap_mcpdm_playback_close(mcpdm);
-			omap_mcpdm_capture_close(mcpdm);
-			abe_dsp_shutdown();
-			abe_dsp_pm_put();
-		} else {
-			omap_mcpdm_stop(mcpdm);
-			omap_mcpdm_playback_close(mcpdm);
-			omap_mcpdm_capture_close(mcpdm);
-		}
-	}
-
-	if (!omap_mcpdm_active(mcpdm))
-		pm_runtime_put_sync(mcpdm->dev);
 }
 
 static void omap_mcpdm_dai_shutdown(struct snd_pcm_substream *substream,
@@ -456,8 +426,19 @@ static void omap_mcpdm_dai_shutdown(struct snd_pcm_substream *substream,
 
 	if (!dai->active) {
 		if (omap_mcpdm_active(mcpdm)) {
-			omap_mcpdm_stop(mcpdm);
-			omap_mcpdm_close_streams(mcpdm);
+	                if (mcpdm->abe_mode) {                                          
+				omap_abe_port_disable(mcpdm->abe, mcpdm->dl_port);      
+				omap_abe_port_disable(mcpdm->abe, mcpdm->ul_port);      
+				udelay(250);
+				omap_mcpdm_stop(mcpdm);
+				omap_mcpdm_playback_close(mcpdm);
+				omap_mcpdm_capture_close(mcpdm);                        
+				abe_dsp_shutdown();                                     
+				abe_dsp_pm_put();                                       
+			} else {
+				omap_mcpdm_stop(mcpdm);
+				omap_mcpdm_close_streams(mcpdm);
+			}
 		}
 
 		if (!omap_mcpdm_active(mcpdm))
@@ -533,22 +514,25 @@ static int omap_mcpdm_prepare(struct snd_pcm_substream *substream,
 				  struct snd_soc_dai *dai)
 {
 	struct omap_mcpdm *mcpdm = snd_soc_dai_get_drvdata(dai);
+	int n;
 
 	/* We only need to prepare for ABE playback */
 	if (dai->id < MCPDM_ABE_DAI_DL1)
 		return 0;
 
-        if (!omap_mcpdm_active(mcpdm)) {                                        
-                omap_mcpdm_start(mcpdm);                                        
-                omap_mcpdm_reg_dump(mcpdm);                                     
-        }
+	pm_runtime_enable(mcpdm->dev);
 
-	if (!omap_mcpdm_active(mcpdm)) {
-		if (mcpdm->abe_mode) {
-			/* Check if ABE McPDM DL is already started */
-			if ((omap_abe_port_is_enabled(mcpdm->abe, mcpdm->dl_port)) ||
-			    (omap_abe_port_is_enabled(mcpdm->abe, mcpdm->ul_port)))
-				return 0;
+        n = omap_mcpdm_active(mcpdm);
+
+	pm_runtime_disable(mcpdm->dev);
+
+	if (n)
+		return 0;
+
+	if (mcpdm->abe_mode) {
+		/* Check if ABE McPDM DL is already started */
+		if ((!omap_abe_port_is_enabled(mcpdm->abe, mcpdm->dl_port)) &&
+		    (!omap_abe_port_is_enabled(mcpdm->abe, mcpdm->ul_port))) {
 
 			abe_dsp_pm_get();
 
@@ -558,15 +542,15 @@ static int omap_mcpdm_prepare(struct snd_pcm_substream *substream,
 
 			/* wait 250us for ABE tick */
 			udelay(250);
-			omap_mcpdm_playback_open(mcpdm);
-			omap_mcpdm_capture_open(mcpdm);
-			omap_mcpdm_start(mcpdm);
-		} else {
-			omap_mcpdm_playback_open(mcpdm);
-			omap_mcpdm_capture_open(mcpdm);
-			omap_mcpdm_start(mcpdm);
 		}
 	}
+
+	omap_mcpdm_playback_open(mcpdm);
+	omap_mcpdm_capture_open(mcpdm);
+
+	omap_mcpdm_start(mcpdm);                                        
+	omap_mcpdm_reg_dump(mcpdm);
+
 	return 0;
 }
 
@@ -776,8 +760,6 @@ static __devinit int asoc_mcpdm_probe(struct platform_device *pdev)
 
 	mcpdm->dev = &pdev->dev;
 
-	INIT_DELAYED_WORK(&mcpdm->delayed_work, playback_work);
-
 #if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\
 	defined(CONFIG_SND_OMAP_SOC_ABE_DSP_MODULE)
 
@@ -816,7 +798,6 @@ static int __devexit asoc_mcpdm_remove(struct platform_device *pdev)
 	struct omap_mcpdm *mcpdm = platform_get_drvdata(pdev);
 	struct resource *res;
 
-	flush_delayed_work_sync(&mcpdm->delayed_work);
 	snd_soc_unregister_dais(&pdev->dev, ARRAY_SIZE(omap_mcpdm_dai));
 
 #if defined(CONFIG_SND_OMAP_SOC_ABE_DSP) ||\
