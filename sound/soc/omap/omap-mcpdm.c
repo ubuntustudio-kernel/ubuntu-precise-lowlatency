@@ -554,7 +554,7 @@ static int omap_mcpdm_prepare(struct snd_pcm_substream *substream,
 	return 0;
 }
 
-static void omap_mcpdm_dai_trigger(struct snd_pcm_substream *substream,
+static int omap_mcpdm_dai_trigger(struct snd_pcm_substream *substream,
 		int cmd, struct snd_soc_dai *dai)
 {
 	struct omap_mcpdm *mcpdm = snd_soc_dai_get_drvdata(dai);
@@ -575,6 +575,8 @@ static void omap_mcpdm_dai_trigger(struct snd_pcm_substream *substream,
 	default:
 		break;
 	}
+
+	return 0;
 }
 
 static struct snd_soc_dai_ops omap_mcpdm_dai_ops = {

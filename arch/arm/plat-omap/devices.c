@@ -93,7 +93,7 @@ static struct omap_device_pm_latency omap_dmic_latency[] = {
 static void omap_init_dmic(void)
 {
 	struct omap_hwmod *oh;
-	struct omap_device *od;
+	struct platform_device *pd;
 
 	oh = omap_hwmod_lookup("dmic");
 	if (!oh) {
@@ -101,10 +101,10 @@ static void omap_init_dmic(void)
 		return;
 	}
 
-	od = omap_device_build("omap-dmic-dai", -1, oh, NULL, 0,
+	pd = omap_device_build("omap-dmic-dai", -1, oh, NULL, 0,
 				omap_dmic_latency,
 				ARRAY_SIZE(omap_dmic_latency), 0);
-	if (IS_ERR(od))
+	if (IS_ERR(pd))
 		printk(KERN_ERR "Could not build omap_device for omap-dmic-dai\n");
 }
 #else
@@ -127,7 +127,7 @@ static struct omap_device_pm_latency omap_mcpdm_latency[] = {
 static void omap_init_mcpdm(void)
 {
 	struct omap_hwmod *oh;
-	struct omap_device *od;
+	struct platform_device *pd;
 	struct omap_mcpdm_platform_data *pdata;
 
 	oh = omap_hwmod_lookup("mcpdm");
@@ -142,11 +142,11 @@ static void omap_init_mcpdm(void)
 		return;
 	}
 
-	od = omap_device_build("omap-mcpdm", -1, oh, pdata,
+	pd = omap_device_build("omap-mcpdm", -1, oh, pdata,
 				sizeof(struct omap_mcpdm_platform_data),
 				omap_mcpdm_latency,
 				ARRAY_SIZE(omap_mcpdm_latency), 0);
-	if (IS_ERR(od))
+	if (IS_ERR(pd))
 		printk(KERN_ERR "Could not build omap_device for omap-mcpdm-dai\n");
 }
 #else
@@ -219,7 +219,7 @@ static struct omap_device_pm_latency omap_aess_latency[] = {
 static void omap_init_aess(void)
 {
 	struct omap_hwmod *oh;
-	struct omap_device *od;
+	struct platform_device *pd;
 	struct omap4_abe_dsp_pdata *pdata;
 
 	oh = omap_hwmod_lookup("aess");
@@ -237,14 +237,14 @@ static void omap_init_aess(void)
 	/* FIXME: Add correct context loss counter */
 	//pdata->get_context_loss_count = omap_pm_get_dev_context_loss_count;
 
-	od = omap_device_build("aess", -1, oh, pdata,
+	pd = omap_device_build("aess", -1, oh, pdata,
 				sizeof(struct omap4_abe_dsp_pdata),
 				omap_aess_latency,
 				ARRAY_SIZE(omap_aess_latency), 0);
 
 	kfree(pdata);
 
-	if (IS_ERR(od))
+	if (IS_ERR(pd))
 		printk(KERN_ERR "Could not build omap_device for omap-aess-audio\n");
 }
 #else
