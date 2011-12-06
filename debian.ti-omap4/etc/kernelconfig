@@ -1,2 +1,2 @@
-archs="armel"
+archs="armel armhf"
 family='ubuntu'
