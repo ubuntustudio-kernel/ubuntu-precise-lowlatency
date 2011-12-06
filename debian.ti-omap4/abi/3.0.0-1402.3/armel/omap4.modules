@@ -1,9 +1,11 @@
 6pack
 74x164
 8021q
+88pm860x-ts
 9p
 9pnet
 a3d
+ab3100-otp
 acecad
 act200l-sir
 act_csum
@@ -118,6 +120,7 @@ af_key
 af-rxrpc
 ah4
 ah6
+aha152x_cs
 ahci_platform
 aiptek
 aircable
@@ -132,6 +135,7 @@ altera_jtaguart
 altera_ps2
 altera-stapl
 altera_uart
+amba-pl022
 amc6821
 analog
 ansi_cprng
@@ -143,7 +147,6 @@ appledisplay
 appletalk
 appletouch
 ar7part
-arc4
 ark3116
 arptable_filter
 arp_tables
@@ -194,6 +197,7 @@ batman-adv
 baycom_par
 baycom_ser_fdx
 baycom_ser_hdx
+bch
 bcm203x
 bcm3510
 bcm5974
@@ -211,6 +215,7 @@ blowfish
 bluecard_cs
 bluetooth
 bmp085
+bnep
 bonding
 bpa10x
 bpqether
@@ -219,7 +224,6 @@ bq24022
 bq27x00_battery
 br2684
 bridge
-broadcom
 broadsheetfb
 bsd_comp
 bt3c_cs
@@ -275,7 +279,6 @@ ch341
 ch7006
 chipreg
 chnl_net
-cicada
 cifs
 clearpad_tm1217
 clip
@@ -286,7 +289,6 @@ cls_route
 cls_rsvp
 cls_rsvp6
 cls_tcindex
-cls_u32
 cm109
 cm4000_cs
 cm4040_cs
@@ -332,13 +334,16 @@ da9030_battery
 da9034-ts
 da903x
 da903x_bl
-davicom
+davinci_cpdma
+davinci_mdio
 db9
 dccp
 dccp_diag
 dccp_ipv4
 dccp_ipv6
 dccp_probe
+de600
+de620
 decnet
 deflate
 des_generic
@@ -428,6 +433,8 @@ dvb-usb-ttusb2
 dvb-usb-umt-010
 dvb-usb-vp702x
 dvb-usb-vp7045
+dw_spi
+dw_spi_mmio
 dynapro
 easycap
 ebt_802_3
@@ -460,6 +467,7 @@ eeprom_93cx6
 eeti_ts
 efs
 elo
+elsa_cs
 em28xx
 em28xx-alsa
 em28xx-dvb
@@ -482,7 +490,6 @@ esd_usb2
 esi-sir
 esp4
 esp6
-et1011c
 et61x251
 ethoc
 evbug
@@ -492,6 +499,7 @@ f71882fg
 f75375s
 faulty
 fcrypt
+fdomain_cs
 ff-memless
 fm_drv
 freevxfs
@@ -500,6 +508,7 @@ ft1000_pcmcia
 ftdi-elan
 ftdi_sio
 ftl
+ftmac100
 fujitsu_ts
 funsoft
 g760a
@@ -635,6 +644,7 @@ hid-monterey
 hid-multitouch
 hid-ntrig
 hid-ortek
+hidp
 hid-petalynx
 hid-picolcd
 hid-pl
@@ -655,6 +665,7 @@ hid-tmff
 hid-topseed
 hid-twinhan
 hid-uclogic
+hid-wacom
 hid-waltop
 hid-zpff
 hid-zydacron
@@ -662,7 +673,6 @@ hisax
 hisax_st5481
 hmc5843
 hmc6352
-hostap
 hostap_cs
 hp4x
 hpfs
@@ -693,7 +703,6 @@ i2c-tiny-usb
 i2c-xiic
 ibmaem
 ibmpex
-icplus
 ics932s401
 idmouse
 ieee802154
@@ -805,6 +814,7 @@ ir-usb
 iscsi_boot_sysfs
 iscsi_tcp
 isdn
+isdn_bsdcomp
 isdnhdlc
 isight_firmware
 isl29003
@@ -887,10 +897,6 @@ lgdt3305
 lgdt330x
 lgs8gxx
 lg-vl600
-lib80211
-lib80211_crypt_ccmp
-lib80211_crypt_tkip
-lib80211_crypt_wep
 libahci
 libata
 libceph
@@ -911,6 +917,14 @@ lightning
 line6usb
 linear
 lirc_dev
+lirc_igorplugusb
+lirc_imon
+lirc_parallel
+lirc_sasem
+lirc_serial
+lirc_sir
+lirc_ttusbir
+lirc_zilog
 lis3l02dq
 lis3lv02d
 lis3lv02d_i2c
@@ -948,7 +962,6 @@ ltc4215
 ltc4245
 ltc4261
 ltv350qv
-lxt
 lzo
 lzo_compress
 m25p80
@@ -962,7 +975,6 @@ map_absent
 map_funcs
 map_ram
 map_rom
-marvell
 matrix_keypad
 max1111
 max11801_ts
@@ -985,7 +997,10 @@ max7359_keypad
 max8649
 max8660
 max8903_charger
+max8925-regulator
 max8952
+max8997
+max8998
 mb86a20s
 mc13783-adc
 mc13783-regulator
@@ -1012,7 +1027,6 @@ md-mod
 memstick
 metronomefb
 mg_disk
-michael_mic
 micrel
 microtek
 minix
@@ -1063,6 +1077,7 @@ mwifiex_sdio
 mxl5005s
 mxl5007t
 nand
+nand_bch
 nand_ecc
 nand_ids
 nandsim
@@ -1157,6 +1172,7 @@ noon010pc30
 nop-usb-xceiv
 n_r3964
 ns558
+nsp_cs
 ntfs
 n_tracerouter
 n_tracesink
@@ -1214,6 +1230,7 @@ pc87427
 pca953x
 pca9541
 pca954x
+pcap_ts
 pcbc
 pcf50633
 pcf50633-adc
@@ -1246,6 +1263,7 @@ plat_nand
 plat-ram
 plip
 plusb
+pn544
 pn_pep
 pohmelfs
 poseidon
@@ -1271,6 +1289,8 @@ pwc
 qcaux
 qcserial
 qinfo_probe
+qlogic_cs
+qlogicfas408
 qnx4
 qsemi
 qt1010
@@ -1396,6 +1416,7 @@ redboot
 redrat3
 reed_solomon
 reiserfs
+rfcomm
 rfd_ftl
 rfkill-regulator
 ring_sw
@@ -1417,6 +1438,8 @@ rt2800usb
 rt2x00lib
 rt2x00usb
 rt73usb
+rtc-88pm860x
+rtc-ab8500
 rtc-bq32k
 rtc-bq4802
 rtc-cmos
@@ -1443,12 +1466,17 @@ rtc-m48t59
 rtc-m48t86
 rtc-max6900
 rtc-max6902
+rtc-max8925
+rtc-max8998
 rtc-mc13xxx
 rtc-msm6242
+rtc-pcap
 rtc-pcf2123
 rtc-pcf50633
 rtc-pcf8563
 rtc-pcf8583
+rtc-pl030
+rtc-pl031
 rtc-r9701
 rtc-rp5c01
 rtc-rs5c348
@@ -1460,6 +1488,8 @@ rtc-s35390a
 rtc-stk17ta8
 rtc-test
 rtc-v3020
+rtc-wm831x
+rtc-wm8350
 rtc-x1205
 rtl8150
 rtl8187
@@ -1503,6 +1533,10 @@ sch_sfq
 sch_tbf
 sch_teql
 scsi_debug
+scsi_dh_alua
+scsi_dh_emc
+scsi_dh_hp_sw
+scsi_dh_rdac
 scsi_tgt
 scsi_transport_fc
 scsi_transport_iscsi
@@ -1515,6 +1549,7 @@ sctp_probe
 sdhci
 sdhci-platform
 sdio_uart
+sedlbauer_cs
 seed
 seqiv
 ser_gigaset
@@ -1524,7 +1559,6 @@ serpent
 serport
 serqt_usb2
 ses
-sg
 sha512_generic
 sh_mobile_ceu_camera
 sht15
@@ -1546,7 +1580,6 @@ sl811-hcd
 slcan
 slip
 slram
-sm501
 sm501fb
 sm7xx
 smc911x
@@ -1558,7 +1591,6 @@ smsc47b397
 smsc47m1
 smsc47m192
 smsc75xx
-smsc911x
 smsdvb
 smsmdtv
 smssdio
@@ -1585,6 +1617,7 @@ snd-seq-midi
 snd-seq-midi-event
 snd-seq-virmidi
 snd-serial-u16550
+snd-soc-88pm860x
 snd-soc-ad1836
 snd-soc-ad193x
 snd-soc-ad73311
@@ -1623,6 +1656,7 @@ snd-soc-uda1380
 snd-soc-wl1273
 snd-soc-wm1250-ev1
 snd-soc-wm2000
+snd-soc-wm8350
 snd-soc-wm8400
 snd-soc-wm8510
 snd-soc-wm8523
@@ -1655,6 +1689,7 @@ snd-soc-wm8988
 snd-soc-wm8990
 snd-soc-wm8991
 snd-soc-wm8993
+snd-soc-wm8994
 snd-soc-wm8995
 snd-soc-wm9081
 snd-soc-wm9090
@@ -1718,6 +1753,7 @@ stinger
 stir4200
 stkwebcam
 stmmac
+stmpe-ts
 stowaway
 stp
 streamzap
@@ -1729,6 +1765,7 @@ stv090x
 stv6110
 stv6110x
 sunkbd
+sym53c500_cs
 symbolserial
 synaptics_i2c
 synaptics_i2c_rmi4
@@ -1771,6 +1808,7 @@ tea5761
 tea5767
 tef6862
 tekram-sir
+teles_cs
 test-kstrtox
 test_power
 tgr192
@@ -1807,6 +1845,8 @@ tps6507x
 tps6507x-regulator
 tps6507x-ts
 tps6524x-regulator
+tps6586x-regulator
+tps65910-regulator
 trancevibrator
 tranzport
 ts_bm
@@ -1817,7 +1857,6 @@ ts_kmp
 tsl2550
 tsl2563
 tsl2583
-tun
 tuner
 tuner-simple
 tuner-types
@@ -1829,6 +1868,7 @@ tveeprom
 tvp5150
 tw9910
 twidjoy
+twl4030-madc
 twofish_common
 twofish_generic
 u132-hcd
@@ -1937,9 +1977,15 @@ wl12xx_spi
 wl3501_cs
 wlags49_h25_cs
 wlags49_h2_cs
+wm831x-dcdc
+wm831x-isink
+wm831x-ldo
+wm831x-ts
+wm8350-regulator
 wm8400-core
 wm8400-regulator
 wm8775
+wm8994-regulator
 wp512
 wusb-cbaf
 wusbcore
@@ -2027,7 +2073,6 @@ xt_TPROXY
 xt_TRACE
 xt_u32
 xusbatm
-xz_dec
 xz_dec_test
 yam
 yealink
