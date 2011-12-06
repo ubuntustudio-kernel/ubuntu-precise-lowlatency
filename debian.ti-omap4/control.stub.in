@@ -56,7 +56,7 @@ Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-maverick.git
 # version locked tools in the PKGVER kernel source.
 
 Package: linux-headers-PKGVER-ABINUM
-Architecture: armel
+Architecture: armel armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
@@ -67,7 +67,7 @@ Description: Header files related to Linux kernel version PKGVER
  /usr/share/doc/linux-headers-PKGVER-ABINUM/debian.README.gz for details
 
 #Package: linux-libc-dev
-#Architecture: armel
+#Architecture: armel armhf
 #Depends: ${misc:Depends}
 #Conflicts: libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), dvb-dev (<< 1.0.1-6), amd64-libs-dev (<= 1.1), SRCPKGNAME-kernel-headers
 #Replaces: libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), dvb-dev (<< 1.0.1-6), SRCPKGNAME-kernel-headers, libdrm-dev
@@ -79,7 +79,7 @@ Description: Header files related to Linux kernel version PKGVER
 # your kernel. Use SRCPKGNAME-headers-* packages for that.
 
 Package: SRCPKGNAME-tools-PKGVER-ABINUM
-Architecture: armel
+Architecture: armel armhf
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
