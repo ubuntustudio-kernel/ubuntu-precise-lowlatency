@@ -2534,11 +2534,11 @@ static int ext4_da_write_end(struct file *file,
 							page, fsdata);
 
 	page_len = PAGE_CACHE_SIZE -
-			((pos + copied - 1) & (PAGE_CACHE_SIZE - 1));
+			((pos + copied) & (PAGE_CACHE_SIZE - 1));
 
-	if (page_len > 0) {
+	if (page_len > 0 && page_len < PAGE_CACHE_SIZE) {
 		ret = ext4_discard_partial_page_buffers_no_lock(handle,
-			inode, page, pos + copied - 1, page_len,
+			inode, page, pos + copied, page_len,
 			EXT4_DISCARD_PARTIAL_PG_ZERO_UNMAPPED);
 	}
 
