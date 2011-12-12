@@ -155,6 +155,11 @@ void omap3_intc_suspend(void);
 void omap3_intc_prepare_idle(void);
 void omap3_intc_resume_idle(void);
 
+/* Used to implement memory barrier on DRAM path */
+#define OMAP4_DRAM_BARRIER_VA	0xfe600000
+
+#ifndef __ASSEMBLER__
+
 /*
  * wfi used in low power code. Directly opcode is used instead
  * of instruction to avoid mulit-omap build break
@@ -174,6 +179,8 @@ extern void __iomem *gic_dist_base_addr;
 
 extern void __init gic_init_irq(void);
 extern void omap_smc1(u32 fn, u32 arg);
+extern void omap_bus_sync(void);
+extern unsigned long omap_get_dram_barrier_base(void);
 
 #ifdef CONFIG_SMP
 /* Needed for secondary core boot */
@@ -183,4 +190,5 @@ extern void omap_auxcoreboot_addr(u32 cpu_addr);
 extern u32 omap_read_auxcoreboot0(void);
 #endif
 
+#endif /* __ASSEMBLER__ */
 #endif /* __ARCH_ARM_MACH_OMAP2PLUS_COMMON_H */
