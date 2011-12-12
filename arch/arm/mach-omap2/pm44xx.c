@@ -19,6 +19,7 @@
 #include "common.h"
 #include "powerdomain.h"
 #include "clockdomain.h"
+#include "pm.h"
 
 struct power_state {
 	struct powerdomain *pwrdm;
