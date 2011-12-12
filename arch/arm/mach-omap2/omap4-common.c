@@ -23,6 +23,8 @@
 
 #include <plat/irqs.h>
 
+#include <plat/irqs.h>
+
 #include <mach/hardware.h>
 
 #include "common.h"
