@@ -58,6 +58,7 @@
 #define HDMI_GPIO_HPD  63 /* Hotplug detect */
 #define DISPLAY_SEL_GPIO	59	/* LCD2/PicoDLP switch */
 #define DLP_POWER_ON_GPIO	40
+#define DISPLAY_SEL_GPIO	59	/* LCD2/PicoDLP switch */
 
 #define GPIO_WIFI_PMENA		54
 #define GPIO_WIFI_IRQ		53
