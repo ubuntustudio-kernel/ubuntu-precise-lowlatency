@@ -125,6 +125,10 @@ struct hdmi_ip_data {
 	/* ti_hdmi_4xxx_ip private data. These should be in a separate struct */
 	int hpd_gpio;
 	bool phy_tx_enabled;
+#if defined(CONFIG_SND_OMAP_SOC_OMAP4_HDMI) || \
+        defined(CONFIG_SND_OMAP_SOC_OMAP4_HDMI_MODULE)
+        struct omap_hwmod *oh;
+#endif
 };
 int ti_hdmi_4xxx_phy_enable(struct hdmi_ip_data *ip_data);
 void ti_hdmi_4xxx_phy_disable(struct hdmi_ip_data *ip_data);
