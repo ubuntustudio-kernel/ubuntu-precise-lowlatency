@@ -366,7 +366,8 @@ void blk_drain_queue(struct request_queue *q, bool drain_all)
 		if (drain_all)
 			blk_throtl_drain(q);
 
-		__blk_run_queue(q);
+		if (!list_empty(&q->queue_head))
+			__blk_run_queue(q);
 
 		if (drain_all)
 			nr_rqs = q->rq.count[0] + q->rq.count[1];
