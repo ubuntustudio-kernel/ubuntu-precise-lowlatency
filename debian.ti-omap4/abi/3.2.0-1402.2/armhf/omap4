@@ -7975,7 +7975,6 @@ EXPORT_SYMBOL_GPL vmlinux 0x22542a3f	sysdev_class_remove_file
 EXPORT_SYMBOL_GPL vmlinux 0x227befa6	scsi_autopm_get_device
 EXPORT_SYMBOL_GPL vmlinux 0x227da508	fuse_request_alloc
 EXPORT_SYMBOL_GPL vmlinux 0x2296c00d	crypto_attr_u32
-EXPORT_SYMBOL_GPL vmlinux 0x22ae5d32	musb_interrupt
 EXPORT_SYMBOL_GPL vmlinux 0x22bdaf32	hwspin_lock_free
 EXPORT_SYMBOL_GPL vmlinux 0x22edd0fa	snd_soc_put_volsw_2r_sx
 EXPORT_SYMBOL_GPL vmlinux 0x22efb825	klist_init
