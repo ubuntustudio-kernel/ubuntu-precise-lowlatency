@@ -266,7 +266,7 @@ ENTRY(xsc3_flush_kern_dcache_area)
  *	- start  - virtual start address
  *	- end	 - virtual end address
  */
-xsc3_dma_inv_range:
+ENTRY(xsc3_dma_inv_range)
 	tst	r0, #CACHELINESIZE - 1
 	bic	r0, r0, #CACHELINESIZE - 1
 	mcrne	p15, 0, r0, c7, c10, 1		@ clean L1 D line
@@ -287,7 +287,7 @@ xsc3_dma_inv_range:
  *	- start  - virtual start address
  *	- end	 - virtual end address
  */
-xsc3_dma_clean_range:
+ENTRY(xsc3_dma_clean_range)
 	bic	r0, r0, #CACHELINESIZE - 1
 1:	mcr	p15, 0, r0, c7, c10, 1		@ clean L1 D line
 	add	r0, r0, #CACHELINESIZE
