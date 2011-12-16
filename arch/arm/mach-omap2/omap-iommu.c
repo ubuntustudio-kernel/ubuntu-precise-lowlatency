@@ -146,8 +146,7 @@ static int __init omap_iommu_init(void)
 	}
 	return 0;
 }
-/* must be ready before omap3isp is probed */
-subsys_initcall(omap_iommu_init);
+postcore_initcall(omap_iommu_init);
 
 static void __exit omap_iommu_exit(void)
 {
