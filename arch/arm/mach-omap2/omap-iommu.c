@@ -146,6 +146,7 @@ static int __init omap_iommu_init(void)
 	}
 	return 0;
 }
+
 /* must be ready before omap3isp is probed */
 subsys_initcall(omap_iommu_init);
 
