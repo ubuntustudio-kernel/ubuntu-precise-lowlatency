@@ -1220,4 +1220,7 @@ MACHINE_START(OMAP_4430SDP, "OMAP4430 4430SDP board")
 	.init_machine	= omap_4430sdp_init,
 	.timer		= &omap4_timer,
 	.restart	= omap_prcm_restart,
+#ifdef CONFIG_ZONE_DMA                                                          
+        .dma_zone_size  = 500 * 1024 * 1024,                                    
+#endif  
 MACHINE_END
