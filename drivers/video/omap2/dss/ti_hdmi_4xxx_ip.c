@@ -316,6 +316,7 @@ int ti_hdmi_4xxx_phy_enable(struct hdmi_ip_data *ip_data)
 		hdmi_set_phy_pwr(ip_data, HDMI_PHYPWRCMD_OFF);
 		return r;
 	}
+	msleep(2000);
 
 	return 0;
 }
@@ -480,16 +481,24 @@ int ti_hdmi_4xxx_read_edid(struct hdmi_ip_data *ip_data,
 	return l;
 }
 
+static u8 test_edid[128];
+
 bool ti_hdmi_4xxx_detect(struct hdmi_ip_data *ip_data)
 {
 	int r;
-
+#if 1
 	void __iomem *base = hdmi_core_sys_base(ip_data);
-
-	msleep(500);
 
 	/* HPD */
 	r = REG_GET(base, HDMI_CORE_SYS_SYS_STAT, 1, 1);
+	pr_err("ti_hdmi_4xxx_detect: by detect line: %d (1 == connected)\n", r);
+#else
+
+	r = ti_hdmi_4xxx_read_edid(ip_data, test_edid, sizeof test_edid);
+	r = r == 128;
+	pr_err("ti_hdmi_4xxx_detect: by edid == %d\n", r);
+
+#endif
 
 	return r == 1;
 }
