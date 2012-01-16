@@ -28,7 +28,7 @@
 #include <asm/hardware/gic.h>
 
 #include <mach/omap-wakeupgen.h>
-#include <mach/omap4-common.h>
+#include "common.h"
 #include <mach/omap-secure.h>
 
 #include "omap4-sar-layout.h"
