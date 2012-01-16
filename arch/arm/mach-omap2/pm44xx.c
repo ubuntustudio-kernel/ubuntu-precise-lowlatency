@@ -35,7 +35,6 @@
 #include "prm44xx.h"
 #include "prminst44xx.h"
 
-#include <mach/omap4-common.h>
 #include <plat/common.h>
 
 #include "prm-regbits-44xx.h"
