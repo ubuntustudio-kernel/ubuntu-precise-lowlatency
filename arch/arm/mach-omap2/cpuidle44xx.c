@@ -18,7 +18,7 @@
 
 #include <asm/proc-fns.h>
 
-#include <mach/omap4-common.h>
+#include "common.h"
 
 #include "pm.h"
 #include "prm.h"
