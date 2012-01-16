@@ -16,7 +16,7 @@
 #include <asm/hardware/cache-l2x0.h>
 
 #include <plat/omap44xx.h>
-#include <mach/omap4-common.h>
+/*#include <mach/omap4-common.h>*/
 #include <mach/omap-secure.h>
 
 #include "omap4-sar-layout.h"
