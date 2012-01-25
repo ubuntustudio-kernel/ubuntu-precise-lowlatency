@@ -79,9 +79,8 @@ isolate_freepages_range(struct zone *zone,
 skip:
 			if (freelist)
 				goto next;
-failed:
 			for (; start < pfn; ++start)
-				__free_page(pfn_to_page(start));
+				__free_page(pfn_to_page(pfn));
 			return 0;
 		}
 
@@ -92,8 +91,6 @@ failed:
 			struct page *p = page;
 			for (i = isolated; i; --i, ++p)
 				list_add(&p->lru, freelist);
-		} else if (!isolated) {
-			goto failed;
 		}
 
 next:
