@@ -111,10 +111,7 @@ skip:
 
 next:
 		pfn += isolated;
-		if (zone_pfn_same_memmap(pfn - isolated, pfn))
-			page += isolated;
-		else
-			page = pfn_to_page(pfn);
+		page += isolated;
 	}
 
 	trace_mm_compaction_isolate_freepages(nr_scanned, total_isolated);
