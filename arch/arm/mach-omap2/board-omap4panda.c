@@ -826,7 +826,4 @@ MACHINE_START(OMAP4_PANDA, "OMAP4 Panda board")
 	.timer		= &omap4_timer,
 	.restart	= omap_prcm_restart,
 	.dt_compat	= omap4_panda_match,
-#ifdef CONFIG_ZONE_DMA                                                          
-        .dma_zone_size  = 500 * 1024 * 1024,
-#endif 
 MACHINE_END
