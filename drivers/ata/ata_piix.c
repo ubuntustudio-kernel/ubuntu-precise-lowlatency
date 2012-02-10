@@ -94,6 +94,9 @@
 #include <scsi/scsi_host.h>
 #include <linux/libata.h>
 #include <linux/dmi.h>
+#ifdef CONFIG_X86
+#include <asm/hypervisor.h>
+#endif
 
 #define DRV_NAME	"ata_piix"
 #define DRV_VERSION	"2.13"
@@ -1666,9 +1669,21 @@ static void piix_remove_one(struct pci_dev *pdev)
 	ata_pci_remove_one(pdev);
 }
 
+static int prefer_ms_hyperv = 1;
+
 static int __init piix_init(void)
 {
 	int rc;
+#ifdef CONFIG_X86
+	/*
+	 * If we are on the Microsoft Hyper-V platform deferr to its block
+	 * drivers.
+	 */
+	if (prefer_ms_hyperv && x86_hyper == &x86_hyper_ms_hyperv) {
+		pr_info("ata_piix: deferring to Hyper-V hypervisor");
+		return -ENODEV;
+	}
+#endif
 
 	DPRINTK("pci_register_driver\n");
 	rc = pci_register_driver(&piix_pci_driver);
@@ -1688,3 +1703,5 @@ static void __exit piix_exit(void)
 
 module_init(piix_init);
 module_exit(piix_exit);
+
+module_param(prefer_ms_hyperv, int, 0);
