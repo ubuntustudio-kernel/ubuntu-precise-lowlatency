@@ -745,6 +745,10 @@ static int omap_panda_netdev_event(struct notifier_block *this,
 	if (event != NETDEV_REGISTER)
 		return NOTIFY_DONE;
 
+	if (strncmp(dev->name, "eth0", 4) == 0 &&
+		!(dev->addr_assign_type & NET_ADDR_RANDOM))
+		return NOTIFY_DONE;
+
 	n = panda_device_path_need_mac(dev->dev.parent);
 	if (n >= 0) {
 		sa.sa_family = dev->type;
