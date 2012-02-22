@@ -921,6 +921,14 @@ lightning
 line6usb
 linear
 lirc_dev
+lirc_igorplugusb
+lirc_imon
+lirc_parallel
+lirc_sasem
+lirc_serial
+lirc_sir
+lirc_ttusbir
+lirc_zilog
 lis3l02dq
 lis3lv02d
 lis3lv02d_i2c
