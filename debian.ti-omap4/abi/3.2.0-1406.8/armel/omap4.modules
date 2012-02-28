@@ -893,7 +893,6 @@ leds-regulator
 ledtrig-backlight
 ledtrig-default-on
 ledtrig-gpio
-ledtrig-heartbeat
 ledtrig-timer
 legousbtower
 lgdt3305
