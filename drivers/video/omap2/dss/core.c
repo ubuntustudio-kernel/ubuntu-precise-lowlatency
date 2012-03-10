@@ -26,6 +26,7 @@
 #include <linux/module.h>
 #include <linux/clk.h>
 #include <linux/err.h>
+#include <linux/export.h>
 #include <linux/platform_device.h>
 #include <linux/seq_file.h>
 #include <linux/debugfs.h>
@@ -61,6 +62,7 @@ const char* omap_dss_get_def_disp()
 {
 	return def_disp_name;
 }
+EXPORT_SYMBOL(omap_dss_get_def_disp);
 
 /* REGULATORS */
 
