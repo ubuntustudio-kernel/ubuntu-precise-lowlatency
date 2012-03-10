@@ -17,6 +17,7 @@
  * WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
  *
  */
+#include <linux/export.h>
 #include <linux/slab.h>
 
 #include "_tcm-sita.h"
@@ -161,6 +162,7 @@ error:
 	kfree(pvt);
 	return NULL;
 }
+EXPORT_SYMBOL(sita_init);
 
 static void sita_deinit(struct tcm *tcm)
 {
