@@ -15,9 +15,8 @@
  *  WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
  *  PURPOSE.
  */
+#include <linux/kernel.h>
 #include <linux/types.h>
-#include <linux/bug.h>
-
 
 #include <heap.h>
 
