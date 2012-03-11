@@ -14,6 +14,7 @@
 #include <linux/kernel.h>
 #include <linux/errno.h>
 #include <linux/err.h>
+#include <linux/export.h>
 #include <linux/init.h>
 #include <linux/slab.h>
 #include <linux/cpufreq.h>
@@ -219,6 +220,7 @@ int opp_get_opp_count(struct device *dev)
 
 	return count;
 }
+EXPORT_SYMBOL(opp_get_opp_count);
 
 /**
  * opp_find_freq_exact() - search for an exact frequency
@@ -354,6 +356,7 @@ struct opp *opp_find_freq_floor(struct device *dev, unsigned long *freq)
 
 	return opp;
 }
+EXPORT_SYMBOL(opp_find_freq_floor);
 
 /**
  * opp_add()  - Add an OPP table from a table definitions
