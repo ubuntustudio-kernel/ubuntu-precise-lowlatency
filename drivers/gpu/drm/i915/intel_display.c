@@ -8875,7 +8875,8 @@ static void quirk_rc6_force_disable(struct drm_device *dev)
 }
 
 /*
- * A machine may need to invert the panel backlight brightness value
+ * A machine (e.g. Acer Aspire 5734Z) may need to invert the panel backlight
+ * brightness value
  */
 static void quirk_invert_brightness(struct drm_device *dev)
 {
@@ -8915,6 +8916,9 @@ struct intel_quirk intel_quirks[] = {
 
 	/* Sony Vaio Y cannot use SSC on LVDS */
 	{ 0x0046, 0x104d, 0x9076, quirk_ssc_force_disable },
+
+	/* Acer Aspire 5734Z must invert backlight brightness */
+	{ 0x2a42, 0x1025, 0x0459, quirk_invert_brightness },
 
 	/* Asus ET2012E may fail to resume from S3 if RC6 is enabled */
 	{ 0x0102, 0x1043, 0x844d, quirk_rc6_force_disable },
