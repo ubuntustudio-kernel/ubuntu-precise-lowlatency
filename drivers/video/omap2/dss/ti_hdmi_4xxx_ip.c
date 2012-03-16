@@ -432,7 +432,7 @@ bool ti_hdmi_4xxx_detect(struct hdmi_ip_data *ip_data)
 
 	/* HPD */
 	r = REG_GET(base, HDMI_CORE_SYS_SYS_STAT, 1, 1);
-	pr_err("ti_hdmi_4xxx_detect: by detect line: %d (1 == connected)\n", r);
+	pr_info("ti_hdmi_4xxx_detect: by detect line: %d (1 == connected)\n", r);
 #else
 
 	r = ti_hdmi_4xxx_read_edid(ip_data, test_edid, sizeof test_edid);
