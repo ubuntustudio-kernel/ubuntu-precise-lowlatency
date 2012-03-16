@@ -156,7 +156,7 @@ void omap3_intc_prepare_idle(void);
 void omap3_intc_resume_idle(void);
 
 /* Used to implement memory barrier on DRAM path */
-#define OMAP4_DRAM_BARRIER_VAi		0xfe600000
+#define OMAP4_DRAM_BARRIER_VA		0xfe600000
 
 #ifndef __ASSEMBLER__
 
