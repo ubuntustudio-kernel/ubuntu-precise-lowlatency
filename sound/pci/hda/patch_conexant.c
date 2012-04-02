@@ -4406,8 +4406,8 @@ static void apply_pincfg(struct hda_codec *codec, const struct cxt_pincfg *cfg)
 
 enum {
 	CXT_PINCFG_LENOVO_X200,
-	CXT_FIXUP_STEREO_DMIC,
 	CXT_PINCFG_LENOVO_TP410,
+	CXT_FIXUP_STEREO_DMIC,
 };
 
 static void apply_fixup(struct hda_codec *codec,
@@ -4455,7 +4455,6 @@ static const struct cxt_pincfg *cxt_pincfg_tbl[] = {
 
 static const struct snd_pci_quirk cxt5051_fixups[] = {
 	SND_PCI_QUIRK(0x17aa, 0x20f2, "Lenovo X200", CXT_PINCFG_LENOVO_X200),
-	SND_PCI_QUIRK(0x17aa, 0x3975, "Lenovo U300s", CXT_FIXUP_STEREO_DMIC),
 	{}
 };
 
@@ -4465,6 +4464,7 @@ static const struct snd_pci_quirk cxt5066_fixups[] = {
 	SND_PCI_QUIRK(0x17aa, 0x215f, "Lenovo T510", CXT_PINCFG_LENOVO_TP410),
 	SND_PCI_QUIRK(0x17aa, 0x21ce, "Lenovo T420", CXT_PINCFG_LENOVO_TP410),
 	SND_PCI_QUIRK(0x17aa, 0x21cf, "Lenovo T520", CXT_PINCFG_LENOVO_TP410),
+	SND_PCI_QUIRK(0x17aa, 0x3975, "Lenovo U300s", CXT_FIXUP_STEREO_DMIC),
 	{}
 };
 
