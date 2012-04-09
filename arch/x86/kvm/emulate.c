@@ -139,6 +139,9 @@
 #define Src2FS      (OpFS << Src2Shift)
 #define Src2GS      (OpGS << Src2Shift)
 #define Src2Mask    (OpMask << Src2Shift)
+#define Aligned     ((u64)1 << 41)  /* Explicitly aligned (e.g. MOVDQA) */
+#define Unaligned   ((u64)1 << 42)  /* Explicitly unaligned (e.g. MOVDQU) */
+#define Avx         ((u64)1 << 43)  /* Advanced Vector Extensions */
 
 #define X2(x...) x, x
 #define X3(x...) X2(x), x
@@ -554,6 +557,29 @@ static void set_segment_selector(struct x86_emulate_ctxt *ctxt, u16 selector,
 	ctxt->ops->set_segment(ctxt, selector, &desc, base3, seg);
 }
 
+/*
+ * x86 defines three classes of vector instructions: explicitly
+ * aligned, explicitly unaligned, and the rest, which change behaviour
+ * depending on whether they're AVX encoded or not.
+ *
+ * Also included is CMPXCHG16B which is not a vector instruction, yet it is
+ * subject to the same check.
+ */
+static bool insn_aligned(struct x86_emulate_ctxt *ctxt, unsigned size)
+{
+	if (likely(size < 16))
+		return false;
+
+	if (ctxt->d & Aligned)
+		return true;
+	else if (ctxt->d & Unaligned)
+		return false;
+	else if (ctxt->d & Avx)
+		return false;
+	else
+		return true;
+}
+
 static int __linearize(struct x86_emulate_ctxt *ctxt,
 		     struct segmented_address addr,
 		     unsigned size, bool write, bool fetch,
@@ -618,6 +644,8 @@ static int __linearize(struct x86_emulate_ctxt *ctxt,
 	}
 	if (fetch ? ctxt->mode != X86EMUL_MODE_PROT64 : ctxt->ad_bytes != 8)
 		la &= (u32)-1;
+	if (insn_aligned(ctxt, size) && ((la & (size - 1)) != 0))
+		return emulate_gp(ctxt, 0);
 	*linear = la;
 	return X86EMUL_CONTINUE;
 bad:
@@ -3162,7 +3190,7 @@ static struct opcode group11[] = {
 };
 
 static struct gprefix pfx_0f_6f_0f_7f = {
-	N, N, N, I(Sse, em_movdqu),
+	N, N, N, I(Sse | Unaligned, em_movdqu),
 };
 
 static struct opcode opcode_table[256] = {
