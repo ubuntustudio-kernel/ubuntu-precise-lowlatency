@@ -5789,6 +5789,7 @@ EXPORT_SYMBOL vmlinux 0xe15c0dc4	d_validate
 EXPORT_SYMBOL vmlinux 0xe15f718b	noop_fsync
 EXPORT_SYMBOL vmlinux 0xe1761617	security_inet_conn_request
 EXPORT_SYMBOL vmlinux 0xe187693c	kstrtouint_from_user
+EXPORT_SYMBOL vmlinux 0xe188e8ef	locks_delete_block
 EXPORT_SYMBOL vmlinux 0xe196e1d8	padata_unregister_cpumask_notifier
 EXPORT_SYMBOL vmlinux 0xe1c3f902	skb_insert
 EXPORT_SYMBOL vmlinux 0xe1e52e15	scsi_cmd_print_sense_hdr
