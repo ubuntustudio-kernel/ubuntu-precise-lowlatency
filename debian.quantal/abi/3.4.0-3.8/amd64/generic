@@ -1195,9 +1195,9 @@ EXPORT_SYMBOL drivers/media/video/saa7134/saa7134 0xb34cc9c0	saa7134_pgtable_bui
 EXPORT_SYMBOL drivers/media/video/saa7134/saa7134 0xd20237ef	saa7134_ts_register
 EXPORT_SYMBOL drivers/media/video/soc_camera 0x1f1e25bb	soc_camera_xlate_by_fourcc
 EXPORT_SYMBOL drivers/media/video/soc_camera 0x3ec98431	soc_camera_unlock
-EXPORT_SYMBOL drivers/media/video/soc_camera 0x52c02069	soc_camera_host_register
+EXPORT_SYMBOL drivers/media/video/soc_camera 0x494bc508	soc_camera_host_register
 EXPORT_SYMBOL drivers/media/video/soc_camera 0x5ff844ef	soc_camera_apply_board_flags
-EXPORT_SYMBOL drivers/media/video/soc_camera 0x61c0e89b	soc_camera_host_unregister
+EXPORT_SYMBOL drivers/media/video/soc_camera 0x866b660e	soc_camera_host_unregister
 EXPORT_SYMBOL drivers/media/video/soc_camera 0xc169673e	soc_camera_lock
 EXPORT_SYMBOL drivers/media/video/soc_mediabus 0x433952ab	soc_mbus_find_fmtdesc
 EXPORT_SYMBOL drivers/media/video/soc_mediabus 0x6951757b	soc_mbus_samples_per_pixel
@@ -8391,6 +8391,7 @@ EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-memops 0x072c0140	vb2_mmap_pfn_r
 EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-memops 0x2fe8bc6c	vb2_common_vm_ops
 EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-memops 0x5bdabb68	vb2_get_contig_userptr
 EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-memops 0xbbc6641b	vb2_put_vma
+EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-memops 0xf20fa93f	vb2_get_vma
 EXPORT_SYMBOL_GPL drivers/media/video/videobuf2-vmalloc 0x829385ee	vb2_vmalloc_memops
 EXPORT_SYMBOL_GPL drivers/media/video/videodev 0x00012a29	v4l2_event_queue_fh
 EXPORT_SYMBOL_GPL drivers/media/video/videodev 0x04850588	v4l2_device_register_subdev
@@ -9621,6 +9622,8 @@ EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0xa15afa38	dccp_v4_connect
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0xc35f5d4f	dccp_v4_send_check
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0xe6b86c6e	dccp_v4_request_recv_sock
 EXPORT_SYMBOL_GPL net/dccp/dccp_ipv4 0xf21e6c1e	dccp_invalid_packet
+EXPORT_SYMBOL_GPL net/dsa/dsa_core 0x13ac8bb0	register_switch_driver
+EXPORT_SYMBOL_GPL net/dsa/dsa_core 0x188a953c	unregister_switch_driver
 EXPORT_SYMBOL_GPL net/ipv4/gre 0x526d906f	gre_add_protocol
 EXPORT_SYMBOL_GPL net/ipv4/gre 0xe350d0da	gre_del_protocol
 EXPORT_SYMBOL_GPL net/ipv4/inet_diag 0x26337c15	inet_diag_dump_icsk
@@ -10592,7 +10595,6 @@ EXPORT_SYMBOL_GPL vmlinux 0x136b9ced	tcp_get_info
 EXPORT_SYMBOL_GPL vmlinux 0x136dfa57	shash_ahash_digest
 EXPORT_SYMBOL_GPL vmlinux 0x13751c22	register_ftrace_function
 EXPORT_SYMBOL_GPL vmlinux 0x138aff76	gnttab_init
-EXPORT_SYMBOL_GPL vmlinux 0x13ac8bb0	register_switch_driver
 EXPORT_SYMBOL_GPL vmlinux 0x13b2a946	register_keyboard_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x13db0c34	xen_swiotlb_map_sg_attrs
 EXPORT_SYMBOL_GPL vmlinux 0x13dfeefe	inet6_hash_connect
@@ -10629,7 +10631,6 @@ EXPORT_SYMBOL_GPL vmlinux 0x18582826	amd_pmu_disable_virt
 EXPORT_SYMBOL_GPL vmlinux 0x18678dec	tcp_reno_ssthresh
 EXPORT_SYMBOL_GPL vmlinux 0x1874f759	perf_event_create_kernel_counter
 EXPORT_SYMBOL_GPL vmlinux 0x1878f62b	edac_err_assert
-EXPORT_SYMBOL_GPL vmlinux 0x188a953c	unregister_switch_driver
 EXPORT_SYMBOL_GPL vmlinux 0x18e2c347	dev_pm_qos_remove_global_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x18f64918	blk_update_request
 EXPORT_SYMBOL_GPL vmlinux 0x18f83fab	gnttab_grant_foreign_access_ref
