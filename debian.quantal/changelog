@@ -1,4 +1,31 @@
-linux-lts-quantal (3.4.0-4.9~precise1) precise; urgency=low
+linux-lts-quantal (3.4.0-5.11~precise1) precise; urgency=low
+
+  [ Leann Ogasawara ]
+
+  * [Config] Disable CONFIG_ARM_LPAE
+    - LP: #1009061
+
+  [ Oleksij Rempel ]
+
+  * SAUCE: b43: do not call ieee80211_unregister_hw if we are not registred
+    - LP: #1008905
+
+  [ Paolo Pisati ]
+
+  * [Config] omap3: MFD_OMAP_USB_HOST is usb host in omap2+.
+    - LP: #1009061
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Tue, 05 Jun 2012 08:06:28 -0700
+
+linux (3.4.0-4.10) quantal; urgency=low
+
+  [ Leann Ogasawara ]
+
+  * Temporarily disable ABI and module check
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Mon, 04 Jun 2012 20:27:31 -0700
+
+linux (3.4.0-4.9) quantal; urgency=low
 
   [ Andy Whitcroft ]
 
