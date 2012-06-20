@@ -1,4 +1,59 @@
-linux-lts-quantal (3.4.0-5.11~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-1.1~precise1) precise; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * [Config] highbank -- enable CONFIG_RFKILL=y and CONFIG_CAN=m
+
+  [ Leann Ogasawara ]
+
+  * Rebase to v3.5-rc1
+  * [Config] Remove USB_DEVICEFS from the config enforcer
+  * [Config] Updateconfigs after rebase to v3.5-rc1
+  * [Config] Temporarily disable CONFIG_MACH_NOKIA_RX51 on arm
+  * [Config] Temporarily disable CONFIG_TOUCHSCREEN_EETI on arm
+  * [Config] Temporarily disable CONFIG_TOUCHSCREEN_EGALAX on arm
+  * [Config] Temporarily disable CONFIG_EZX_PCAP on arm
+  * [Config] Temporarily disable CONFIG_LIS3L02DQ on arm
+  * [Config] Temporarily disable CONFIG_TI_CPSW on arm
+  * [Config] Temporarily disable CONFIG_GPIO_EM on arm
+  * [Config] Temporarily disable CONFIG_SERIAL_8250_EM on armhf
+  * [Config] Temporarily disable CONFIG_STMMAC_ETH on armhf
+  * [Config] Temporarily disable CONFIG_HW_RANDOM_ATMEL on armhf
+  * Rebase to v3.5-rc2
+  * [Config] Updateconfigs after rebase to v3.5-rc2
+  * [Config] Temporarily disable CONFIG_MV643XX_ETH on powerpc
+  * Rebase to v3.5-rc3
+  * [Config] Updateconfigs after rebase to v3.5-rc3
+
+  [ Paul Mundt ]
+
+  * SAUCE: fix bug.h's inclusion of kernel.h
+
+  [ Stefan Bader ]
+
+  * SAUCE: Fix compile failures of dm-raid45
+  * [Config] Enable dm-raid45
+  * Move dependency on crda to extra package
+    - LP: #657901
+  * SAUCE: Mask CR4 writes on older Xen hypervisors
+
+  [ Upstream Kernel Changes ]
+
+  * rebase to v3.5-rc3
+    - LP: #993162
+    - LP: #925577
+  * rebase to v3.5-rc2
+  * rebase to v3.5-rc1
+    - LP: #955892
+    - LP: #978038
+    - LP: #987371
+    - LP: #929545
+    - LP: #942316
+    - LP: #903853
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Fri, 08 Jun 2012 14:28:46 -0700
+
+linux (3.4.0-5.11) quantal-proposed; urgency=low
 
   [ Leann Ogasawara ]
 
