@@ -1,4 +1,39 @@
-linux-lts-quantal (3.5.0-2.2~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-3.3~precise1) precise; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * [Config] enable CONFIG_MEMTEST=y
+    - LP: #1004535
+  * [Config] config-check: add support for a cut operation
+  * [Config] enforcer -- switch to cut where appropriate
+
+  [ Leann Ogasawara ]
+
+  * Rebase to v3.5-rc5
+  * [Config] Updateconfigs after rebase to v3.5-rc5
+
+  [ Luis Henriques ]
+
+  * SAUCE: ocfs2: Fix NULL pointer dereferrence in
+    __ocfs2_change_file_space
+    - LP: #1006012
+
+  [ Seth Forshee ]
+
+  * SAUCE: (drop after 3.5) drm/i915: ignore pipe select bit when checking
+    for LVDS register initialization
+    - LP: #1012800
+
+  [ Upstream Kernel Changes ]
+
+  * rebase to v3.5-rc5
+    - LP: #1013183
+    - LP: #1017017
+    - LP: #884652
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Mon, 02 Jul 2012 06:41:58 -0700
+
+linux (3.5.0-2.2) quantal-proposed; urgency=low
 
   [ Andy Whitcroft ]
 
