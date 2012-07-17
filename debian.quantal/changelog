@@ -1,4 +1,42 @@
-linux-lts-quantal (3.5.0-4.4~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-5.5~precise1) precise; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * [Config] annotations: initial import of configuration annotations
+
+  [ Bryan Wu ]
+
+  * [Config] enforcer -- add CONFIG_I2C_DESIGNWARE_PLATFORM enforce checker
+
+  [ Leann Ogasawara ]
+
+  * Rebase to v3.5-rc7
+
+  [ Manoj Iyer ]
+
+  * SAUCE: Bluetooth: btusb: Add vendor specific ID (0a5c:21f4) BCM20702A0
+    - LP: #1010281
+
+  [ Tim Gardner ]
+
+  * [Config] enable CONFIG_I2C_HELPER_AUTO for all flavours as policy
+    expects
+  * [Config] CONFIG_I2O_CONFIG_OLD_IOCTL=n
+  * [Config] CONFIG_BRIDGE_EBT_ULOG=n
+  * [Config] CONFIG_IP_NF_QUEUE=n
+  * [Config] CONFIG_MTD_DOC2000=n
+  * [Config] CONFIG_PRINT_QUOTA_WARNING=n
+  * [Config] CONFIG_PRISM54=n
+  * [Config] CONFIG_SCx200_I2C=n
+  * [Config] CONFIG_USB_ANNOUNCE_NEW_DEVICES=y
+
+  [ Upstream Kernel Changes ]
+
+  * rebase to v3.5-rc7
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Mon, 16 Jul 2012 15:38:41 -0700
+
+linux (3.5.0-4.4) quantal-proposed; urgency=low
 
   [ Andy Whitcroft ]
 
