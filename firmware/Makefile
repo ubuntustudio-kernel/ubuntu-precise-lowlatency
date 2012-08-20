@@ -76,6 +76,12 @@ fw-shipped-$(CONFIG_USB_SERIAL_WHITEHEAT) += whiteheat_loader.fw whiteheat.fw \
 fw-shipped-$(CONFIG_USB_VICAM) += vicam/firmware.fw
 fw-shipped-$(CONFIG_YAM) += yam/1200.bin yam/9600.bin
 
+fw-shipped-$(CONFIG_SCSI_QLA_FC) += \
+	ql2300_fw.bin \
+	ql2322_fw.bin \
+	ql2400_fw.bin \
+	ql2500_fw.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
