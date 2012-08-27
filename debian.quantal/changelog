@@ -1,4 +1,18 @@
-linux-lts-quantal (3.5.0-12.12~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-13.13~precise1) precise; urgency=low
+
+  [ Tim Gardner ]
+
+  * rebase to v3.5.3
+  * [Config] Add smsc{79}5xx to nic-usb-modules
+    - LP: #1041397
+
+  [ Upstream Kernel Changes ]
+
+  * rebase to v3.5.3
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Mon, 27 Aug 2012 11:29:08 -0700
+
+linux (3.5.0-12.12) quantal-proposed; urgency=low
 
   [ Luis Henriques ]
 
