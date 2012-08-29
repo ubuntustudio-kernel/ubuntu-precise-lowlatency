@@ -1,4 +1,19 @@
-linux-lts-quantal (3.5.0-13.13~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-13.14~precise1) precise; urgency=low
+
+  [ Leann Ogasawara ]
+
+  * [Config] Disable CONFIG_DRM_MGAG200
+    - LP: #1042903
+
+  [ Upstream Kernel Changes ]
+
+  * [media] uvcvideo: Reset the bytesused field when recycling an erroneous
+    buffer
+    - LP: #1042809
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Tue, 28 Aug 2012 08:43:55 -0400
+
+linux (3.5.0-13.13) quantal-proposed; urgency=low
 
   [ Tim Gardner ]
 
