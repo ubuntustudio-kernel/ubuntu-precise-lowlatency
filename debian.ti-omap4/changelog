@@ -4,6 +4,15 @@ linux-ti-omap4 (3.2.0-1418.25) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Herton Ronaldo Krzesinski ]
+
+  * rebased on Ubuntu-3.2.0-30.48
+
+  [ Ubuntu: 3.2.0-30.48 ]
+
+  * mutex: Place lock in contended state after fastpath_lock failure
+    - LP: #1041114
+
  -- Herton Ronaldo Krzesinski <herton.krzesinski@canonical.com>  Fri, 31 Aug 2012 14:32:40 -0300
 
 linux-ti-omap4 (3.2.0-1418.24) precise-proposed; urgency=low
