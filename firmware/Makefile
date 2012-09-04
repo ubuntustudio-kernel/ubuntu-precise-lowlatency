@@ -82,6 +82,25 @@ fw-shipped-$(CONFIG_SCSI_QLA_FC) += \
 	ql2400_fw.bin \
 	ql2500_fw.bin
 
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/ARUBA_me.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/ARUBA_pfp.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/ARUBA_rlc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/PITCAIRN_ce.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/PITCAIRN_mc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/PITCAIRN_me.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/PITCAIRN_pfp.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/PITCAIRN_rlc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/TAHITI_ce.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/TAHITI_mc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/TAHITI_me.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/TAHITI_pfp.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/TAHITI_rlc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/VERDE_ce.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/VERDE_mc.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/VERDE_me.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/VERDE_pfp.bin
+fw-shipped-$(CONFIG_DRM_RADEON) += radeon/VERDE_rlc.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
