@@ -663,7 +663,7 @@ int main(void)
 	fd = socket(AF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
 	if (fd < 0) {
 		syslog(LOG_ERR, "netlink socket creation failed; error:%d", fd);
-		exit(-1);
+		exit(EXIT_FAILURE);
 	}
 	addr.nl_family = AF_NETLINK;
 	addr.nl_pad = 0;
@@ -675,7 +675,7 @@ int main(void)
 	if (error < 0) {
 		syslog(LOG_ERR, "bind failed; error:%d", error);
 		close(fd);
-		exit(-1);
+		exit(EXIT_FAILURE);
 	}
 	sock_opt = addr.nl_groups;
 	setsockopt(fd, 270, 1, &sock_opt, sizeof(sock_opt));
@@ -695,7 +695,7 @@ int main(void)
 	if (len < 0) {
 		syslog(LOG_ERR, "netlink_send failed; error:%d", len);
 		close(fd);
-		exit(-1);
+		exit(EXIT_FAILURE);
 	}
 
 	pfd.fd = fd;
@@ -863,7 +863,7 @@ kvp_done:
 		len = netlink_send(fd, incoming_cn_msg);
 		if (len < 0) {
 			syslog(LOG_ERR, "net_link send failed; error:%d", len);
-			exit(-1);
+			exit(EXIT_FAILURE);
 		}
 	}
 
