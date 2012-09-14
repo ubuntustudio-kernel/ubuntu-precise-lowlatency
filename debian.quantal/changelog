@@ -1,4 +1,22 @@
-linux-lts-quantal (3.5.0-14.16~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-14.18~precise1) precise; urgency=low
+
+  [ Tim Gardner ]
+
+  * SAUCE: Add 'used' to the video_cards structure attributes
+    - LP: #1049650
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Fri, 14 Sep 2012 10:58:40 -0400
+
+linux (3.5.0-14.17) quantal; urgency=low
+
+  [ Keng-Yu Lin ]
+
+  * SAUCE: Intel xhci: Only switch the switchable ports
+    - LP: #1034814
+
+ -- Leann Ogasawara <leann.ogasawara@canonical.com>  Wed, 12 Sep 2012 08:34:21 -0700
+
+linux (3.5.0-14.16) quantal-proposed; urgency=low
 
   [ Bernhard Froemel ]
 
