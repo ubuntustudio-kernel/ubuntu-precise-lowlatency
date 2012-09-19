@@ -1,4 +1,27 @@
-linux-lts-quantal (3.5.0-15.20~precise1) precise; urgency=low
+linux-lts-quantal (3.5.0-15.21~precise1) precise; urgency=low
+
+  [ Tim Gardner ]
+
+  * ubuntu: AUFS -- update to 18e455787597579fe144cdb2f18aa6a0a32c46a4
+  * [Config] Enable aufs
+    - LP: #908784
+
+  [ Upstream Kernel Changes ]
+
+  * eCryptfs: check for eCryptfs cipher support at mount
+    - LP: #338914
+  * drm/i915: pnv has a backlight polarity control bit, too
+    - LP: #954661
+  * drm/i915: clear up backlight #define confusion on gen4+
+    - LP: #954661
+  * drm/i915: properly enable the blc controller on the right pipe
+    - LP: #954661
+  * drm/i915: allow pipe A for lvds on gen4
+    - LP: #954661
+
+ -- Tim Gardner <tim.gardner@canonical.com>  Tue, 18 Sep 2012 08:37:51 -0400
+
+linux (3.5.0-15.20) quantal-proposed; urgency=low
 
   [ Tim Gardner ]
 
