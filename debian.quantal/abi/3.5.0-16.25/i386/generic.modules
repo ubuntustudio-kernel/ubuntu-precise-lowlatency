@@ -1879,7 +1879,6 @@ mtip32xx
 mtouch
 multipath
 multiq3
-musb_hdrc
 mv88e6060
 mv88e6xxx_drv
 mvsas
@@ -2180,7 +2179,6 @@ pcap_keys
 pcap_ts
 pcbc
 pcbit
-pcc-cpufreq
 pcd
 pcf50633
 pcf50633-adc
@@ -2736,7 +2734,6 @@ sis5595
 sis900
 sis-agp
 sisfb
-sisusbvga
 sit
 sja1000
 sja1000_isa
@@ -3591,7 +3588,6 @@ xfrm_ipcomp
 xfrm_user
 xfs
 xgifb
-xgmac
 xilinx_uartps
 xirc2ps_cs
 xircom_cb
