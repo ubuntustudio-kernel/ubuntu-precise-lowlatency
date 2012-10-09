@@ -134,6 +134,7 @@ af-rxrpc
 afs
 ah4
 ah6
+ahci_platform
 aiptek
 aircable
 ak881x
@@ -381,6 +382,7 @@ dccp
 dccp_diag
 dccp_ipv4
 dccp_ipv6
+dccp_probe
 de600
 de620
 decnet
@@ -1691,6 +1693,7 @@ scsi_transport_spi
 scsi_transport_srp
 scsi_wait_scan
 sctp
+sctp_probe
 sdhci-pxav2
 sdhci-pxav3
 sdio_uart
@@ -1949,7 +1952,19 @@ tcm825x
 tcm_fc
 tcm_loop
 tcm_usb_gadget
+tcp_bic
 tcp_diag
+tcp_highspeed
+tcp_htcp
+tcp_hybla
+tcp_illinois
+tcp_lp
+tcp_probe
+tcp_scalable
+tcp_vegas
+tcp_veno
+tcp_westwood
+tcp_yeah
 tcrypt
 tda10021
 tda10023
@@ -1978,6 +1993,7 @@ tea6415c
 tea6420
 tef6862
 tekram-sir
+test-kprobes
 test_power
 tgr192
 thmc50
