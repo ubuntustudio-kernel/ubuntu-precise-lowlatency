@@ -944,7 +944,8 @@ static void btusb_load_firmware(struct hci_dev *hdev)
 		return;
 
 	snprintf(filename, PATCHRAM_NAME_LEN, "fw-%04x_%04x.hcd",
-			id->idVendor, id->idProduct);
+			le16_to_cpu(udev->descriptor.idVendor),
+			le16_to_cpu(udev->descriptor.idProduct));
 	if (request_firmware(&fw, (const char *) filename, &udev->dev) < 0) {
 		BT_INFO("can't load firmware, may not work correctly");
 		return;
