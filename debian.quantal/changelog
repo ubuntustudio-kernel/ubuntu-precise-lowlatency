@@ -1,9 +1,60 @@
-linux-lts-quantal (3.5.0-18.29~precise1) precise-proposed; urgency=low
+linux-lts-quantal (3.5.0-19.30~precise1) precise-proposed; urgency=low
 
   [Luis Henriques]
 
   * Release Tracking Bug
-    - LP: #1069865
+    - LP: #1078677
+
+  [ Andy Whitcroft ]
+
+  * UBUNTU: ensure we build signed packages for precise
+    - LP: #1075181
+  * [Config] update Vcs-git: to point to quantal
+    - LP: #1069204
+
+  [ Joseph Salisbury ]
+
+  * SAUCE: ALSA: hda - add quirk for Thinkpad T430
+    - LP: #1060372
+
+  [ Tim Gardner ]
+
+  * [Config] CONFIG_USB_OTG=n for all but armel/armhf
+    - LP: #1047527
+  * [Config] remove ndiswrapper from Provides:
+    - LP: #1076395
+  * [Config] ONFIG_AMD_IOMMU_V2=m
+    - LP: #1071520
+
+  [ Upstream Kernel Changes ]
+
+  * kernel/sys.c: fix stack memory content leak via UNAME26
+    - LP: #1065622, #1060521
+    - CVE-2012-0957
+  * use clamp_t in UNAME26 fix
+    - LP: #1065622, #1060521
+    - CVE-2012-0957
+  * net: fix divide by zero in tcp algorithm illinois
+    - LP: #1077091
+    - CVE-2012-4565
+
+  [ Wen-chien Jesse Sung ]
+
+  * SAUCE: Bluetooth: Add a load_firmware callback to struct hci_dev
+    - LP: #1065400
+  * SAUCE: Bluetooth: Implement broadcom patchram firmware loader
+    - LP: #1065400
+  * SAUCE: Bluetooth: Add support for 13d3:3388 and 13d3:3389
+    - LP: #1065400
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Wed, 14 Nov 2012 11:55:55 +0000
+
+linux (3.5.0-18.29) quantal-proposed; urgency=low
+
+  [Luis Henriques]
+
+  * Release Tracking Bug
+    - LP: #1068224
 
   [ Andy Whitcroft ]
 
@@ -479,7 +530,7 @@ linux-lts-quantal (3.5.0-18.29~precise1) precise-proposed; urgency=low
   * Linux 3.5.7
     - LP: #1066176
 
- -- Luis Henriques <luis.henriques@canonical.com>  Mon, 22 Oct 2012 16:07:53 +0100
+ -- Luis Henriques <luis.henriques@canonical.com>  Thu, 18 Oct 2012 17:43:41 +0100
 
 linux (3.5.0-17.28) quantal-proposed; urgency=low
 
