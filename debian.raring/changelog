@@ -1,4 +1,4 @@
-linux (3.7.0-1.7) raring; urgency=low
+linux-lts-raring (3.7.0-1.7~precise1) precise; urgency=low
 
   [ Tim Gardner ]
 
