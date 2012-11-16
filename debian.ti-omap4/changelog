@@ -4,6 +4,538 @@ linux-ti-omap4 (3.2.0-1421.29) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-34.53 ]
+
+  * Release Tracking Bug
+    - LP: #1078760
+  * SAUCE: input: Cypress PS/2 Trackpad list additional contributors
+  * SAUCE: input: Cypress PS/2 Trackpad fix multi-source, double-click
+    - LP: #1055788
+  * SAUCE: input: Cypress PS/2 Trackpad fix lost sync upon palm contact
+    - LP: #1048258
+  * SAUCE: input: Cypress PS/2 Trackpad fix taps turning into hardware
+    clicks
+    - LP: #1064086
+  * [Config] remove ndiswrapper from Provides:
+    - LP: #1076395
+  * [Config] CONFIG_HP_WATCHDOG=m for x86en
+    - LP: #1076342
+  * Revert "SUNRPC: Ensure we close the socket on EPIPE errors too..."
+    - LP: #1075355
+  * Revert "ath9k_hw: Updated AR9003 tx gain table for 5GHz"
+    - LP: #1075355
+  * eCryptfs: check for eCryptfs cipher support at mount
+    - LP: #338914
+  * isci: fix isci_pci_probe() generates warning on efi failure path
+    - LP: #1068162
+  * mtd: nand: Use the mirror BBT descriptor when reading its version
+    - LP: #1068162
+  * drm/i915: prevent possible pin leak on error path
+    - LP: #1068162
+  * workqueue: add missing smp_wmb() in process_one_work()
+    - LP: #1068162
+  * TTY: ttyprintk, don't touch behind tty->write_buf
+    - LP: #1068162
+  * Remove BUG_ON from n_tty_read()
+    - LP: #1068162
+  * n_gsm.c: Implement 3GPP27.010 DLC start-up procedure in MUX
+    - LP: #1068162
+  * n_gsm: uplink SKBs accumulate on list
+    - LP: #1068162
+  * n_gsm : Flow control handling in Mux driver
+    - LP: #1068162
+  * char: n_gsm: remove message filtering for contipated DLCI
+    - LP: #1068162
+  * n_gsm: added interlocking for gsm_data_lock for certain code paths
+    - LP: #1068162
+  * n_gsm: avoid accessing freed memory during CMD_FCOFF condition
+    - LP: #1068162
+  * n_gsm: replace kfree_skb w/ appropriate dev_* versions
+    - LP: #1068162
+  * n_gsm: memory leak in uplink error path
+    - LP: #1068162
+  * UBI: fix autoresize handling in R/O mode
+    - LP: #1068162
+  * UBI: erase free PEB with bitflip in EC header
+    - LP: #1068162
+  * firmware: Add missing attributes to EFI variable attribute print out
+    from sysfs
+    - LP: #1068162
+  * tools/hv: Fix exit() error code
+    - LP: #1068162
+  * slab: fix the DEADLOCK issue on l3 alien lock
+    - LP: #1068162
+  * gspca_pac7302: Add usb-id for 145f:013c
+    - LP: #1068162
+  * gspca_pac7302: add support for device 1ae7:2001 Speedlink Snappy
+    Microphone SL-6825-SBK
+    - LP: #1068162
+  * xhci: Warn when hosts don't halt.
+    - LP: #1068162
+  * xHCI: add cmd_ring_state
+    - LP: #1068162
+  * xHCI: add aborting command ring function
+    - LP: #1068162
+  * xHCI: cancel command after command timeout
+    - LP: #1068162
+  * hpsa: Use LUN reset instead of target reset
+    - LP: #1068162
+  * rc: ite-cir: Initialise ite_dev::rdev earlier
+    - LP: #1068162
+  * staging: speakup_soft: Fix reading of init string
+    - LP: #1068162
+  * target: fix return code in target_core_init_configfs error path
+    - LP: #1068162
+  * powerpc/eeh: Lock module while handling EEH event
+    - LP: #1068162
+  * intel-iommu: Default to non-coherent for domains unattached to iommus
+    - LP: #1068162
+  * workqueue: fix possible stall on try_to_grab_pending() of a delayed
+    work item
+    - LP: #1068162
+  * PCI: Check P2P bridge for invalid secondary/subordinate range
+    - LP: #1068162
+  * staging: comedi: don't dereference user memory for INSN_INTTRIG
+    - LP: #1068162
+  * SUNRPC: Ensure that the TCP socket is closed when in CLOSE_WAIT
+    - LP: #1068162
+  * ext4: fix potential deadlock in ext4_nonda_switch()
+    - LP: #1068162
+  * staging: comedi: fix memory leak for saved channel list
+    - LP: #1068162
+  * USB: option: blacklist QMI interface on ZTE MF683
+    - LP: #1068162
+  * USB: qcaux: add Pantech vendor class match
+    - LP: #1068162
+  * can: mscan-mpc5xxx: fix return value check in mpc512x_can_get_clock()
+    - LP: #1068162
+  * iscsi-target: Correctly set 0xffffffff field within ISCSI_OP_REJECT PDU
+    - LP: #1068162
+  * rcu: Fix day-one dyntick-idle stall-warning bug
+    - LP: #1068162
+  * zfcp: Make trace record tags unique
+    - LP: #1068162
+  * zfcp: Bounds checking for deferred error trace
+    - LP: #1068162
+  * zfcp: Do not wakeup while suspended
+    - LP: #1068162
+  * zfcp: remove invalid reference to list iterator variable
+    - LP: #1068162
+  * zfcp: restore refcount check on port_remove
+    - LP: #1068162
+  * zfcp: only access zfcp_scsi_dev for valid scsi_device
+    - LP: #1068162
+  * ibmvscsi: Fix host config length field overflow
+    - LP: #1068162
+  * scsi_remove_target: fix softlockup regression on hot remove
+    - LP: #1056746, #1068162
+  * scsi_dh_alua: Enable STPG for unavailable ports
+    - LP: #1068162
+  * Increase XHCI suspend timeout to 16ms
+    - LP: #1068162
+  * usb: host: xhci: Fix Null pointer dereferencing with 71c731a for
+    non-x86 systems
+    - LP: #1068162
+  * USB: ftdi_sio: add TIAO USB Multi-Protocol Adapter (TUMPA) support
+    - LP: #1068162
+  * ACPI: run _OSC after ACPI_FULL_INITIALIZATION
+    - LP: #1068162
+  * ath9k: Disable ASPM only for AR9285
+    - LP: #1068162
+  * xhci: Intel Panther Point BEI quirk.
+    - LP: #1068162
+  * drm/i915: add some barriers when changing DIPs
+    - LP: #1068162
+  * drm/i915: make sure we write all the DIP data bytes
+    - LP: #1068162
+  * ext4: move_extent code cleanup
+    - LP: #1068162
+  * ext4: online defrag is not supported for journaled files
+    - LP: #1068162
+  * staging: comedi: s626: don't dereference insn->data
+    - LP: #1068162
+  * serial: set correct baud_base for EXSYS EX-41092 Dual 16950
+    - LP: #1068162
+  * serial: pl011: handle corruption at high clock speeds
+    - LP: #1068162
+  * ext4: always set i_op in ext4_mknod()
+    - LP: #1068162
+  * ext4: fix fdatasync() for files with only i_size changes
+    - LP: #1068162
+  * coredump: prevent double-free on an error path in core dumper
+    - LP: #1068162
+  * drm/i915: use adjusted_mode instead of mode for checking the 6bpc force
+    flag
+    - LP: #1068162
+  * drm/radeon: only adjust default clocks on NI GPUs
+    - LP: #1068162
+  * drm/radeon: Add MSI quirk for gateway RS690
+    - LP: #1068162
+  * drm/radeon: force MSIs on RS690 asics
+    - LP: #1068162
+  * kbuild: Do not package /boot and /lib in make tar-pkg
+    - LP: #1068162
+  * staging: comedi: jr3_pci: fix iomem dereference
+    - LP: #1068162
+  * mtd: autcpu12-nvram: Fix compile breakage
+    - LP: #1068162
+  * mtd: mtdpart: break it as soon as we parse out the partitions
+    - LP: #1068162
+  * mtd: omap2: fix omap_nand_remove segfault
+    - LP: #1068162
+  * mtd: omap2: fix module loading
+    - LP: #1068162
+  * JFFS2: don't fail on bitflips in OOB
+    - LP: #1068162
+  * mtd: nandsim: bugfix: fail if overridesize is too big
+    - LP: #1068162
+  * IPoIB: Fix use-after-free of multicast object
+    - LP: #1068162
+  * IB/srp: Fix use-after-free in srp_reset_req()
+    - LP: #1068162
+  * IB/srp: Avoid having aborted requests hang
+    - LP: #1068162
+  * localmodconfig: Fix localyesconfig to set to 'y' not 'm'
+    - LP: #1068162
+  * pnfsblock: fix partial page buffer wirte
+    - LP: #1068162
+  * drm/i915: Flush the pending flips on the CRTC before modification
+    - LP: #1068162
+  * target/file: Re-enable optional fd_buffered_io=1 operation
+    - LP: #1068162
+  * iscsi-target: Add explicit set of cache_dynamic_acls=1 for TPG
+    demo-mode
+    - LP: #1068162
+  * iscsit: remove incorrect unlock in iscsit_build_sendtargets_resp
+    - LP: #1068162
+  * scripts/Kbuild.include: Fix portability problem of "echo -e"
+    - LP: #1068162
+  * kbuild: Fix gcc -x syntax
+    - LP: #1068162
+  * mmc: omap_hsmmc: Pass on the suspend failure to the PM core
+    - LP: #1068162
+  * mmc: sh-mmcif: avoid oops on spurious interrupts
+    - LP: #1068162
+  * iscsi-target: Bump defaults for nopin_timeout + nopin_response_timeout
+    values
+    - LP: #1068162
+  * lguest: fix occasional crash in example launcher.
+    - LP: #1068162
+  * drm/i915: call drm_handle_vblank before finish_page_flip
+    - LP: #1068162
+  * drm/i915: Fix GT_MODE default value
+    - LP: #1068162
+  * mn10300: only add -mmem-funcs to KBUILD_CFLAGS if gcc supports it
+    - LP: #1068162
+  * drivers/dma/dmaengine.c: lower the priority of 'failed to get' dma
+    channel message
+    - LP: #1068162
+  * kbuild: make: fix if_changed when command contains backslashes
+    - LP: #1068162
+  * drivers/scsi/atp870u.c: fix bad use of udelay
+    - LP: #1068162
+  * kernel/sys.c: call disable_nonboot_cpus() in kernel_restart()
+    - LP: #1068162
+  * lib/gcd.c: prevent possible div by 0
+    - LP: #1068162
+  * rapidio/rionet: fix multicast packet transmit logic
+    - LP: #1068162
+  * ALSA: hda - Fix internal mic for Lenovo Ideapad U300s
+    - LP: #1068162, #903853
+  * ALSA: HDA: Add inverted internal mic quirk for Lenovo S205
+    - LP: #1068162, #884652
+  * ALSA: hda - Add inverted internal mic quirk for Lenovo IdeaPad U310
+    - LP: #1068162
+  * ALSA: aloop - add locking to timer access
+    - LP: #1068162
+  * mmc: sdhci-s3c: fix the wrong number of max bus clocks
+    - LP: #1068162
+  * ARM: OMAP: counter: add locking to read_persistent_clock
+    - LP: #1068162
+  * mm: fix invalidate_complete_page2() lock ordering
+    - LP: #1068162
+  * mm: thp: fix pmd_present for split_huge_page and PROT_NONE with THP
+    - LP: #1068162
+  * mm: hugetlb: fix pgoff computation when unmapping page from vma
+    - LP: #1068162
+  * hugetlb: do not use vma_hugecache_offset() for vma_prio_tree_foreach
+    - LP: #1068162
+  * firewire: cdev: fix user memory corruption (i386 userland on amd64
+    kernel)
+    - LP: #1068162
+  * autofs4 - fix reset pending flag on mount fail
+    - LP: #1068162
+  * udf: fix retun value on error path in udf_load_logicalvol
+    - LP: #1068162
+  * efi: initialize efi.runtime_version to make
+    query_variable_info/update_capsule workable
+    - LP: #1068162
+  * mempolicy: remove mempolicy sharing
+    - LP: #1068162
+  * mempolicy: fix a race in shared_policy_replace()
+    - LP: #1068162
+  * mempolicy: fix refcount leak in mpol_set_shared_policy()
+    - LP: #1068162
+  * mempolicy: fix a memory corruption by refcount imbalance in
+    alloc_pages_vma()
+    - LP: #1068162
+  * r8169: Config1 is read-only on 8168c and later.
+    - LP: #1068162
+  * r8169: 8168c and later require bit 0x20 to be set in Config2 for PME
+    signaling.
+    - LP: #1068162
+  * hpsa: dial down lockup detection during firmware flash
+    - LP: #1068162
+  * netfilter: nf_ct_ipv4: packets with wrong ihl are invalid
+    - LP: #1068162
+  * netfilter: nf_nat_sip: fix incorrect handling of EBUSY for RTCP
+    expectation
+    - LP: #1068162
+  * netfilter: nf_nat_sip: fix via header translation with multiple
+    parameters
+    - LP: #1068162
+  * netfilter: nf_ct_expect: fix possible access to uninitialized timer
+    - LP: #1068162
+  * ipvs: fix oops on NAT reply in br_nf context
+    - LP: #1068162
+  * netfilter: limit, hashlimit: avoid duplicated inline
+    - LP: #1068162
+  * netfilter: xt_limit: have r->cost != 0 case work
+    - LP: #1068162
+  * e1000: fix lockdep splat in shutdown handler
+    - LP: #1068162
+  * xHCI: handle command after aborting the command ring
+    - LP: #1068162
+  * drm/i915: fix swizzle detection for gen3
+    - LP: #1068162
+  * drm/i915: Mark untiled BLT commands as fenced on gen2/3
+    - LP: #1068162
+  * drm/i915: clear fencing tracking state when retiring requests
+    - LP: #1068162
+  * Linux 3.2.32
+    - LP: #1068162
+  * netfilter: ipset: avoid use of kernel-only types
+    - LP: #1075355
+  * samsung-laptop: don't handle backlight if handled by acpi/video
+    - LP: #1075355
+  * samsung-laptop: make the dmi check less strict (part 2)
+    - LP: #1075355
+  * jbd: Fix assertion failure in commit code due to lacking transaction
+    credits
+    - LP: #1075355
+  * mtd: nand: allow NAND_NO_SUBPAGE_WRITE to be set from driver
+    - LP: #1075355
+  * e1000: fix vlan processing regression
+    - LP: #1075355
+  * SUNRPC: Set alloc_slot for backchannel tcp ops
+    - LP: #1075355
+  * drm/i915: don't pwrite tiled objects through the gtt
+    - LP: #1075355
+  * drm/i915: no lvds quirk for Zotac ZDBOX SD ID12/ID13
+    - LP: #1075355
+  * sparc64: fix ptrace interaction with force_successful_syscall_return()
+    - LP: #1075355
+  * sparc64: Like x86 we should check current->mm during perf backtrace
+    generation.
+    - LP: #1075355
+  * sparc64: Fix bit twiddling in sparc_pmu_enable_event().
+    - LP: #1075355
+  * sparc64: do not clobber personality flags in sys_sparc64_personality()
+    - LP: #1075355
+  * sparc64: Be less verbose during vmemmap population.
+    - LP: #1075355
+  * net: Fix skb_under_panic oops in neigh_resolve_output
+    - LP: #1075355
+  * skge: Add DMA mask quirk for Marvell 88E8001 on ASUS P5NSLI motherboard
+    - LP: #1075355
+  * vlan: don't deliver frames for unknown vlans to protocols
+    - LP: #1075355
+  * RDS: fix rds-ping spinlock recursion
+    - LP: #1075355
+  * tcp: resets are misrouted
+    - LP: #1075355
+  * staging: comedi: amplc_pc236: fix invalid register access during detach
+    - LP: #1075355
+  * nfsd4: fix nfs4 stateid leak
+    - LP: #1075355
+  * viafb: don't touch clock state on OLPC XO-1.5
+    - LP: #1075355
+  * module: taint kernel when lve module is loaded
+    - LP: #1075355
+  * ACPI: EC: Make the GPE storm threshold a module parameter
+    - LP: #1075355
+  * ACPI: EC: Add a quirk for CLEVO M720T/M730T laptop
+    - LP: #1075355
+  * ARM: vfp: fix saving d16-d31 vfp registers on v6+ kernels
+    - LP: #1075355
+  * scsi_debug: Fix off-by-one bug when unmapping region
+    - LP: #1075355
+  * timers: Fix endless looping between cascade() and internal_add_timer()
+    - LP: #1075355
+  * timekeeping: Cast raw_interval to u64 to avoid shift overflow
+    - LP: #1075355
+  * video/udlfb: fix line counting in fb_write
+    - LP: #1075355
+  * tmpfs,ceph,gfs2,isofs,reiserfs,xfs: fix fh_len checking
+    - LP: #1075355
+  * ext4: race-condition protection for
+    ext4_convert_unwritten_extents_endio
+    - LP: #1075355
+  * ALSA: hda - Fix memory leaks at error path in patch_cirrus.c
+    - LP: #1075355
+  * nohz: Fix idle ticks in cpu summary line of /proc/stat
+    - LP: #1075355
+  * ALSA: hda - do not detect jack on internal speakers for Realtek
+    - LP: #1075355
+  * pktgen: fix crash when generating IPv6 packets
+    - LP: #1075355
+  * md/raid10: use correct limit variable
+    - LP: #1075355
+  * Bluetooth: SMP: Fix setting unknown auth_req bits
+    - LP: #1075355
+  * mips,kgdb: fix recursive page fault with CONFIG_KPROBES
+    - LP: #1075355
+  * xen/bootup: allow read_tscp call for Xen PV guests.
+    - LP: #1075355
+  * xen/bootup: allow {read|write}_cr8 pvops call.
+    - LP: #1075355
+  * pcmcia: sharpsl: don't discard sharpsl_pcmcia_ops
+    - LP: #1075355
+  * oprofile, x86: Fix wrapping bug in op_x86_get_ctrl()
+    - LP: #1075355
+  * drm/radeon: Don't destroy I2C Bus Rec in radeon_ext_tmds_enc_destroy().
+    - LP: #1075355
+  * mac80211: check if key has TKIP type before updating IV
+    - LP: #1075355
+  * bcma: fix unregistration of cores
+    - LP: #1075355
+  * net/wireless: ipw2200: Fix panic occurring in
+    ipw_handle_promiscuous_tx()
+    - LP: #1075355
+  * iwlwifi: fix 6000 series channel switch command
+    - LP: #1075355
+  * cgroup: notify_on_release may not be triggered in some cases
+    - LP: #1075355
+  * ALSA: hda - Always check array bounds in alc_get_line_out_pfx
+    - LP: #1075355
+  * NLM: nlm_lookup_file() may return NLMv4-specific error codes
+    - LP: #1075355
+  * SUNRPC: Prevent kernel stack corruption on long values of flush
+    - LP: #1075355
+  * USB: cdc-acm: fix pipe type of write endpoint
+    - LP: #1075355
+  * usb: acm: fix the computation of the number of data bits
+    - LP: #1075355
+  * usb: host: xhci: New system added for Compliance Mode Patch on
+    SN65LVPE502CP
+    - LP: #1075355
+  * USB: option: blacklist net interface on ZTE devices
+    - LP: #1075355
+  * USB: option: add more ZTE devices
+    - LP: #1075355
+  * s390: fix linker script for 31 bit builds
+    - LP: #1075355
+  * xen/x86: don't corrupt %eip when returning from a signal handler
+    - LP: #1075355
+  * ALSA: hda - add dock support for Thinkpad T430
+    - LP: #1075355
+  * kernel/sys.c: fix stack memory content leak via UNAME26
+    - LP: #1075355
+    - CVE-2012-0957
+  * ARM: 7559/1: smp: switch away from the idmap before updating
+    init_mm.mm_count
+    - LP: #1075355
+  * usb hub: send clear_tt_buffer_complete events when canceling TT clear
+    work
+    - LP: #1075355
+  * cpufreq / powernow-k8: Remove usage of smp_processor_id() in
+    preemptible code
+    - LP: #1075355
+  * arch/tile: avoid generating .eh_frame information in modules
+    - LP: #1075355
+  * amd64_edac:__amd64_set_scrub_rate(): avoid overindexing scrubrates[]
+    - LP: #1075355
+  * SUNRPC: Clear the connect flag when socket state is TCP_CLOSE_WAIT
+    - LP: #1075355
+  * SUNRPC: Prevent races in xs_abort_connection()
+    - LP: #1075355
+  * SUNRPC: Get rid of the xs_error_report socket callback
+    - LP: #1075355
+  * USB: serial: Fix memory leak in sierra_release()
+    - LP: #1075355
+  * usb-storage: add unusual_devs entry for Casio EX-N1 digital camera
+    - LP: #1075355
+  * Drivers: hv: Cleanup error handling in vmbus_open()
+    - LP: #1075355
+  * sysfs: sysfs_pathname/sysfs_add_one: Use strlcat() instead of strcat()
+    - LP: #1075355
+  * vhost: fix mergeable bufs on BE hosts
+    - LP: #1075355
+  * USB: whiteheat: fix memory leak in error path
+    - LP: #1075355
+  * USB: opticon: fix DMA from stack
+    - LP: #1075355
+  * USB: opticon: fix memory leak in error path
+    - LP: #1075355
+  * USB: mct_u232: fix broken close
+    - LP: #1075355
+  * USB: sierra: fix memory leak in attach error path
+    - LP: #1075355
+  * USB: sierra: fix memory leak in probe error path
+    - LP: #1075355
+  * USB: mos7840: fix urb leak at release
+    - LP: #1075355
+  * USB: mos7840: fix port-device leak in error path
+    - LP: #1075355
+  * USB: mos7840: remove NULL-urb submission
+    - LP: #1075355
+  * USB: mos7840: remove invalid disconnect handling
+    - LP: #1075355
+  * ehci: fix Lucid nohandoff pci quirk to be more generic with BIOS
+    versions
+    - LP: #1075355
+  * ehci: Add yet-another Lucid nohandoff pci quirk
+    - LP: #1075355
+  * xhci: Fix potential NULL ptr deref in command cancellation.
+    - LP: #1075355
+  * freezer: exec should clear PF_NOFREEZE along with PF_KTHREAD
+    - LP: #1075355
+  * mm: fix XFS oops due to dirty pages without buffers on s390
+    - LP: #1075355
+  * genalloc: stop crashing the system when destroying a pool
+    - LP: #1075355
+  * drivers/rtc/rtc-imxdi.c: add missing spin lock initialization
+    - LP: #1075355
+  * gen_init_cpio: avoid stack overflow when expanding
+    - LP: #1075355
+  * fs/compat_ioctl.c: VIDEO_SET_SPU_PALETTE missing error check
+    - LP: #1075355
+  * netfilter: nf_conntrack: fix racy timer handling with reliable events
+    - LP: #1075355
+  * tpm: Propagate error from tpm_transmit to fix a timeout hang
+    - LP: #1075355
+  * ALSA: ac97 - Fix missing NULL check in snd_ac97_cvol_new()
+    - LP: #1075355
+  * ALSA: emu10k1: add chip details for E-mu 1010 PCIe card
+    - LP: #1075355
+  * Add CDC-ACM support for the CX93010-2x UCMxx USB Modem
+    - LP: #1075355
+  * Linux 3.2.33
+    - LP: #1075355
+  * use clamp_t in UNAME26 fix
+    - CVE-2012-0957
+  * net: fix divide by zero in tcp algorithm illinois
+    - LP: #1077091
+    - CVE-2012-4565
+  * SAUCE: Bluetooth: Add a load_firmware callback to struct hci_dev
+    - LP: #1065400
+  * SAUCE: Bluetooth: Implement broadcom patchram firmware loader
+    - LP: #1065400
+  * SAUCE: Bluetooth: Getting ID from descriptor instead of matched rule
+    - LP: #1065400
+  * SAUCE: Bluetooth: Add support for 13d3:3388 and 13d3:3389
+    - LP: #1065400
+
  -- Paolo Pisati <paolo.pisati@canonical.com>  Fri, 16 Nov 2012 11:56:46 +0100
 
 linux-ti-omap4 (3.2.0-1421.28) precise-proposed; urgency=low
