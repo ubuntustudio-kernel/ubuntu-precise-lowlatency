@@ -82,6 +82,15 @@ fw-shipped-$(CONFIG_RTLWIFI) += \
 	rtlwifi/rtl8192sefw.bin \
 	rtlwifi/rtl8712u.bin
 
+fw-shipped-$(CONFIG_WL12XX) += \
+	ti-connectivity/wl18xx-fw.bin \
+	ti-connectivity/wl127x-fw-5-plt.bin \
+	ti-connectivity/wl128x-fw-5-sr.bin \
+	ti-connectivity/wl128x-fw-5-mr.bin \
+	ti-connectivity/wl128x-fw-5-plt.bin \
+	ti-connectivity/wl127x-fw-5-mr.bin \
+	ti-connectivity/wl127x-fw-5-sr.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
