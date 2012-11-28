@@ -23,6 +23,13 @@ fw-external-y := $(subst ",,$(CONFIG_EXTRA_FIRMWARE))
 fw-shipped-$(CONFIG_BNX2X) += bnx2x/bnx2x-e1-7.8.2.0.fw \
 			      bnx2x/bnx2x-e1h-7.8.2.0.fw \
 			      bnx2x/bnx2x-e2-7.8.2.0.fw
+ifdef CONFIG_ACENIC_OMIT_TIGON_I
+acenic-objs := acenic/tg2.bin
+fw-shipped- += acenic/tg1.bin
+else
+acenic-objs := acenic/tg1.bin acenic/tg2.bin
+endif
+fw-shipped-$(CONFIG_ACENIC) += $(acenic-objs)
 fw-shipped-$(CONFIG_BNX2) += 	bnx2/bnx2-mips-09-6.2.1b.fw \
 				bnx2/bnx2-rv2p-06-6.0.15.fw \
 				bnx2/bnx2-mips-06-6.2.3.fw \
