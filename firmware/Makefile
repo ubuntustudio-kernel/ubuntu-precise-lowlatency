@@ -97,6 +97,26 @@ fw-shipped-$(CONFIG_SCSI_QLA_FC) += \
 	ql2400_fw.bin \
 	ql2500_fw.bin
 
+fw-shipped-$(CONFIG_DRM_RADEON) += \
+	radeon/TAHITI_mc.bin	\
+	radeon/VERDE_me.bin	\
+	radeon/ARUBA_me.bin	\
+	radeon/VERDE_pfp.bin	\
+	radeon/PITCAIRN_ce.bin	\
+	radeon/TAHITI_ce.bin	\
+	radeon/TAHITI_pfp.bin	\
+	radeon/PITCAIRN_pfp.bin	\
+	radeon/TAHITI_rlc.bin	\
+	radeon/ARUBA_rlc.bin	\
+	radeon/ARUBA_pfp.bin	\
+	radeon/VERDE_ce.bin	\
+	radeon/VERDE_mc.bin	\
+	radeon/PITCAIRN_rlc.bin	\
+	radeon/PITCAIRN_me.bin	\
+	radeon/VERDE_rlc.bin	\
+	radeon/PITCAIRN_mc.bin	\
+	radeon/TAHITI_me.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
