@@ -35,6 +35,8 @@ fw-shipped-$(CONFIG_BNX2) += 	bnx2/bnx2-mips-09-6.2.1b.fw \
 				bnx2/bnx2-mips-06-6.2.3.fw \
 				bnx2/bnx2-rv2p-09-6.0.17.fw \
 				bnx2/bnx2-rv2p-09ax-6.0.17.fw
+fw-shipped-$(CONFIG_ADAPTEC_STARFIRE) += adaptec/starfire_rx.bin \
+					 adaptec/starfire_tx.bin
 fw-shipped-$(CONFIG_E100) += e100/d101m_ucode.bin e100/d101s_ucode.bin \
 			     e100/d102e_ucode.bin
 fw-shipped-$(CONFIG_PCMCIA_PCNET) += 
