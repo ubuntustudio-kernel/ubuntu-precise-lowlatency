@@ -59,6 +59,22 @@ fw-shipped-$(CONFIG_USB_SERIAL_WHITEHEAT) += whiteheat_loader.fw \
 
 fw-shipped-$(CONFIG_BT_ATH3K) += ath3k-1.fw
 
+fw-shipped-$(CONFIG_ATH6KL) += \
+	ath6k/AR6003/hw2.1.1/fw-3.bin \
+	ath6k/AR6003/hw2.1.1/bdata.SD31.bin \
+	ath6k/AR6003/hw2.1.1/athwlan.bin \
+	ath6k/AR6003/hw2.1.1/otp.bin \
+	ath6k/AR6003/hw2.1.1/data.patch.bin \
+	ath6k/AR6003/hw2.1.1/fw-2.bin \
+	ath6k/AR6003/hw2.0/bdata.SD31.bin \
+	ath6k/AR6003/hw2.0/athwlan.bin.z77 \
+	ath6k/AR6003/hw2.0/otp.bin.z77 \
+	ath6k/AR6003/hw2.0/data.patch.bin \
+	ath6k/AR6004/hw1.2/bdata.bin \
+	ath6k/AR6004/hw1.2/fw-2.bin \
+	ath6k/AR6004/hw1.3/fw-3.bin \
+	ath6k/AR6004/hw1.3/bdata.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
