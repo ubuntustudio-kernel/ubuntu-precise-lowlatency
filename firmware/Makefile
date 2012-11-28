@@ -117,6 +117,12 @@ fw-shipped-$(CONFIG_DRM_RADEON) += \
 	radeon/PITCAIRN_mc.bin	\
 	radeon/TAHITI_me.bin
 
+fw-shipped-$(CONFIG_R8169) +=	\
+	rtl_nic/rtl8168f-1.fw	\
+	rtl_nic/rtl8411-1.fw	\
+	rtl_nic/rtl8168g-1.fw	\
+	rtl_nic/rtl8106e-1.fw
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
