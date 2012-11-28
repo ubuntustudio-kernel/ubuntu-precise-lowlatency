@@ -91,6 +91,12 @@ fw-shipped-$(CONFIG_WL12XX) += \
 	ti-connectivity/wl127x-fw-5-mr.bin \
 	ti-connectivity/wl127x-fw-5-sr.bin
 
+fw-shipped-$(CONFIG_SCSI_QLA_FC) += \
+	ql2300_fw.bin \
+	ql2322_fw.bin \
+	ql2400_fw.bin \
+	ql2500_fw.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
