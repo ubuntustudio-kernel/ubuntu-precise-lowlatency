@@ -75,6 +75,13 @@ fw-shipped-$(CONFIG_ATH6KL) += \
 	ath6k/AR6004/hw1.3/fw-3.bin \
 	ath6k/AR6004/hw1.3/bdata.bin
 
+fw-shipped-$(CONFIG_RTLWIFI) += \
+	rtlwifi/rtl8192cfwU.bin \
+	rtlwifi/rtl8192cfwU_B.bin \
+	rtlwifi/rtl8192defw.bin \
+	rtlwifi/rtl8192sefw.bin \
+	rtlwifi/rtl8712u.bin
+
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
 # Directories which we _might_ need to create, so we have a rule for them.
