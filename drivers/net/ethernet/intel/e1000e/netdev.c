@@ -60,6 +60,10 @@
 char e1000e_driver_name[] = "e1000e";
 const char e1000e_driver_version[] = DRV_VERSION;
 
+static int eeprom_bad_csum_allow __read_mostly = 0;
+module_param(eeprom_bad_csum_allow, int, 0);
+MODULE_PARM_DESC(eeprom_bad_csum_allow, "Allow bad EEPROM checksums");
+
 static void e1000e_disable_aspm(struct pci_dev *pdev, u16 state);
 
 static const struct e1000_info *e1000_info_tbl[] = {
@@ -6105,8 +6109,14 @@ static int __devinit e1000_probe(struct pci_dev *pdev,
 			break;
 		if (i == 2) {
 			e_err("The NVM Checksum Is Not Valid\n");
-			err = -EIO;
-			goto err_eeprom;
+
+			/* if we allow bad checksums, just break */
+			if (eeprom_bad_csum_allow) {
+				break;
+			} else {
+				err = -EIO;
+				goto err_eeprom;
+			}
 		}
 	}
 
