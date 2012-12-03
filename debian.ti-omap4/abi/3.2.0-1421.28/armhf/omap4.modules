@@ -313,7 +313,6 @@ core
 cp210x
 cpia2
 cpufreq_conservative
-cpufreq_ondemand
 cpufreq_powersave
 cpufreq_userspace
 cpu-notifier-error-inject
