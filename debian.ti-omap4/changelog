@@ -4,6 +4,208 @@ linux-ti-omap4 (3.2.0-1422.30) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-35.55 ]
+
+  * Release Tracking Bug
+    - LP: #1086856
+  * Revert "SAUCE: ata_piix: add a disable_driver option"
+    - LP: #1079084
+  * Revert "SAUCE: ata_piix: defer disks to the Hyper-V drivers by default"
+    - LP: #1079084
+  * SAUCE: ata_piix: add a disable_driver option
+    - LP: #1079084, #994870
+  * libata: add a host flag to ignore detected ATA devices
+    - LP: #1079084
+  * ata_piix: defer disks to the Hyper-V drivers by default
+    - LP: #1079084, #929545, #942316
+
+  [ Ubuntu: 3.2.0-35.54 ]
+
+  * Release Tracking Bug
+    - LP: #1086349
+  * Revert "SAUCE: SECCOMP: audit: always report seccomp violations"
+    - LP: #1079469
+  * SAUCE: SECCOMP: audit: fix build on archs without CONFIG_AUDITSYSCALL
+    - LP: #1079469
+  * seccomp: forcing auditing of kill condition
+    - LP: #1079469
+  * Bluetooth: Avoid calling undefined smp_conn_security()
+    - LP: #1081676
+  * x86: Remove the ancient and deprecated disable_hlt() and enable_hlt()
+    facility
+    - LP: #1081676
+  * drm/nouveau: silence modesetting spam on pre-gf8 chipsets
+    - LP: #1081676
+  * drm/nouveau: fix suspend/resume when in headless mode
+    - LP: #1081676
+  * drm/nouveau: headless mode by default if pci class != vga display
+    - LP: #1081676
+  * nfsd: add get_uint for u32's
+    - LP: #1081676
+  * ALSA: PCM: Fix some races at disconnection
+    - LP: #1081676
+  * ALSA: usb-audio: Fix races at disconnection
+    - LP: #1081676
+  * ALSA: usb-audio: Use rwsem for disconnect protection
+    - LP: #1081676
+  * ALSA: usb-audio: Fix races at disconnection in mixer_quirks.c
+    - LP: #1081676
+  * ALSA: Add a reference counter to card instance
+    - LP: #1081676
+  * ALSA: Avoid endless sleep after disconnect
+    - LP: #1081676
+  * drm/radeon: fix typo in evergreen_mc_resume()
+    - LP: #1081676
+  * USB: mos7840: remove unused variable
+    - LP: #1081676
+  * rtnetlink: Fix problem with buffer allocation
+    - LP: #1081676
+  * rtnetlink: fix rtnl_calcit() and rtnl_dump_ifinfo()
+    - LP: #1081676
+  * gpio-timberdale: fix a potential wrapping issue
+    - LP: #1081676
+  * cfg80211: fix antenna gain handling
+    - LP: #1081676
+  * drm/i915: fix overlay on i830M
+    - LP: #1081676
+  * drm/i915: fixup infoframe support for sdvo
+    - LP: #1081676
+  * drm/i915: clear the entire sdvo infoframe buffer
+    - LP: #1081676
+  * crypto: cryptd - disable softirqs in cryptd_queue_worker to prevent
+    data corruption
+    - LP: #1081676
+  * ARM: at91: at91sam9g10: fix SOC type detection
+    - LP: #1081676
+  * ARM: at91/i2c: change id to let i2c-gpio work
+    - LP: #1081676
+  * mac80211: Only process mesh config header on frames that RA_MATCH
+    - LP: #1081676
+  * mac80211: don't inspect Sequence Control field on control frames
+    - LP: #1081676
+  * mac80211: fix SSID copy on IBSS JOIN
+    - LP: #1081676
+  * wireless: drop invalid mesh address extension frames
+    - LP: #1081676
+  * mac80211: check management frame header length
+    - LP: #1081676
+  * mac80211: verify that skb data is present
+    - LP: #1081676
+  * mac80211: make sure data is accessible in EAPOL check
+    - LP: #1081676
+  * ath9k: fix stale pointers potentially causing access to free'd skbs
+    - LP: #1081676
+  * floppy: do put_disk on current dr if blk_init_queue fails
+    - LP: #1081676
+  * floppy: properly handle failure on add_disk loop
+    - LP: #1081676
+  * xen/gntdev: don't leak memory from IOCTL_GNTDEV_MAP_GRANT_REF
+    - LP: #1081676
+  * rt2800: validate step value for temperature compensation
+    - LP: #1081676
+  * ath9k: Test for TID only in BlockAcks while checking tx status
+    - LP: #1081676
+  * module: fix out-by-one error in kallsyms
+    - LP: #1081676
+  * Input: tsc40 - remove wrong announcement of pressure support
+    - LP: #1081676
+  * HID: microsoft: fix invalid rdesc for 3k kbd
+    - LP: #1081676
+  * xen/mmu: Use Xen specific TLB flush instead of the generic one.
+    - LP: #1081676
+  * NFS: Wait for session recovery to finish before returning
+    - LP: #1081676
+  * NFSv4.1: We must release the sequence id when we fail to get a session
+    slot
+    - LP: #1081676
+  * NFSv4: nfs4_locku_done must release the sequence id
+    - LP: #1081676
+  * NFS: fix bug in legacy DNS resolver.
+    - LP: #1081676
+  * nfsv3: Make v3 mounts fail with ETIMEDOUTs instead EIO on mountd
+    timeouts
+    - LP: #1081676
+  * nfs: Show original device name verbatim in /proc/*/mount{s,info}
+    - LP: #1081676
+  * target: Don't return success from module_init() if setup fails
+    - LP: #1081676
+  * target: Avoid integer overflow in se_dev_align_max_sectors()
+    - LP: #1081676
+  * iscsi-target: Fix missed wakeup race in TX thread
+    - LP: #1081676
+  * DRM/Radeon: Fix Load Detection on legacy primary DAC.
+    - LP: #1081676
+  * cifs: fix potential buffer overrun in cifs.idmap handling code
+    - LP: #1081676
+  * ALSA: hda: Cirrus: Fix coefficient index for beep configuration
+    - LP: #1081676
+  * ALSA: HDA: Fix digital microphone on CS420x
+    - LP: #1081676
+  * ALSA: hda - Force to reset IEC958 status bits for AD codecs
+    - LP: #1081676, #359361
+  * hwmon: (w83627ehf) Force initial bank selection
+    - LP: #1081676
+  * drm: restore open_count if drm_setup fails
+    - LP: #1081676
+  * ALSA: hda - Fix empty DAC filling in patch_via.c
+    - LP: #1081676
+  * ALSA: hda - Fix invalid connections in VT1802 codec
+    - LP: #1081676
+  * ALSA: hda - Add new codec ALC668 and ALC900 (default name ALC1150)
+    - LP: #1081676
+  * ALSA: Fix card refcount unbalance
+    - LP: #1081676
+  * xfs: fix reading of wrapped log data
+    - LP: #1081676
+  * fanotify: fix missing break
+    - LP: #1081676
+  * mm: bugfix: set current->reclaim_state to NULL while returning from
+    kswapd()
+    - LP: #1081676
+  * drm/vmwgfx: Fix hibernation device reset
+    - LP: #1081676
+  * drm/vmwgfx: Fix a case where the code would BUG when trying to pin GMR
+    memory
+    - LP: #1081676
+  * sctp: fix call to SCTP_CMD_PROCESS_SACK in sctp_cmd_interpreter()
+    - LP: #1081676
+  * netlink: use kfree_rcu() in netlink_release()
+    - LP: #1081676
+  * tcp: fix FIONREAD/SIOCINQ
+    - LP: #1081676
+  * ipv6: Set default hoplimit as zero.
+    - LP: #1081676
+  * net: usb: Fix memory leak on Tx data path
+    - LP: #1081676
+  * l2tp: fix oops in l2tp_eth_create() error path
+    - LP: #1081676
+  * af-packet: fix oops when socket is not present
+    - LP: #1081676
+  * ipv6: send unsolicited neighbour advertisements to all-nodes
+    - LP: #1081676
+  * r8169: allow multicast packets on sub-8168f chipset.
+    - LP: #1081676
+  * r8169: Fix WoL on RTL8168d/8111d.
+    - LP: #1081676
+  * r8169: use unlimited DMA burst for TX
+    - LP: #1081676
+  * sky2: Fix for interrupt handler
+    - LP: #1081676
+  * ALSA: usb-audio: Fix mutex deadlock at disconnection
+    - LP: #1081676
+  * Linux 3.2.34
+    - LP: #1081676
+  * bonding: Bonding driver does not consider the gso_max_size/gso_max_segs
+    setting of slave devices.
+    - LP: #1078184
+  * mm/hotplug: correctly add new zone to all other nodes' zone lists
+    - LP: #1079860
+    - CVE-2012-5517
+  * thinkpad-acpi: fix issuing duplicated key events for brightness up/down
+    - LP: #841315
+  * Bluetooth: ath3k: Add support for VAIO VPCEH [0489:e027]
+    - LP: #898826
+
  -- Paolo Pisati <paolo.pisati@canonical.com>  Thu, 06 Dec 2012 14:22:33 +0100
 
 linux-ti-omap4 (3.2.0-1422.29) precise-proposed; urgency=low
