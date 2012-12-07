@@ -1859,6 +1859,7 @@ EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_data_from_8023
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_data_to_8023
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_frequency_to_channel
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_get_hdrlen_from_skb
+EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_get_mesh_hdrlen
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_get_response_rate
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_hdrlen
 EXPORT_SYMBOL net/wireless/cfg80211 0x00000000	ieee80211_radiotap_iterator_init
@@ -1925,6 +1926,7 @@ EXPORT_SYMBOL sound/core/snd 0x00000000	snd_card_free_when_closed
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_card_proc_new
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_card_register
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_card_set_id
+EXPORT_SYMBOL sound/core/snd 0x00000000	snd_card_unref
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_cards
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_component_add
 EXPORT_SYMBOL sound/core/snd 0x00000000	snd_ctl_add
