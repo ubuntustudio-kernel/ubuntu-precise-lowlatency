@@ -1,9 +1,20 @@
-linux-lts-quantal (3.5.0-20.31~precise1) precise-proposed; urgency=low
+linux-lts-quantal (3.5.0-21.32~precise1) precise-proposed; urgency=low
+
+  [ Luis Henriques ]
+
+  * Release Tracking Bug
+    - LP: #1087221
+  * SAUCE: i915_hsw: move i915_hsw_enabled symbol to intel_ips
+    - LP: #1087622
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Thu, 13 Dec 2012 19:13:49 +0000
+
+linux (3.5.0-20.31) quantal-proposed; urgency=low
 
   [Luis Henriques]
 
   * Release Tracking Bug
-    - LP: #1087221
+    - LP: #1086759
 
   [ Ben Widawsky ]
 
@@ -673,7 +684,7 @@ linux-lts-quantal (3.5.0-20.31~precise1) precise-proposed; urgency=low
   * i915_hsw: drm/edid: Fix potential memory leak in edid_load()
     - LP: #1085245
 
- -- Luis Henriques <luis.henriques@canonical.com>  Thu, 06 Dec 2012 11:37:14 +0000
+ -- Luis Henriques <luis.henriques@canonical.com>  Wed, 05 Dec 2012 11:53:06 +0000
 
 linux (3.5.0-19.30) quantal-proposed; urgency=low
 
