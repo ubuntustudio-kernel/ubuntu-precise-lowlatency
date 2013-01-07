@@ -4,6 +4,234 @@ linux-ti-omap4 (3.2.0-1423.31) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-36.56 ]
+
+  * Release Tracking Bug
+    - LP: #1095351
+  * SAUCE: add eeprom_bad_csum_allow module parameter
+    - LP: #1070182
+  * SAUCE: samsung-laptop: disable in UEFI mode
+    - LP: #1040557
+  * SAUCE: usb: cdc-wdm: fix regression on buffer deallocation
+    - LP: #1074157
+  * SAUCE: exec: do not leave bprm->interp on stack
+    - LP: #1068888
+    - CVE-2012-4530
+  * Add ceph to virtual kernel flavor
+    - LP: #1063784
+  * SAUCE: fsnotify: introduce fsnotify_get_group()
+    - LP: #922906
+  * SAUCE: fsnotify: use reference counting for groups
+    - LP: #922906
+  * SAUCE: fsnotify: take groups mark_lock before mark lock
+    - LP: #922906
+  * SAUCE: fanotify: add an extra flag to mark_remove_from_mask that
+    indicates wheather a mark should be destroyed
+    - LP: #922906
+  * SAUCE: fsnotify: use a mutex instead of a spinlock to protect a groups
+    mark list
+    - LP: #922906
+  * SAUCE: fsnotify: pass group to fsnotify_destroy_mark()
+    - LP: #922906
+  * SAUCE: fsnotify: introduce locked versions of fsnotify_add_mark() and
+    fsnotify_remove_mark()
+    - LP: #922906
+  * SAUCE: fsnotify: dont put marks on temporary list when clearing marks
+    by group
+    - LP: #922906
+  * SAUCE: tools: hv: Netlink source address validation allows DoS
+    - LP: #1084777
+    - CVE-2012-5532
+  * drm/i915: add Ivy Bridge GT2 Server entries
+    - LP: #1087302
+  * drm/i915: EBUSY status handling added to i915_gem_fault().
+    - LP: #1087302
+  * UBIFS: introduce categorized lprops counter
+    - LP: #1087865
+  * UBIFS: fix mounting problems after power cuts
+    - LP: #1087865
+  * futex: Handle futex_pi OWNER_DIED take over correctly
+    - LP: #1087865
+  * mac80211: sync acccess to tx_filtered/ps_tx_buf queues
+    - LP: #1087865
+  * ASoC: wm8978: pll incorrectly configured when codec is master
+    - LP: #1087865
+  * device_cgroup: fix RCU usage
+    - LP: #1087865
+  * ASoC: dapm: Use card_list during DAPM shutdown
+    - LP: #1087865
+  * s390/signal: set correct address space control
+    - LP: #1087865
+  * wireless: allow 40 MHz on world roaming channels 12/13
+    - LP: #1087865
+  * drm/i915/sdvo: clean up connectors on intel_sdvo_init() failures
+    - LP: #1087865
+  * s390/gup: add missing TASK_SIZE check to get_user_pages_fast()
+    - LP: #1087865
+  * USB: option: add Novatel E362 and Dell Wireless 5800 USB IDs
+    - LP: #1087865
+  * USB: option: add Alcatel X220/X500D USB IDs
+    - LP: #1087865
+  * drm/radeon: fix logic error in atombios_encoders.c
+    - LP: #1087865
+  * ttm: Clear the ttm page allocated from high memory zone correctly
+    - LP: #1087865
+  * memcg: oom: fix totalpages calculation for memory.swappiness==0
+    - LP: #1087865
+  * tmpfs: change final i_blocks BUG to WARNING
+    - LP: #1087865
+  * x86: Exclude E820_RESERVED regions and memory holes above 4 GB from
+    direct mapping.
+    - LP: #1087865
+  * x86, mm: Find_early_table_space based on ranges that are actually being
+    mapped
+    - LP: #1087865
+  * x86, mm: Undo incorrect revert in arch/x86/mm/init.c
+    - LP: #1087865
+  * netfilter: Mark SYN/ACK packets as invalid from original direction
+    - LP: #1087865
+  * netfilter: Validate the sequence number of dataless ACK packets as well
+    - LP: #1087865
+  * netfilter: nf_nat: don't check for port change on ICMP tuples
+    - LP: #1087865
+  * ipv4: avoid undefined behavior in do_ip_setsockopt()
+    - LP: #1087865
+  * ipv6: setsockopt(IPIPPROTO_IPV6, IPV6_MINHOPCOUNT) forgot to set return
+    value
+    - LP: #1087865
+  * net: correct check in dev_addr_del()
+    - LP: #1087865
+  * net-rps: Fix brokeness causing OOO packets
+    - LP: #1087865
+  * usb: use usb_serial_put in usb_serial_probe errors
+    - LP: #1087865
+  * PCI : Calculate right add_size
+    - LP: #1087865
+  * Input: i8042 - also perform controller reset when suspending
+    - LP: #1087865
+  * ixgbe: add support for new 82599 device id
+    - LP: #1087865
+  * ixgbe: add support for X540-AT1
+    - LP: #1087865
+  * drm/i915: Check VBIOS value for determining LVDS dual channel mode, too
+    - LP: #1087865
+  * get_dvb_firmware: fix download site for tda10046 firmware
+    - LP: #1087865
+  * m68k: fix sigset_t accessor functions
+    - LP: #1087865
+  * HID: add quirk for Freescale i.MX28 ROM recovery
+    - LP: #1087865
+  * brcm80211: smac: only print block-ack timeout message at trace level
+    - LP: #1087865
+  * bas_gigaset: fix pre_reset handling
+    - LP: #1087865
+  * GFS2: Test bufdata with buffer locked and gfs2_log_lock held
+    - LP: #1087865
+  * ptp: update adjfreq callback description
+    - LP: #1087865
+  * watchdog: using u64 in get_sample_period()
+    - LP: #1087865
+  * x86, amd: Disable way access filter on Piledriver CPUs
+    - LP: #1087865
+  * mtd: ofpart: Fix incorrect NULL check in parse_ofoldpart_partitions()
+    - LP: #1087865
+  * mtd: slram: invalid checking of absolute end address
+    - LP: #1087865
+  * jffs2: Fix lock acquisition order bug in jffs2_write_begin
+    - LP: #1087865
+  * isci: copy fis 0x34 response into proper buffer
+    - LP: #1087865
+  * mac80211: deinitialize ibss-internals after emptiness check
+    - LP: #1087865
+  * fix virtual aliasing issue in get_shared_area()
+    - LP: #1087865
+  * rtlwifi: rtl8192cu: Add new USB ID
+    - LP: #1087865
+  * mwifiex: fix system hang issue in cmd timeout error case
+    - LP: #1087865
+  * mwifiex: report error to MMC core if we cannot suspend
+    - LP: #1087865
+  * xfs: drop buffer io reference when a bad bio is built
+    - LP: #1087865
+  * ALSA: ua101, usx2y: fix broken MIDI output
+    - LP: #1087865
+  * sparc64: not any error from do_sigaltstack() should fail rt_sigreturn()
+    - LP: #1087865
+  * reiserfs: Fix lock ordering during remount
+    - LP: #1087865
+  * reiserfs: Protect reiserfs_quota_on() with write lock
+    - LP: #1087865
+  * reiserfs: Protect reiserfs_quota_write() with write lock
+    - LP: #1087865
+  * reiserfs: Move quota calls out of write lock
+    - LP: #1087865
+  * md: Reassigned the parameters if read_seqretry returned true in func
+    md_is_badblock.
+    - LP: #1087865
+  * md: Avoid write invalid address if read_seqretry returned true.
+    - LP: #1087865
+  * drm/radeon: properly track the crtc not_enabled case
+    evergreen_mc_stop()
+    - LP: #1087865
+  * radeon: add AGPMode 1 quirk for RV250
+    - LP: #1087865
+  * x86-32: Fix invalid stack address while in softirq
+    - LP: #1087865
+  * x86-32: Export kernel_stack_pointer() for modules
+    - LP: #1087865
+  * x86, microcode, AMD: Add support for family 16h processors
+    - LP: #1087865
+  * ALSA: hda - Add new codec ALC283 ALC290 support
+    - LP: #1087865
+  * ALSA: hda - Add support for Realtek ALC292
+    - LP: #1081466, #1087865
+  * selinux: fix sel_netnode_insert() suspicious rcu dereference
+    - LP: #1087865
+  * Dove: Attempt to fix PMU/RTC interrupts
+    - LP: #1087865
+  * Dove: Fix irq_to_pmu()
+    - LP: #1087865
+  * ARM: Kirkwood: Update PCI-E fixup
+    - LP: #1087865
+  * fix user-triggerable panic on parisc
+    - LP: #1087865
+  * dm: fix deadlock with request based dm and queue request_fn recursion
+    - LP: #1087865
+  * block: Don't access request after it might be freed
+    - LP: #1087865
+  * jbd: Fix lock ordering bug in journal_unmap_buffer()
+    - LP: #1087865
+  * can: bcm: initialize ifindex for timeouts without previous frame
+    reception
+    - LP: #1087865
+  * futex: avoid wake_futex() for a PI futex_q
+    - LP: #1087865
+  * mm/vmemmap: fix wrong use of virt_to_page
+    - LP: #1087865
+  * mm: vmscan: fix endless loop in kswapd balancing
+    - LP: #1087865
+  * mm: soft offline: split thp at the beginning of soft_offline_page()
+    - LP: #1087865
+  * workqueue: exit rescuer_thread() as TASK_RUNNING
+    - LP: #1087865
+  * intel_idle: initial IVB support
+    - LP: #1087865
+  * intel_idle: enable IVB Xeon support
+    - LP: #1087865
+  * Linux 3.2.35
+    - LP: #1087865
+  * MISC: hpilo, remove pci_disable_device
+    - LP: #1087860
+  * asix: Adds support for Lenovo 10/100 USB dongle.
+    - LP: #1087480
+  * KVM: x86: invalid opcode oops on SET_SREGS with OSXSAVE bit set
+    (CVE-2012-4461)
+    - LP: #1089604
+    - CVE-2012-4461
+  * exec: use -ELOOP for max recursion depth
+    - LP: #1068888
+    - CVE-2012-4530
+
  -- Paolo Pisati <paolo.pisati@canonical.com>  Mon, 07 Jan 2013 09:47:16 +0100
 
 linux-ti-omap4 (3.2.0-1423.30) precise-proposed; urgency=low
