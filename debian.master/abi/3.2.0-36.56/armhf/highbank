@@ -2682,6 +2682,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	block_write_full_page
 EXPORT_SYMBOL vmlinux 0x00000000	block_write_full_page_endio
 EXPORT_SYMBOL vmlinux 0x00000000	bmap
 EXPORT_SYMBOL vmlinux 0x00000000	boot_tvec_bases
+EXPORT_SYMBOL vmlinux 0x00000000	bprm_change_interp
 EXPORT_SYMBOL vmlinux 0x00000000	brioctl_set
 EXPORT_SYMBOL vmlinux 0x00000000	bsearch
 EXPORT_SYMBOL vmlinux 0x00000000	build_ehash_secret

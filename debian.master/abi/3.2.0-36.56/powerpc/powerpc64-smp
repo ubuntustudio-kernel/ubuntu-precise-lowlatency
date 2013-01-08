@@ -3528,7 +3528,6 @@ EXPORT_SYMBOL vmlinux 0x04074f48	ioremap
 EXPORT_SYMBOL vmlinux 0x040a8c93	tty_port_block_til_ready
 EXPORT_SYMBOL vmlinux 0x0422fe4a	inet_csk_timer_bug_msg
 EXPORT_SYMBOL vmlinux 0x0440a533	_lv1_net_remove_multicast_address
-EXPORT_SYMBOL vmlinux 0x04516f43	fsnotify_destroy_mark
 EXPORT_SYMBOL vmlinux 0x045478c5	init_buffer
 EXPORT_SYMBOL vmlinux 0x046ffac6	pci_bus_read_config_word
 EXPORT_SYMBOL vmlinux 0x0479aad4	input_close_device
@@ -4193,6 +4192,7 @@ EXPORT_SYMBOL vmlinux 0x2f45bfba	scsi_adjust_queue_depth
 EXPORT_SYMBOL vmlinux 0x2f57a01f	pci_claim_resource
 EXPORT_SYMBOL vmlinux 0x2f635079	unregister_cdrom
 EXPORT_SYMBOL vmlinux 0x2f6f3f19	truncate_setsize
+EXPORT_SYMBOL vmlinux 0x2f7c6748	fsnotify_alloc_group
 EXPORT_SYMBOL vmlinux 0x2f8333a1	brioctl_set
 EXPORT_SYMBOL vmlinux 0x2f929512	task_ns_capable
 EXPORT_SYMBOL vmlinux 0x2f98b82c	icmpv6_send
@@ -4241,6 +4241,7 @@ EXPORT_SYMBOL vmlinux 0x32485fbe	vfs_create
 EXPORT_SYMBOL vmlinux 0x324aa1df	blk_fetch_request
 EXPORT_SYMBOL vmlinux 0x324d0c40	cdrom_release
 EXPORT_SYMBOL vmlinux 0x327b9c1b	pmu_poll_adb
+EXPORT_SYMBOL vmlinux 0x328df565	fsnotify_add_mark
 EXPORT_SYMBOL vmlinux 0x32a5268d	secpath_dup
 EXPORT_SYMBOL vmlinux 0x32b910e0	blkdev_issue_flush
 EXPORT_SYMBOL vmlinux 0x32e2df5b	i2c_smbus_read_word_data
@@ -4574,6 +4575,7 @@ EXPORT_SYMBOL vmlinux 0x487c2f1c	i2c_smbus_write_block_data
 EXPORT_SYMBOL vmlinux 0x4881efab	pmac_get_partition
 EXPORT_SYMBOL vmlinux 0x4882c250	dma_async_memcpy_buf_to_buf
 EXPORT_SYMBOL vmlinux 0x488aff28	devm_ioport_map
+EXPORT_SYMBOL vmlinux 0x489ac7a3	fsnotify_put_group
 EXPORT_SYMBOL vmlinux 0x48b25ff2	tcp_poll
 EXPORT_SYMBOL vmlinux 0x48bf54cb	netdev_emerg
 EXPORT_SYMBOL vmlinux 0x48c09935	simple_write_end
@@ -4670,7 +4672,6 @@ EXPORT_SYMBOL vmlinux 0x4e9dffb5	ip_fast_csum
 EXPORT_SYMBOL vmlinux 0x4ea5ec4a	n_tty_compat_ioctl_helper
 EXPORT_SYMBOL vmlinux 0x4eb30b67	__dec_zone_page_state
 EXPORT_SYMBOL vmlinux 0x4edd72f7	block_all_signals
-EXPORT_SYMBOL vmlinux 0x4ee47b74	fsnotify_add_mark
 EXPORT_SYMBOL vmlinux 0x4f1cd128	security_tun_dev_create
 EXPORT_SYMBOL vmlinux 0x4f26b10f	mutex_lock_interruptible
 EXPORT_SYMBOL vmlinux 0x4f391d0e	nla_parse
@@ -4886,6 +4887,7 @@ EXPORT_SYMBOL vmlinux 0x5c3db119	deactivate_locked_super
 EXPORT_SYMBOL vmlinux 0x5c4c426a	path_is_under
 EXPORT_SYMBOL vmlinux 0x5c64429d	ifla_policy
 EXPORT_SYMBOL vmlinux 0x5c6767a1	unregister_netdevice_queue
+EXPORT_SYMBOL vmlinux 0x5c67bf74	fsnotify_destroy_mark
 EXPORT_SYMBOL vmlinux 0x5cc8e015	iov_iter_single_seg_count
 EXPORT_SYMBOL vmlinux 0x5cca691c	should_remove_suid
 EXPORT_SYMBOL vmlinux 0x5ccc9045	_lv1_close_device
@@ -5801,6 +5803,7 @@ EXPORT_SYMBOL vmlinux 0x9a130c64	xfrm_alloc_spi
 EXPORT_SYMBOL vmlinux 0x9a1dfd65	strpbrk
 EXPORT_SYMBOL vmlinux 0x9a1ffb92	_lv1_clear_spe_interrupt_status
 EXPORT_SYMBOL vmlinux 0x9a38c72e	__ethtool_get_settings
+EXPORT_SYMBOL vmlinux 0x9a3b0b0c	bprm_change_interp
 EXPORT_SYMBOL vmlinux 0x9a3baae1	gnet_stats_finish_copy
 EXPORT_SYMBOL vmlinux 0x9a4fdbdf	of_mm_gpiochip_add
 EXPORT_SYMBOL vmlinux 0x9a626734	ftrace_print_hex_seq
@@ -5979,6 +5982,7 @@ EXPORT_SYMBOL vmlinux 0xa4fafc5a	__scm_send
 EXPORT_SYMBOL vmlinux 0xa560dc30	i2c_add_adapter
 EXPORT_SYMBOL vmlinux 0xa58d6e76	pci_find_bus
 EXPORT_SYMBOL vmlinux 0xa598e29c	vesa_modes
+EXPORT_SYMBOL vmlinux 0xa59d93b1	fsnotify_init_mark
 EXPORT_SYMBOL vmlinux 0xa5c4f5ea	phy_device_register
 EXPORT_SYMBOL vmlinux 0xa5e15c7b	simple_dir_operations
 EXPORT_SYMBOL vmlinux 0xa5e9f94c	mmc_can_sanitize
@@ -6052,6 +6056,7 @@ EXPORT_SYMBOL vmlinux 0xab28fc9f	register_netdev
 EXPORT_SYMBOL vmlinux 0xab66f611	_lv1_set_lpm_trigger_control
 EXPORT_SYMBOL vmlinux 0xab6bde28	sysctl_max_syn_backlog
 EXPORT_SYMBOL vmlinux 0xab6bfed3	sock_queue_rcv_skb
+EXPORT_SYMBOL vmlinux 0xab861b4a	fsnotify_put_mark
 EXPORT_SYMBOL vmlinux 0xab9f7188	__sock_create
 EXPORT_SYMBOL vmlinux 0xabc17c47	scsicam_bios_param
 EXPORT_SYMBOL vmlinux 0xabcaa577	free_anon_bdev
@@ -6164,7 +6169,6 @@ EXPORT_SYMBOL vmlinux 0xb2682405	utf8_to_utf32
 EXPORT_SYMBOL vmlinux 0xb2a7fc7d	uart_suspend_port
 EXPORT_SYMBOL vmlinux 0xb2b0d772	__kfifo_dma_in_finish_r
 EXPORT_SYMBOL vmlinux 0xb2c0832c	init_task
-EXPORT_SYMBOL vmlinux 0xb2ce2c0d	fsnotify_init_mark
 EXPORT_SYMBOL vmlinux 0xb2d271cc	__xfrm_policy_check
 EXPORT_SYMBOL vmlinux 0xb2f30ba8	unregister_key_type
 EXPORT_SYMBOL vmlinux 0xb3305d52	send_remote_softirq
@@ -6510,7 +6514,6 @@ EXPORT_SYMBOL vmlinux 0xcaabf3f9	pasemi_write_iob_reg
 EXPORT_SYMBOL vmlinux 0xcaadc24c	skb_dequeue
 EXPORT_SYMBOL vmlinux 0xcab0fc0f	inet_sk_rebuild_header
 EXPORT_SYMBOL vmlinux 0xcab4f949	vfs_mknod
-EXPORT_SYMBOL vmlinux 0xcabcf272	fsnotify_put_mark
 EXPORT_SYMBOL vmlinux 0xcacdadeb	scsi_print_result
 EXPORT_SYMBOL vmlinux 0xcaec6b99	security_path_chmod
 EXPORT_SYMBOL vmlinux 0xcb1a68af	__blk_end_request_cur
@@ -6889,7 +6892,6 @@ EXPORT_SYMBOL vmlinux 0xe420ce2d	mfd_cell_enable
 EXPORT_SYMBOL vmlinux 0xe4520ee4	__insert_inode_hash
 EXPORT_SYMBOL vmlinux 0xe464f8d0	dev_get_by_index_rcu
 EXPORT_SYMBOL vmlinux 0xe484e35f	ioread32
-EXPORT_SYMBOL vmlinux 0xe49b16f1	fsnotify_alloc_group
 EXPORT_SYMBOL vmlinux 0xe4a895fa	up_write
 EXPORT_SYMBOL vmlinux 0xe4abe74f	__free_pages
 EXPORT_SYMBOL vmlinux 0xe4bd15f0	journal_lock_updates
@@ -7022,7 +7024,6 @@ EXPORT_SYMBOL vmlinux 0xedbaee5e	nla_strcmp
 EXPORT_SYMBOL vmlinux 0xedbb60c7	security_path_rename
 EXPORT_SYMBOL vmlinux 0xedc03953	iounmap
 EXPORT_SYMBOL vmlinux 0xedc410d0	udplite_table
-EXPORT_SYMBOL vmlinux 0xedc8b2ff	fsnotify_put_group
 EXPORT_SYMBOL vmlinux 0xedc9b10b	update_region
 EXPORT_SYMBOL vmlinux 0xedcb23fc	thermal_zone_bind_cooling_device
 EXPORT_SYMBOL vmlinux 0xedf0b48c	_lv1_storage_get_async_status
