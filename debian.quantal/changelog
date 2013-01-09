@@ -1,9 +1,65 @@
-linux-lts-quantal (3.5.0-22.33~precise1) precise-proposed; urgency=low
+linux-lts-quantal (3.5.0-22.34~precise1) precise-proposed; urgency=low
+
+  [Luis Henriques]
+
+  * Release Tracking Bug
+    - LP: #1097919
+
+  [ Chris J Arges ]
+
+  * Revert "SAUCE: fsnotify: dont put marks on temporary list when clearing
+    marks by group"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: introduce locked versions of
+    fsnotify_add_mark() and fsnotify_remove_mark()"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: pass group to fsnotify_destroy_mark()"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: use a mutex instead of a spinlock to protect a
+    groups mark list"
+    - LP: #1096137
+  * Revert "SAUCE: fanotify: add an extra flag to mark_remove_from_mask
+    that indicates wheather a mark should be destroyed"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: take groups mark_lock before mark lock"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: use reference counting for groups"
+    - LP: #1096137
+  * Revert "SAUCE: fsnotify: introduce fsnotify_get_group()"
+    - LP: #1096137
+
+  [ Upstream Kernel Changes ]
+
+  * fsnotify: introduce fsnotify_get_group()
+    - LP: #1096137
+  * fsnotify: use reference counting for groups
+    - LP: #1096137
+  * fsnotify: take groups mark_lock before mark lock
+    - LP: #1096137
+  * fanotify: add an extra flag to mark_remove_from_mask that indicates
+    wheather a mark should be destroyed
+    - LP: #1096137
+  * fsnotify: use a mutex instead of a spinlock to protect a groups mark
+    list
+    - LP: #1096137
+  * fsnotify: pass group to fsnotify_destroy_mark()
+    - LP: #1096137
+  * fsnotify: introduce locked versions of fsnotify_add_mark() and
+    fsnotify_remove_mark()
+    - LP: #1096137
+  * fsnotify: dont put marks on temporary list when clearing marks by group
+    - LP: #1096137
+  * fsnotify: change locking order
+    - LP: #1096137
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Wed, 09 Jan 2013 20:36:51 +0000
+
+linux (3.5.0-22.33) quantal-proposed; urgency=low
 
   [Brad Figg]
 
   * Release Tracking Bug
-    - LP: #1095815
+    - LP: #1095349
 
   [ Chris J Arges ]
 
@@ -559,7 +615,7 @@ linux-lts-quantal (3.5.0-22.33~precise1) precise-proposed; urgency=low
     pins
     - LP: #1095242
 
- -- Brad Figg <brad.figg@canonical.com>  Fri, 04 Jan 2013 09:33:51 -0800
+ -- Brad Figg <brad.figg@canonical.com>  Wed, 02 Jan 2013 12:24:40 -0800
 
 linux (3.5.0-21.32) quantal-proposed; urgency=low
 
