@@ -8949,6 +8949,9 @@ struct intel_quirk intel_quirks[] = {
 	/* Acer Aspire 5734Z must invert backlight brightness */
 	{ 0x2a42, 0x1025, 0x0459, quirk_invert_brightness },
 
+	/* Acer/eMachines G725 */
+	{ 0x2a42, 0x1025, 0x0210, quirk_invert_brightness },
+
 	/* Asus ET2012E may fail to resume from S3 if RC6 is enabled */
 	{ 0x0102, 0x1043, 0x844d, quirk_rc6_force_disable },
 
