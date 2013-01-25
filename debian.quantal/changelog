@@ -1,9 +1,50 @@
-linux-lts-quantal (3.5.0-22.34~precise1) precise-proposed; urgency=low
+linux-lts-quantal (3.5.0-23.35~precise1) precise-proposed; urgency=low
 
   [Luis Henriques]
 
   * Release Tracking Bug
-    - LP: #1097919
+    - LP: #1105149
+
+  [ Tim Gardner ]
+
+  * UBUNTU: [Config] Build binary dependent tools package
+    - LP: #1088454
+
+  [ Upstream Kernel Changes ]
+
+  * Revert "fsnotify: change locking order"
+    - LP: #1101666
+  * Revert "fsnotify: dont put marks on temporary list when clearing marks
+    by group"
+    - LP: #1101666
+  * Revert "fsnotify: introduce locked versions of fsnotify_add_mark() and
+    fsnotify_remove_mark()"
+    - LP: #1101666
+  * Revert "fsnotify: pass group to fsnotify_destroy_mark()"
+    - LP: #1101666
+  * Revert "fsnotify: use a mutex instead of a spinlock to protect a groups
+    mark list"
+    - LP: #1101666
+  * Revert "fanotify: add an extra flag to mark_remove_from_mask that
+    indicates wheather a mark should be destroyed"
+    - LP: #1101666
+  * Revert "fsnotify: take groups mark_lock before mark lock"
+    - LP: #1101666
+  * Revert "fsnotify: use reference counting for groups"
+    - LP: #1101666
+  * Revert "fsnotify: introduce fsnotify_get_group()"
+    - LP: #1101666
+  * radeon/kms: force rn50 chip to always report connected on analog output
+    - LP: #1103320
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Fri, 25 Jan 2013 16:13:29 +0000
+
+linux (3.5.0-22.34) quantal-proposed; urgency=low
+
+  [Luis Henriques]
+
+  * Release Tracking Bug
+    - LP: #1097343
 
   [ Chris J Arges ]
 
@@ -52,7 +93,7 @@ linux-lts-quantal (3.5.0-22.34~precise1) precise-proposed; urgency=low
   * fsnotify: change locking order
     - LP: #1096137
 
- -- Luis Henriques <luis.henriques@canonical.com>  Wed, 09 Jan 2013 20:36:51 +0000
+ -- Luis Henriques <luis.henriques@canonical.com>  Tue, 08 Jan 2013 17:54:01 +0000
 
 linux (3.5.0-22.33) quantal-proposed; urgency=low
 
