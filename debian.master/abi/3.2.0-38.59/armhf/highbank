@@ -3437,6 +3437,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_clear_xmit_timers
 EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_delete_keepalive_timer
 EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_destroy_sock
 EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_init_xmit_timers
+EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_prepare_forced_close
 EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_reset_keepalive_timer
 EXPORT_SYMBOL vmlinux 0x00000000	inet_csk_timer_bug_msg
 EXPORT_SYMBOL vmlinux 0x00000000	inet_del_protocol
@@ -3753,6 +3754,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	km_state_notify
 EXPORT_SYMBOL vmlinux 0x00000000	kmalloc_caches
 EXPORT_SYMBOL vmlinux 0x00000000	kmap
 EXPORT_SYMBOL vmlinux 0x00000000	kmap_high
+EXPORT_SYMBOL vmlinux 0x00000000	kmap_to_page
 EXPORT_SYMBOL vmlinux 0x00000000	kmem_cache_alloc
 EXPORT_SYMBOL vmlinux 0x00000000	kmem_cache_create
 EXPORT_SYMBOL vmlinux 0x00000000	kmem_cache_destroy
