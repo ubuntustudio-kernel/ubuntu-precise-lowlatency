@@ -4,6 +4,431 @@ linux-lowlatency (3.2.0-38.41) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-39.62 ]
+
+  * Release Tracking Bug
+    - LP: #1134424
+  * Revert "SAUCE: samsung-laptop: disable in UEFI mode"
+    - LP: #1117693
+  * d-i: Add mellanox ethernet drivers to nic-modules
+    - LP: #1015339
+  * SAUCE: xen/netback: shutdown the ring if it contains garbage.
+    - LP: #1117325
+    - CVE-2013-0216
+  * SAUCE: netback: correct netbk_tx_err to handle wrap around.
+    - LP: #1117325
+    - CVE-2013-0216
+  * SAUCE: xen/netback: don't leak pages on failure in
+    xen_netbk_tx_check_gop.
+    - LP: #1117331
+    - CVE-2013-0217
+  * SAUCE: xen/netback: free already allocated memory on failure in
+    xen_netbk_get_requests
+    - LP: #1117331
+    - CVE-2013-0217
+  * SAUCE: xen-pciback: rate limit error messages from
+    xen_pcibk_enable_msi{, x}()
+    - LP: #1117336
+    - CVE-2013-0231
+  * [debian] Remove dangling symlink from headers package
+    - LP: #1112442
+  * SAUCE: rt2x00: rt2x00pci_regbusy_read() - only print register access
+    failure once
+    - LP: #1128840
+  * Revert "ALSA: hda - Shut up pins at power-saving mode with Conexnat
+    codecs"
+    - LP: #1117693, #886975
+  * Revert "drm/i915: no lvds quirk for Zotac ZDBOX SD ID12/ID13"
+    - LP: #1117693
+  * Revert "ptrace: ensure arch_ptrace/ptrace_request can never race with
+    SIGKILL"
+    - LP: #1131218
+  * SAUCE: xen/pv-spinlock: Never enable interrupts in xen_spin_lock_slow()
+    - LP: #1011792
+  * usb: gadget: dummy: fix enumeration with g_multi
+    - LP: #1117693
+  * usb: musb: core: print new line in the driver banner again
+    - LP: #1117693
+  * virtio-blk: Don't free ida when disk is in use
+    - LP: #1117693
+  * mac80211: use del_timer_sync for final sta cleanup timer deletion
+    - LP: #1117693
+  * xhci: Handle HS bulk/ctrl endpoints that don't NAK.
+    - LP: #1117693
+  * USB: Handle auto-transition from hot to warm reset.
+    - LP: #1117693
+  * USB: Ignore xHCI Reset Device status.
+    - LP: #1117693
+  * USB: Allow USB 3.0 ports to be disabled.
+    - LP: #1117693
+  * USB: Increase reset timeout.
+    - LP: #1117693
+  * USB: Ignore port state until reset completes.
+    - LP: #1117693
+  * USB: Handle warm reset failure on empty port.
+    - LP: #1117693
+  * xhci: Avoid "dead ports", add roothub port polling.
+    - LP: #1117693
+  * ASoC: wm5100: Remove DSP B and left justified formats
+    - LP: #1117693
+  * mwifiex: handle association failure case correctly
+    - LP: #1117693
+  * mwifiex: check wait_event_interruptible return value
+    - LP: #1117693
+  * ASoC: wm2000: Fix sense of speech clarity enable
+    - LP: #1117693
+  * ioat: Fix DMA memory sync direction correct flag
+    - LP: #1117693
+  * drm/i915; Only increment the user-pin-count after successfully pinning
+    the bo
+    - LP: #1117693
+  * staging: r8712u: Add new device ID
+    - LP: #1117693
+  * staging: speakup: avoid out-of-range access in synth_init()
+    - LP: #1117693
+  * staging: speakup: avoid out-of-range access in synth_add()
+    - LP: #1117693
+  * staging: comedi: fix minimum AO period for NI 625x and NI 628x
+    - LP: #1117693
+  * staging: comedi: comedi_test: fix race when cancelling command
+    - LP: #1117693
+  * regulator: max8997: Use uV in voltage_map_desc
+    - LP: #1117693
+  * ALSA: pxa27x: fix ac97 cold reset
+    - LP: #1117693
+  * ALSA: pxa27x: fix ac97 warm reset
+    - LP: #1117693
+  * SUNRPC: Ensure we release the socket write lock if the rpc_task exits
+    early
+    - LP: #1117693
+  * target: use correct sense code for LUN communication failure
+    - LP: #1117693
+  * regulator: max8998: Ensure enough delay time for
+    max8998_set_voltage_buck_time_sel
+    - LP: #1117693
+  * radeon/kms: force rn50 chip to always report connected on analog output
+    - LP: #1117693
+  * tcm_fc: Do not indicate retry capability to initiators
+    - LP: #1117693
+  * tcm_fc: Do not report target role when target is not defined
+    - LP: #1117693
+  * sh: Fix FDPIC binary loader
+    - LP: #1117693
+  * USB: option: Add new MEDIATEK PID support
+    - LP: #1117693
+  * USB: option: blacklist network interface on ZTE MF880
+    - LP: #1117693
+  * USB: option: add Telekom Speedstick LTE II
+    - LP: #1117693
+  * USB: option: add Nexpring NP10T terminal id
+    - LP: #1117693
+  * USB: cdc-acm: Add support for "PSC Scanning, Magellan 800i"
+    - LP: #1117693
+  * USB: hub: handle claim of enabled remote wakeup after reset
+    - LP: #1117693
+  * mm: compaction: fix echo 1 > compact_memory return error issue
+    - LP: #1117693
+  * mm: use aligned zone start for pfn_to_bitidx calculation
+    - LP: #1117693
+  * USB: Add device quirk for Microsoft VX700 webcam
+    - LP: #1117693
+  * PCI: pciehp: Fix wrong workqueue cleanup
+    - LP: #1117693
+  * PCI: pciehp: Handle push button event asynchronously
+    - LP: #1117693
+  * PCI: pciehp: Use per-slot workqueues to avoid deadlock
+    - LP: #1117693
+  * usb: ftdi_sio: Crucible Technologies COMET Caller ID - pid added
+    - LP: #1117693
+  * PCI/AER: pci_get_domain_bus_and_slot() call missing required
+    pci_dev_put()
+    - LP: #1117693
+  * PCI: shpchp: Handle push button event asynchronously
+    - LP: #1117693
+  * PCI: shpchp: Use per-slot workqueues to avoid deadlock
+    - LP: #1117693
+  * serial:ifx6x60:Delete SPI timer when shut down port
+    - LP: #1117693
+  * tty: 8250_dw: Fix inverted arguments to serial_out in IRQ handler
+    - LP: #1117693
+  * drm/i915: Invalidate the relocation presumed_offsets along the slow
+    path
+    - LP: #1117693
+  * s390/time: fix sched_clock() overflow
+    - LP: #1117693
+  * ARM: 7627/1: Predicate preempt logic on PREEMP_COUNT not PREEMPT alone
+    - LP: #1117693
+  * ARM: 7628/1: head.S: map one extra section for the ATAG/DTB area
+    - LP: #1117693
+  * staging: vt6656: Fix inconsistent structure packing
+    - LP: #1117693
+  * 8250/16?50: Add support for Broadcom TruManage redirected serial port
+    - LP: #1117693
+  * KVM: PPC: Emulate dcbf
+    - LP: #1117693
+  * USB: option: blacklist network interface on ONDA MT8205 4G LTE
+    - LP: #1117693
+  * USB: option: add TP-LINK HSUPA Modem MA180
+    - LP: #1117693
+  * USB: io_ti: Fix NULL dereference in chase_port()
+    - LP: #1117693
+  * usb: dwc3: gadget: fix ep->maxburst for ep0
+    - LP: #1117693
+  * intel_idle: Don't register CPU notifier if we are not running.
+    - LP: #1117693
+  * ACPI / cpuidle: Fix NULL pointer issues when cpuidle is disabled
+    - LP: #1117693
+  * ACPI / processor: Get power info before updating the C-states
+    - LP: #1117693
+  * ARM: DMA: Fix struct page iterator in dma_cache_maint() to work with
+    sparsemem
+    - LP: #1117693
+  * evm: checking if removexattr is not a NULL
+    - LP: #1117693
+  * ALSA: hda - Add Conexant CX20751/2/3/4 codec support
+    - LP: #1117693
+  * ALSA: hda/conexant - Correct vendor IDs for new codecs
+    - LP: #1117693
+  * ALSA: hda - Add Conexant CX20755/20756/20757 codec IDs
+    - LP: #1117693
+  * ftrace: Be first to run code modification on modules
+    - LP: #1117693
+  * USB: UHCI: fix IRQ race during initialization
+    - LP: #1117693
+  * fs/cifs/cifs_dfs_ref.c: fix potential memory leakage
+    - LP: #1117693
+  * Bluetooth: Fix incorrect strncpy() in hidp_setup_hid()
+    - LP: #1117693
+  * ath9k_htc: Fix memory leak
+    - LP: #1117693
+  * ath9k: do not link receive buffers during flush
+    - LP: #1117693
+  * ath9k: fix double-free bug on beacon generate failure
+    - LP: #1117693
+  * brcmsmac: increase timer reference count for new timers only
+    - LP: #1117693
+  * efi, x86: Pass a proper identity mapping in efi_call_phys_prelog
+    - LP: #1117693
+  * ath9k_hw: fix calibration issues on chainmask that don't include chain
+    0
+    - LP: #1117693
+  * ath9k_hw: fix chain swap setting when setting rx chainmask to 5
+    - LP: #1117693
+  * mwifiex: fix typo in PCIe adapter NULL check
+    - LP: #1117693
+  * drm/i915: Remove the MI_FLUSH_ENABLE setting.
+    - LP: #1117693
+  * drm/i915: Correct the bit number for the MI_FLUSH_ENABLE.
+    - LP: #1117693
+  * drm/i915: Disable AsyncFlip performance optimisations
+    - LP: #1117693
+  * drm/i915: GFX_MODE Flush TLB Invalidate Mode must be '1' for scanline
+    waits
+    - LP: #1117693
+  * iommu/intel: disable DMAR for g4x integrated gfx
+    - LP: #1117693
+  * drm/i915: dump UTS_RELEASE into the error_state
+    - LP: #1117693
+  * drm/radeon: fix a rare case of double kfree
+    - LP: #1117693
+  * x86/msr: Add capabilities check
+    - LP: #1117693
+  * can: c_can: fix invalid error codes
+    - LP: #1117693
+  * can: ti_hecc: fix invalid error codes
+    - LP: #1117693
+  * can: pch_can: fix invalid error codes
+    - LP: #1117693
+  * ALSA: usb-audio: fix invalid length check for RME and other UAC 2
+    devices
+    - LP: #1117693
+  * smp: Fix SMP function call empty cpu mask race
+    - LP: #1117693
+  * IOMMU, AMD Family15h Model10-1Fh erratum 746 Workaround
+    - LP: #1117693
+  * xfs: Fix possible use-after-free with AIO
+    - LP: #1117693
+  * ALSA: hda - Fix non-snoop page handling
+    - LP: #1117693
+  * EDAC: Test correct variable in ->store function
+    - LP: #1117693
+  * efi: Make 'efi_enabled' a function to query EFI facilities
+    - LP: #1117693
+  * samsung-laptop: Disable on EFI hardware
+    - LP: #1117693
+  * NFS: Don't silently fail setattr() requests on mountpoints
+    - LP: #1117693
+  * NFSv4.1: Handle NFS4ERR_DELAY when resetting the NFSv4.1 session
+    - LP: #1117693
+  * x86/Sandy Bridge: reserve pages when integrated graphics is present
+    - LP: #1117693
+  * x86/Sandy Bridge: mark arrays in __init functions as __initconst
+    - LP: #1117693
+  * x86/Sandy Bridge: Sandy Bridge workaround depends on CONFIG_PCI
+    - LP: #1117693
+  * ahci: Add identifiers for ASM106x devices
+    - LP: #1117693
+  * sd: Reshuffle init_sd to avoid crash
+    - LP: #1117693
+  * drivers/firmware/dmi_scan.c: check dmi version when get system uuid
+    - LP: #1117693
+  * drivers/firmware/dmi_scan.c: fetch dmi version from SMBIOS if it exists
+    - LP: #1117693
+  * drm/i915: Implement WaDisableHiZPlanesWhenMSAAEnabled
+    - LP: #1117693
+  * x86: Use enum instead of literals for trap values
+    - LP: #1117693
+  * staging: comedi: Kconfig: COMEDI_NI_AT_A2150 should select COMEDI_FC
+    - LP: #1117693
+  * staging: comedi: don't hijack hardware device private data
+    - LP: #1117693
+  * intel-iommu: Prevent devices with RMRRs from being placed into SI
+    Domain
+    - LP: #1117693
+  * ALSA: usb - fix race in creation of M-Audio Fast track pro driver
+    - LP: #1095315, #1117693
+  * igb: release already assigned MSI-X interrupts if setup fails
+    - LP: #1117693
+  * drbd: add missing part_round_stats to _drbd_start_io_acct
+    - LP: #1117693
+  * staging: usbip: changed function return type to void
+    - LP: #1117693
+  * x86, efi: Set runtime_version to the EFI spec revision
+    - LP: #1117693
+  * printk: fix buffer overflow when calling log_prefix function from
+    call_console_drivers
+    - LP: #1117693
+  * Linux 3.2.38
+    - LP: #1117693
+  * xen: Fix stack corruption in xen_failsafe_callback for 32bit PVOPS
+    guests.
+    - LP: #1102374
+    - CVE-2013-0190
+  * xhci: Fix isoc TD encoding.
+    - LP: #1131218
+  * xhci: Fix TD size for isochronous URBs.
+    - LP: #1131218
+  * USB: XHCI: fix memory leak of URB-private data
+    - LP: #1131218
+  * usb: Prevent dead ports when xhci is not enabled
+    - LP: #1131218
+  * sched/rt: Use root_domain of rt_rq not current processor
+    - LP: #1131218
+  * rtlwifi: Fix the usage of the wrong variable in usb.c
+    - LP: #1131218
+  * drm/radeon: add quirk for RV100 board
+    - LP: #1131218
+  * USB: qcserial: add Telit Gobi QDL device
+    - LP: #1131218
+  * USB: option: add support for Telit LE920
+    - LP: #1131218
+  * mwifiex: fix incomplete scan in case of IE parsing error
+    - LP: #1131218
+  * USB: EHCI: fix bug in scheduling periodic split transfers
+    - LP: #1131218
+  * x86-64: Replace left over sti/cli in ia32 audit exit code
+    - LP: #1131218
+  * Bluetooth: Fix handling of unexpected SMP PDUs
+    - LP: #1131218
+  * drm/radeon: Calling object_unrefer() when creating fb failure
+    - LP: #1131218
+  * drm/radeon: prevent crash in the ring space allocation
+    - LP: #1131218
+  * can: c_can: Set reserved bit in IFx_MASK2 to 1 on write
+    - LP: #1131218
+  * USB: ftdi_sio: add PID/VID entries for ELV WS 300 PC II
+    - LP: #1131218
+  * USB: option: add Changhong CH690
+    - LP: #1131218
+  * USB: ftdi_sio: add Zolix FTDI PID
+    - LP: #1131218
+  * USB: storage: Define a new macro for USB storage match rules
+    - LP: #1131218
+  * USB: storage: optimize to match the Huawei USB storage devices and
+    support new switch command
+    - LP: #1131218
+  * nilfs2: fix fix very long mount time issue
+    - LP: #1131218
+  * drivers/rtc/rtc-isl1208.c: call rtc_update_irq() from the alarm irq
+    handler
+    - LP: #1131218
+  * drivers/rtc/rtc-pl031.c: fix the missing operation on enable
+    - LP: #1131218
+  * virtio_console: Don't access uninitialized data.
+    - LP: #1131218
+  * wireless: rt2x00: rt{2500,73}usb.c put back duplicate id
+    - LP: #1131218
+  * Wireless: rt2x00: Add device id for Sweex LW323 to rt2800usb.c
+    - LP: #1131218
+  * rt2800usb: Add support for 2001:3c1e (D-Link DWA-125 rev B1) USB Wi-Fi
+    adapter
+    - LP: #1131218
+  * gspca_kinect: add Kinect for Windows USB id
+    - LP: #1131218
+  * ahci: support the STA2X11 I/O Hub
+    - LP: #1131218
+  * ahci: Add support for Enmotus Bobcat device.
+    - LP: #1131218
+  * ptrace/x86: Introduce set_task_blockstep() helper
+    - LP: #1131218
+  * ptrace/x86: Partly fix set_task_blockstep()->update_debugctlmsr() logic
+    - LP: #1131218
+  * ptrace: ensure arch_ptrace/ptrace_request can never race with SIGKILL
+    - LP: #1131218
+  * Bluetooth: Fix sending HCI commands after reset
+    - LP: #1131218
+  * HID: usbhid: quirk for Formosa IR receiver
+    - LP: #1131218
+  * kernel/resource.c: fix stack overflow in __reserve_region_with_split()
+    - LP: #1131218
+  * net: prevent setting ttl=0 via IP_TTL
+    - LP: #1131218
+  * ipv6: fix the noflags test in addrconf_get_prefix_route
+    - LP: #1131218
+  * MAINTAINERS: Stephen Hemminger email change
+    - LP: #1131218
+  * ipv6: fix header length calculation in ip6_append_data()
+    - LP: #1131218
+  * isdn/gigaset: fix zero size border case in debug dump
+    - LP: #1131218
+  * netxen: fix off by one bug in netxen_release_tx_buffer()
+    - LP: #1131218
+  * r8169: remove the obsolete and incorrect AMD workaround
+    - LP: #1131218
+  * net: loopback: fix a dst refcounting issue
+    - LP: #1131218
+  * pktgen: correctly handle failures when adding a device
+    - LP: #1131218
+  * ipv6: do not create neighbor entries for local delivery
+    - LP: #1131218
+  * packet: fix leakage of tx_ring memory
+    - LP: #1131218
+  * atm/iphase: rename fregt_t -> ffreg_t
+    - LP: #1131218
+  * sctp: refactor sctp_outq_teardown to insure proper re-initalization
+    - LP: #1131218
+  * net: sctp: sctp_setsockopt_auth_key: use kzfree instead of kfree
+    - LP: #1131218
+  * net: sctp: sctp_endpoint_free: zero out secret key data
+    - LP: #1131218
+  * tcp: frto should not set snd_cwnd to 0
+    - LP: #1131218
+  * tcp: fix for zero packets_in_flight was too broad
+    - LP: #1131218
+  * tcp: fix MSG_SENDPAGE_NOTLAST logic
+    - LP: #1131218
+  * tg3: Avoid null pointer dereference in tg3_interrupt in netconsole mode
+    - LP: #1131218
+  * tg3: Fix crc errors on jumbo frame receive
+    - LP: #1131218
+  * x86/xen: don't assume %ds is usable in xen_iret for 32-bit PVOPS.
+    - LP: #1131218
+  * Linux 3.2.39
+    - LP: #1131218
+  * vhost: fix length for cross region descriptor
+    - LP: #1130951
+    - CVE-2013-0311
+
  -- Kaj Ailomaa <zequence@mousike.me>  Thu, 28 Feb 2013 23:12:33 +0100
 
 linux-lowlatency (3.2.0-38.40) precise-proposed; urgency=low
