@@ -8482,7 +8482,7 @@ EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x0aa05a88	usbip_pack_pdu
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x0ae31328	usbip_recv_xbuff
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x330aece6	usbip_recv_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x3a47d151	usbip_event_add
-EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x46aeaa24	usbip_pad_iso
+EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x42933525	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x78b72f44	usbip_debug_flag
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x82ed07c4	usbip_dump_urb
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x9303e7b4	sockfd_to_socket

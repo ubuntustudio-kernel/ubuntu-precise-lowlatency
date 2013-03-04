@@ -8676,11 +8676,11 @@ EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x26ab7649	usbip_dump_urb
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x34be0958	dev_attr_usbip_debug
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x39bff112	usbip_stop_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x5767d28f	usbip_alloc_iso_desc_pdu
-EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x64cff1a2	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x78b72f44	usbip_debug_flag
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x8ad960ef	usbip_start_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xa54d9928	usbip_pack_pdu
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xb4f4d7a5	usbip_recv_iso
+EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xbc8bead1	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xc3c9f23f	usbip_recv_xbuff
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xd02753dc	usbip_header_correct_endian
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xe1087945	sockfd_to_socket

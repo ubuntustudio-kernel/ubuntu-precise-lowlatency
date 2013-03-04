@@ -6799,13 +6799,13 @@ EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x1a9650ff	usbip_dump_urb
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x2227257d	usbip_event_happened
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x39e945c6	sockfd_to_socket
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x52bd150b	usbip_recv_iso
-EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x5d33f901	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x6285bb71	dev_attr_usbip_debug
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x65df8ff1	usbip_stop_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x782aaff3	usbip_event_add
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x78b72f44	usbip_debug_flag
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x8d280555	usbip_xmit
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xa1b655f0	usbip_pack_pdu
+EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xa376f5c0	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xad552323	usbip_start_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xaf25b991	usbip_alloc_iso_desc_pdu
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xb6f8320e	usbip_recv_xbuff

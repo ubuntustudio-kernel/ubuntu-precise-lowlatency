@@ -3751,7 +3751,6 @@ EXPORT_SYMBOL vmlinux 0x08bf826c	_raw_spin_unlock_bh
 EXPORT_SYMBOL vmlinux 0x08d54781	dec_zone_page_state
 EXPORT_SYMBOL vmlinux 0x09100609	jbd2_journal_init_inode
 EXPORT_SYMBOL vmlinux 0x09319346	pcim_iounmap_regions
-EXPORT_SYMBOL vmlinux 0x0933aae1	efi_enabled
 EXPORT_SYMBOL vmlinux 0x0944288f	fb_class
 EXPORT_SYMBOL vmlinux 0x0948cde9	num_physpages
 EXPORT_SYMBOL vmlinux 0x0964bcb2	boot_cpu_data
@@ -3764,6 +3763,7 @@ EXPORT_SYMBOL vmlinux 0x09844b1e	pci_map_rom
 EXPORT_SYMBOL vmlinux 0x098b71c6	fb_dealloc_cmap
 EXPORT_SYMBOL vmlinux 0x098c9bb0	mdiobus_scan
 EXPORT_SYMBOL vmlinux 0x09902682	vfs_llseek
+EXPORT_SYMBOL vmlinux 0x0992780d	efi_enabled
 EXPORT_SYMBOL vmlinux 0x099f680a	netif_rx
 EXPORT_SYMBOL vmlinux 0x09c55cec	schedule_timeout_interruptible
 EXPORT_SYMBOL vmlinux 0x09c8eb55	font_vga_8x16
@@ -8878,7 +8878,7 @@ EXPORT_SYMBOL_GPL drivers/spi/spi-bitbang 0xe8863378	spi_bitbang_setup
 EXPORT_SYMBOL_GPL drivers/spi/spi-bitbang 0xff5df338	spi_bitbang_transfer
 EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0x11bca1cb	comedi_pci_auto_unconfig
 EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0x170fa02e	comedi_usb_auto_config
-EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0x1bc2fe47	comedi_get_device_file_info
+EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0x8bfb41f2	comedi_get_device_file_info
 EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0xfc29cacc	comedi_usb_auto_unconfig
 EXPORT_SYMBOL_GPL drivers/staging/comedi/comedi 0xffaeb436	comedi_pci_auto_config
 EXPORT_SYMBOL_GPL drivers/staging/comedi/drivers/das08 0x1f287c48	das08_common_attach
@@ -8946,13 +8946,13 @@ EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x24fde801	usbip_recv_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x42af9f17	usbip_pack_pdu
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x48f58514	usbip_event_happened
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x61e868ac	usbip_alloc_iso_desc_pdu
-EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x69b45bae	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x6a38d005	usbip_xmit
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x763e4eea	usbip_start_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x78b72f44	usbip_debug_flag
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x90747cd0	usbip_stop_eh
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0x9bf861e2	usbip_event_add
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xa2d06d08	sockfd_to_socket
+EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xb709ccec	usbip_pad_iso
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xd02753dc	usbip_header_correct_endian
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xdf7b3c53	dev_attr_usbip_debug
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xe1ea0586	usbip_dump_header
