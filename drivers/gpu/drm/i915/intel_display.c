@@ -6852,9 +6852,10 @@ void intel_mark_busy(struct drm_device *dev, struct drm_i915_gem_object *obj)
 	if (!drm_core_check_feature(dev, DRIVER_MODESET))
 		return;
 
-	if (!dev_priv->busy)
+	if (!dev_priv->busy) {
+		intel_sanitize_pm(dev);
 		dev_priv->busy = true;
-	else
+	} else
 		mod_timer(&dev_priv->idle_timer, jiffies +
 			  msecs_to_jiffies(GPU_IDLE_TIMEOUT));
 
@@ -8615,6 +8616,42 @@ void intel_init_clock_gating(struct drm_device *dev)
 		dev_priv->display.init_pch_clock_gating(dev);
 }
 
+static void gen6_sanitize_pm(struct drm_device *dev)
+{
+	struct drm_i915_private *dev_priv = dev->dev_private;
+	u32 limits, delay, old;
+
+	gen6_gt_force_wake_get(dev_priv);
+
+	old = limits = I915_READ(GEN6_RP_INTERRUPT_LIMITS);
+	/* Make sure we continue to get interrupts
+	 * until we hit the minimum or maximum frequencies.
+	 */
+	limits &= ~(0x3f << 16 | 0x3f << 24);
+	delay = dev_priv->cur_delay;
+	if (delay < dev_priv->max_delay)
+		limits |= (dev_priv->max_delay & 0x3f) << 24;
+	if (delay > dev_priv->min_delay)
+		limits |= (dev_priv->min_delay & 0x3f) << 16;
+
+	if (old != limits) {
+		DRM_ERROR("Power management discrepancy: GEN6_RP_INTERRUPT_LIMITS expected %08x, was %08x\n",
+			limits, old);
+		I915_WRITE(GEN6_RP_INTERRUPT_LIMITS, limits);
+	}
+
+	gen6_gt_force_wake_put(dev_priv);
+}
+
+void intel_sanitize_pm(struct drm_device *dev)
+{
+	struct drm_i915_private *dev_priv = dev->dev_private;
+
+	if (dev_priv->display.sanitize_pm)
+		dev_priv->display.sanitize_pm(dev);
+}
+
+
 /* Set up chip specific display functions */
 static void intel_init_display(struct drm_device *dev)
 {
@@ -8721,6 +8758,7 @@ static void intel_init_display(struct drm_device *dev)
 			}
 			dev_priv->display.fdi_link_train = gen6_fdi_link_train;
 			dev_priv->display.init_clock_gating = gen6_init_clock_gating;
+			dev_priv->display.sanitize_pm = gen6_sanitize_pm;
 			dev_priv->display.write_eld = ironlake_write_eld;
 		} else if (IS_IVYBRIDGE(dev)) {
 			/* FIXME: detect B0+ stepping and use auto training */
@@ -8733,6 +8771,7 @@ static void intel_init_display(struct drm_device *dev)
 				dev_priv->display.update_wm = NULL;
 			}
 			dev_priv->display.init_clock_gating = ivybridge_init_clock_gating;
+			dev_priv->display.sanitize_pm = gen6_sanitize_pm;
 			dev_priv->display.write_eld = ironlake_write_eld;
 		} else
 			dev_priv->display.update_wm = NULL;
