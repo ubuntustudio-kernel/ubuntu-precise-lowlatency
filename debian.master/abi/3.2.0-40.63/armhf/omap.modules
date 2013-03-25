@@ -235,6 +235,7 @@ bh1780gli
 binfmt_aout
 binfmt_misc
 block2mtd
+blocklayoutdriver
 blowfish_common
 blowfish_generic
 bluetooth
@@ -1222,6 +1223,7 @@ nfnetlink_queue
 nfs
 nfs_acl
 nfsd
+nfs_layout_nfsv41_files
 nftl
 nf_tproxy_core
 n_hdlc
