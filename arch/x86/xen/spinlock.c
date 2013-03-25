@@ -242,7 +242,7 @@ static noinline int xen_spin_lock_slow(struct arch_spinlock *lock, bool irq_enab
 		flags = arch_local_save_flags();
 		if (irq_enable) {
 			ADD_STATS(taken_slow_irqenable, 1);
-			/* raw_local_irq_enable(); */
+			raw_local_irq_enable();
 		}
 
 		/*
@@ -256,7 +256,7 @@ static noinline int xen_spin_lock_slow(struct arch_spinlock *lock, bool irq_enab
 		 */
 		xen_poll_irq(irq);
 
-		/* raw_local_irq_restore(flags); */
+		raw_local_irq_restore(flags);
 
 		ADD_STATS(taken_slow_spurious, !xen_test_irq_pending(irq));
 	} while (!xen_test_irq_pending(irq)); /* check for spurious wakeups */
