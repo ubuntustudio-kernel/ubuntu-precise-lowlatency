@@ -4,6 +4,17 @@ linux-lowlatency (3.2.0-40.43) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-40.64 ]
+
+  * Release Tracking Bug
+    - LP: #1160017
+  * SAUCE: Revert "SAUCE: xen/pv-spinlock: Never enable interrupts in
+    xen_spin_lock_slow()"
+  * SAUCE: PCI: define macro for marvell vendor ID
+    - LP: #1159863
+  * SAUCE: PCI: fix system hang issue of Marvell SATA host controller
+    - LP: #1159863
+
  -- Kaj Ailomaa <zequence@mousike.me>  Tue, 26 Mar 2013 17:56:39 +0100
 
 linux-lowlatency (3.2.0-40.42) precise-proposed; urgency=low
