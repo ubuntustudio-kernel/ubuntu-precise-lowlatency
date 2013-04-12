@@ -4,6 +4,385 @@ linux-lowlatency (3.2.0-40.44) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-41.65 ]
+
+  * Release Tracking Bug
+    - LP: #1167436
+  * SAUCE: (no-up) apparmor: Fix quieting of audit messages for network
+    mediation
+    - LP: #1163259
+  * SAUCE: Update configs for new efivars option
+    - LP: #1164646
+  * Revert "powerpc/eeh: Fix crash when adding a device in a slot with DDW"
+    - LP: #1164646
+  * Input: cypress_ps2 - fix trackpadi found in Dell XPS12
+    - LP: #1103594
+  * btrfs: Init io_lock after cloning btrfs device struct
+    - LP: #1164646
+  * md: protect against crash upon fsync on ro array
+    - LP: #1164646
+  * NFS: Don't allow NFS silly-renamed files to be deleted, no signal
+    - LP: #1164646
+  * SUNRPC: Don't start the retransmission timer when out of socket space
+    - LP: #1164646
+  * storvsc: Initialize the sglist
+    - LP: #1164646
+  * dc395x: uninitialized variable in device_alloc()
+    - LP: #1164646
+  * ARM: VFP: fix emulation of second VFP instruction
+    - LP: #1164646
+  * ARM: fix scheduling while atomic warning in alignment handling code
+    - LP: #1164646
+  * md: fix two bugs when attempting to resize RAID0 array.
+    - LP: #1164646
+  * md: raid0: fix error return from create_stripe_zones.
+    - LP: #1164646
+  * proc connector: reject unprivileged listener bumps
+    - LP: #1164646
+  * ath9k: fix RSSI dummy marker value
+    - LP: #1164646
+  * ath9k_htc: fix signal strength handling issues
+    - LP: #1164646
+  * mwifiex: correct sleep delay counter
+    - LP: #1164646
+  * cifs: ensure that cifs_get_root() only traverses directories
+    - LP: #1164646
+  * xen/pci: We don't do multiple MSI's.
+    - LP: #1164646
+  * dm: fix truncated status strings
+    - LP: #1164646
+  * dm snapshot: add missing module aliases
+    - LP: #1164646
+  * drm/i915: Don't clobber crtc->fb when queue_flip fails
+    - LP: #1164646
+  * ARM: 7663/1: perf: fix ARMv7 EVTYPE_MASK to include NSH bit
+    - LP: #1164646
+  * hwmon: (pmbus/ltc2978) Fix peak attribute handling
+    - LP: #1164646
+  * hwmon: (pmbus/ltc2978) Use detected chip ID to select supported
+    functionality
+    - LP: #1164646
+  * hwmon: (sht15) Check return value of regulator_enable()
+    - LP: #1164646
+  * hw_random: make buffer usable in scatterlist.
+    - LP: #1164646
+  * ALSA: vmaster: Fix slave change notification
+    - LP: #1164646
+  * drm/radeon: add primary dac adj quirk for R200 board
+    - LP: #1164646
+  * dmi_scan: fix missing check for _DMI_ signature in smbios_present()
+    - LP: #1164646
+  * iwlwifi: always copy first 16 bytes of commands
+    - LP: #1164646
+  * HID: add support for Sony RF receiver with USB product id 0x0374
+    - LP: #1164646
+  * HID: clean up quirk for Sony RF receivers
+    - LP: #1164646
+  * ahci: Add Device IDs for Intel Lynx Point-LP PCH
+    - LP: #1164646
+  * ahci: AHCI-mode SATA patch for Intel Avoton DeviceIDs
+    - LP: #1164646
+  * ahci: Add Device IDs for Intel Wellsburg PCH
+    - LP: #1164646
+  * iommu/amd: Initialize device table after dma_ops
+    - LP: #1164646
+  * tty: Correct tty buffer flush.
+    - LP: #1164646
+  * efi_pstore: Check remaining space with QueryVariableInfo() before
+    writing data
+    - LP: #1164646
+  * efivars: Disable external interrupt while holding efivars->lock
+    - LP: #1164646
+  * efi: be more paranoid about available space when creating variables
+    - LP: #1164646
+  * ftrace: Update the kconfig for DYNAMIC_FTRACE
+    - LP: #1164646
+  * decnet: Fix disappearing sysctl entries
+    - LP: #1164646
+  * Fix memory leak in cpufreq stats.
+    - LP: #1164646
+  * vfs: fix pipe counter breakage
+    - LP: #1164646
+  * xen/pciback: Don't disable a PCI device that is already disabled.
+    - LP: #1164646
+  * USB: option: add Huawei E5331
+    - LP: #1164646
+  * USB: storage: fix Huawei mode switching regression
+    - LP: #1164646
+  * USB: added support for Cinterion's products AH6 and PLS8
+    - LP: #1164646
+  * e1000e: fix pci-device enable-counter balance
+    - LP: #1164646
+  * virtio: rng: disallow multiple device registrations, fixes crashes
+    - LP: #1164646
+  * ALSA: seq: Fix missing error handling in snd_seq_timer_open()
+    - LP: #1164646
+  * usb: cp210x new Vendor/Device IDs
+    - LP: #1164646
+  * staging: vt6656: Fix oops on resume from suspend.
+    - LP: #1164646
+  * qcaux: add Franklin U600
+    - LP: #1164646
+  * ext3: Fix format string issues
+    - LP: #1164646
+  * tty/serial: Add support for Altera serial port
+    - LP: #1164646
+  * Fix 4 port and add support for 8 port 'Unknown' PCI serial port cards
+    - LP: #1164646
+  * serial: 8250_pci: add support for another kind of NetMos Technology PCI
+    9835 Multi-I/O Controller
+    - LP: #1164646
+  * tty: serial: fix typo "ARCH_S5P6450"
+    - LP: #1164646
+  * usb: serial: Add Rigblaster Advantage to device table
+    - LP: #1164646
+  * w1: fix oops when w1_search is called from netlink connector
+    - LP: #1164646
+  * USB: cdc-wdm: fix buffer overflow
+    - LP: #1164646
+  * hwmon: (lineage-pem) Add missing terminating entry for
+    pem_[input|fan]_attributes
+    - LP: #1164646
+  * hwmon: (pmbus/ltc2978) Fix temperature reporting
+    - LP: #1164646
+  * Fix: compat_rw_copy_check_uvector() misuse in aio, readv, writev, and
+    security keys
+    - LP: #1164646
+  * USB: Don't use EHCI port sempahore for USB 3.0 hubs.
+    - LP: #1164646
+  * USB: Prepare for refactoring by adding extra udev checks.
+    - LP: #1164646
+  * USB: Rip out recursive call on warm port reset.
+    - LP: #1164646
+  * USB: Fix connected device switch to Inactive state.
+    - LP: #1164646
+  * batman-adv: bat_socket_read missing checks
+    - LP: #1164646
+  * batman-adv: Only write requested number of byte to user buffer
+    - LP: #1164646
+  * block: use i_size_write() in bd_set_size()
+    - LP: #1164646
+  * loopdev: fix a deadlock
+    - LP: #1164646
+  * loopdev: remove an user triggerable oops
+    - LP: #1164646
+  * btrfs: use rcu_barrier() to wait for bdev puts at unmount
+    - LP: #1164646
+  * Linux 3.2.41
+    - LP: #1164646
+  * TTY: do not reset master's packet mode
+    - LP: #1164646
+  * perf,x86: fix kernel crash with PEBS/BTS after suspend/resume
+    - LP: #1164646
+  * perf,x86: fix wrmsr_on_cpu() warning on suspend/resume
+    - LP: #1164646
+  * perf,x86: fix link failure for non-Intel configs
+    - LP: #1164646
+  * l2tp: Restore socket refcount when sendmsg succeeds
+    - LP: #1164646
+  * rds: limit the size allocated by rds_message_alloc()
+    - LP: #1164646
+  * net: ipv6: Don't purge default router if accept_ra=2
+    - LP: #1164646
+  * tcp: fix double-counted receiver RTT when leaving receiver fast path
+    - LP: #1164646
+  * tun: add a missing nf_reset() in tun_net_xmit()
+    - LP: #1164646
+  * macvlan: Set IFF_UNICAST_FLT flag to prevent unnecessary promisc mode.
+    - LP: #1164646
+  * netlabel: correctly list all the static label mappings
+    - LP: #1164646
+  * bridging: fix rx_handlers return code
+    - LP: #1164646
+  * ipv6: stop multicast forwarding to process interface scoped addresses
+    - LP: #1164646
+  * rtnl: fix info leak on RTM_GETLINK request for VF devices
+    - LP: #1164646
+  * dcbnl: fix various netlink info leaks
+    - LP: #1164646
+  * 6lowpan: Fix endianness issue in is_addr_link_local().
+    - LP: #1164646
+  * drm/i915: Increase the RC6p threshold.
+    - LP: #1164646
+  * perf: Revert duplicated commit
+    - LP: #1164646
+  * i915: initialize CADL in opregion
+    - LP: #1164646
+  * s390/mm: fix flush_tlb_kernel_range()
+    - LP: #1164646
+  * mwifiex: fix potential out-of-boundary access to ibss rate table
+    - LP: #1164646
+  * rtlwifi: rtl8192cu: Fix schedule while atomic bug splat
+    - LP: #1164646
+  * powerpc: Fix cputable entry for 970MP rev 1.0
+    - LP: #1164646
+  * rtlwifi: rtl8192cu: Fix problem that prevents reassociation
+    - LP: #1164646
+  * vhost/net: fix heads usage of ubuf_info
+    - LP: #1164646
+  * selinux: use GFP_ATOMIC under spin_lock
+    - LP: #1164646
+  * udf: avoid info leak on export
+    - LP: #1164646
+  * isofs: avoid info leak on export
+    - LP: #1164646
+  * sunsu: Fix panic in case of nonexistent port at "console=ttySY" cmdline
+    option
+    - LP: #1164646
+  * net/ipv4: Ensure that location of timestamp option is stored
+    - LP: #1164646
+  * netconsole: don't call __netpoll_cleanup() while atomic
+    - LP: #1164646
+  * bonding: don't call update_speed_duplex() under spinlocks
+    - LP: #1164646
+  * sctp: Use correct sideffect command in duplicate cookie handling
+    - LP: #1164646
+  * sctp: don't break the loop while meeting the active_path so as to find
+    the matched transport
+    - LP: #1164646
+  * ipv4: fix definition of FIB_TABLE_HASHSZ
+    - LP: #1164646
+  * tcp: fix skb_availroom()
+    - LP: #1164646
+  * rtnetlink: Mask the rta_type when range checking
+    - LP: #1164646
+  * inet: limit length of fragment queue hash table bucket lists
+    - LP: #1164646
+  * sfc: Do not attempt to flush queues if DMA is disabled
+    - LP: #1164646
+  * sfc: Convert firmware subtypes to native byte order in
+    efx_mcdi_get_board_cfg()
+    - LP: #1164646
+  * sfc: Fix two causes of flush failure
+    - LP: #1164646
+  * sfc: lock TX queues when calling netif_device_detach()
+    - LP: #1164646
+  * sfc: Fix timekeeping in efx_mcdi_poll()
+    - LP: #1164646
+  * sfc: Properly sync RX DMA buffer when it is not the last in the page
+    - LP: #1164646
+  * sfc: Fix efx_rx_buf_offset() in the presence of swiotlb
+    - LP: #1164646
+  * sfc: Detach net device when stopping queues for reconfiguration
+    - LP: #1164646
+  * sfc: Disable soft interrupt handling during efx_device_detach_sync()
+    - LP: #1164646
+  * sfc: Only use TX push if a single descriptor is to be written
+    - LP: #1164646
+  * ext4: fix the wrong number of the allocated blocks in
+    ext4_split_extent()
+    - LP: #1164646
+  * jbd2: fix use after free in jbd2_journal_dirty_metadata()
+    - LP: #1164646
+  * ext4: convert number of blocks to clusters properly
+    - LP: #1164646
+  * ext4: use atomic64_t for the per-flexbg free_clusters count
+    - LP: #1164646
+  * tracing: Fix race in snapshot swapping
+    - LP: #1164646
+  * cifs: delay super block destruction until all cifsFileInfo objects are
+    gone
+    - LP: #1164646
+  * drm/i915: restrict kernel address leak in debugfs
+    - LP: #1164646
+  * drm/i915: bounds check execbuffer relocation count
+    - LP: #1164646
+    - CVE-2013-0913
+  * tracing: Fix free of probe entry by calling call_rcu_sched()
+    - LP: #1164646
+  * tracing: Protect tracer flags with trace_types_lock
+    - LP: #1164646
+  * tracing: Keep overwrite in sync between regular and snapshot buffers
+    - LP: #1164646
+  * tracing: Prevent buffer overwrite disabled for latency tracers
+    - LP: #1164646
+  * USB: xhci: correctly enable interrupts
+    - LP: #1164646
+  * usb-storage: add unusual_devs entry for Samsung YP-Z3 mp3 player
+    - LP: #1164646
+  * drm/radeon/benchmark: make sure bo blit copy exists before using it
+    - LP: #1164646
+  * ALSA: hda/cirrus - Fix the digital beep registration
+    - LP: #1164646
+  * USB: xhci - fix bit definitions for IMAN register
+    - LP: #1164646
+  * x86-64: Fix the failure case in copy_user_handle_tail()
+    - LP: #1164646
+  * ALSA: snd-usb: mixer: propagate errors up the call chain
+    - LP: #1164646
+  * ALSA: snd-usb: mixer: ignore -EINVAL in snd_usb_mixer_controls()
+    - LP: #1164646
+  * ext4: fix data=journal fast mount/umount hang
+    - LP: #1164646
+  * ALSA: hda - Fix typo in checking IEC958 emphasis bit
+    - LP: #1164646
+  * usb: gadget: udc-core: fix a regression during gadget driver unbinding
+    - LP: #1164646
+  * dm thin: fix discard corruption
+    - LP: #1164646
+  * efivars: Allow disabling use as a pstore backend
+    - LP: #1164646
+  * efivars: Add module parameter to disable use as a pstore backend
+    - LP: #1164646
+  * efivars: Fix check for CONFIG_EFI_VARS_PSTORE_DEFAULT_DISABLE
+    - LP: #1164646
+  * efi_pstore: Introducing workqueue updating sysfs
+    - LP: #1164646
+  * efivars: explicitly calculate length of VariableName
+    - LP: #1164646
+  * efivars: Handle duplicate names from get_next_variable()
+    - LP: #1164646
+  * cifs: ignore everything in SPNEGO blob after mechTypes
+    - LP: #1164646
+  * USB: garmin_gps: fix memory leak on disconnect
+    - LP: #1164646
+  * USB: io_ti: fix get_icount for two port adapters
+    - LP: #1164646
+  * USB: serial: fix interface refcounting
+    - LP: #1164646
+  * i2c: tegra: check the clk_prepare_enable() return value
+    - LP: #1164646
+  * vfs,proc: guarantee unique inodes in /proc
+    - LP: #1164646
+  * mm/hugetlb: fix total hugetlbfs pages count when using memory
+    overcommit accouting
+    - LP: #1164646
+  * KMS: fix EDID detailed timing vsync parsing
+    - LP: #1164646
+  * KMS: fix EDID detailed timing frame rate
+    - LP: #1164646
+  * efivars: pstore: Do not check size when erasing variable
+    - LP: #1164646
+  * signal: Define __ARCH_HAS_SA_RESTORER so we know whether to clear
+    sa_restorer
+    - LP: #1164646
+  * kernel/signal.c: use __ARCH_HAS_SA_RESTORER instead of SA_RESTORER
+    - LP: #1164646
+  * Linux 3.2.42
+    - LP: #1164646
+  * KVM: x86: fix for buffer overflow in handling of MSR_KVM_SYSTEM_TIME
+    (CVE-2013-1796)
+    - LP: #1158254
+    - CVE-2013-1796
+  * KVM: Fix bounds checking in ioapic indirect register reads
+    (CVE-2013-1798)
+    - LP: #1158262
+    - CVE-2013-1798
+  * KVM: x86: Convert MSR_KVM_SYSTEM_TIME to use gfn_to_hva_cache functions
+    (CVE-2013-1797)
+    - LP: #1158258
+    - CVE-2013-1797
+  * drm/i915: "Flush Me Harder" required on gen6+
+    - LP: #1140716
+  * drm/i915: PIPE_CONTROL_TLB_INVALIDATE
+    - LP: #1140716
+  * drm/i915: Apply post-sync write for pipe control invalidates
+    - LP: #1140716
+  * drm/i915: TLB invalidation with MI_FLUSH_DW requires a post-sync op v3
+    - LP: #1140716
+  * drm/i915: PIPE_CONTROL TLB invalidate requires CS stall
+    - LP: #1140716
+
  -- Kaj Ailomaa <zequence@mousike.me>  Fri, 12 Apr 2013 19:51:09 +0200
 
 linux-lowlatency (3.2.0-40.43) precise-proposed; urgency=low
