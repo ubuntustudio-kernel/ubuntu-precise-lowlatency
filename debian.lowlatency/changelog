@@ -4,6 +4,318 @@ linux-lowlatency (3.2.0-42.46) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-42.67 ]
+
+  * Release Tracking Bug
+    - LP: #1177080
+  * SAUCE: (no-up) x86: reboot: Make Dell Optiplex 390 use reboot=pci
+    - LP: #800660
+  * [Config] Add libceph to virtual flavour modules list
+    - LP: #1164739
+  * [packaging] Bump ABI for every new release
+  * Start new release
+  * tg3: fix length overflow in VPD firmware parsing
+    - LP: #1167065
+    - CVE-2013-1929
+  * Bluetooth: Add support for atheros 04ca:3004 device to ath3k
+    - LP: #1168852
+  * clockevents: Don't allow dummy broadcast timers
+    - LP: #1174914
+  * ASoC: imx-ssi: Fix occasional AC97 reset failure
+    - LP: #1174914
+  * UBIFS: make space fixup work in the remount case
+    - LP: #1174914
+  * Bluetooth: Add support for IMC Networks [13d3:3393]
+    - LP: #1174914
+  * Bluetooth: Add support for GC-WB300D PCIe [04ca:3006] to ath3k.
+    - LP: #1174914
+  * Bluetooth: Add support for Foxconn / Hon Hai [0489:e04e]
+    - LP: #1174914
+  * Bluetooth: Add support for Foxconn / Hon Hai [0489:e056]
+    - LP: #1174914
+  * Bluetooth device 04ca:3008 should use ath3k
+    - LP: #1174914
+  * Bluetooth: Device 0cf3:3008 should map AR 3012
+    - LP: #1174914
+  * Bluetooth: Add support for Dell[QCA 0cf3:0036]
+    - LP: #1174914
+  * tty: atmel_serial_probe(): index of atmel_ports[] fix
+    - LP: #1174914
+  * HID: usbhid: quirk for Realtek Multi-card reader
+    - LP: #1174914
+  * HID: usbhid: quirk for MSI GX680R led panel
+    - LP: #1174914
+  * HID: usbhid: fix build problem
+    - LP: #1174914
+  * Bluetooth: Add support for Dell[QCA 0cf3:817a]
+    - LP: #1174914
+  * ath9k_hw: revert chainmask to user configuration after calibration
+    - LP: #1174914
+  * rtlwifi: usb: add missing freeing of skbuff
+    - LP: #1174914
+  * xen-blkback: fix dispatch_rw_block_io() error path
+    - LP: #1174914
+  * net/irda: add missing error path release_sock call
+    - LP: #1174914
+  * sysfs: fix race between readdir and lseek
+    - LP: #1174914
+  * sysfs: handle failure path correctly for readdir()
+    - LP: #1174914
+  * pnfs-block: removing DM device maybe cause oops when call dev_remove
+    - LP: #1174914
+  * NFSv4.1: Fix a race in pNFS layoutcommit
+    - LP: #1174914
+  * ASoC: dma-sh7760: Fix compile error
+    - LP: #1174914
+  * IPoIB: Fix send lockup due to missed TX completion
+    - LP: #1174914
+  * SUNRPC: Add barriers to ensure read ordering in
+    rpc_wake_up_task_queue_locked
+    - LP: #1174914
+  * usb: xhci: Fix TRB transfer length macro used for Event TRB.
+    - LP: #1174914
+  * staging: comedi: s626: fix continuous acquisition
+    - LP: #1174914
+  * nfsd4: reject "negative" acl lengths
+    - LP: #1174914
+  * Nest rename_lock inside vfsmount_lock
+    - LP: #1174914
+  * vt: synchronize_rcu() under spinlock is not nice...
+    - LP: #1174914
+  * iommu/amd: Make sure dma_ops are set for hotplug devices
+    - LP: #1174914
+  * can: sja1000: fix define conflict on SH
+    - LP: #1174914
+  * b43: A fix for DMA transmission sequence errors
+    - LP: #1174914
+  * Btrfs: limit the global reserve to 512mb
+    - LP: #1174914
+  * usb: ftdi_sio: Add support for Mitsubishi FX-USB-AW/-BD
+    - LP: #1174914
+  * reiserfs: Fix warning and inode leak when deleting inode with xattrs
+    - LP: #1174914
+  * tile: expect new initramfs name from hypervisor file system
+    - LP: #1174914
+  * virtio: console: rename cvq_lock to c_ivq_lock
+    - LP: #1174914
+  * virtio: console: add locking around c_ovq operations
+    - LP: #1174914
+  * spi/mpc512x-psc: optionally keep PSC SS asserted across xfer segmensts
+    - LP: #1174914
+  * EISA/PCI: Init EISA early, before PNP
+    - LP: #1174914
+  * mm: prevent mmap_cache race in find_vma()
+    - LP: #1174914
+  * ixgbe: fix registration order of driver and DCA nofitication
+    - LP: #1174914
+  * rt2x00: error in configurations with mesh support disabled
+    - LP: #1174914
+  * key: Fix resource leak
+    - LP: #1174914
+  * udf: Fix bitmap overflow on large filesystems with small block size
+    - LP: #1174914
+  * NFS: nfs_getaclargs.acl_len is a size_t
+    - LP: #1174914
+  * loop: prevent bdev freeing while device in use
+    - LP: #1174914
+  * sky2: Receive Overflows not counted
+    - LP: #1174914
+  * sky2: Threshold for Pause Packet is set wrong
+    - LP: #1174914
+  * tcp: preserve ACK clocking in TSO
+    - LP: #1174914
+  * tcp: undo spurious timeout after SACK reneging
+    - LP: #1174914
+  * 8021q: fix a potential use-after-free
+    - LP: #1174914
+  * thermal: shorten too long mcast group name
+    - LP: #1174914
+  * bonding: fix miimon and arp_interval delayed work race conditions
+    - LP: #1174914
+  * unix: fix a race condition in unix_release()
+    - LP: #1174914
+  * bonding: remove already created master sysfs link on failure
+    - LP: #1174914
+  * bonding: fix disabling of arp_interval and miimon
+    - LP: #1174914
+  * drivers: net: ethernet: davinci_emac: use netif_wake_queue() while
+    restarting tx queue
+    - LP: #1174914
+  * aoe: reserve enough headroom on skbs
+    - LP: #1174914
+  * atl1e: drop pci-msi support because of packet corruption
+    - LP: #1174914
+  * DM9000B: driver initialization upgrade
+    - LP: #1174914
+  * ipv6: don't accept multicast traffic with scope 0
+    - LP: #1174914
+  * ipv6: fix bad free of addrconf_init_net
+    - LP: #1174914
+  * ipv6: don't accept node local multicast traffic from the wire
+    - LP: #1174914
+  * ks8851: Fix interpretation of rxlen field.
+    - LP: #1174914
+  * net: add a synchronize_net() in netdev_rx_handler_unregister()
+    - LP: #1174914
+  * pch_gbe: fix ip_summed checksum reporting on rx
+    - LP: #1174914
+  * smsc75xx: fix jumbo frame support
+    - LP: #1174914
+  * bonding: get netdev_rx_handler_unregister out of locks
+    - LP: #1174914
+  * HID: microsoft: do not use compound literal - fix build
+    - LP: #1174914
+  * Linux 3.2.43
+    - LP: #1174914
+  * USB: serial: add modem-status-change wait queue
+    - LP: #1174914
+  * USB: serial: fix hang when opening port
+    - LP: #1174914
+  * USB: ark3116: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: ch341: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: cypress_m8: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: ftdi_sio: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: io_edgeport: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: io_ti: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: mct_u232: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: mos7840: fix broken TIOCMIWAIT
+    - LP: #1174914
+  * USB: mos7840: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: oti6858: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: pl2303: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: spcp8x5: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: ssu100: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * USB: ti_usb_3410_5052: fix use-after-free in TIOCMIWAIT
+    - LP: #1174914
+  * hrtimer: Don't reinitialize a cpu_base lock on CPU_UP
+    - LP: #1174914
+  * crypto: gcm - fix assumption that assoc has one segment
+    - LP: #1174914
+  * libata: Use integer return value for atapi_command_packet_set
+    - LP: #1174914
+  * libata: Set max sector to 65535 for Slimtype DVD A DS8A8SH drive
+    - LP: #1174914
+  * ata_piix: Fix DVD not dectected at some Haswell platforms
+    - LP: #1174914
+  * hwspinlock: fix __hwspin_lock_request error path
+    - LP: #1174914
+  * ALSA: usb-audio: fix endianness bug in snd_nativeinstruments_*
+    - LP: #1174914
+  * alpha: Add irongate_io to PCI bus resources
+    - LP: #1174914
+  * powerpc: pSeries_lpar_hpte_remove fails from Adjunct partition being
+    performed before the ANDCOND test
+    - LP: #1174914
+  * sched_clock: Prevent 64bit inatomicity on 32bit systems
+    - LP: #1174914
+  * ftrace: Consistently restore trace function on sysctl enabling
+    - LP: #1174914
+  * PM / reboot: call syscore_shutdown() after disable_nonboot_cpus()
+    - LP: #1174914
+  * can: gw: use kmem_cache_free() instead of kfree()
+    - LP: #1174914
+  * ASoC: wm8903: Fix the bypass to HP/LINEOUT when no DAC or ADC is
+    running
+    - LP: #1174914
+  * spinlocks and preemption points need to be at least compiler barriers
+    - LP: #1174914
+  * tracing: Fix double free when function profile init failed
+    - LP: #1174914
+  * x86, mm, paravirt: Fix vmalloc_fault oops during lazy MMU updates
+    - LP: #1174914
+  * x86, mm: Patch out arch_flush_lazy_mmu_mode() when running on bare
+    metal
+    - LP: #1174914
+  * target: Fix MAINTENANCE_IN service action CDB checks to use lower 5
+    bits
+    - LP: #1174914
+  * target: Fix incorrect fallthrough of ALUA Standby/Offline/Transition
+    CDBs
+    - LP: #1174914
+  * tracing: Fix possible NULL pointer dereferences
+    - LP: #1174914
+  * Btrfs: make sure nbytes are right after log replay
+    - LP: #1174914
+  * kref: Implement kref_get_unless_zero v3
+    - LP: #1174914
+  * kobject: fix kset_find_obj() race with concurrent last kobject_put()
+    - LP: #1174914
+  * vfs: Revert spurious fix to spinning prevention in prune_icache_sb
+    - LP: #1174914
+  * ARM: Do 15e0d9e37c (ARM: pm: let platforms select cpu_suspend support)
+    properly
+    - LP: #1174914
+  * ath9k_htc: accept 1.x firmware newer than 1.3
+    - LP: #1174914
+  * of: introduce helper to manage boolean
+    - LP: #1174914
+  * can: sja1000: fix handling on dt properties on little endian systems
+    - LP: #1174914
+  * ath9k_hw: change AR9580 initvals to fix a stability issue
+    - LP: #1174914
+  * ARM: 7696/1: Fix kexec by setting outer_cache.inv_all for Feroceon
+    - LP: #1174914
+  * ARM: 7698/1: perf: fix group validation when using enable_on_exec
+    - LP: #1174914
+  * hugetlbfs: add swap entry check in follow_hugetlb_page()
+    - LP: #1174914
+  * kernel/signal.c: stop info leak via the tkill and the tgkill syscalls
+    - LP: #1174914
+  * net: fix incorrect credentials passing
+    - LP: #1174914
+  * thermal: return an error on failure to register thermal class
+    - LP: #1174914
+  * writeback: fix dirtied pages accounting on redirty
+    - LP: #1174914
+  * Btrfs: fix race between mmap writes and compression
+    - LP: #1174914
+  * drm/i915: panel: invert brightness via parameter
+    - LP: #1174914
+  * drm/i915: panel: invert brightness via quirk
+    - LP: #1174914
+  * drm/i915: panel: invert brightness acer aspire 5734z
+    - LP: #1174914
+  * DRM/i915: Add QUIRK_INVERT_BRIGHTNESS for NCR machines.
+    - LP: #1174914
+  * drm/i915: add quirk to invert brightness on eMachines G725
+    - LP: #1174914
+  * drm/i915: add quirk to invert brightness on eMachines e725
+    - LP: #1174914
+  * drm/i915: add quirk to invert brightness on Packard Bell NCL20
+    - LP: #1174914
+  * msi-wmi: Fix memory leak
+    - LP: #1174914
+  * ALSA: hda - Enabling Realtek ALC 671 codec
+    - LP: #1174914
+  * ALSA: hda - fix typo in proc output
+    - LP: #1174914
+  * block: avoid using uninitialized value in from queue_var_store
+    - LP: #1174914
+  * r8169: fix auto speed down issue
+    - LP: #1174914
+  * mtd: Disable mtdchar mmap on MMU systems
+    - LP: #1174914
+  * hfsplus: fix potential overflow in hfsplus_file_truncate()
+    - LP: #1174914
+  * KVM: Allow cross page reads and writes from cached translations.
+    - LP: #1174914
+  * sched: Convert BUG_ON()s in try_to_wake_up_local() to WARN_ON_ONCE()s
+    - LP: #1174914
+  * Linux 3.2.44
+    - LP: #1174914
+
  -- Kaj Ailomaa <zequence@mousike.me>  Thu, 09 May 2013 03:15:09 +0200
 
 linux-lowlatency (3.2.0-41.45) precise-proposed; urgency=low
