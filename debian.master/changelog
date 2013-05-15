@@ -1,3 +1,21 @@
+linux (3.2.0-43.68) precise-proposed; urgency=low
+
+  [Steve Conklin]
+
+  * Release Tracking Bug
+    - LP: #1180167
+  * Based on 3.2.0-41.66 release
+    - entire delta from 41.66 to 42.67 removed
+    - CVE release is based on updates+fix
+
+  [ Upstream Kernel Changes ]
+
+  * perf: Treat attr.config as u64 in perf_swevent_init()
+    - LP: #1179943
+    - CVE-2013-2094
+
+ -- Steve Conklin <sconklin@canonical.com>  Tue, 14 May 2013 21:40:40 -0500
+
 linux (3.2.0-42.67) precise; urgency=low
 
   [Brad Figg]
