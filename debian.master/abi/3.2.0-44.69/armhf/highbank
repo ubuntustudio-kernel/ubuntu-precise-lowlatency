@@ -2426,6 +2426,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	abort
 EXPORT_SYMBOL vmlinux 0x00000000	abort_creds
 EXPORT_SYMBOL vmlinux 0x00000000	abort_exclusive_wait
 EXPORT_SYMBOL vmlinux 0x00000000	account_page_dirtied
+EXPORT_SYMBOL vmlinux 0x00000000	account_page_redirty
 EXPORT_SYMBOL vmlinux 0x00000000	account_page_writeback
 EXPORT_SYMBOL vmlinux 0x00000000	add_device_randomness
 EXPORT_SYMBOL vmlinux 0x00000000	add_disk
@@ -2491,6 +2492,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	bdev_stack_limits
 EXPORT_SYMBOL vmlinux 0x00000000	bdevname
 EXPORT_SYMBOL vmlinux 0x00000000	bdget
 EXPORT_SYMBOL vmlinux 0x00000000	bdget_disk
+EXPORT_SYMBOL vmlinux 0x00000000	bdgrab
 EXPORT_SYMBOL vmlinux 0x00000000	bdi_destroy
 EXPORT_SYMBOL vmlinux 0x00000000	bdi_init
 EXPORT_SYMBOL vmlinux 0x00000000	bdi_register
@@ -7647,6 +7649,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_exit
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_register_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_unregister_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpuset_mem_spread_node
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	cred_real_to_ucred
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cred_to_ucred
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	crypto_ablkcipher_type
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	crypto_aead_setauthsize
