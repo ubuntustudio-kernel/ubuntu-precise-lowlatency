@@ -3615,6 +3615,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	iw_handler_set_spy
 EXPORT_SYMBOL vmlinux 0x00000000	iw_handler_set_thrspy
 EXPORT_SYMBOL vmlinux 0x00000000	jbd2__journal_restart
 EXPORT_SYMBOL vmlinux 0x00000000	jbd2__journal_start
+EXPORT_SYMBOL vmlinux 0x00000000	jbd2_complete_transaction
 EXPORT_SYMBOL vmlinux 0x00000000	jbd2_inode_cache
 EXPORT_SYMBOL vmlinux 0x00000000	jbd2_journal_abort
 EXPORT_SYMBOL vmlinux 0x00000000	jbd2_journal_ack_err
@@ -5352,6 +5353,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	vm_get_page_prot
 EXPORT_SYMBOL vmlinux 0x00000000	vm_insert_mixed
 EXPORT_SYMBOL vmlinux 0x00000000	vm_insert_page
 EXPORT_SYMBOL vmlinux 0x00000000	vm_insert_pfn
+EXPORT_SYMBOL vmlinux 0x00000000	vm_iomap_memory
 EXPORT_SYMBOL vmlinux 0x00000000	vm_map_ram
 EXPORT_SYMBOL vmlinux 0x00000000	vm_stat
 EXPORT_SYMBOL vmlinux 0x00000000	vm_unmap_ram
