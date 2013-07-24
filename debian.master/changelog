@@ -1,5 +1,17 @@
 linux (3.2.0-51.77) precise; urgency=low
 
+  [Brad Figg]
+
+  * Release Tracking Bug
+    - LP: #1199470
+
+  [ Upstream Kernel Changes ]
+
+  * Bluetooth: Fix invalid length check in l2cap_information_rsp()
+    - LP: #1204548
+
+ -- Brad Figg <brad.figg@canonical.com>  Wed, 24 Jul 2013 12:36:41 -0700
+
 linux (3.2.0-50.76) precise; urgency=low
 
   [Brad Figg]
