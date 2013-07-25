@@ -3213,6 +3213,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	flow_cache_lookup
 EXPORT_SYMBOL vmlinux 0x00000000	flush_dcache_page
 EXPORT_SYMBOL vmlinux 0x00000000	flush_delayed_work
 EXPORT_SYMBOL vmlinux 0x00000000	flush_delayed_work_sync
+EXPORT_SYMBOL vmlinux 0x00000000	flush_kernel_dcache_page
 EXPORT_SYMBOL vmlinux 0x00000000	flush_old_exec
 EXPORT_SYMBOL vmlinux 0x00000000	flush_scheduled_work
 EXPORT_SYMBOL vmlinux 0x00000000	flush_signals
@@ -7650,6 +7651,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_enter
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_exit
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_register_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_pm_unregister_notifier
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpu_topology
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cpuset_mem_spread_node
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cred_real_to_ucred
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	cred_to_ucred

@@ -2912,6 +2912,7 @@ EXPORT_SYMBOL vmlinux 0x3796bdcc	snd_pcm_format_little_endian
 EXPORT_SYMBOL vmlinux 0x379c84d8	netdev_crit
 EXPORT_SYMBOL vmlinux 0x379f5837	param_set_invbool
 EXPORT_SYMBOL vmlinux 0x37befc70	jiffies_to_msecs
+EXPORT_SYMBOL vmlinux 0x37c8fc6b	flush_kernel_dcache_page
 EXPORT_SYMBOL vmlinux 0x37e74642	get_jiffies_64
 EXPORT_SYMBOL vmlinux 0x37ea921e	vfsmount_lock_local_lock_cpu
 EXPORT_SYMBOL vmlinux 0x37f614b7	__kfifo_len_r
