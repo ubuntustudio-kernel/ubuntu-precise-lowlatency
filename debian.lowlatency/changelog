@@ -4,6 +4,13 @@ linux-lowlatency (3.2.0-51.53) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-51.77 ]
+
+  * Release Tracking Bug
+    - LP: #1199470
+  * Bluetooth: Fix invalid length check in l2cap_information_rsp()
+    - LP: #1204548
+
  -- Kaj Ailomaa <zequence@mousike.me>  Fri, 26 Jul 2013 11:53:02 +0200
 
 linux-lowlatency (3.2.0-50.52) precise-proposed; urgency=low
