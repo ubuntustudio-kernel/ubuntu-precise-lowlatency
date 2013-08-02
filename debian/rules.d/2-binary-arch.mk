@@ -104,6 +104,10 @@ endif
 				tee $(target_flavour).inclusion-list.log; \
 		/sbin/depmod -b $(pkgdir) -ea -F $(pkgdir)/boot/System.map-$(abi_release)-$* \
 			$(abi_release)-$* 2>&1 |tee $(target_flavour).depmod.log; \
+		if grep unknown $(target_flavour).depmod.log; then \
+			echo "Error: Missing inclusion module dependencies"; \
+			exit 1;\
+		fi;\
 	fi
 
 ifeq ($(no_dumpfile),)
