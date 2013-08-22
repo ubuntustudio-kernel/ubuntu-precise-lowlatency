@@ -36,6 +36,7 @@
 #include <linux/moduleparam.h>
 #include <net/pkt_sched.h>
 #include <net/net_namespace.h>
+#include <linux/sched.h>
 
 #define TX_Q_LIMIT    32
 struct ifb_private {
