@@ -5248,6 +5248,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	udp_poll
 EXPORT_SYMBOL vmlinux 0x00000000	udp_proc_register
 EXPORT_SYMBOL vmlinux 0x00000000	udp_proc_unregister
 EXPORT_SYMBOL vmlinux 0x00000000	udp_prot
+EXPORT_SYMBOL vmlinux 0x00000000	udp_push_pending_frames
 EXPORT_SYMBOL vmlinux 0x00000000	udp_sendmsg
 EXPORT_SYMBOL vmlinux 0x00000000	udp_seq_open
 EXPORT_SYMBOL vmlinux 0x00000000	udp_table
