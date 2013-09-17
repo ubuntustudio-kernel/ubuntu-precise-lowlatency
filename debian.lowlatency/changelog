@@ -4,6 +4,31 @@ linux-lowlatency (3.2.0-54.56) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-54.82 ]
+
+  * Release Tracking Bug
+    - LP: #1223490
+  * Revert "zram: use zram->lock to protect zram_free_page() in swap free
+    notify path"
+    - LP: #1215513
+  * x86 thermal: Delete power-limit-notification console messages
+    - LP: #1215748
+  * x86 thermal: Disable power limit notification interrupt by default
+    - LP: #1215748
+  * ARM: 7810/1: perf: Fix array out of bounds access in
+    armpmu_map_hw_event()
+    - LP: #1216442
+    - CVE-2013-4254
+  * ARM: 7809/1: perf: fix event validation for software group leaders
+    - LP: #1216442
+    - CVE-2013-4254
+  * xfs: fix _xfs_buf_find oops on blocks beyond the filesystem end
+    - LP: #1151527
+    - CVE-2013-1819
+  * cifs: don't instantiate new dentries in readdir for inodes that need to
+    be revalidated immediately
+    - LP: #1222442
+
  -- Kaj Ailomaa <zequence@mousike.me>  Tue, 17 Sep 2013 21:49:29 +0200
 
 linux-lowlatency (3.2.0-53.55) precise-proposed; urgency=low
