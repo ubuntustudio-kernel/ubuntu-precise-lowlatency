@@ -4,6 +4,262 @@ linux-lowlatency (3.2.0-55.57) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-55.85 ]
+
+  * Release Tracking Bug
+    - LP: #1233349
+  * kernel-doc: bugfix - multi-line macros
+    - LP: #1223920
+  * Revert "ARM: 7810/1: perf: Fix array out of bounds access in
+    armpmu_map_hw_event()"
+  * Revert "PM / Domains: Fix handling of wakeup devices during system
+    resume"
+    - LP: #1233387
+  * inetpeer: Invalidate the inetpeer tree along with the routing cache
+    - LP: #1205741
+  * inetpeer: fix a race in inetpeer_gc_worker()
+    - LP: #1205741
+  * mm/memory-hotplug: fix lowmem count overflow when offline pages
+    - LP: #1233387
+  * libata: make it clear that sata_inic162x is experimental
+    - LP: #1233387
+  * sched: Fix the broken sched_rr_get_interval()
+    - LP: #1233387
+  * drm/i915: quirk no PCH_PWM_ENABLE for Dell XPS13 backlight
+    - LP: #1162026, #1163720, #1233387
+  * perf: Fix event group context move
+    - LP: #1233387
+  * perf tools: Add anonymous huge page recognition
+    - LP: #1233387
+  * arcnet: cleanup sizeof parameter
+    - LP: #1233387
+  * sysctl net: Keep tcp_syn_retries inside the boundary
+    - LP: #1233387
+  * sctp: fully initialize sctp_outq in sctp_outq_init
+    - LP: #1233387
+  * ipv6: take rtnl_lock and mark mrt6 table as freed on namespace cleanup
+    - LP: #1233387
+  * usbnet: do not pretend to support SG/TSO
+    - LP: #1233387
+  * net_sched: Fix stack info leak in cbq_dump_wrr().
+    - LP: #1233387
+  * af_key: more info leaks in pfkey messages
+    - LP: #1233387
+  * net_sched: info leak in atm_tc_dump_class()
+    - LP: #1233387
+  * drm/i915/lvds: ditch ->prepare special case
+    - LP: #1233387
+  * af_key: initialize satype in key_notify_policy_flush()
+    - LP: #1233387
+  * ALSA: usb-audio: skip UAC2 EFFECT_UNIT
+    - LP: #1233387
+  * ALSA: usb: Parse UAC2 extension unit like for UAC1
+    - LP: #1233387
+  * ALSA: ak4xx-adda: info leak in ak4xxx_capture_source_info()
+    - LP: #1233387
+  * slab: introduce kmalloc_array()
+    - LP: #1233387
+  * NFSv4.1: integer overflow in decode_cb_sequence_args()
+    - LP: #1233387
+  * jfs: fix readdir cookie incompatibility with NFSv4
+    - LP: #1233387
+  * vm: add no-mmu vm_iomap_memory() stub
+    - LP: #1233387
+  * nl80211: fix mgmt tx status and testmode reporting for netns
+    - LP: #1233387
+  * mac80211: fix duplicate retransmission detection
+    - LP: #1233387
+  * iwlwifi: dvm: don't send BT_CONFIG on devices w/o Bluetooth
+    - LP: #1233387
+  * iwlwifi: add DELL SKU for 5150 HMC
+    - LP: #1233387
+  * ath9k_htc: do some initial hardware configuration
+    - LP: #1233387
+  * Bluetooth: Add support for Foxconn/Hon Hai [0489:e04d]
+    - LP: #1233387
+  * Bluetooth: Add support for Mediatek Bluetooth device [0e8d:763f]
+    - LP: #1233387
+  * Bluetooth: ath3k: Add support for Fujitsu Lifebook UH5x2 [04c5:1330]
+    - LP: #1233387
+  * Bluetooth: ath3k: Add support for ID 0x13d3/0x3402
+    - LP: #1233387
+  * Bluetooth: Add support for Atheros [0cf3:3121]
+    - LP: #1233387
+  * Bluetooth: Add support for Atheros [0cf3:e003]
+    - LP: #1233387
+  * ARM: 7791/1: a.out: remove partial a.out support
+    - LP: #1233387
+  * x86, fpu: correct the asm constraints for fxsave, unbreak mxcsr.daz
+    - LP: #1233387
+  * mwifiex: Add missing endian conversion.
+    - LP: #1233387
+  * USB: mos7840: fix race in register handling
+    - LP: #1233387
+  * serial/mxs-auart: fix race condition in interrupt handler
+    - LP: #1233387
+  * serial/mxs-auart: increase time to wait for transmitter to become idle
+    - LP: #1233387
+  * ixgbe: Fix Tx Hang issue with lldpad on 82598EB
+    - LP: #1233387
+  * virtio: console: fix race with port unplug and open/close
+    - LP: #1233387
+  * virtio: console: fix race in port_fops_open() and port unplug
+    - LP: #1233387
+  * virtio: console: clean up port data immediately at time of unplug
+    - LP: #1233387
+  * virtio: console: fix raising SIGIO after port unplug
+    - LP: #1233387
+  * virtio: console: return -ENODEV on all read operations after unplug
+    - LP: #1233387
+  * rt2x00: fix stop queue
+    - LP: #1233387
+  * USB: serial: ftdi_sio: add more RT Systems ftdi devices
+    - LP: #1233387
+  * ACPI / battery: Fix parsing _BIX return value
+    - LP: #1233387
+  * drm/radeon/atom: initialize more atom interpretor elements to 0
+    - LP: #1233387
+  * cifs: extend the buffer length enought for sprintf() using
+    - LP: #1233387
+  * iwlwifi: dvm: fix calling ieee80211_chswitch_done() with NULL
+    - LP: #1233387
+  * iwl4965: set power mode early
+    - LP: #1233387
+  * iwl4965: reset firmware after rfkill off
+    - LP: #1233387
+  * megaraid_sas: megaraid_sas driver init fails in kdump kernel
+    - LP: #1233387
+  * tracing: Fix fields of struct trace_iterator that are zeroed by mistake
+    - LP: #1233387
+  * ALSA: 6fire: fix DMA issues with URB transfer_buffer usage
+    - LP: #1233387
+  * drm/radeon: always program the MC on startup
+    - LP: #1233387
+  * hwmon: (adt7470) Fix incorrect return code check
+    - LP: #1233387
+  * ext4: fix mount/remount error messages for incompatible mount options
+    - LP: #1233387
+  * zd1201: do not use stack as URB transfer_buffer
+    - LP: #1233387
+  * Hostap: copying wrong data prism2_ioctl_giwaplist()
+    - LP: #1233387
+  * ALSA: 6fire: make buffers DMA-able (pcm)
+    - LP: #1233387
+  * ALSA: 6fire: make buffers DMA-able (midi)
+    - LP: #1233387
+  * jbd2: Fix use after free after error in jbd2_journal_dirty_metadata()
+    - LP: #1233387
+  * USB: adutux: fix big-endian device-type reporting
+    - LP: #1233387
+  * USB: ti_usb_3410_5052: fix big-endian firmware handling
+    - LP: #1233387
+  * perf/arm: Fix armpmu_map_hw_event()
+    - LP: #1233387
+  * fs/proc/task_mmu.c: fix buffer overflow in add_page_map()
+    - LP: #1233387
+  * m68k/atari: ARAnyM - Fix NatFeat module support
+    - LP: #1233387
+  * m68k: Truncate base in do_div()
+    - LP: #1233387
+  * usb: add two quirky touchscreen
+    - LP: #1233387
+  * USB: mos7720: fix broken control requests
+    - LP: #1233387
+  * USB: keyspan: fix null-deref at disconnect and release
+    - LP: #1233387
+  * drm/i915: Invalidate TLBs for the rings after a reset
+    - LP: #1233387
+  * libata: apply behavioral quirks to sil3826 PMP
+    - LP: #1233387
+  * xen/events: initialize local per-cpu mask for all possible events
+    - LP: #1233387
+  * xen/events: mask events when changing their VCPU binding
+    - LP: #1233387
+  * block: Add bio_for_each_segment_all()
+    - LP: #1233387
+  * sg: Fix user memory corruption when SG_IO is interrupted by a signal
+    - LP: #1233387
+  * of: fdt: fix memory initialization for expanded DT
+    - LP: #1233387
+  * zfcp: fix lock imbalance by reworking request queue locking
+    - LP: #1233387
+  * zfcp: fix schedule-inside-lock in scsi_device list loops
+    - LP: #1233387
+  * nilfs2: remove double bio_put() in nilfs_end_bio_write() for
+    BIO_EOPNOTSUPP error
+    - LP: #1233387
+  * nilfs2: fix issue with counting number of bio requests for
+    BIO_EOPNOTSUPP error detection
+    - LP: #1233387
+  * SCSI: nsp32: use mdelay instead of large udelay constants
+    - LP: #1233387
+  * microblaze: Update microblaze defconfigs
+    - LP: #1233387
+  * sound: Fix make allmodconfig on MIPS
+    - LP: #1233387
+  * sound: Fix make allmodconfig on MIPS correctly
+    - LP: #1233387
+  * CRIS: Add _sdata to vmlinux.lds.S
+    - LP: #1233387
+  * alpha: makefile: don't enforce small data model for kernel builds
+    - LP: #1233387
+  * include <linux/prefetch.h> in drivers/parisc/iommu-helpers.h
+    - LP: #1233387
+  * sparc32: support atomic64_t
+    - LP: #1233387
+  * Hexagon: misc compile warning/error cleanup due to missing headers
+    - LP: #1233387
+  * iwl4965: fix rfkill set state regression
+    - LP: #1233387
+  * ath9k_htc: Restore skb headroom when returning skb to mac80211
+    - LP: #1233387
+  * powerpc: Don't Oops when accessing /proc/powerpc/lparcfg without
+    hypervisor
+    - LP: #1233387
+  * powerpc: Work around gcc miscompilation of __pa() on 64-bit
+    - LP: #1233387
+  * powerpc/hvsi: Increase handshake timeout from 200ms to 400ms.
+    - LP: #1233387
+  * sunrpc: remove the second argument of k[un]map_atomic()
+    - LP: #1233387
+  * SUNRPC: Fix memory corruption issue on 32-bit highmem systems
+    - LP: #1233387
+  * drivers/base/memory.c: fix show_mem_removable() to handle missing
+    sections
+    - LP: #1233387
+  * workqueue: cond_resched() after processing each work item
+    - LP: #1233387
+  * drm/i915: ivb: fix edp voltage swing reg val
+    - LP: #1233387
+  * drm/vmwgfx: Split GMR2_REMAP commands if they are to large
+    - LP: #1233387
+  * x86 get_unmapped_area: Access mmap_legacy_base through mm_struct member
+    - LP: #1233387
+  * pci: frv architecture needs generic setup-bus infrastructure
+    - LP: #1233387
+  * m32r: consistently use "suffix-$(...)"
+    - LP: #1233387
+  * m32r: add memcpy() for CONFIG_KERNEL_GZIP=y
+    - LP: #1233387
+  * m32r: make memset() global for CONFIG_KERNEL_BZIP2=y
+    - LP: #1233387
+  * microblaze: Fix __futex_atomic_op macro register usage
+    - LP: #1233387
+  * sparc32: add ucmpdi2
+    - LP: #1233387
+  * sparc32: Add ucmpdi2.o to obj-y instead of lib-y.
+    - LP: #1233387
+  * ALSA: opti9xx: Fix conflicting driver object name
+    - LP: #1233387
+  * target: Fix trailing ASCII space usage in INQUIRY vendor+model
+    - LP: #1233387
+  * KVM: s390: move kvm_guest_enter,exit closer to sie
+    - LP: #1233387
+  * x86/xen: do not identity map UNUSABLE regions in the machine E820
+    - LP: #1233387
+  * Linux 3.2.51
+    - LP: #1233387
+
  -- Kaj Ailomaa <zequence@mousike.me>  Sun, 06 Oct 2013 12:36:58 +0200
 
 linux-lowlatency (3.2.0-54.56) precise-proposed; urgency=low
