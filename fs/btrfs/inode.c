@@ -6971,6 +6971,28 @@ static int btrfs_rename(struct inode *old_dir, struct dentry *old_dentry,
 	if (S_ISDIR(old_inode->i_mode) && new_inode &&
 	    new_inode->i_size > BTRFS_EMPTY_DIR_SIZE)
 		return -ENOTEMPTY;
+
+
+	/* check for collisions, even if the  name isn't there */
+	ret = btrfs_check_dir_item_collision(root, new_dir->i_ino,
+			     new_dentry->d_name.name,
+			     new_dentry->d_name.len);
+
+	if (ret) {
+		if (ret == -EEXIST) {
+			/* we shouldn't get
+			 * eexist without a new_inode */
+			if (!new_inode) {
+				WARN_ON(1);
+				return ret;
+			}
+		} else {
+			/* maybe -EOVERFLOW */
+			return ret;
+		}
+	}
+	ret = 0;
+
 	/*
 	 * we're using rename to replace one file with another.
 	 * and the replacement file is large.  Start IO on it now so
