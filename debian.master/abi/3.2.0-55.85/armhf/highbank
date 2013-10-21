@@ -3479,6 +3479,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	inet_stream_ops
 EXPORT_SYMBOL vmlinux 0x00000000	inet_twsk_deschedule
 EXPORT_SYMBOL vmlinux 0x00000000	inet_unregister_protosw
 EXPORT_SYMBOL vmlinux 0x00000000	inetdev_by_index
+EXPORT_SYMBOL vmlinux 0x00000000	inetpeer_invalidate_tree
 EXPORT_SYMBOL vmlinux 0x00000000	init_buffer
 EXPORT_SYMBOL vmlinux 0x00000000	init_cdrom_command
 EXPORT_SYMBOL vmlinux 0x00000000	init_net

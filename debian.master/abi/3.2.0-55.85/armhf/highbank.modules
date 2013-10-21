@@ -191,7 +191,6 @@ befs
 belkin_sa
 bfs
 bfusb
-binfmt_aout
 binfmt_misc
 block2mtd
 blocklayoutdriver
