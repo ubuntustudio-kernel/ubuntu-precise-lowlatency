@@ -666,8 +666,18 @@ static int dispatch_rw_block_io(struct xen_blkif *blkif,
 	}
 
 	preq.dev           = req->handle;
-	preq.sector_number = req->u.rw.sector_number;
-	preq.nr_sects      = 0;
+	if (operation == REQ_DISCARD) {
+		/*
+		 * It's safe to initialise preq.nr_sects here because the
+		 * 'for' loop below won't iterate as req->nr_segments = 0
+		 * (see blkif_queue_request)
+		 */
+		preq.sector_number = req->u.discard.sector_number;
+		preq.nr_sects      = req->u.discard.nr_sectors;
+	} else {
+		preq.sector_number = req->u.rw.sector_number;
+		preq.nr_sects      = 0;
+	}
 
 	pending_req->blkif     = blkif;
 	pending_req->id        = req->id;
