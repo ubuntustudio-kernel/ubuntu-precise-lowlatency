@@ -4,6 +4,27 @@ linux-lowlatency (3.2.0-56.58) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-56.86 ]
+
+  * Release Tracking Bug
+    - LP: #1242901
+  * Revert "xfs: fix _xfs_buf_find oops on blocks beyond the filesystem
+    end"
+    - LP: #1236041
+    - CVE-2013-1819 fix backport:
+  * cciss: fix info leak in cciss_ioctl32_passthru()
+    - LP: #1188355
+    - CVE-2013-2147
+  * cpqarray: fix info leak in ida_locked_ioctl()
+    - LP: #1188355
+    - CVE-2013-2147
+  * SAUCE: (no-up) Only let characters through when there are active
+    readers.
+    - LP: #1208740
+  * Btrfs: fix hash overflow handling
+    - LP: #1091187, #1091188
+    - CVE-2012-5375
+
  -- Kaj Ailomaa <zequence@mousike.me>  Mon, 28 Oct 2013 15:45:20 +0100
 
 linux-lowlatency (3.2.0-55.57) precise-proposed; urgency=low
