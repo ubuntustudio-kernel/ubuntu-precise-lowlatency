@@ -92,10 +92,10 @@ ifeq ($(do_tools),true)
 	install -d $(toolsbin)
 	install -d $(toolsman)/man1
 
-	install -m755 debian/tools/perf $(toolsbin)/perf
+	install -m755 debian/tools/generic $(toolsbin)/perf
 	if [ "$(arch)" = "amd64" ] || [ "$(arch)" = "i386" ]; then \
-		install -m755 debian/tools/x86_energy_perf_policy $(toolsbin)/x86_energy_perf_policy; \
-		install -m755 debian/tools/turbostat $(toolsbin)/turbostat; \
+		install -m755 debian/tools/generic $(toolsbin)/x86_energy_perf_policy; \
+		install -m755 debian/tools/generic $(toolsbin)/turbostat; \
 		install -d $(toolssbin) ; \
 		install -m755 debian/tools/generic $(toolssbin)/hv_kvp_daemon; \
 	fi
