@@ -116,6 +116,7 @@ static struct scsi_host_template ahci_platform_sht = {
 
 static const struct of_device_id ahci_of_match[] = {
 	{ .compatible = "calxeda,hb-ahci", .data = &ahci_port_info[CALXEDA_AHCI], },
+	{ .compatible = "ibm,476gtr-ahci", },
 	{},
 };
 MODULE_DEVICE_TABLE(of, ahci_of_match);
