@@ -5560,6 +5560,7 @@ EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hid_report_raw_event
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hid_resolv_usage
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hid_set_field
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hid_unregister_driver
+EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hid_validate_values
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hidinput_connect
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hidinput_disconnect
 EXPORT_SYMBOL_GPL drivers/hid/hid 0x00000000	hidinput_find_field
