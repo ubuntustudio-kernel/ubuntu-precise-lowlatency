@@ -4,6 +4,207 @@ linux-lowlatency (3.2.0-58.60) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-58.88 ]
+
+  * Release Tracking Bug
+    - LP: #1257370
+  * SAUCE: (no-up) drm/i915: i915.disable_pch_pwm overrides PCH_PWM_ENABLE
+    quirk
+    - LP: #1163720
+  * KVM: perform an invalid memslot step for gpa base change
+    - LP: #1254900
+    - CVE-2013-4592
+  * KVM: Fix iommu map/unmap to handle memory slot moves
+    - LP: #1254900
+    - CVE-2013-4592
+  * ARM: 7301/1: Rename the T() macro to TUSER() to avoid namespace
+    conflicts
+    - LP: #1254901
+    - CVE-2013-6282
+  * ARM: 7527/1: uaccess: explicitly check __user pointer when
+    !CPU_USE_DOMAINS
+    - LP: #1254901
+    - CVE-2013-6282
+  * libertas: potential oops in debugfs
+    - LP: #1256080
+    - CVE-2013-6378
+  * tcp: must unclone packets before mangling them
+    - LP: #1257010
+  * tcp: do not forget FIN in tcp_shifted_skb()
+    - LP: #1257010
+  * net: do not call sock_put() on TIMEWAIT sockets
+    - LP: #1257010
+  * net: heap overflow in __audit_sockaddr()
+    - LP: #1257010
+  * proc connector: fix info leaks
+    - LP: #1257010
+  * ipv4: fix ineffective source address selection
+    - LP: #1257010
+  * can: dev: fix nlmsg size calculation in can_get_size()
+    - LP: #1257010
+  * ipv6: restrict neighbor entry creation to output flow
+    - LP: #1257010
+  * net: vlan: fix nlmsg size calculation in vlan_get_size()
+    - LP: #1257010
+  * l2tp: must disable bh before calling l2tp_xmit_skb()
+    - LP: #1257010
+  * farsync: fix info leak in ioctl
+    - LP: #1257010
+  * connector: use nlmsg_len() to check message length
+    - LP: #1257010
+  * bnx2x: record rx queue for LRO packets
+    - LP: #1257010
+  * net: dst: provide accessor function to dst->xfrm
+    - LP: #1257010
+  * sctp: Use software crc32 checksum when xfrm transform will happen.
+    - LP: #1257010
+  * sctp: Perform software checksum if packet has to be fragmented.
+    - LP: #1257010
+  * wanxl: fix info leak in ioctl
+    - LP: #1257010
+  * net: unix: inherit SOCK_PASS{CRED, SEC} flags from socket to fix race
+    - LP: #1257010
+  * net: fix cipso packet validation when !NETLABEL
+    - LP: #1257010
+  * davinci_emac.c: Fix IFF_ALLMULTI setup
+    - LP: #1257010
+  * PCI: fix truncation of resource size to 32 bits
+    - LP: #1257010
+  * fs: add new FMODE flags: FMODE_32bithash and FMODE_64bithash
+    - LP: #1257010
+  * ext4: return 32/64-bit dir name hash according to usage type
+    - LP: #1257010
+  * nfsd: rename 'int access' to 'int may_flags' in nfsd_open()
+    - LP: #1257010
+  * nfsd: vfs_llseek() with 32 or 64 bit offsets (hashes)
+    - LP: #1257010
+  * ext3: return 32/64-bit dir name hash according to usage type
+    - LP: #1257010
+  * perf: Fix perf ring buffer memory ordering
+    - LP: #1257010
+  * xen-netback: use jiffies_64 value to calculate credit timeout
+    - LP: #1257010
+  * perf tools: Fix getrusage() related build failure on glibc trunk
+    - LP: #1257010
+  * inet: fix possible memory corruption with UDP_CORK and UFO
+    - LP: #1257010
+  * 8139cp: re-enable interrupts after tx timeout
+    - LP: #1257010
+  * netfilter: nf_ct_sip: don't drop packets with offsets pointing outside
+    the packet
+    - LP: #1257010
+  * tracing: Fix potential out-of-bounds in trace_get_user()
+    - LP: #1257010
+  * include/linux/fs.h: disable preempt when acquire i_size_seqcount write
+    lock
+    - LP: #1257010
+  * jfs: fix error path in ialloc
+    - LP: #1257010
+  * random: run random_int_secret_init() run after all late_initcalls
+    - LP: #1257010
+  * mac80211: drop spoofed packets in ad-hoc mode
+    - LP: #1257010
+  * mac80211: update sta->last_rx on acked tx frames
+    - LP: #1257010
+  * tile: use a more conservative __my_cpu_offset in CONFIG_PREEMPT
+    - LP: #1257010
+  * iwlwifi: two more SKUs for 6x05 series
+    - LP: #1257010
+  * iwlwifi: remove un-supported SKUs
+    - LP: #1257010
+  * iwlwifi: update pci subsystem id
+    - LP: #1257010
+  * iwlwifi: one more sku added to 6x35 series
+    - LP: #1257010
+  * iwlwifi: add new pci id for 6x35 series
+    - LP: #1257010
+  * iwlwifi: pcie: add SKUs for 6000, 6005 and 6235 series
+    - LP: #1257010
+  * ALSA: snd-usb-usx2y: remove bogus frame checks
+    - LP: #1257010
+  * libata: make ata_eh_qc_retry() bump scmd->allowed on bogus failures
+    - LP: #1257010
+  * ALSA: hda - Add fixup for ASUS N56VZ
+    - LP: #1257010
+  * mac80211: correctly close cancelled scans
+    - LP: #1257010
+  * hwmon: (applesmc) Always read until end of data
+    - LP: #1257010
+  * drm/radeon: fix hw contexts for SUMO2 asics
+    - LP: #1257010
+  * xhci: Don't enable/disable RWE on bus suspend/resume.
+    - LP: #1257010
+  * xhci: quirk for extra long delay for S4
+    - LP: #1257010
+  * xhci: Fix spurious wakeups after S5 on Haswell
+    - LP: #1257010
+  * KVM: PPC: Book3S HV: Fix typo in saving DSCR
+    - LP: #1257010
+  * rtlwifi: rtl8192cu: Fix error in pointer arithmetic
+    - LP: #1257010
+  * random: allow architectures to optionally define random_get_entropy()
+    - LP: #1257010
+  * compiler-gcc.h: Add gcc-recommended GCC_VERSION macro
+    - LP: #1257010
+  * compiler/gcc4: Add quirk for 'asm goto' miscompilation bug
+    - LP: #1257010
+  * USB: support new huawei devices in option.c
+    - LP: #1257010
+  * USB: serial: option: add support for Inovia SEW858 device
+    - LP: #1257010
+  * ext4: fix memory leak in xattr
+    - LP: #1257010
+  * vfs: allow O_PATH file descriptors for fstatfs()
+    - LP: #1257010
+  * parisc: fix interruption handler to respect pagefault_disable()
+    - LP: #1257010
+  * wireless: radiotap: fix parsing buffer overrun
+    - LP: #1257010
+  * USB: quirks.c: add one device that cannot deal with suspension
+    - LP: #1257010
+  * xtensa: don't use alternate signal stack on threads
+    - LP: #1257010
+  * dm snapshot: fix data corruption
+    - LP: #1257010
+    - CVE-2013-4299
+  * USB: quirks: add touchscreen that is dazzeled by remote wakeup
+    - LP: #1257010
+  * usb: serial: option: blacklist Olivetti Olicard200
+    - LP: #1257010
+  * ecryptfs: Fix memory leakage in keystore.c
+    - LP: #1257010
+  * drm: Prevent overwriting from userspace underallocating core ioctl
+    structs
+    - LP: #1257010
+  * drm: Pad drm_mode_get_connector to 64-bit boundary
+    - LP: #1257010
+  * drm/radeon/atom: workaround vbios bug in transmitter table on rs780
+    - LP: #1257010
+  * target/pscsi: fix return value check
+    - LP: #1257010
+  * parisc: Do not crash 64bit SMP kernels on machines with >= 4GB RAM
+    - LP: #1257010
+  * ASoC: dapm: Fix source list debugfs outputs
+    - LP: #1257010
+  * Fix a few incorrectly checked [io_]remap_pfn_range() calls
+    - LP: #1257010
+  * ALSA: hda - Add a fixup for ASUS N76VZ
+    - LP: #1257010
+  * ASoC: wm_hubs: Add missing break in hp_supply_event()
+    - LP: #1257010
+  * uml: check length in exitcode_proc_write()
+    - LP: #1257010
+  * aacraid: missing capable() check in compat ioctl
+    - LP: #1257010
+  * staging: wlags49_h2: buffer overflow setting station name
+    - LP: #1257010
+  * Staging: bcm: info leak in ioctl
+    - LP: #1257010
+  * lib/scatterlist.c: don't flush_kernel_dcache_page on slab page
+    - LP: #1257010
+  * Linux 3.2.53
+    - LP: #1257010
+
  -- Kaj Ailomaa <zequence@mousike.me>  Thu, 05 Dec 2013 14:03:18 +0100
 
 linux-lowlatency (3.2.0-57.59) precise-proposed; urgency=low
