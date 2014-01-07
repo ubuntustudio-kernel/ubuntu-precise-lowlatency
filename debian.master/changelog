@@ -1,3 +1,11 @@
+linux (3.2.0-59.90) precise; urgency=low
+
+  [ Brad Figg ]
+
+  * UBUNTU: Disable modules checking for armel and armhf for this upload; the staging/tidspbridge has been disabled
+
+ -- Brad Figg <brad.figg@canonical.com>  Tue, 07 Jan 2014 12:36:47 -0800
+
 linux (3.2.0-59.89) precise; urgency=low
 
   [ Brad Figg ]
