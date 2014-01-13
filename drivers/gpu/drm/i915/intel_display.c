@@ -8989,6 +8989,9 @@ struct intel_quirk intel_quirks[] = {
 	/* Acer Aspire 4736Z */
 	{ 0x2a42, 0x1025, 0x0260, quirk_invert_brightness },
 
+	/* Acer Aspire 5336 */
+	{ 0x2a42, 0x1025, 0x048a, quirk_invert_brightness },
+
 	/* Asus ET2012E may fail to resume from S3 if RC6 is enabled */
 	{ 0x0102, 0x1043, 0x844d, quirk_rc6_force_disable },
 
