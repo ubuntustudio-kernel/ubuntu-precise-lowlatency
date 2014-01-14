@@ -4,6 +4,398 @@ linux-lowlatency (3.2.0-59.61) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-59.90 ]
+
+  * UBUNTU: Disable modules checking for armel and armhf for this upload; the staging/tidspbridge has been disabled
+
+  [ Ubuntu: 3.2.0-59.89 ]
+
+  * Release Tracking Bug
+    - LP: #1266551
+  * [Debian] Improve tools version message
+    - LP: #1257715
+  * SAUCE: netfilter: xt_hashlimit: fix proc entry leak in netns destroy
+    path
+    - LP: #1256988
+  * [Config] Enable CONFIG_VT6656
+    - LP: #162671
+  * netfilter: xt_recent: fix namespace destroy path
+    - LP: #1256988
+  * netfilter: xt_hashlimit: fix namespace destroy path
+    - LP: #1256988
+  * selinux: correct locking in selinux_netlbl_socket_connect)
+    - LP: #1266546
+  * NFSv4: Fix a use-after-free situation in _nfs4_proc_getlk()
+    - LP: #1266546
+  * USB: mos7840: fix tiocmget error handling
+    - LP: #1266546
+  * usb: Disable USB 2.0 Link PM before device reset.
+    - LP: #1266546
+  * usb: hub: Clear Port Reset Change during init/resume
+    - LP: #1266546
+  * rt2400pci: fix RSSI read
+    - LP: #1266546
+  * rt2x00: check if device is still available on rt2x00mac_flush()
+    - LP: #1266546
+  * alarmtimer: return EINVAL instead of ENOTSUPP if rtcdev doesn't exist
+    - LP: #1266546
+  * USB：add new zte 3g-dongle's pid to option.c
+    - LP: #1266546
+  * libata: Fix display of sata speed
+    - LP: #1266546
+  * ahci: disabled FBS prior to issuing software reset
+    - LP: #1266546
+  * drivers/libata: Set max sector to 65535 for Slimtype DVD A DS8A9SH
+    drive
+    - LP: #1266546
+  * ALSA: 6fire: Fix probe of multiple cards
+    - LP: #1266546
+  * ARM: sa11x0/assabet: ensure CS2 is configured appropriately
+    - LP: #1266546
+  * usb: wusbcore: set the RPIPE wMaxPacketSize value correctly
+    - LP: #1266546
+  * usb: wusbcore: change WA_SEGS_MAX to a legal value
+    - LP: #1266546
+  * powerpc/vio: Fix modalias_show return values
+    - LP: #1266546
+  * powerpc/vio: use strcpy in modalias_show
+    - LP: #1266546
+  * dm: allocate buffer for messages with small number of arguments using
+    GFP_NOIO
+    - LP: #1266546
+  * can: c_can: Fix RX message handling, handle lost message before EOB
+    - LP: #1266546
+  * dm mpath: fix race condition between multipath_dtr and pg_init_done
+    - LP: #1266546
+  * ext4: avoid bh leak in retry path of ext4_expand_extra_isize_ea()
+    - LP: #1266546
+  * ASoC: ak4642: prevent un-necessary changes to SG_SL1
+    - LP: #1266546
+  * ahci: Add Device IDs for Intel Wildcat Point-LP
+    - LP: #1266546
+  * KVM: IOMMU: hva align mapping page size
+    - LP: #1266546
+  * crypto: s390 - Fix aes-cbc IV corruption
+    - LP: #1266546
+  * audit: printk USER_AVC messages when audit isn't enabled
+    - LP: #1266546
+  * audit: fix info leak in AUDIT_GET requests
+    - LP: #1266546
+  * audit: use nlmsg_len() to get message payload length
+    - LP: #1266546
+  * drm/ttm: Fix memory type compatibility check
+    - LP: #1266546
+  * PM / hibernate: Avoid overflow in hibernate_preallocate_memory()
+    - LP: #1266546
+  * ALSA: hda - Add support for CX20952
+    - LP: #1266546
+  * mtd: nand: hack ONFI for non-power-of-2 dimensions
+    - LP: #1266546
+  * mtd: map: fixed bug in 64-bit systems
+    - LP: #1266546
+  * mtd: m25p80: fix allocation size
+    - LP: #1266546
+  * qeth: avoid buffer overflow in snmp ioctl
+    - LP: #1266546
+  * x86/apic: Disable I/O APIC before shutdown of the local APIC
+    - LP: #1266546
+  * block: fix race between request completion and timeout handling
+    - LP: #1266546
+  * blk-core: Fix memory corruption if blkcg_init_queue fails
+    - LP: #1266546
+  * loop: fix crash if blk_alloc_queue fails
+    - LP: #1266546
+  * block: fix a probe argument to blk_register_region
+    - LP: #1266546
+  * SUNRPC: Fix a data corruption issue when retransmitting RPC calls
+    - LP: #1266546
+  * IB/ipath: Convert ipath_user_sdma_pin_pages() to use
+    get_user_pages_fast()
+    - LP: #1266546
+  * IB/qib: Convert qib_user_sdma_pin_pages() to use get_user_pages_fast()
+    - LP: #1266546
+  * rtlwifi: rtl8192se: Fix wrong assignment
+    - LP: #1266546
+  * rtlwifi: Fix endian error in extracting packet type
+    - LP: #1266546
+  * rtlwifi: rtl8192se: Fix incorrect signal strength for unassociated AP
+    - LP: #1266546
+  * rtlwifi: rtl8192cu: Fix incorrect signal strength for unassociated AP
+    - LP: #1266546
+  * rtlwifi: rtl8192de: Fix incorrect signal strength for unassociated AP
+    - LP: #1266546
+  * mwifiex: correct packet length for packets from SDIO interface
+    - LP: #1266546
+  * mtd: gpmi: fix kernel BUG due to racing DMA operations
+    - LP: #1266546
+  * prism54: set netdev type to "wlan"
+    - LP: #1266546
+  * ALSA: msnd: Avoid duplicated driver name
+    - LP: #1266546
+  * x86/microcode/amd: Tone down printk(), don't treat a missing firmware
+    file as an error
+    - LP: #1266546
+  * cris: media platform drivers: fix build
+    - LP: #1266546
+  * vsprintf: check real user/group id for %pK
+    - LP: #1266546
+  * backlight: atmel-pwm-bl: fix reported brightness
+    - LP: #1266546
+  * backlight: atmel-pwm-bl: fix gpio polarity in remove
+    - LP: #1266546
+  * exec/ptrace: fix get_dumpable() incorrect tests
+    - LP: #1266546
+    - CVE-2013-2929
+  * devpts: plug the memory leak in kill_sb
+    - LP: #1266546
+  * ipc, msg: fix message length check for negative values
+    - LP: #1266546
+  * drm/nouveau: when bailing out of a pushbuf ioctl, do not remove
+    previous fence
+    - LP: #1266546
+  * ALSA: pcsp: Fix the order of input device unregistration
+    - LP: #1266546
+  * ARM: integrator_cp: Set LCD{0,1} enable lines when turning on CLCD
+    - LP: #1266546
+  * hwmon: (lm90) Fix max6696 alarm handling
+    - LP: #1266546
+  * drm/i915: flush cursors harder
+    - LP: #1266546
+  * rtlwifi: rtl8192cu: Fix more pointer arithmetic errors
+    - LP: #1266546
+  * radeon: workaround pinning failure on low ram gpu
+    - LP: #1266546
+  * setfacl removes part of ACL when setting POSIX ACLs to Samba
+    - LP: #1266546
+  * dm delay: fix a possible deadlock due to shared workqueue
+    - LP: #1266546
+  * nfsd: split up nfsd_setattr
+    - LP: #1266546
+  * nfsd: make sure to balance get/put_write_access
+    - LP: #1266546
+  * nfsd4: fix xdr decoding of large non-write compounds
+    - LP: #1266546
+  * avr32: setup crt for early panic()
+    - LP: #1266546
+  * avr32: fix out-of-range jump in large kernels
+    - LP: #1266546
+  * NFSv4 wait on recovery for async session errors
+    - LP: #1266546
+  * NFSv4: Update list of irrecoverable errors on DELEGRETURN
+    - LP: #1266546
+  * PCI: Remove duplicate pci_disable_device() from pcie_portdrv_remove()
+    - LP: #1266546
+  * powerpc/pseries: Duplicate dtl entries sometimes sent to userspace
+    - LP: #1266546
+  * powerpc/signals: Mark VSX not saved with small contexts
+    - LP: #1266546
+  * iscsi-target: fix extract_param to handle buffer length corner case
+    - LP: #1266546
+  * iscsi-target: chap auth shouldn't match username with trailing garbage
+    - LP: #1266546
+  * configfs: fix race between dentry put and lookup
+    - LP: #1266546
+  * ahci: add support for IBM Akebono platform device
+    - LP: #1266546
+  * ahci: add Marvell 9230 to the AHCI PCI device list
+    - LP: #1266546
+  * powerpc/signals: Improved mark VSX not saved with small contexts fix
+    - LP: #1266546
+  * ASoC: wm8990: Mark the register map as dirty when powering down
+    - LP: #1266546
+  * mac80211: don't attempt to reorder multicast frames
+    - LP: #1266546
+  * USB: serial: fix race in generic write
+    - LP: #1266546
+  * usb: gadget: composite: reset delayed_status on reset_config
+    - LP: #1266546
+  * usb: dwc3: fix implementation of endpoint wedge
+    - LP: #1266546
+  * Staging: zram: Fix access of NULL pointer
+    - LP: #1266546
+  * Staging: zram: Fix memory leak by refcount mismatch
+    - LP: #1266546
+  * can: sja1000: fix {pre,post}_irq() handling and IRQ handler return
+    value
+    - LP: #1266546
+  * irq: Enable all irqs unconditionally in irq_resume
+    - LP: #1266546
+  * ALSA: hda/realtek - Add support of ALC231 codec
+    - LP: #1266546
+  * ALSA: hda/realtek - Set pcbeep amp for ALC668
+    - LP: #1266546
+  * tracing: Allow events to have NULL strings
+    - LP: #1266546
+  * libsas: fix usage of ata_tf_to_fis
+    - LP: #1266546
+  * Staging: tidspbridge: disable driver
+    - LP: #1266546
+  * cpuset: Fix memory allocator deadlock
+    - LP: #1266546
+  * crypto: authenc - Find proper IV address in ablkcipher callback
+    - LP: #1266546
+  * crypto: scatterwalk - Set the chain pointer indication bit
+    - LP: #1266546
+  * crypto: s390 - Fix aes-xts parameter corruption
+    - LP: #1266546
+  * crypto: ccm - Fix handling of zero plaintext when computing mac
+    - LP: #1266546
+  * saa7164: fix return value check in saa7164_initdev()
+    - LP: #1266546
+  * net: smc91: fix crash regression on the versatile
+    - LP: #1266546
+  * net: update consumers of MSG_MORE to recognize MSG_SENDPAGE_NOTLAST
+    - LP: #1266546
+  * ARM: footbridge: fix VGA initialisation
+    - LP: #1266546
+  * hpsa: do not discard scsi status on aborted commands
+    - LP: #1266546
+  * hpsa: return 0 from driver probe function on success, not 1
+    - LP: #1266546
+  * enclosure: fix WARN_ON in dual path device removing
+    - LP: #1266546
+  * USB: serial: option: blacklist interface 1 for Huawei E173s-6
+    - LP: #1266546
+  * USB: option: support new huawei devices
+    - LP: #1266546
+  * USB: spcp8x5: correct handling of CS5 setting
+    - LP: #1266546
+  * USB: mos7840: correct handling of CS5 setting
+    - LP: #1266546
+  * USB: ftdi_sio: fixed handling of unsupported CSIZE setting
+    - LP: #1266546
+  * USB: pl2303: fixed handling of CS5 setting
+    - LP: #1266546
+  * powerpc/gpio: Fix the wrong GPIO input data on MPC8572/MPC8536
+    - LP: #1266546
+  * ASoC: wm8731: fix dsp mode configuration
+    - LP: #1266546
+  * USB: cdc-acm: Added support for the Lenovo RD02-D400 USB Modem
+    - LP: #1266546
+  * usb: hub: Use correct reset for wedged USB3 devices that are
+    NOTATTACHED
+    - LP: #1266546
+  * drivers/char/i8k.c: add Dell XPLS L421X
+    - LP: #1266546
+  * crypto: scatterwalk - Use sg_chain_ptr on chain entries
+    - LP: #1266546
+  * ARM: 7912/1: check stack pointer in get_wchan
+    - LP: #1266546
+  * ARM: 7913/1: fix framepointer check in unwind_frame
+    - LP: #1266546
+  * x86, build: Pass in additional -mno-mmx, -mno-sse options
+    - LP: #1266546
+  * ALSA: memalloc.h - fix wrong truncation of dma_addr_t
+    - LP: #1266546
+  * dm snapshot: avoid snapshot space leak on crash
+    - LP: #1266546
+  * dm table: fail dm_table_create on dm_round_up overflow
+    - LP: #1266546
+  * x86, build, icc: Remove uninitialized_var() from compiler-intel.h
+    - LP: #1266546
+  * x86, efi: Don't use (U)EFI time services on 32 bit
+    - LP: #1266546
+  * dm bufio: initialize read-only module parameters
+    - LP: #1266546
+  * ARM: pxa: tosa: fix keys mapping
+    - LP: #1266546
+  * ARM: pxa: prevent PXA270 occasional reboot freezes
+    - LP: #1266546
+  * hwmon: (w83l786ng) Fix fan speed control mode setting and reporting
+    - LP: #1266546
+  * hwmon: (w83l768ng) Fix fan speed control range
+    - LP: #1266546
+  * hwmon: Prevent some divide by zeros in FAN_TO_REG()
+    - LP: #1266546
+  * futex: fix handling of read-only-mapped hugepages
+    - LP: #1266546
+  * KVM: Improve create VCPU parameter (CVE-2013-4587)
+    - LP: #1266546
+  * KVM: x86: Fix potential divide by 0 in lapic (CVE-2013-6367)
+    - LP: #1266546
+  * selinux: handle TCP SYN-ACK packets correctly in selinux_ip_output()
+    - LP: #1266546
+  * selinux: handle TCP SYN-ACK packets correctly in selinux_ip_postroute()
+    - LP: #1266546
+  * drivers/rtc/rtc-at91rm9200.c: correct alarm over day/month wrap
+    - LP: #1266546
+  * sched: Avoid throttle_cfs_rq() racing with period_timer stopping
+    - LP: #1266546
+  * um: add missing declaration of 'getrlimit()' and friends
+    - LP: #1266546
+  * net: Fix "ip rule delete table 256"
+    - LP: #1266546
+  * ipv6: use rt6_get_dflt_router to get default router in rt6_route_rcv
+    - LP: #1266546
+  * random32: fix off-by-one in seeding requirement
+    - LP: #1266546
+  * bonding: don't permit to use ARP monitoring in 802.3ad mode
+    - LP: #1266546
+  * 6lowpan: Uncompression of traffic class field was incorrect
+    - LP: #1266546
+  * bonding: fix two race conditions in bond_store_updelay/downdelay
+    - LP: #1266546
+  * isdnloop: use strlcpy() instead of strcpy()
+    - LP: #1266546
+  * connector: improved unaligned access error fix
+    - LP: #1266546
+  * ipv4: fix possible seqlock deadlock
+    - LP: #1266546
+  * inet: prevent leakage of uninitialized memory to user in recv syscalls
+    - LP: #1266546
+  * net: rework recvmsg handler msg_name and msg_namelen logic
+    - LP: #1266546
+  * net: add BUG_ON if kernel advertises msg_namelen > sizeof(struct
+    sockaddr_storage)
+    - LP: #1266546
+  * inet: fix addr_len/msg->msg_namelen assignment in recv_error and rxpmtu
+    functions
+    - LP: #1266546
+  * net: clamp ->msg_namelen instead of returning an error
+    - LP: #1266546
+  * ipv6: fix leaking uninitialized port number of offender sockaddr
+    - LP: #1266546
+  * atm: idt77252: fix dev refcnt leak
+    - LP: #1266546
+  * net: core: Always propagate flag changes to interfaces
+    - LP: #1266546
+  * bridge: flush br's address entry in fdb when remove the bridge dev
+    - LP: #1266546
+  * packet: fix use after free race in send path when dev is released
+    - LP: #1266546
+  * af_packet: block BH in prb_shutdown_retire_blk_timer()
+    - LP: #1266546
+  * inet: fix possible seqlock deadlocks
+    - LP: #1266546
+  * ipv6: fix possible seqlock deadlock in ip6_finish_output2
+    - LP: #1266546
+  * {pktgen, xfrm} Update IPv4 header total len and checksum after
+    tranformation
+    - LP: #1266546
+  * HID: multitouch: validate indexes details
+    - LP: #1266546
+    - CVE-2013-2897
+  * crypto: ansi_cprng - Fix off by one error in non-block size request
+    - LP: #1266546
+  * aacraid: prevent invalid pointer dereference
+    - LP: #1266546
+  * xfs: underflow bug in xfs_attrlist_by_handle()
+    - LP: #1266546
+  * net: flow_dissector: fail on evil iph->ihl
+    - LP: #1266546
+  * ftrace: Fix ftrace hash record update with notrace
+    - LP: #1266546
+  * ftrace: Create ftrace_hash_empty() helper routine
+    - LP: #1266546
+  * ftrace: Check module functions being traced on reload
+    - LP: #1266546
+  * ftrace: Fix function graph with loading of modules
+    - LP: #1266546
+  * mmc: block: fix a bug of error handling in MMC driver
+    - LP: #1266546
+  * Linux 3.2.54
+    - LP: #1266546
+
  -- Kaj Ailomaa <zequence@mousike.me>  Tue, 14 Jan 2014 19:54:26 +0100
 
 linux-lowlatency (3.2.0-58.60) precise-proposed; urgency=low
