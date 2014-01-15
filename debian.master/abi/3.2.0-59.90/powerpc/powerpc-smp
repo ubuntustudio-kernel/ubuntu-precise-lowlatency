@@ -1881,12 +1881,12 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x58c46a59	rtl_cam_mark_inval
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x59865e19	rtl_pci_suspend
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x5baa4db4	rtl_efuse_shadow_map_update
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x5f0f339f	rtl_cam_delete_one_entry
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x7224b052	rtl_get_tcb_desc
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x80454059	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x8a88adc3	rtl_usb_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xa0d2594e	rtl_ps_disable_nic
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xe6579d8f	efuse_read_1byte
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xed29d593	rtl_pci_probe
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf91b4423	rtlwifi_rate_mapping
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xfc7283eb	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/parport/parport 0x045b149e	parport_ieee1284_ecp_read_data
 EXPORT_SYMBOL drivers/parport/parport 0x08cb3d80	parport_wait_event
 EXPORT_SYMBOL drivers/parport/parport 0x21a9b956	parport_get_port

@@ -1924,6 +1924,7 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xf6121d6a	r
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xfcb4ca7c	rtl92c_dm_init_rate_adaptive_mask
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xfffffaab	_rtl92c_phy_bb8192c_config_parafile
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x0947c4c9	rtl_efuse_shadow_map_update
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x10f89433	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x122a822b	rtl_cam_empty_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x2a76b2c1	rtl_usb_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x3eda1a5b	rtl_cam_get_free_entry
@@ -1938,10 +1939,9 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xa3c9ebb2	rtl_pci_probe
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xa8542d7f	rtl_cam_del_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xb71b553b	rtl_usb_suspend
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd0ee1db1	efuse_read_1byte
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd341e797	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd8fc29b9	rtl_usb_probe
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xdbff6878	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xdf7d8bf5	rtl_pci_disconnect
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xe17b8e92	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xee89e787	rtl_usb_disconnect
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xfb3330b5	rtl_pci_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xfb3e1845	rtl_pci_suspend

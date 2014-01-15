@@ -1893,11 +1893,13 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xdde35a96	_
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xee1b50cf	rtl92c_phy_ap_calibrate
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xf1904f7b	rtl92c_download_fw
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x08764b22	rtl_cam_get_free_entry
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x0cee9aa7	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x0f9fd114	rtl_cam_reset_all_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x10615e7f	rtl_cam_del_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x19402ff6	rtl_usb_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x441f4849	rtl_usb_suspend
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x473ec1a6	efuse_read_1byte
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x4917e491	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x7a254968	rtl_ps_set_rf_state
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x7added40	rtl_ps_disable_nic
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x902a6899	rtl_cam_delete_one_entry
@@ -1908,9 +1910,7 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xaadd384c	rtl_pci_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xb5deff73	rtl_cam_empty_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xbcb3ed34	rtl_pci_probe
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd1a4c1ef	rtl_usb_probe
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd70a1774	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf5433b50	rtl_cam_mark_invalid
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf71d4c90	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf928f253	rtl_cam_add_one_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf993ee68	rtl_efuse_shadow_map_update
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xfbebc40b	rtl_pci_suspend

@@ -457,6 +457,7 @@ firmware:       turtlebeach/msndperm.bin
 firmware:       turtlebeach/pndsperm.bin
 firmware:       turtlebeach/pndspini.bin
 firmware:       usb8388.bin
+firmware:       vntwusb.fw
 firmware:       vx/bd56002.boot
 firmware:       vx/bd563s3.boot
 firmware:       vx/bd563v2.boot

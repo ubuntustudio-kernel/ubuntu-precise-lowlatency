@@ -1067,16 +1067,15 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xf4605605	r
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xfc81bb1b	rtl92c_phy_sw_chnl
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xfca11a72	rtl92c_phy_set_bb_reg
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtl8192c/rtl8192c-common 0xfcdc67ad	rtl92c_phy_ap_calibrate
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x0330b7b9	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x04d7ee3f	rtl_cam_reset_all_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x112df8e3	rtl_efuse_shadow_map_update
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x20ac51de	rtl_usb_probe
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x21b499e7	efuse_read_1byte
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x255dc273	rtl_usb_resume
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x4fb4616b	rtl_cam_empty_entry
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x5795cdfe	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x61b549da	rtl_usb_disconnect
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x6bd6140d	rtl_cam_del_entry
-EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0x913a4d81	rtlwifi_rate_mapping
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xa0db55af	rtl_ps_set_rf_state
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xa31bede6	rtl_usb_suspend
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xd0db95f2	rtl_cam_delete_one_entry
@@ -1085,6 +1084,7 @@ EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xdd1bff2f	rtl_cam_mark_inval
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xe2e42101	rtl_ps_enable_nic
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xe35fe244	rtl_cam_get_free_entry
 EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xe8e38c22	rtl_ps_disable_nic
+EXPORT_SYMBOL drivers/net/wireless/rtlwifi/rtlwifi 0xf6d491b1	rtl_get_tcb_desc
 EXPORT_SYMBOL drivers/parport/parport 0x0175edcf	parport_announce_port
 EXPORT_SYMBOL drivers/parport/parport 0x09c9f7e6	parport_read
 EXPORT_SYMBOL drivers/parport/parport 0x12a10dc3	parport_find_base
@@ -4998,7 +4998,6 @@ EXPORT_SYMBOL vmlinux 0xc6462940	wake_up_process
 EXPORT_SYMBOL vmlinux 0xc656c5b4	genphy_read_status
 EXPORT_SYMBOL vmlinux 0xc6604663	tc_classify_compat
 EXPORT_SYMBOL vmlinux 0xc672211f	skb_split
-EXPORT_SYMBOL vmlinux 0xc6a9ed62	omap_dsp_get_mempool_base
 EXPORT_SYMBOL vmlinux 0xc6cbbc89	capable
 EXPORT_SYMBOL vmlinux 0xc6f831cb	mb_cache_shrink
 EXPORT_SYMBOL vmlinux 0xc711bd6f	phys_mem_access_prot
