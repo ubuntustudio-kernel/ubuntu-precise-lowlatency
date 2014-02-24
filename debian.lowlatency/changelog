@@ -4,6 +4,186 @@ linux-lowlatency (3.2.0-60.62) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-60.91 ]
+
+  * Release Tracking Bug
+    - LP: #1281800
+  * [Config] d-i -- add xts.ko to crypto-modules udeb
+    - LP: #1276739
+  * ath9k_htc: properly set MAC address and BSSID mask
+    - LP: #1252422
+    - CVE-2013-4579
+  * SELinux: Fix kernel BUG on empty security contexts.
+    - CVE-2014-1874
+  * net: do not pretend FRAGLIST support
+    - LP: #1281620
+  * rds: prevent BUG_ON triggered on congestion update to loopback
+    - LP: #1281620
+  * ipv6: don't count addrconf generated routes against gc limit
+    - LP: #1281620
+  * net: drop_monitor: fix the value of maxattr
+    - LP: #1281620
+  * tg3: Initialize REG_BASE_ADDR at PCI config offset 120 to 0
+    - LP: #1281620
+  * net: unix: allow bind to fail on mutex lock
+    - LP: #1281620
+  * net: inet_diag: zero out uninitialized idiag_{src,dst} fields
+    - LP: #1281620
+  * drivers/net/hamradio: Integer overflow in hdlcdrv_ioctl()
+    - LP: #1281620
+  * hamradio/yam: fix info leak in ioctl
+    - LP: #1281620
+  * rds: prevent dereference of a NULL device
+    - LP: #1281620
+  * net: rose: restore old recvmsg behavior
+    - LP: #1281620
+  * vlan: Fix header ops passthru when doing TX VLAN offload.
+    - LP: #1281620
+  * net: llc: fix use after free in llc_ui_recvmsg
+    - LP: #1281620
+  * bridge: use spin_lock_bh() in br_multicast_set_hash_max
+    - LP: #1281620
+  * bnx2x: fix DMA unmapping of TSO split BDs
+    - LP: #1281620
+  * inet_diag: fix inet_diag_dump_icsk() timewait socket state logic
+    - LP: #1281620
+  * net: avoid reference counter overflows on fib_rules in multicast
+    forwarding
+    - LP: #1281620
+  * xfs: Account log unmount transaction correctly
+    - LP: #1281620
+  * PCI: Enable ARI if dev and upstream bridge support it; disable
+    otherwise
+    - LP: #1281620
+  * mm/memory-failure.c: recheck PageHuge() after hugetlb page migrate
+    successfully
+    - LP: #1281620
+  * staging: comedi: cb_pcidio: fix for newer PCI-DIO48H
+    - LP: #1281620
+  * Fix warning from machine_kexec.c
+    - LP: #1281620
+  * hpfs: fix warnings when the filesystem fills up
+    - LP: #1281620
+  * KVM: x86: Convert vapic synchronization to _cached functions
+    (CVE-2013-6368)
+    - LP: #1281620
+  * x86, fpu, amd: Clear exceptions in AMD FXSAVE workaround
+    - LP: #1281620
+  * mm: ensure get_unmapped_area() returns higher address than
+    mmap_min_addr
+    - LP: #1281620
+  * ceph: cleanup aborted requests when re-sending requests.
+    - LP: #1281620
+  * ceph: wake up 'safe' waiters when unregistering request
+    - LP: #1281620
+  * sh: always link in helper functions extracted from libgcc
+    - LP: #1281620
+  * libata: add ATA_HORKAGE_BROKEN_FPDMA_AA quirk for Seagate Momentus
+    SpinPoint M8
+    - LP: #1281620
+  * ext4: call ext4_error_inode() if jbd2_journal_dirty_metadata() fails
+    - LP: #1281620
+  * ext4: fix use-after-free in ext4_mb_new_blocks
+    - LP: #1281620
+  * ext4: check for overlapping extents in ext4_valid_extent_entries()
+    - LP: #1281620
+  * ext2: Fix oops in ext2_get_block() called from ext2_quota_write()
+    - LP: #1281620
+  * ext4: fix del_timer() misuse for ->s_err_report
+    - LP: #1281620
+  * xhci: Limit the spurious wakeup fix only to HP machines
+    - LP: #1281620
+  * iscsi-target: Fix-up all zero data-length CDBs with R/W_BIT set
+    - LP: #1281620
+  * drm/radeon: Fix sideport problems on certain RS690 boards
+    - LP: #1281620
+  * ALSA: hda - Add enable_msi=0 workaround for four HP machines
+    - LP: #1260225, #1281620
+  * gpio: msm: Fix irq mask/unmask by writing bits instead of numbers
+    - LP: #1281620
+  * radiotap: fix bitmap-end-finding buffer overrun
+    - LP: #1281620
+  * ftrace: Initialize the ftrace profiler for each possible cpu
+    - LP: #1281620
+  * libata: disable a disk via libata.force params
+    - LP: #1281620
+  * drm/ttm: Fix accesses through vmas with only partial coverage
+    - LP: #1281620
+  * sched/rt: Fix rq's cpupri leak while enqueue/dequeue child RT entities
+    - LP: #1281620
+  * ALSA: Add SNDRV_PCM_STATE_PAUSED case in wait_for_avail function
+    - LP: #1281620
+  * drm/i915: Use the correct GMCH_CTRL register for Sandybridge+
+    - LP: #1281620
+  * rtlwifi: pci: Fix oops on driver unload
+    - LP: #1281620
+  * ath9k: Fix interrupt handling for the AR9002 family
+    - LP: #1281620
+  * cpupower: Fix segfault due to incorrect getopt_long arugments
+    - LP: #1281620
+  * ASoC: wm8904: fix DSP mode B configuration
+    - LP: #1281620
+  * net_dma: mark broken
+    - LP: #1281620
+  * dm9601: fix reception of full size ethernet frames on dm9620/dm9621a
+    - LP: #1281620
+  * dm9601: work around tx fifo sync issue on dm962x
+    - LP: #1281620
+  * ext4: add explicit casts when masking cluster sizes
+    - LP: #1281620
+  * drm/radeon: 0x9649 is SUMO2 not SUMO
+    - LP: #1281620
+  * selinux: fix broken peer recv check
+    - LP: #1281620
+  * selinux: selinux_setprocattr()->ptrace_parent() needs rcu_read_lock()
+    - LP: #1281620
+  * ARM: fix footbridge clockevent device
+    - LP: #1281620
+  * powerpc: Fix bad stack check in exception entry
+    - LP: #1281620
+  * ahci: Use PCI_VENDOR_ID_MARVELL_EXT for 0x1b4b
+    - LP: #1281620
+  * ahci: add an observed PCI ID for Marvell 88se9172 SATA controller
+    - LP: #1281620
+  * pci: Add PCI_DEVICE_SUB() macro
+    - LP: #1281620
+  * ahci: add PCI ID for Marvell 88SE9170 SATA controller
+    - LP: #1281620
+  * ARM: fix "bad mode in ... handler" message for undefined instructions
+    - LP: #1281620
+  * SELinux: Fix possible NULL pointer dereference in
+    selinux_inode_permission()
+    - LP: #1281620
+  * md/raid5: Fix possible confusion when multiple write errors occur.
+    - LP: #1281620
+  * md/raid10: fix two bugs in handling of known-bad-blocks.
+    - LP: #1281620
+  * md/raid10: fix bug when raid10 recovery fails to recover a block.
+    - LP: #1281620
+  * hwmon: (coretemp) Fix truncated name of alarm attributes
+    - LP: #1281620
+  * nilfs2: fix segctor bug that causes file system corruption
+    - LP: #1281620
+  * perf/x86/amd/ibs: Fix waking up from S3 for AMD family 10h
+    - LP: #1281620
+  * mm: fix aio performance regression for database caused by THP
+    - LP: #1281620
+  * mm: hugetlbfs: fix hugetlbfs optimization
+    - LP: #1281620
+  * sched/rt: Fix SCHED_RR across cgroups
+    - LP: #1281620
+  * sched,rt: fix isolated CPUs leaving root_task_group indefinitely
+    throttled
+    - LP: #1281620
+  * sched: Unthrottle rt runqueues in __disable_runtime()
+    - LP: #1281620
+  * sched/rt: Avoid updating RT entry timeout twice within one tick period
+    - LP: #1281620
+  * Linux 3.2.55
+    - LP: #1281620
+  * netfilter: nf_conntrack: avoid large timeout for mid-stream pickup
+    - LP: #1270237
+
  -- Kaj Ailomaa <zequence@mousike.me>  Mon, 24 Feb 2014 10:42:41 +0100
 
 linux-lowlatency (3.2.0-59.61) precise-proposed; urgency=low
