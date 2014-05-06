@@ -3760,6 +3760,7 @@ EXPORT_SYMBOL vmlinux 0x71a672ef	dmam_pool_destroy
 EXPORT_SYMBOL vmlinux 0x71a6d134	skb_gso_segment
 EXPORT_SYMBOL vmlinux 0x71c350ad	kthread_bind
 EXPORT_SYMBOL vmlinux 0x71c90087	memcmp
+EXPORT_SYMBOL vmlinux 0x7216fd40	dm_kobject_release
 EXPORT_SYMBOL vmlinux 0x7234eafb	otg_state_string
 EXPORT_SYMBOL vmlinux 0x7239f192	d_invalidate
 EXPORT_SYMBOL vmlinux 0x7258431b	kobject_del
@@ -4514,6 +4515,7 @@ EXPORT_SYMBOL vmlinux 0xa4551e20	netdev_warn
 EXPORT_SYMBOL vmlinux 0xa4610bc6	omap_rev
 EXPORT_SYMBOL vmlinux 0xa48d4d33	proto_unregister
 EXPORT_SYMBOL vmlinux 0xa48f5b09	omap_dma_set_global_params
+EXPORT_SYMBOL vmlinux 0xa494e915	nosteal_pipe_buf_ops
 EXPORT_SYMBOL vmlinux 0xa4b37258	snd_component_add
 EXPORT_SYMBOL vmlinux 0xa4b42c55	omap_set_dma_priority
 EXPORT_SYMBOL vmlinux 0xa4bfbf7f	nf_unregister_hooks
@@ -8063,6 +8065,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x33c6b5ef	ata_sas_queuecmd
 EXPORT_SYMBOL_GPL vmlinux 0x33c6f364	watchdog_register_device
 EXPORT_SYMBOL_GPL vmlinux 0x33c9796b	sysfs_notify_dirent
 EXPORT_SYMBOL_GPL vmlinux 0x33fb6c6a	blk_queue_rq_timed_out
+EXPORT_SYMBOL_GPL vmlinux 0x34147144	skb_gso_transport_seglen
 EXPORT_SYMBOL_GPL vmlinux 0x341643ba	omap_dm_timer_modify_idlect_mask
 EXPORT_SYMBOL_GPL vmlinux 0x342491e7	ata_scsi_port_error_handler
 EXPORT_SYMBOL_GPL vmlinux 0x3441c3d6	gpio_set_value_cansleep

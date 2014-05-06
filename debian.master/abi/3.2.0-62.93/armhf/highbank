@@ -2936,6 +2936,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	dm_kcopyd_copy
 EXPORT_SYMBOL vmlinux 0x00000000	dm_kcopyd_do_callback
 EXPORT_SYMBOL vmlinux 0x00000000	dm_kcopyd_prepare_callback
 EXPORT_SYMBOL vmlinux 0x00000000	dm_kcopyd_zero
+EXPORT_SYMBOL vmlinux 0x00000000	dm_kobject_release
 EXPORT_SYMBOL vmlinux 0x00000000	dm_put_device
 EXPORT_SYMBOL vmlinux 0x00000000	dm_ratelimit_state
 EXPORT_SYMBOL vmlinux 0x00000000	dm_read_arg
@@ -4171,6 +4172,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	nonseekable_open
 EXPORT_SYMBOL vmlinux 0x00000000	noop_fsync
 EXPORT_SYMBOL vmlinux 0x00000000	noop_llseek
 EXPORT_SYMBOL vmlinux 0x00000000	noop_qdisc
+EXPORT_SYMBOL vmlinux 0x00000000	nosteal_pipe_buf_ops
 EXPORT_SYMBOL vmlinux 0x00000000	notify_change
 EXPORT_SYMBOL vmlinux 0x00000000	nr_cpu_ids
 EXPORT_SYMBOL vmlinux 0x00000000	ns_capable
@@ -8663,6 +8665,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_detach_filter
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_setup_caps
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_cow_data
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_gro_receive
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_gso_transport_seglen
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_morph
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_partial_csum_set
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_pull_rcsum
