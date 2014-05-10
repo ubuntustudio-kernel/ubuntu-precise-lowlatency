@@ -1,4 +1,4 @@
-linux-lowlatency (3.2.0-63.64) precise-proposed; urgency=low
+linux-lowlatency (3.2.0-63.64) precise; urgency=low
 
   [ Kaj Ailomaa ]
 
@@ -491,7 +491,7 @@ linux-lowlatency (3.2.0-63.64) precise-proposed; urgency=low
 
   * n_tty: Fix n_tty_write crash when echoing in raw mode
 
- --  <>  Sat, 10 May 2014 21:42:02 +0200
+ -- Kaj Ailomaa <zequence@mousike.me>  Sat, 10 May 2014 21:42:02 +0200
 
 linux-lowlatency (3.2.0-61.63) precise-proposed; urgency=low
 
