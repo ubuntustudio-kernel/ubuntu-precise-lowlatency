@@ -10876,6 +10876,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x403c7523	ata_bmdma_setup
 EXPORT_SYMBOL_GPL vmlinux 0x403f9529	gpio_request_one
 EXPORT_SYMBOL_GPL vmlinux 0x40595c59	sata_link_scr_lpm
 EXPORT_SYMBOL_GPL vmlinux 0x40670bfa	netdev_rx_handler_unregister
+EXPORT_SYMBOL_GPL vmlinux 0x4093f5fd	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0x40af0dec	ata_xfer_mode2mask
 EXPORT_SYMBOL_GPL vmlinux 0x40d46b21	crypto_ft_tab
 EXPORT_SYMBOL_GPL vmlinux 0x413e8331	dequeue_signal

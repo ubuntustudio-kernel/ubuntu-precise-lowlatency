@@ -10078,6 +10078,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x3109b751	cpu_clock
 EXPORT_SYMBOL_GPL vmlinux 0x3110fa8b	ata_wait_after_reset
 EXPORT_SYMBOL_GPL vmlinux 0x31266931	con_debug_leave
 EXPORT_SYMBOL_GPL vmlinux 0x312d9120	unregister_kretprobes
+EXPORT_SYMBOL_GPL vmlinux 0x312db7db	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0x316db187	__tracepoint_block_rq_remap
 EXPORT_SYMBOL_GPL vmlinux 0x31c0516d	kill_pid_info_as_cred
 EXPORT_SYMBOL_GPL vmlinux 0x31c0c2d1	dm_put

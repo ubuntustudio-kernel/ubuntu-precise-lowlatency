@@ -11836,6 +11836,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xdb5878c3	dio_end_io
 EXPORT_SYMBOL_GPL vmlinux 0xdb7af2ea	scsi_mode_select
 EXPORT_SYMBOL_GPL vmlinux 0xdb7cbcf1	blocking_notifier_chain_unregister
 EXPORT_SYMBOL_GPL vmlinux 0xdb9ff37e	rt_mutex_destroy
+EXPORT_SYMBOL_GPL vmlinux 0xdc2c691d	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0xdc6c3af9	clockevent_delta2ns
 EXPORT_SYMBOL_GPL vmlinux 0xdc825d6c	usb_amd_quirk_pll_disable
 EXPORT_SYMBOL_GPL vmlinux 0xdc90aec8	wm8350_read_auxadc

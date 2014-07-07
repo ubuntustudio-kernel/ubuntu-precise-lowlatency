@@ -8663,6 +8663,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_attach_filter
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_clone
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_detach_filter
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	sk_setup_caps
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_cow_data
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_gro_receive
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	skb_gso_transport_seglen

@@ -11053,6 +11053,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x643d8789	synchronize_srcu_expedited
 EXPORT_SYMBOL_GPL vmlinux 0x64416d3e	xenbus_frontend_closed
 EXPORT_SYMBOL_GPL vmlinux 0x6443abd8	tty_ldisc_flush
 EXPORT_SYMBOL_GPL vmlinux 0x64769e11	debugfs_create_u32
+EXPORT_SYMBOL_GPL vmlinux 0x649a7e2a	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0x64cf2515	devres_get
 EXPORT_SYMBOL_GPL vmlinux 0x64e8da0a	irq_remove_generic_chip
 EXPORT_SYMBOL_GPL vmlinux 0x65af6abd	anon_transport_class_register

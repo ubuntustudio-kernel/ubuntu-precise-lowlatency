@@ -9522,6 +9522,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xde1f1dc5	blkcipher_walk_done
 EXPORT_SYMBOL_GPL vmlinux 0xde1fba32	iommu_unmap
 EXPORT_SYMBOL_GPL vmlinux 0xde417b81	async_schedule_domain
 EXPORT_SYMBOL_GPL vmlinux 0xde537ab0	ata_sff_qc_fill_rtf
+EXPORT_SYMBOL_GPL vmlinux 0xde57d8ba	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0xdeeadbe5	bus_unregister_notifier
 EXPORT_SYMBOL_GPL vmlinux 0xdefd2760	sdhci_add_host
 EXPORT_SYMBOL_GPL vmlinux 0xdf2a96b6	tty_put_char

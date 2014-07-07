@@ -11777,6 +11777,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xa2e67f08	acpi_bus_generate_proc_event4
 EXPORT_SYMBOL_GPL vmlinux 0xa304c686	cred_to_ucred
 EXPORT_SYMBOL_GPL vmlinux 0xa31591b9	__inet_lookup_established
 EXPORT_SYMBOL_GPL vmlinux 0xa319ba69	__rio_local_write_config_8
+EXPORT_SYMBOL_GPL vmlinux 0xa372fab3	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0xa3759779	ata_sas_port_init
 EXPORT_SYMBOL_GPL vmlinux 0xa38602cd	drain_workqueue
 EXPORT_SYMBOL_GPL vmlinux 0xa388e149	vring_del_virtqueue

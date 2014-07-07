@@ -10729,6 +10729,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x42eee679	stop_machine
 EXPORT_SYMBOL_GPL vmlinux 0x431f6bb1	tty_prepare_flip_string
 EXPORT_SYMBOL_GPL vmlinux 0x432fd7f6	__gpio_set_value
 EXPORT_SYMBOL_GPL vmlinux 0x435e6c6e	crypto_alg_sem
+EXPORT_SYMBOL_GPL vmlinux 0x43e73224	skb_copy_ubufs
 EXPORT_SYMBOL_GPL vmlinux 0x43f56e82	ata_xfer_mode2shift
 EXPORT_SYMBOL_GPL vmlinux 0x4409412d	ata_host_activate
 EXPORT_SYMBOL_GPL vmlinux 0x442b66c9	user_instantiate
