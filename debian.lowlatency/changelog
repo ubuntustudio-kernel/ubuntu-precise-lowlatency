@@ -54,6 +54,20 @@ linux-lowlatency (3.2.0-66.68) precise-proposed; urgency=low
 
  -- Kaj Ailomaa <zequence@mousike.me>  Thu, 03 Jul 2014 13:06:59 +0200
 
+linux-lowlatency (3.2.0-65.68) precise; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * rebase to Ubuntu-3.2.0-65.99
+
+  [ Ubuntu: 3.2.0-65.99 ]
+
+  * x86_64,ptrace: Enforce RIP <= TASK_SIZE_MAX (CVE-2014-4699)
+    - LP: #1337339
+    - CVE-2014-4699
+
+ -- Andy Whitcroft <apw@canonical.com>  Fri, 04 Jul 2014 17:18:45 +0100
+
 linux-lowlatency (3.2.0-65.67) precise-proposed; urgency=low
 
   [ Kaj Ailomaa ]
