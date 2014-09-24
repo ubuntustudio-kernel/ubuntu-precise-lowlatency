@@ -1,3 +1,18 @@
+linux (3.2.0-70.105) precise; urgency=low
+
+  [ Kamal Mostafa ]
+
+  * Release Tracking Bug
+    - re-used previous tracking bug
+
+  [ Upstream Kernel Changes ]
+
+  * udf: Avoid infinite loop when processing indirect ICBs
+    - LP: #1370042
+    - CVE-2014-6410
+
+ -- Kamal Mostafa <kamal@canonical.com>  Wed, 24 Sep 2014 12:16:42 -0700
+
 linux (3.2.0-70.104) precise; urgency=low
 
   [ Joseph Salisbury ]

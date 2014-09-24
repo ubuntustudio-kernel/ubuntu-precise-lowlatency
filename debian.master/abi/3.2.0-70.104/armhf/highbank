@@ -3571,6 +3571,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	ip_defrag
 EXPORT_SYMBOL vmlinux 0x00000000	ip_fragment
 EXPORT_SYMBOL vmlinux 0x00000000	ip_generic_getfrag
 EXPORT_SYMBOL vmlinux 0x00000000	ip_getsockopt
+EXPORT_SYMBOL vmlinux 0x00000000	ip_idents_reserve
 EXPORT_SYMBOL vmlinux 0x00000000	ip_mc_dec_group
 EXPORT_SYMBOL vmlinux 0x00000000	ip_mc_inc_group
 EXPORT_SYMBOL vmlinux 0x00000000	ip_mc_join_group
