@@ -21,7 +21,6 @@
 8139too
 8250_accent
 8250_boca
-8250_dw
 8250_exar_st16c554
 8250_fourport
 8250_hub6
@@ -557,7 +556,9 @@ crypto_user
 crystalhd
 cs5345
 cs53l32a
+cs5535-clockevt
 cs5535-mfd
+cs5535-mfgpt
 cs553x_nand
 cs89x0
 ct82c710
@@ -921,7 +922,6 @@ ftl
 fujitsu-laptop
 fujitsu_ts
 funsoft
-fusb300_udc
 g450_pll
 g760a
 g_acm_ms
@@ -940,6 +940,7 @@ generic_bl
 gen_probe
 geode-aes
 geode-rng
+geodewdt
 g_ether
 gf128mul
 gf2k
@@ -967,6 +968,7 @@ gpio-addr-flash
 gpio-adp5520
 gpio-adp5588
 gpio-charger
+gpio-cs5535
 gpio-fan
 gpio-generic
 gpio-i2cmux
@@ -1136,7 +1138,6 @@ hid-waltop
 hid-wiimote
 hid-zpff
 hid-zydacron
-hifn_795x
 hisax
 hisax_fcpcipnp
 hisax_isac
@@ -1205,7 +1206,6 @@ i2c-parport-light
 i2c-pca-isa
 i2c-pca-platform
 i2c-piix4
-i2c-pxa
 i2c-scmi
 i2c-simtec
 i2c-sis5595
@@ -1512,7 +1512,6 @@ l4f00242t03
 l64781
 lanai
 lance
-langwell_udc
 lanstreamer
 lapb
 lapbether
@@ -1988,11 +1987,7 @@ ocfs2_nodemanager
 ocfs2_stackglue
 ocfs2_stack_o2cb
 ocfs2_stack_user
-ofpart
-of_serial
 old_belkin-sir
-olpc_battery
-olpc-dcon
 olympic
 omfs
 omninet
@@ -2073,7 +2068,6 @@ pata_netcell
 pata_ninja32
 pata_ns87410
 pata_ns87415
-pata_of_platform
 pata_oldpiix
 pata_opti
 pata_optidma
@@ -2164,7 +2158,6 @@ phonedev
 phonet
 phram
 physmap
-physmap_of
 pktcdvd
 pktgen
 pl2303
@@ -2579,7 +2572,6 @@ scsi_tgt
 scsi_transport_fc
 scsi_transport_iscsi
 scsi_transport_sas
-scsi_transport_spi
 scsi_transport_srp
 scsi_wait_scan
 sctp
@@ -3028,7 +3020,6 @@ sworks-agp
 sx8
 sym53c416
 sym53c500_cs
-sym53c8xx
 symbolserial
 synaptics_i2c
 synaptics_i2c_rmi4
@@ -3423,6 +3414,17 @@ x38_edac
 xc4000
 xc5000
 xcbc
+xen-blkback
+xen-evtchn
+xen-fbfront
+xenfs
+xen-gntalloc
+xen-gntdev
+xen-kbdfront
+xen-netback
+xen-pciback
+xen-pcifront
+xen_wdt
 xfrm4_mode_beet
 xfrm4_mode_transport
 xfrm4_mode_tunnel
@@ -3440,7 +3442,6 @@ xilinx_uartps
 xirc2ps_cs
 xircom_cb
 xo15-ebook
-xo1-rfkill
 xor
 xpad
 xprtrdma

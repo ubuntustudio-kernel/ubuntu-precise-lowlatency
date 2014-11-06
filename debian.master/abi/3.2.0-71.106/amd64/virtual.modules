@@ -518,7 +518,9 @@ crypto_user
 crystalhd
 cs5345
 cs53l32a
+cs5535-clockevt
 cs5535-mfd
+cs5535-mfgpt
 ct82c710
 ctr
 cts
@@ -870,6 +872,7 @@ gdth
 generic
 generic_bl
 gen_probe
+geodewdt
 g_ether
 gf128mul
 gf2k

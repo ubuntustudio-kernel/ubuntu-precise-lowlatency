@@ -8231,6 +8231,12 @@ EXPORT_SYMBOL_GPL drivers/misc/cb710/cb710 0x783ca0be	cb710_sg_dwiter_write_next
 EXPORT_SYMBOL_GPL drivers/misc/cb710/cb710 0x7bca6ecb	cb710_sg_dwiter_read_next_block
 EXPORT_SYMBOL_GPL drivers/misc/cb710/cb710 0x9e7cc0a4	cb710_set_irq_handler
 EXPORT_SYMBOL_GPL drivers/misc/cb710/cb710 0xcabf8611	cb710_pci_update_config_reg
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0x28796a16	cs5535_mfgpt_set_irq
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0x33a9d4c6	cs5535_mfgpt_read
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0x48b1ed48	cs5535_mfgpt_alloc_timer
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0x560762a8	cs5535_mfgpt_toggle_event
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0x9bb2b336	cs5535_mfgpt_free_timer
+EXPORT_SYMBOL_GPL drivers/misc/cs5535-mfgpt 0xa07c4f3d	cs5535_mfgpt_write
 EXPORT_SYMBOL_GPL drivers/misc/eeprom/eeprom_93cx6 0x2df115d4	eeprom_93cx6_multiread
 EXPORT_SYMBOL_GPL drivers/misc/eeprom/eeprom_93cx6 0x63d14d2f	eeprom_93cx6_read
 EXPORT_SYMBOL_GPL drivers/misc/enclosure 0x223fe2a0	enclosure_register
