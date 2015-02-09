@@ -3936,6 +3936,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	mempool_kmalloc
 EXPORT_SYMBOL vmlinux 0x00000000	mempool_resize
 EXPORT_SYMBOL vmlinux 0x00000000	memscan
 EXPORT_SYMBOL vmlinux 0x00000000	memset
+EXPORT_SYMBOL vmlinux 0x00000000	memzero_explicit
 EXPORT_SYMBOL vmlinux 0x00000000	mfd_add_devices
 EXPORT_SYMBOL vmlinux 0x00000000	mfd_cell_disable
 EXPORT_SYMBOL vmlinux 0x00000000	mfd_cell_enable
@@ -4261,6 +4262,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	page_readlink
 EXPORT_SYMBOL vmlinux 0x00000000	page_symlink
 EXPORT_SYMBOL vmlinux 0x00000000	page_symlink_inode_operations
 EXPORT_SYMBOL vmlinux 0x00000000	page_zero_new_buffers
+EXPORT_SYMBOL vmlinux 0x00000000	pagecache_isize_extended
 EXPORT_SYMBOL vmlinux 0x00000000	pagecache_write_begin
 EXPORT_SYMBOL vmlinux 0x00000000	pagecache_write_end
 EXPORT_SYMBOL vmlinux 0x00000000	pagevec_lookup
@@ -8130,6 +8132,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	ip_route_output_flow
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_dup_options
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_find_tlv
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_opt_accepted
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_proxy_select_ident
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_create_of_mapping
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_dispose_mapping
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_domain_add_simple
