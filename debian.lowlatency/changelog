@@ -4,6 +4,48 @@ linux-lowlatency (3.2.0-77.79) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-77.112 ]
+
+  * Release Tracking Bug
+    - LP: #1419968
+  * [Packaging] force "dpkg-source -I -i" behavior
+  * isofs: Fix unchecked printing of ER records
+    - LP: #1409808
+    - CVE-2014-9584
+  * KEYS: close race between key lookup and freeing
+    - LP: #1409048
+    - CVE-2014-9529
+  * vfs: new internal helper: mnt_has_parent(mnt)
+    - LP: #1383356
+    - CVE-2014-7970
+  * vfs: more mnt_parent cleanups
+    - LP: #1383356
+    - CVE-2014-7970
+  * mnt: Prevent pivot_root from creating a loop in the mount tree
+    - LP: #1383356
+    - CVE-2014-7970
+  * netfilter: conntrack: disable generic tracking for known protocols
+    - LP: #1413109
+    - CVE-2014-8160
+  * KVM: x86 emulator: reject SYSENTER in compatibility mode on AMD guests
+    - LP: #1414651
+    - CVE-2015-0239
+  * KVM: x86: SYSENTER emulation is broken
+    - LP: #1414651
+    - CVE-2015-0239
+  * x86_64, vdso: Fix the vdso address randomization algorithm
+    - LP: #1409811
+    - CVE-2014-9585
+  * crypto: prefix module autoloading with "crypto-"
+    - LP: #1415507
+    - CVE-2013-7421
+  * crypto: add missing crypto module aliases
+    - LP: #1415507
+    - CVE-2013-7421
+  * crypto: include crypto- module prefix in template
+    - LP: #1415632
+    - CVE-2014-9644
+
  -- Kaj Ailomaa <zequence@mousike.me>  Mon, 16 Feb 2015 16:15:28 +0100
 
 linux-lowlatency (3.2.0-76.78) precise-proposed; urgency=low
