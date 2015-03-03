@@ -6673,6 +6673,7 @@ EXPORT_SYMBOL vmlinux 0xbfa61e22	ping_prot
 EXPORT_SYMBOL vmlinux 0xbfc177bc	iowrite32_rep
 EXPORT_SYMBOL vmlinux 0xbfd49bda	pagecache_isize_extended
 EXPORT_SYMBOL vmlinux 0xbfd7adda	poll_freewait
+EXPORT_SYMBOL vmlinux 0xbfe97439	path_is_under
 EXPORT_SYMBOL vmlinux 0xbfed3af3	mmc_can_reset
 EXPORT_SYMBOL vmlinux 0xbfedba11	sk_stream_error
 EXPORT_SYMBOL vmlinux 0xbfee3ad5	loop_unregister_transfer
@@ -7552,7 +7553,6 @@ EXPORT_SYMBOL vmlinux 0xf94d287f	register_nls
 EXPORT_SYMBOL vmlinux 0xf95092a2	blk_queue_io_opt
 EXPORT_SYMBOL vmlinux 0xf96172fc	ppp_unregister_channel
 EXPORT_SYMBOL vmlinux 0xf97456ea	_raw_spin_unlock_irqrestore
-EXPORT_SYMBOL vmlinux 0xf98bad4f	path_is_under
 EXPORT_SYMBOL vmlinux 0xf98c4517	netdev_state_change
 EXPORT_SYMBOL vmlinux 0xf98ca0ef	rtnetlink_put_metrics
 EXPORT_SYMBOL vmlinux 0xf993d273	netif_receive_skb

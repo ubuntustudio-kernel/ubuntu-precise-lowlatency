@@ -4421,6 +4421,7 @@ EXPORT_SYMBOL vmlinux 0x3416d8f5	md_integrity_register
 EXPORT_SYMBOL vmlinux 0x341cbed2	cpu_present_mask
 EXPORT_SYMBOL vmlinux 0x34268ff0	ip6_frag_match
 EXPORT_SYMBOL vmlinux 0x344bae8a	search_binary_handler
+EXPORT_SYMBOL vmlinux 0x3462aee7	path_is_under
 EXPORT_SYMBOL vmlinux 0x347013de	nla_validate
 EXPORT_SYMBOL vmlinux 0x3482a0be	tty_port_init
 EXPORT_SYMBOL vmlinux 0x3484e5e2	kern_path
@@ -6094,7 +6095,6 @@ EXPORT_SYMBOL vmlinux 0xa55c2b7e	phy_register_fixup_for_uid
 EXPORT_SYMBOL vmlinux 0xa598e29c	vesa_modes
 EXPORT_SYMBOL vmlinux 0xa59f1c22	netdev_info
 EXPORT_SYMBOL vmlinux 0xa5a4d355	ps2_end_command
-EXPORT_SYMBOL vmlinux 0xa5bd5086	path_is_under
 EXPORT_SYMBOL vmlinux 0xa5c027bf	inode_init_owner
 EXPORT_SYMBOL vmlinux 0xa5d962af	key_unlink
 EXPORT_SYMBOL vmlinux 0xa5e4f65c	__next_cpu_nr

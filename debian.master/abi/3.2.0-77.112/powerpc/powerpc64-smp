@@ -4643,7 +4643,6 @@ EXPORT_SYMBOL vmlinux 0x4d5f937a	jbd2_journal_start
 EXPORT_SYMBOL vmlinux 0x4d770756	netpoll_cleanup
 EXPORT_SYMBOL vmlinux 0x4d974b9c	register_sysrq_key
 EXPORT_SYMBOL vmlinux 0x4da7c931	rwsem_downgrade_wake
-EXPORT_SYMBOL vmlinux 0x4db955be	path_is_under
 EXPORT_SYMBOL vmlinux 0x4db9eef0	phy_ethtool_sset
 EXPORT_SYMBOL vmlinux 0x4dc45be9	nf_log_unbind_pf
 EXPORT_SYMBOL vmlinux 0x4dca42eb	of_device_unregister
@@ -6534,6 +6533,7 @@ EXPORT_SYMBOL vmlinux 0xca2a7a20	pcim_iounmap_regions
 EXPORT_SYMBOL vmlinux 0xca2d6978	kernel_sock_ioctl
 EXPORT_SYMBOL vmlinux 0xca320b1f	read_dev_sector
 EXPORT_SYMBOL vmlinux 0xca33ea50	input_inject_event
+EXPORT_SYMBOL vmlinux 0xca3b4694	path_is_under
 EXPORT_SYMBOL vmlinux 0xca3db2c2	splice_from_pipe_feed
 EXPORT_SYMBOL vmlinux 0xca3e8254	request_key_with_auxdata
 EXPORT_SYMBOL vmlinux 0xca409d4a	padata_remove_cpu

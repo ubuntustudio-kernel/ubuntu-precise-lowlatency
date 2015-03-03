@@ -2689,6 +2689,7 @@ EXPORT_SYMBOL vmlinux 0x230de58d	tcp_proc_unregister
 EXPORT_SYMBOL vmlinux 0x231d4001	fb_edid_add_monspecs
 EXPORT_SYMBOL vmlinux 0x232b2b74	scsi_eh_finish_cmd
 EXPORT_SYMBOL vmlinux 0x23532c4d	ftrace_print_flags_seq
+EXPORT_SYMBOL vmlinux 0x2356dcf0	path_is_under
 EXPORT_SYMBOL vmlinux 0x235bebfa	may_umount
 EXPORT_SYMBOL vmlinux 0x237bbd94	tcp_v4_md5_hash_skb
 EXPORT_SYMBOL vmlinux 0x237e024d	dev_mc_flush
@@ -4638,7 +4639,6 @@ EXPORT_SYMBOL vmlinux 0xa90ea345	nf_setsockopt
 EXPORT_SYMBOL vmlinux 0xa9110637	__blk_end_request_all
 EXPORT_SYMBOL vmlinux 0xa943beca	cpufreq_global_kobject
 EXPORT_SYMBOL vmlinux 0xa949b681	inet_register_protosw
-EXPORT_SYMBOL vmlinux 0xa94d5134	path_is_under
 EXPORT_SYMBOL vmlinux 0xa951313e	jbd2_journal_unlock_updates
 EXPORT_SYMBOL vmlinux 0xa95de84a	sock_no_mmap
 EXPORT_SYMBOL vmlinux 0xa962703b	mmc_can_secure_erase_trim
