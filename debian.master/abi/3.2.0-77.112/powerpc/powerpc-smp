@@ -5999,6 +5999,7 @@ EXPORT_SYMBOL vmlinux 0xae545f06	_raw_write_unlock_irqrestore
 EXPORT_SYMBOL vmlinux 0xae65d39b	netlink_set_err
 EXPORT_SYMBOL vmlinux 0xae7148ef	xfrm_policy_alloc
 EXPORT_SYMBOL vmlinux 0xae7a15b0	kernel_getsockopt
+EXPORT_SYMBOL vmlinux 0xae8580ce	path_is_under
 EXPORT_SYMBOL vmlinux 0xae8b0419	mb_cache_shrink
 EXPORT_SYMBOL vmlinux 0xae960165	generic_error_remove_page
 EXPORT_SYMBOL vmlinux 0xae9837b9	read_cache_page
@@ -6077,7 +6078,6 @@ EXPORT_SYMBOL vmlinux 0xb317e437	bio_clone
 EXPORT_SYMBOL vmlinux 0xb3194118	inet_csk_accept
 EXPORT_SYMBOL vmlinux 0xb3305d52	send_remote_softirq
 EXPORT_SYMBOL vmlinux 0xb364ee15	padata_remove_cpu
-EXPORT_SYMBOL vmlinux 0xb369567b	path_is_under
 EXPORT_SYMBOL vmlinux 0xb3714eb0	generic_write_checks
 EXPORT_SYMBOL vmlinux 0xb39579d5	jbd2_journal_dirty_metadata
 EXPORT_SYMBOL vmlinux 0xb39a0cca	ppp_unregister_channel

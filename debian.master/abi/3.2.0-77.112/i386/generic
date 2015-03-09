@@ -6144,6 +6144,7 @@ EXPORT_SYMBOL vmlinux 0xa0b46147	kernel_sock_shutdown
 EXPORT_SYMBOL vmlinux 0xa0bdee71	redraw_screen
 EXPORT_SYMBOL vmlinux 0xa0c169c7	read_cache_pages
 EXPORT_SYMBOL vmlinux 0xa0ceef51	out_of_line_wait_on_bit
+EXPORT_SYMBOL vmlinux 0xa0dc6153	path_is_under
 EXPORT_SYMBOL vmlinux 0xa0e99ed7	dma_async_device_unregister
 EXPORT_SYMBOL vmlinux 0xa0ebd14c	sysctl_tcp_mem
 EXPORT_SYMBOL vmlinux 0xa0fbac79	wake_up_bit
@@ -6464,7 +6465,6 @@ EXPORT_SYMBOL vmlinux 0xb41ae403	napi_frags_skb
 EXPORT_SYMBOL vmlinux 0xb423dba1	console_blanked
 EXPORT_SYMBOL vmlinux 0xb4390375	tty_wait_until_sent
 EXPORT_SYMBOL vmlinux 0xb4390f9a	mcount
-EXPORT_SYMBOL vmlinux 0xb44a1fdd	path_is_under
 EXPORT_SYMBOL vmlinux 0xb45578b8	memscan
 EXPORT_SYMBOL vmlinux 0xb466b459	flock_lock_file_wait
 EXPORT_SYMBOL vmlinux 0xb4709322	scsi_dev_info_add_list

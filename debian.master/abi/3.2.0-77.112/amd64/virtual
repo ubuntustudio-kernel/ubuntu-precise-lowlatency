@@ -5093,6 +5093,7 @@ EXPORT_SYMBOL vmlinux 0x633a3531	brioctl_set
 EXPORT_SYMBOL vmlinux 0x633f1f5b	pci_restore_state
 EXPORT_SYMBOL vmlinux 0x635f15a3	scsi_host_get
 EXPORT_SYMBOL vmlinux 0x6363d590	__seq_open_private
+EXPORT_SYMBOL vmlinux 0x6365bfac	path_is_under
 EXPORT_SYMBOL vmlinux 0x636a5691	acpi_register_ioapic
 EXPORT_SYMBOL vmlinux 0x6382dd6a	bio_map_kern
 EXPORT_SYMBOL vmlinux 0x6398b912	ip6_frag_init
@@ -5521,7 +5522,6 @@ EXPORT_SYMBOL vmlinux 0x7dd554fc	unregister_kmmio_probe
 EXPORT_SYMBOL vmlinux 0x7de81343	d_prune_aliases
 EXPORT_SYMBOL vmlinux 0x7deff673	dm_consume_args
 EXPORT_SYMBOL vmlinux 0x7df5a15c	bioset_create
-EXPORT_SYMBOL vmlinux 0x7e0f08b1	path_is_under
 EXPORT_SYMBOL vmlinux 0x7e394c4e	sysctl_local_reserved_ports
 EXPORT_SYMBOL vmlinux 0x7e4c382e	__ht_create_irq
 EXPORT_SYMBOL vmlinux 0x7e5ab01f	remove_proc_entry
