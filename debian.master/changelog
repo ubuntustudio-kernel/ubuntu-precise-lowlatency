@@ -305,6 +305,16 @@ linux (3.2.0-78.113) precise; urgency=low
 
  -- Seth Forshee <seth.forshee@canonical.com>  Tue, 03 Mar 2015 09:37:21 -0600
 
+linux (3.2.0-77.114) precise; urgency=low
+
+  [ Upstream Kernel Changes ]
+
+  * IB/core: Prevent integer overflow in ib_umem_get address arithmetic
+    - LP: #1413741
+    - CVE-2015-8159
+
+ -- Luis Henriques <luis.henriques@canonical.com>  Mon, 09 Mar 2015 20:50:51 +0000
+
 linux (3.2.0-77.112) precise; urgency=low
 
   [ Seth Forshee ]
