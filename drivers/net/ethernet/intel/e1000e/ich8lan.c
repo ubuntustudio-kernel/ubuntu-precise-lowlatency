@@ -136,6 +136,7 @@
 /* PHY Power Management Control */
 #define HV_PM_CTRL		PHY_REG(770, 17)
 #define HV_PM_CTRL_PLL_STOP_IN_K1_GIGA	0x100
+#define HV_PM_CTRL_K1_ENABLE           0x4000
 
 /* PHY Low Power Idle Control */
 #define I82579_LPI_CTRL				PHY_REG(772, 20)
@@ -1701,51 +1702,45 @@ out:
  *  e1000_k1_gig_workaround_lv - K1 Si workaround
  *  @hw:   pointer to the HW structure
  *
- *  Workaround to set the K1 beacon duration for 82579 parts
+ *  Workaround to set the K1 beacon duration for 82579 parts in 10Mbps
+ *  Disable K1 in 1000Mbps and 100Mbps
  **/
 static s32 e1000_k1_workaround_lv(struct e1000_hw *hw)
 {
 	s32 ret_val = 0;
 	u16 status_reg = 0;
-	u32 mac_reg;
-	u16 phy_reg;
 
 	if (hw->mac.type != e1000_pch2lan)
 		goto out;
 
-	/* Set K1 beacon duration based on 1Gbps speed or otherwise */
+	/* Set K1 beacon duration based on 10Mbs speed */
 	ret_val = e1e_rphy(hw, HV_M_STATUS, &status_reg);
 	if (ret_val)
 		goto out;
 
 	if ((status_reg & (HV_M_STATUS_LINK_UP | HV_M_STATUS_AUTONEG_COMPLETE))
-	    == (HV_M_STATUS_LINK_UP | HV_M_STATUS_AUTONEG_COMPLETE)) {
-		mac_reg = er32(FEXTNVM4);
-		mac_reg &= ~E1000_FEXTNVM4_BEACON_DURATION_MASK;
+			== (HV_M_STATUS_LINK_UP | HV_M_STATUS_AUTONEG_COMPLETE)) {
+			if (status_reg &
+					(HV_M_STATUS_SPEED_1000 | HV_M_STATUS_SPEED_100)) {
 
-		ret_val = e1e_rphy(hw, I82579_LPI_CTRL, &phy_reg);
-		if (ret_val)
-			goto out;
+				u16 pm_phy_reg;
 
-		if (status_reg & HV_M_STATUS_SPEED_1000) {
-			u16 pm_phy_reg;
+				/* LV 1G/100 Packet drop issue wa  */
+				ret_val = e1e_rphy(hw, HV_PM_CTRL, &pm_phy_reg);
+				if (ret_val)
+					return ret_val;
+				pm_phy_reg &= ~HV_PM_CTRL_K1_ENABLE;
+				ret_val = e1e_wphy(hw, HV_PM_CTRL, pm_phy_reg);
+				if (ret_val)
+					return ret_val;
+			} else {
+				u32 mac_reg;
 
-			mac_reg |= E1000_FEXTNVM4_BEACON_DURATION_8USEC;
-			phy_reg &= ~I82579_LPI_CTRL_FORCE_PLL_LOCK_COUNT;
-			/* LV 1G Packet drop issue wa  */
-			ret_val = e1e_rphy(hw, HV_PM_CTRL, &pm_phy_reg);
-			if (ret_val)
-				return ret_val;
-			pm_phy_reg &= ~HV_PM_CTRL_PLL_STOP_IN_K1_GIGA;
-			ret_val = e1e_wphy(hw, HV_PM_CTRL, pm_phy_reg);
-			if (ret_val)
-				return ret_val;
-		} else {
-			mac_reg |= E1000_FEXTNVM4_BEACON_DURATION_16USEC;
-			phy_reg |= I82579_LPI_CTRL_FORCE_PLL_LOCK_COUNT;
+				mac_reg = er32(FEXTNVM4);
+				mac_reg &= ~E1000_FEXTNVM4_BEACON_DURATION_MASK;
+				mac_reg |= E1000_FEXTNVM4_BEACON_DURATION_16USEC;
+				ew32(FEXTNVM4, mac_reg);
 		}
-		ew32(FEXTNVM4, mac_reg);
-		ret_val = e1e_wphy(hw, I82579_LPI_CTRL, phy_reg);
 	}
 
 out:

@@ -153,6 +153,7 @@ struct e1000_info;
 #define HV_M_STATUS_AUTONEG_COMPLETE      0x1000
 #define HV_M_STATUS_SPEED_MASK            0x0300
 #define HV_M_STATUS_SPEED_1000            0x0200
+#define HV_M_STATUS_SPEED_100             0x0100
 #define HV_M_STATUS_LINK_UP               0x0040
 
 #define E1000_ICH_FWSM_PCIM2PCI		0x01000000 /* ME PCIm-to-PCI active */
