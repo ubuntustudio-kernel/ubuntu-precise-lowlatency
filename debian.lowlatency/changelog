@@ -4,6 +4,93 @@ linux-lowlatency (3.2.0-80.82) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Ubuntu: 3.2.0-81.117 ]
+
+  * Release Tracking Bug
+    - LP: #1442215
+  * e1000e: 82579: workaround for link drop issue
+    - LP: #1425333
+  * e1000e: update workaround for 82579 intermittently disabled during
+    S0->Sx
+    - LP: #1425333
+  * e1000e: issues in Sx on 82577/8/9
+    - LP: #1425333
+  * e1000e: 82579 packet drop workaround
+    - LP: #1425333
+  * e1000e: Workaround for dropped packets in Gig/100 speeds on 82579
+    - LP: #1425333
+  * ipv6: Don't reduce hop limit for an interface
+    - LP: #1441103
+    - CVE-2015-2922
+
+  [ Ubuntu: 3.2.0-80.116 ]
+
+  * Release Tracking Bug
+    - LP: #1435392
+  * [Packaging] generate live watchdog blacklists
+    - LP: #1432837
+  * Drivers: hv: vmbus: incorrect device name is printed when child device
+    is unregistered
+    - LP: #1417313
+  * x86, mm/ASLR: Fix stack randomization on 64-bit systems
+    - LP: #1423757
+    - CVE-2015-1593
+  * net: llc: use correct size for sysctl timeout entries
+    - LP: #1425271
+    - CVE-2015-2041
+  * net: rds: use correct size for max unacked packets and bytes
+    - LP: #1425274
+    - CVE-2015-2042
+  * PCI: quirks: Fix backport of quirk_io()
+    - LP: #1434639
+  * MIPS: IRQ: Fix disable_irq on CPU IRQs
+    - LP: #1434639
+  * ASoC: atmel_ssc_dai: fix start event for I2S mode
+    - LP: #1434639
+  * ALSA: ak411x: Fix stall in work callback
+    - LP: #1434639
+  * lib/checksum.c: fix carry in csum_tcpudp_nofold
+    - LP: #1434639
+  * lib/checksum.c: fix build for generic csum_tcpudp_nofold
+    - LP: #1434639
+  * caif: remove wrong dev_net_set() call
+    - LP: #1434639
+  * MIPS: Fix kernel lockup or crash after CPU offline/online
+    - LP: #1434639
+  * gpio: sysfs: fix memory leak in gpiod_export_link
+    - LP: #1434639
+  * gpio: sysfs: fix memory leak in gpiod_sysfs_set_active_low
+    - LP: #1434639
+  * net: sctp: fix passing wrong parameter header to param_type2af in
+    sctp_process_param
+    - LP: #1434639
+  * mm: pagewalk: call pte_hole() for VM_PFNMAP during walk_page_range
+    - LP: #1434639
+  * nilfs2: fix deadlock of segment constructor over I_SYNC flag
+    - LP: #1434639
+  * staging: comedi: cb_pcidas64: fix incorrect AI range code handling
+    - LP: #1434639
+  * media/rc: Send sync space information on the lirc device
+    - LP: #1434639
+  * sched/rt: Reduce rq lock contention by eliminating locking of
+    non-feasible target
+    - LP: #1434639
+  * time: adjtimex: Validate the ADJ_FREQUENCY values
+    - LP: #1434639
+  * ntp: Fixup adjtimex freq validation on 32-bit systems
+    - LP: #1434639
+  * ipv6: fib: fix fib dump restart
+    - LP: #1434639
+  * ipv6: fib: fix fib dump restart
+    - LP: #1434639
+  * Bluetooth: ath3k: workaround the compatibility issue with xHCI
+    controller
+    - LP: #1400215, #1434639
+  * Linux 3.2.68
+    - LP: #1434639
+  * KVM: nVMX: Fix content of MSR_IA32_VMX_ENTRY/EXIT_CTLS
+    - LP: #1431473
+
  -- Kaj Ailomaa <zequence@mousike.me>  Sat, 11 Apr 2015 19:38:59 +0200
 
 linux-lowlatency (3.2.0-79.81) precise-proposed; urgency=low
